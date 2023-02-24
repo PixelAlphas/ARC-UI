@@ -1,0 +1,121 @@
+{
+  "namespace": "aui-setting_about",
+  "config_element@auicore_configloader.core": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "label01": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "Configuration Details",
+          "shadow": false
+        }
+      },
+      { "label02": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "('§7- Config name : §f' + $configname)",
+          "shadow": false
+        }
+      },
+      { "label03": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "('§7- Config key : §f' + $key)",
+          "shadow": false
+        }
+      },
+      { "label04": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "('§7- Config ver : §f' + $ver)",
+          "shadow": false
+        }
+      },
+      { "label05": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUES",
+          "shadow": false,
+          "variables": [
+            { "requires": "($Testvalue)", "$valuetext": "('§7- Test Values : ' + '§aTrue')" },
+            { "requires": "(not $Testvalue)", "$valuetext": "('§7- Test Values : ' + '§cFalse')" }
+          ]
+        }
+      },
+      { "label06": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUES",
+          "shadow": false,
+          "variables": [
+            { "requires": "($is_DebugMode)", "$valuetext": "('§7- Debug mode : ' + '§aTrue')" },
+            { "requires": "(not $is_DebugMode)", "$valuetext": "('§7- Debug mode : ' + '§cFalse')" }
+          ]
+        }
+      },
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
+    ]
+  },
+  "about_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}},
+      { "titlelogo": { "type": "image", "texture": "textures/ui/title", "size": [ "100%", 30 ] }},
+      { "pudding02": { "type": "panel", "size": [ 1, 10 ]}},
+      { "label00": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "Arc-UI Version\n§7- v1.0-beta2§7\n- Feb 25, 2023 §g[ Build date ]§7\n- 1.19.62 §g[ Currently Developed in ]",
+          "shadow": false
+        }
+      },
+      { "pudding03": { "type": "panel", "size": [ 1, 10 ]}},
+      { "label01": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "Greetings! Thanks for stopping by! ARC-UI is created by §eArcdustry§f formally known as §ePixelHarlow§f! Thanks for testing by, since its just a regular beta stage, things may get changed and some not. if you have suggestions, feel free to join Arc-UI discord server and suggest from there!\n\nRegardless, have a great day!",
+          "shadow": false
+        }
+      },
+      { "pudding04": { "type": "panel", "size": [ 1, 10 ]}}
+    ]
+  },
+  "root_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "arcuiabout_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "about_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_about.about_element", "$text": "About ARC-UI" }},
+      { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "config_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_about.config_element", "$text": "Configuration" }}
+    ]
+  }
+}

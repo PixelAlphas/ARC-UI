@@ -1,0 +1,24 @@
+{
+  "namespace": "aui-content_log",
+  "content_log_element": {
+    "type": "panel",
+    "size": [ "100% - 8px", "100% - 28px" ],
+    "offset": [ 0, 10 ],
+    "controls": [
+      { "main_stack_panel@content_log_history.main_stack_panel": {} },
+      { "close_button@common.close_button": {
+          "size": [ 8, 8 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, -18 ]
+        }
+      }
+    ]
+  },
+  "root_contents": {
+    "type": "panel",
+    "controls": [
+      { "content_log_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-content_log.content_log_element", "$text": "contentlog.history.title", "$auivar-bgsize|default": [ "85%", "85%" ], "$auivar-bganchor|default": "center" }}
+    ]
+  }
+}

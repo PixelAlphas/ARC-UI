@@ -1,0 +1,14 @@
+{
+  "namespace": "auicore_configloader",
+  "core@auicore-configsource.element": {
+    "variables": [
+      { "requires": "(not ($key = 'Test'))",
+        "$ver|default": "1.0-Beta2",
+        "$key|default": "failback",
+        "$Testvalue|default": false,
+        "$configname|default": "Failmode Default",
+        "$is_DebugMode|default": false
+      }
+    ]
+  }
+}

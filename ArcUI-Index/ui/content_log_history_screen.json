@@ -1,0 +1,86 @@
+{
+  "namespace": "content_log_history",
+  "messages_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "$scrolling_content_anchor_from": "bottom_left",
+    "$scrolling_content_anchor_to": "bottom_left",
+    "collection_name": "content_log_message",
+    "size": [ "100%", "default" ],
+    "factory": {
+      "name": "messages_factory",
+      "control_name": "content_log_message@content_log_history.content_log_message_panel"
+    },
+    "bindings": [
+      {
+        "binding_name": "#messages_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+  "messages_scrolling_panel@common.scrolling_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 2, -27 ],
+    "$scrolling_content": "content_log_history.messages_stack_panel",
+    "$scroll_size": [ 5, "100%-4px" ],
+    "$jump_to_bottom_on_update": true,
+    "$show_background": false,
+    "$always_handle_scrolling": true
+  },
+  "content_log_element": {
+    "type": "panel",
+    "size": [ "100% - 8px", "100% - 28px" ],
+    "offset": [ 0, 10 ],
+    "controls": [
+      { "main_stack_panel@content_log_history.main_stack_panel": {} },
+      { "close_button@common.close_button": {
+          "size": [ 8, 8 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, -18 ]
+        }
+      }
+    ]
+  },
+  "root_contents": {
+    "type": "panel",
+    "controls": [
+      { "content_log_element@aui-common.header_background_element": { "$auivar-header_contents": "content_log_history.content_log_element", "$text": "contentlog.history.title", "$auivar-bgsize|default": [ "85%", "85%" ], "$auivar-bganchor|default": "center" }}
+    ]
+  },
+  "content_log_history_panel": {
+    "type": "panel",
+    "$dialog_control|default": "common_dialogs.main_panel_no_buttons",
+    "variables": [
+      {
+        "requires": "$supports_clipboard_set",
+        "$dialog_control": "common_dialogs.main_panel_one_button"
+      }
+    ],
+    "controls": [
+      {
+        "content_log_history_dialog@$dialog_control": {
+          "$text_name": "contentlog.history.title",
+          "$child_control": "content_log_history.main_stack_panel",
+          "$button_panel": "content_log_history.clipboard_button",
+          "size": [ "85%", "85%" ]
+        }
+      }
+    ]
+  },
+  "content_log_history_screen@common.base_screen": {
+    "$screen_content": "content_log_history.root_contents",
+    "$screen_bg_content": "aui-common.menu_screen_background",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

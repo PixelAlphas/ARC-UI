@@ -1,0 +1,81 @@
+{
+  "namespace": "aui-online_safety_screen",
+  "do_not_show_checkbox@aui-common.checkbox": {
+    "size": [ "75%", 30 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$toggle_name": "online_safety_do_not_show_again",
+    "$toggle_state_binding_name": "#online_safety_do_not_show_again",
+    "$toggle_label_text|default": "onlinePlay.doNotShowAgain",
+    "tts_control_type_order_priority": 100,
+    "tts_value_order_priority": 101,
+    "$toggle_enabled_binding_type": "global",
+    "controls": [
+      { "header_description_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            { "checkbox_visuals@common.toggle_visuals": { "size": [ 30, "100%" ], "anchor_from": "left_middle", "anchor_to": "left_middle" }},
+            { "buffer_panel": { "type": "panel", "layer": 3, "size": [ "fill", "100%" ], "controls": [{ "label": { "type": "label", "color": "$light_button_default_text_color", "text": "$toggle_label_text", "size": [ "default", "default" ], "anchor_from": "center", "anchor_to": "center" }}]}},
+            { "another_panel": { "type": "panel", "size": [ 30, "100%" ] }}
+          ]
+        }
+      }
+    ]
+  },
+  "online_safety_screen_dialog": {
+    "type": "panel",
+    "size": [ 300, 200 ],
+    "layer": 20,
+    "controls": [
+      { "main_title": {
+          "type": "panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100%", 32 ],
+          "controls": [
+            { "label_element": {
+                "type": "label",
+                "text": "onlinePlay.notRated",
+                "font_type": "dainbold",
+                "font_size": "large",
+                "text_alignment": "center",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 0 ]
+              }
+            }
+          ]
+        }
+      },
+      { "online_safety_desc": { "type": "label", "text": "onlinePlay.message", "anchor_from": "top_middle", "anchor_to": "top_middle", "layer": 1, "offset": [ 0, 30 ], "size": [ "100%", "default" ] }},
+      { "check_tick@aui-online_safety_screen.do_not_show_checkbox": { "offset": [ 0, 120 ] }},
+      { "button_stack": {
+          "type": "stack_panel",
+          "size": [ "default", 25 ],
+          "orientation": "horizontal",
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle",
+          "controls": [
+            { "online_safety_proceed_button@aui-button.light_text_button": { "size": [ 150, "default" ], "$pressed_button_name": "button.proceed", "$button_text": "onlinePlay.proceed" }},
+            { "space": { "type": "panel", "size": [ 4, "default" ] }},
+            { "online_safety_back_button@aui-button.light_text_button": { "size": [ 150, "default" ], "$pressed_button_name": "button.back", "$button_text": "onlinePlay.Back" }}
+          ]
+        }
+      }
+    ]
+  },
+  "root_contents": {
+    "type": "panel",
+    "$button_state_default_base": "common.button_state_default",
+    "$button_state_hover_base": "common.button_state_hover",
+    "$button_state_pressed_base": "common.button_state_pressed",
+    "controls": [
+      { "online_safety_screen_dialog@aui-online_safety_screen.online_safety_screen_dialog": {} },
+      { "gamepad_helpers@online_safety.gamepad_helpers": {} }
+    ]
+  }
+}

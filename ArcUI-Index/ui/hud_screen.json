@@ -1,0 +1,11 @@
+{
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "control_name": "mob_effects_renderer",
+        "operation": "remove"
+      }
+    ]
+  }
+}

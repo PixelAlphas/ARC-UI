@@ -1,0 +1,7 @@
+{
+  "play_screen@common.base_screen": {
+    "$screen_content": "aui-play_screen.root_contents",
+    "$screen_bg_content": "aui-common.menu_screen_background",
+    "$world_picker_screen": false
+  }
+}

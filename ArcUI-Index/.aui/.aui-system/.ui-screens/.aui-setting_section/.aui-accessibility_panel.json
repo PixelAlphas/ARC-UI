@@ -1,0 +1,204 @@
+{
+  "namespace": "aui-setting_accessibility",
+  "notification_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "label": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "options.notificationDuration.message",
+          "shadow": false,
+          "color": "$7_color_format"
+        }
+      },
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}},
+      { "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", 30 ],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "threesec@aui-setting_screen.dropdown_radio_button": {
+                "size": [ "fill", 30 ],
+                "$toggle_state_binding_name": "#notification_duration_radio_ThreeSec",
+                "$radio_label_text": "options.notificationDuration.ThreeSec"
+              }
+            },
+            {
+              "tensec@aui-setting_screen.dropdown_radio_button": {
+                "size": [ "fill", 30 ],
+                "$toggle_state_binding_name": "#notification_duration_radio_TenSec",
+                "$radio_label_text": "options.notificationDuration.TenSec"
+              }
+            },
+            {
+              "thirtysec@aui-setting_screen.dropdown_radio_button": {
+                "size": [ "fill", 30 ],
+                "$toggle_state_binding_name": "#notification_duration_radio_ThirtySec",
+                "$radio_label_text": "options.notificationDuration.ThirtySec"
+              }
+            }
+          ]
+        }
+      },
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
+    ]
+  },
+  "visuality_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      {
+        "option_toggle3@settings_common.option_toggle": {
+          "ignored": "(not $supports_flite_tts)",
+          "$option_label": "options.enableOpenChatMessage",
+          "$option_binding_name": "#enable_open_chat_message",
+          "$option_enabled_binding_name": "#enable_open_chat_message_enabled",
+          "$toggle_name": "enable_open_chat_message"
+        }
+      },
+      {
+        "camera_shake_toggle@settings_common.option_toggle": {
+          "ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
+          "$option_label": "options.screenShake",
+          "$option_binding_name": "#camera_shake",
+          "$option_enabled_binding_name": "#camera_shake_enabled",
+          "$toggle_name": "camera_shake"
+        }
+      },
+      {
+        "text_background_opacity_slider@aui-setting_screen.option_slider": {
+          "$option_label": "#text_background_opacity_slider_label",
+          "$slider_name": "text_background_opacity",
+          "$slider_value_binding_name": "#text_background_opacity",
+          "$slider_tts_text_value": "#text_background_opacity_text_value",
+          "$option_enabled_binding_name": "#text_background_opacity_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+      { "darkness_slider@aui-setting_screen.option_slider": {
+          "$option_label": "#darkness_slider_label",
+          "$slider_name": "darkness",
+          "$slider_value_binding_name": "#darkness",
+          "$slider_tts_text_value": "#darkness_text_value",
+          "$option_enabled_binding_name": "#darkness_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+      { "label": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "options.darknessEffectModifier.message",
+          "shadow": false,
+          "color": "$7_color_format"
+        }
+      },
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
+    ]
+  },
+  "text_to_speak_element": {
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "option_slider_0@aui-setting_screen.option_slider": {
+          "$option_label": "#texttospeech_volume_slider_label",
+          "$slider_name": "texttospeech_volume",
+          "$slider_value_binding_name": "#texttospeech_volume",
+          "$slider_tts_text_value": "#texttospeech_volume_text_value",
+          "$option_enabled_binding_name": "#texttospeech_volume_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+      {
+        "option_toggle0@settings_common.option_toggle": {
+          "ignored": "(not $supports_flite_tts or not $platform_tts_exists)",
+          "$option_label": "options.enableAutoPlatformTextToSpeech",
+          "$option_binding_name": "#enable_auto_text_to_speech",
+          "$option_enabled_binding_name": "#enable_auto_text_to_speech_enabled",
+          "$toggle_name": "enable_auto_text_to_speech"
+        }
+      },
+      {
+        "option_toggle1@settings_common.option_toggle": {
+          "ignored": "(not $supports_flite_tts)",
+          "$option_label": "options.enableUITextToSpeech",
+          "$option_binding_name": "#enable_ui_text_to_speech",
+          "$option_enabled_binding_name": "#enable_ui_text_to_speech_enabled",
+          "$toggle_name": "enable_ui_text_to_speech"
+        }
+      },
+      {
+        "option_toggle2@settings_common.option_toggle": {
+          "ignored": "(not $supports_flite_tts)",
+          "$option_label": "options.enableChatTextToSpeech",
+          "$option_binding_name": "#enable_chat_text_to_speech",
+          "$option_enabled_binding_name": "#enable_chat_text_to_speech_enabled",
+          "$toggle_name": "enable_chat_text_to_speech",
+          "bindings": [
+            {
+              "binding_name": "#not_hide_chat",
+              "binding_name_override": "#enabled"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "root_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "accessibility_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "text_to_speak_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_accessibility.text_to_speak_element", "$text": "Text To Speech Settings" }},
+      { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "visuality_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_accessibility.visuality_element", "$text": "Visuality Settings" }},
+      { "pudding02": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "notification_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_accessibility.notification_element", "$text": "options.notificationDuration" }},
+      { "pudding03": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "reset_button@aui-setting_screen.action_button": {
+          "ignored": "(not $is_pregame)",
+          "$pressed_button_name": "button.reset_settings",
+          "$button_text": "options.resetSettings",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+          "property_bag": {
+            "reset_group": "accessibility"
+          }
+        }
+      }
+    ]
+  }
+}

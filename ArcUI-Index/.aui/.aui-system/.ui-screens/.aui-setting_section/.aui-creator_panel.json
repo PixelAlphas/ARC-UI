@@ -1,0 +1,116 @@
+{
+  "namespace": "aui-setting_creator",
+  "content_log_location_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "content_log_location_label": {
+          "type": "label",
+          "text": "#text",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "layer": 1,
+          "hide_hyphen": true,
+          "color": "$7_color_format",
+          "bindings": [
+            {
+              "binding_name": "#content_log_location_text",
+              "binding_name_override": "#text"
+            },
+            {
+              "binding_name": "#content_log_file_enabled",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
+    ]
+  },
+  "option_content_log_element": {
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "option_content_file_log@aui-setting_screen.option_toggle": {
+          "$option_label": "options.content_log_file",
+          "$option_binding_name": "#content_log_file",
+          "$option_enabled_binding_name": "#content_log_file_enabled",
+          "$toggle_name": "content_log_file"
+        }
+      },
+      {
+        "option_content_gui_log@aui-setting_screen.option_toggle": {
+          "$option_label": "options.content_log_gui",
+          "$option_binding_name": "#content_log_gui",
+          "$option_enabled_binding_name": "#content_log_gui_enabled",
+          "$toggle_name": "content_log_gui"
+        }
+      },
+      {
+        "option_content_file_log@aui-setting_screen.option_toggle": {
+          "$option_label": "options.copyCoordinateUI",
+          "$option_binding_name": "#copy_coordinate_ui",
+          "$toggle_name": "copy_coordinate_ui"
+        }
+      },
+      {
+        "option_content_button_stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", 30 ],
+          "orientation": "horizontal",
+          "controls": [
+            { "open_content_log_history@aui-setting_screen.action_button": {
+                "$pressed_button_name": "button.open_content_log_history",
+                "$button_text": "contentlog.history.title",
+                "size": [ "50%", "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#content_log_gui_option_enabled",
+                    "binding_name_override": "#enabled"
+                  }
+                ]
+              }
+            },
+            {
+              "clear_content_log_files@aui-setting_screen.action_button": {
+                "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+                "$pressed_button_name": "button.clear_content_log_files",
+                "$button_text": "contentlog.clear_files",
+                "size": [ "50%", "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#allow_content_log_write_to_disk",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
+    ]
+  },
+  "root_section": {
+    "ignored": "$ignore_creator_section",
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      { "binding_type": "view", "source_control_name": "creator_button_toggle", "source_property_name": "#toggle_state", "target_property_name": "#visible" }
+    ],
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ "100%", 2 ] }},
+      { "option_content_log_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_creator.option_content_log_element", "$text": "Creator Settings" }},
+      { "pudding01": { "type": "panel", "size": [ "100%", 2 ] }},
+      { "content_log_location_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_creator.content_log_location_element", "$text": "contentlog.logLocationSectionName" }}
+    ]
+  }
+}

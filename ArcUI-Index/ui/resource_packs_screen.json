@@ -1,0 +1,20 @@
+{
+  "resource_packs_section_toggle_base@common_toggles.light_ui_toggle": {
+    "$button_size_override": [ "100%", "100% + 1px" ],
+    "$default_border_visible": false,
+    "$hover_border_visible": false,
+    "$button_image_fill": true,
+    "$default_checked_text_color": "$light_button_pressed_text_color",
+    "$default_text_color": "$light_button_pressed_text_color",
+    "$default_texture": ".aui/.aui-assets/buttons/global/black_button",
+    "$hover_texture": ".aui/.aui-assets/buttons/global/black_button_hover",
+    "$pressed_texture": ".aui/.aui-assets/buttons/global/black_button_pressed",
+    "$pressed_no_hover_texture": ".aui/.aui-assets/buttons/global/black_button_pressed"
+  },
+  "resource_packs_toggle_button_control/icon_border": {
+    "size": [ 22, 22 ]
+  },
+  "resource_packs_toggle_button_control/cycling_icon": {
+    "size": [ 20, 20 ]
+  }
+}

@@ -1,0 +1,6 @@
+{ "namespace": "auicore-configsource",
+  "element": { "type":"panel","$key":"Test","$ver":"1.0-Alpha",
+  "$Testvalue": true,
+  "$configname": "Default",
+  "$is_DebugMode": false
+}}

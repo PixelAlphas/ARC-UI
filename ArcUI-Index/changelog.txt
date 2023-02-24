@@ -1,0 +1,181 @@
+--- v1.0 Beta 1 Release (Feb 22, 2023) ---
+/*
+ * -- Changes stuff before closing --
+ * Few tweaks needs to be changed. and yes, new stuff too.
+*/
+
+[+] Added Content log history in ARC-UI treatment.
+[+] Added Toggle highlights for visibilities, controller/k&m
+    can see the toggle highlights now.
+[+] Quality life changes alongside with performance improvements
+[+] Fixed a bug where it can indefinitely kills the
+    setting screen ultimately making it useless
+[+] Fixed some issues with coordinate shortcuts on keyboard and
+    creator section
+[+] Added close (X) button on couple of screens for mobile user
+
+[=] Pause screen is tweaked to have the same offset as
+    start screen
+[=] Common elements changes for making development more
+    easier 
+[=] code cleaning
+
+[-] Disabled configuration system until I'll properly implement
+    it.
+
+--- v1.0 Pre-Beta Release (Feb 18, 2023) ---
+/*
+ * -- The beginnings --
+ * Finally, after 7 months of scraping works and many thing,
+ * ARC-UI is finally released on MCPEDL! Heres what new.
+ *
+*/
+
+- [ What's new? ] -
+[+] A Complete rework UI inspired by Valve's source game
+    built-in steam deck ui.
+[+] Every screen is bought in good feels of controller usage
+[+] Massive improvements into configuration system, although.
+    No functional features are being added until next update.
+[+] Massively optimized! using the less resources as possible
+    while maintaining vanilla feels.
+[+] A Rewrite from scratch, features that from previous
+    Arc-UI version is no longer exists. such as
+    - Huge configuration functionalities
+    - Better theme customization system
+    - the use of "contents.json"
+    - Better Play screen sections ( did a rewrite in this ver )
+    - Lynxsium/OverwhelmUI leftovers
+[+] Expect every screens has a function! :D
+
+- [ Important note ] -
+[=] Restart is required to take custom fonts in effect.
+[=] Pocket UI is not recommended, because this is built-in
+    Classic UI ( I hope i could support it in the future lols )
+[=] No Controller/Keyboard Icons on every screen.
+[=] Controller selection highlights is abit, not friendly yet.
+[=] Lawnmower is no longer there :(
+[=] Expect issues that can happens by the usage of controllers
+[=] Touch and Keyboard/Mouse is supported.
+
+
+
+
+
+--- v0.2 Alpha 1 Rewrite (Dec 14, 2022) ---
+/*
+ * -- Rewrite and Beyond Update --
+ * This update inculdes whole rewritten version of Arc-UI.
+ * as well recreate better configs and stuff for better
+ * optimiziton and massive improvement for low-end devices.
+ *
+ * Since i've switched from Acode to Neovim, i've able to
+ * create comments and massive improvement to my coding
+ * experience. which, result better productitiy.
+ *
+ * Expeft faster update and code improvement for mow.
+*/
+
+- [ Whats new? ] -
+[+] Complete rewrite from scratch.
+[+] Assets UI files may now switch from .json to .jsonc for
+    comments
+
+--- v0.1 Alpha 2.4 (Nov 27, 2022) ---
+/* -- UI Updates --
+ *
+ * Improvements to its stability and better visuality.
+ *
+*/
+
+[+] Added better visuals on play screen's tab,
+    added icons on selection buttons.
+[+] Friends/Realms section is finished!
+[+] Play screen are 80% completed!
+[+] Removed the background because i don't want any DMCA
+    - Background can be re-enabled, but you'll need
+      to use custom background via configuration.
+    - ^ same as blur background
+    - To prevent pink and black texture occurs when
+      background/blur is enabled, you'll see the
+      s t r e t c h e d   f r o g instead.
+[+] Optimizations and few tweaks.
+
+--- v0.1 Alpha 2.3 (Nov 23, 2022) ---
+/* -- UI Updates --
+ *
+ * Improvements to its stability, removed concepts art.
+ * few UI components are being added.
+ * No configuration update, this is purely play screen.
+*/
+
+[+] Play Screen - Added Tabs for allowing to play servers
+                  and realms. World screen is completed!
+[+] Play Screen 65% Complete
+[+] Optimized few UI's to work alot better
+[+] Added the concepts button fully in the play screen
+[+] Added Vanilla's controller scheme support
+
+--- v0.1 Alpha 2.2 (Nov 16, 2022) ---
+/* -- Re-working UI's --
+ *
+ * Improvements and concepts art are being added.
+ * Arcaea's background will be removed soon hopefully.
+ *
+*/
+[=] Play Screen (World Section) 85% Complete
+[=] Play Screen 15% Complete
+[+] Improvements to Play Screen
+[+] Added the concepts buttons
+[+] Moved Player Screen (World Section) to its 
+    own section folder.
+[+] Temporarily disabled "contents.json" order to make
+    development easier
+[+] Added Temporarily modified vanilla buttons
+[+] Removed couples of unused files
+
+--- v0.1 Alpha 2.1 (Nov 12, 2022) ---
+/* -- Re-working UI's --
+ *
+ * Improvements and bug fixes, Appearance's is added.
+ * Working alot with config system and introduction
+ * of world screen.
+ *
+*/
+[+] Enabled Play Screen (World Sector), should able to
+    play the world now.
+[+] Adjustments to incompatible backgrounds
+[+] Dialog Concepts.
+
+--- v0.1 Alpha 2 (Nov 10, 2022) ---
+/* -- Re-working UI's --
+ *
+ * Improvements and bug fixes, Appearance's is added.
+ * Working alot with config system and introduction
+ * of world screen.
+ *
+*/
+[+] Added/Modified World Screen.
+[+] Adjustments to kernel config.
+[+] Massive improvements to templates.
+[+] Added few customization in configuration.
+    > Menu backgrounds and blurs
+    > Custom backgrounds directory
+    > Custom blurs background directory
+    > Displays user xbox nametag
+[+] Optimizations.
+[+] Revamped config file to look more visually.
+
+--- v0.1 Alpha 1 (Oct 3, 2022) ---
+/* -- Initial Release for github. --
+ *
+ * Many features from config such as appearance aren't
+ * properly added. Don't issue for such unfinished
+ * features for now.
+ *
+*/
+[=] Modified Start Screen
+[=] Modified Kernel Config Checker
+[=] Added Debug screen for kernel
+[=] Added "contents.json" for better checking and
+    don't add any unnecessary files.

@@ -1,0 +1,172 @@
+{
+  "namespace": "aui-loading_screen",
+  "loading_spin_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 16,
+    "frame_step": 32,
+    "fps": 20,
+    "reversible": false,
+    "easing": "linear"
+  },
+  "loading_spin": {
+    "type": "image",
+    "texture": ".aui/.aui-assets/loadingharlow",
+    "size": [ 16, 16 ],
+    "uv_size": [ 16, 16 ],
+    "uv": "@aui-loading_screen.loading_spin_animation",
+    "disable_anim_fast_forward": true,
+    "bindings": [
+      { "binding_name": "#loading_spin_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "modal_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "modal_progress_panel@aui-loading_screen.modal_progress_panel": {}}
+    ]
+  },
+  "modal_progress_panel": {
+    "type": "panel",
+    "controls": [
+      { "progress_title_text@progress.progress_title_text": {
+          "font_size": "large",
+          "text": "#title_text",
+          "text_alignment": "center",
+          "offset": [ 0, -40 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "bindings": [ { "binding_name": "#title_text" }]
+        }
+      },
+      { "progress_bar_text@progress.progress_bar_text": {
+          "size": [ "100%", 20 ],
+          "offset": [ 0, -20 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text": "#progress_text",
+          "text_alignment": "center",
+          "bindings": [ { "binding_name": "#progress_text" }]
+        }
+      },
+      { "progress_bar@progress.progress_bar": {} },
+      { "loading_spin@aui-loading_screen.loading_spin": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -70 ],
+          "size": [ 32, 32 ]
+        }
+      }
+    ]
+  },
+  "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100% - 8px", 8 ],
+    "offset": [ 0, -2 ],
+    "controls": [
+      { "experience_bar_full@aui-common.experience_bar_full": { "layer": 2, "bindings": [{ "binding_name": "#loading_bar_percentage", "binding_name_override": "#clip_ratio" }]}},
+      { "experience_bar_empty@aui-common.experience_bar_empty": { "layer": 1 }},
+      { "loading_text": {
+          "type": "label",
+          "text": "Loading...",
+          "font_type": "MinecraftTen",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 0, -10 ]
+        }
+      }
+    ]
+  },
+  "cancel_button_world_loading@aui-loading_screen.cancel_button": { "size": [ 120, 25 ], "offset": [ -2, -12 ], "anchor_from": "bottom_right", "anchor_to": "bottom_right"},
+  "cancel_button@aui-button.light_text_button": { "$pressed_button_name": "button.menu_exit", "$button_text": "#cancel_button_text", "$button_text_binding_type": "global", "bindings": [ { "binding_name": "#cancel_visible", "binding_name_override": "#visible" }]},
+  "modal_progress_screen": { "$force_render_below": "$is_pregame", "$is_full_screen_layout": true },
+  "progress_title_world_panel": {
+    "type": "panel",
+    "controls": [
+      { "progress_title_text@progress.progress_title_text": {
+          "font_size": "large",
+          "text": "#title_text",
+          "text_alignment": "center",
+          "offset": [ 0, -40 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "bindings": [ { "binding_name": "#title_text" }]
+        }
+      },
+      { "progress_bar_text@progress.progress_bar_text": {
+          "size": [ "100%", 20 ],
+          "localize": false,
+          "offset": [ 0, -20 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text": "#progress_text",
+          "text_alignment": "center",
+          "bindings": [ { "binding_name": "#progress_text" }]
+        }
+      },
+      { "loading_spin@aui-loading_screen.loading_spin": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -70 ],
+          "size": [ 32, 32 ]
+        }
+      }
+    ]
+  },
+  "progress_title_world_panelold": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "95%", 70 ],
+    "controls": [
+      { "progress_title_text@progress.progress_title_text": {
+          "shadow": false,
+          "size": [ "100%", 20 ],
+          "font_size": "large",
+          "text": "#title_text",
+          "text_alignment": "left",
+          "bindings": [ { "binding_name": "#title_text" }]}},
+      { "progress_bar_text@progress.progress_bar_text": {
+          "shadow": false,
+          "size": [ "100%", 20 ],
+          "localize": false,
+          "text": "#progress_text",
+          "text_alignment": "left",
+          "bindings": [ { "binding_name": "#progress_text" }]}}]},
+  "world_modal_progress_panel@progress.world_modal_progress_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "base_content": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%", "100%" ],
+          "offset": [ 0, 0 ],
+          "controls": [
+            { "progress_title_world_panel@aui-loading_screen.progress_title_world_panel": { "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 4, -3 ]}},
+            { "fancy_progress_loading_bars@aui-loading_screen.fancy_progress_loading_bars": {}},
+            { "cancel_button_world_loading@aui-loading_screen.cancel_button_world_loading": { "bindings": [ { "binding_name": "#cancel_visible", "binding_name_override": "#visible" }]}}
+          ]
+        }
+      }
+    ]
+  },
+  "world_convert_modal_progress_screen_content": {
+    "type": "panel",
+    "layer": 3,
+    "controls": [
+      { "world_modal_progress_panel@aui-loading_screen.world_modal_progress_panel": {}},
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
+    ]
+  },
+  "world_save_modal_progress_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "world_modal_progress_panel@aui-loading_screen.world_modal_progress_panel": {}},
+      { "save_icon@lynxuicommon.lynxui_progressloadingbars": {}},
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
+    ]
+  }
+}

@@ -1,0 +1,724 @@
+{
+  "namespace": "aui-setting_screen",
+  "root_contents": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "status_bottom_bar@aui-common.status_bottom_bar": { "$auivar-screen_name": "\"Settings Screen\"", "$auivar-label_no_mcver": true }},
+      { "menu_title@aui-common.menu_title": { "$auivar-title_text": "SETTINGS" }},
+      { "close_button@common.close_button": {
+          "size": [ 8, 8 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -16, 12 ]
+        }
+      },
+      { "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100% - 60px" ],
+          "controls": [
+            {
+              "content_panel": {
+                "type": "panel",
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "container": {
+                      "type": "panel",
+                      "size": [ "100%-16px","100%" ],
+                      "controls": [
+                        { "$dialog_content@$dialog_content": {} }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "purchase_failed": "@realms_create.popup_dialog__purchase_failed",
+            "purchase_in_progress": "@realms_create.popup_dialog__purchase_in_progress",
+            "share_by_link": "@realms_allowlist.popup_dialog__share_by_link",
+            "options_modal": "@realms_allowlist.popup_dialog__options",
+            "backups_modal": "@realms_settings.popup_dialog__backups"
+          }
+        }
+      }
+    ]
+  },
+  "dialog_content": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "selector_area@settings_common.selector_area": {} },
+      { "content_area@settings_common.content_area": {} }
+    ]
+  },
+  "selector_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "orientation": "vertical",
+    "$default_selector_toggle_index": 0,
+    "ttsSectionContainer": true,
+    "controls": [
+      { "pudding00": { "ignored": "(not $include_world_section)", "type": "panel", "size": [ 2, 2 ]}},
+      { "buttons_panel": {
+          "type": "stack_panel",
+          "controls": [
+            { "header@aui-common.header": { "ignored": "(not $include_controls_and_settings_sections)", "$text": "Utilities" }},
+            { "world_selector_pane@aui-setting_screen.selector_pane_content": { "ignored": "(not $include_world_section)" }},
+            { "accessibility_button@aui-setting_screen.accessibility_button": { "$toggle_group_forced_index": "$accessibility_forced_index", "ignored": "(not $include_controls_and_settings_sections)" }},
+            { "creator_button@aui-setting_screen.creator_button": { "$toggle_group_forced_index": 100, "ignored": "(not $include_controls_and_settings_sections)" }},
+            { "about_button@aui-setting_screen.about_button": { "$toggle_group_forced_index": 101, "ignored": "(not $include_controls_and_settings_sections)" }},
+            { "realm_selector_panel@realms_settings.selector_panel": { "ignored": "(not $include_realm_section)", "$world_toggle_index": "$world_forced_index", "$members_toggle_index": "$members_forced_index", "$subscription_toggle_index": "$subscription_forced_index", "$backup_toggle_index": "$backup_forced_index", "$dev_options_toggle_index": "$dev_options_forced_index"}}
+          ]
+        }
+      },
+      {
+        "controls_and_settings_selector_pane": {
+          "type": "stack_panel",
+          "ignored": "(not $include_controls_and_settings_sections)",
+          "$controls_section_header": "options.group.input",
+          "$general_section_header": "stat.generalButton",
+          "controls": [
+            { "pudding00": { "type": "panel", "size": [ 2, 2 ] }},
+            { "header00@aui-common.header": { "$text": "Controls" }},
+            { "how_to_play_button@aui-setting_screen.how_to_play_button": { "$toggle_group_forced_index": "$how_to_play_index", "ignored": "(not $include_controls_and_settings_sections)" }},
+            { "keyboard_and_mouse_button@aui-setting_screen.keyboard_and_mouse_button": { "ignored": "(not $keyboard_and_mouse_supported)", "$toggle_group_forced_index": "$keyboard_and_mouse_forced_index", "$tts_section_header": "$controls_section_header" }},
+            { "controller_button@aui-setting_screen.controller_button": { "ignored": "(not $gamepad_supported or $nx_os)", "$toggle_group_forced_index": "$controller_and_switch_forced_index", "$tts_section_header": "$controls_section_header" }},
+            { "switch_controller_button@aui-setting_screen.controller_button": { "ignored": "(not $gamepad_supported or not $nx_os)", "$toggle_group_forced_index": "$controller_and_switch_forced_index", "$glyph_texture": ".aui/.aui-assets/icons/glyph/controller_glyph_switch", "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/controller_glyph_color_switch", "$tts_section_header": "$controls_section_header" }},
+            { "touch_button@aui-setting_screen.touch_button": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "$toggle_group_forced_index": "$touch_forced_index", "$tts_section_header": "$controls_section_header" }},
+            { "pudding01": { "type": "panel", "size": [ 2, 2 ] }},
+            { "header01@aui-common.header": { "$text": "Generals" }},
+            { "general_button@aui-setting_screen.general_button": { "$toggle_group_forced_index": "$general_forced_index", "$tts_section_header": "$general_section_header" }},
+            { "account_button@aui-setting_screen.account_button": { "$toggle_group_forced_index": "$account_forced_index", "$tts_section_header": "$general_section_header" }},
+            { "video_button@aui-setting_screen.video_button": { "$toggle_group_forced_index": "$video_forced_index", "$tts_section_header": "$general_section_header" }},
+            { "sound_button@aui-setting_screen.sound_button": { "$toggle_group_forced_index": "$sound_forced_index", "$tts_section_header": "$general_section_header" }},
+            { "global_texture_pack_button@general_section.global_texture_pack_button": { "ignored": "$ignore_global_resources_section", "$toggle_group_forced_index": "$global_texture_pack_forced_index", "visible": "($is_global_texture_packs_visible)", "$tts_section_header": "$general_section_header" }},
+            { "language_button@aui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index", "$tts_section_header": "$general_section_header" }}
+          ]
+        }
+      },
+      { "addons_selector_panel@aui-setting_screen.addons_selector_panel": { "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))", "$level_texture_pack_toggle_index": "$level_texture_pack_index", "$addon_toggle_index": "$addon_index" }}
+    ]
+  },
+  "section_content_panels": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100% - 4px", "100%c + 4px" ],
+    "offset": [ 2, 0 ],
+    "controls": [
+      {
+        "world_sections": {
+          "type": "stack_panel",
+          "ignored": "(not $include_world_section)",
+          "controls": [
+            { "game_section@world_section.game_section": {} },
+            { "server_section@world_section.server_section": {} },
+            { "multiplayer_section@world_section.multiplayer_section": {} }
+          ]
+        }
+      },
+      {
+        "packs_sections": {
+          "type": "stack_panel",
+          "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))",
+          "controls": [
+            { "level_texture_pack_section@world_section.level_texture_pack_section": {} },
+            { "addon_section@world_section.addon_section": {} }
+          ]
+        }
+      },
+      {
+        "general_and_controls_sections": {
+          "type": "stack_panel",
+          "ignored": "(not $include_controls_and_settings_sections)",
+          "controls": [
+            { "accessibility_section@aui-setting_accessibility.root_section": { "visible": false } },
+            { "about_section@aui-setting_about.root_section": { "visible": false } },
+            { "keyboard_and_mouse_section@aui-km_control.root_section": { "ignored": "(not $keyboard_and_mouse_supported)", "visible": false }},
+            { "controller_section@aui-gamepad_control.root_section": { "ignored": "(not $gamepad_supported)", "visible": false}},
+            { "touch_section@aui-touch_control.root_section": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "visible": false}},
+            { "general_tab_section@aui-setting_general.root_section": { "visible": false } },
+            { "account_section@aui-setting_account.root_section": { "visible": false } },
+            { "creator_section@aui-setting_creator.root_section": { "visible": false } },
+            { "sound_section@aui-setting_sound.root_section": { "visible": false } },
+            { "video_section@aui-setting_video.root_section": { "visible": false } },
+            { "how_to_play_section@aui-setting_htp.root_section": { "visible": false } },
+            { "language_section@aui-setting_lang.root_section": { "ignored": "(not $is_pregame)", "visible": false }},
+            { "global_texture_pack_section@general_section.global_texture_pack_section": { "visible": false, "ignored": "$ignore_global_resources_section" }}
+          ]
+        }
+      }
+    ]
+  },
+  "selector_pane_content": {
+    "type": "stack_panel",
+    "$tts_section_header": "realmsSettingsScreen.worldSectionTitle",
+    "variables": { "requires": "$is_pregame", "$tts_section_header": "options.editSettings" },
+    "controls": [
+      { "world_snapshot_image": {
+          "ignored": "(not $is_pregame)",
+          "type": "panel",
+          "size": [ "100%", "100%c + 2px" ],
+          "controls": [
+            { "thumbnail": {
+                "type": "image",
+                "force_texture_reload": true,
+                "size": [ "100% - 2px", "56.25%x + 2.25px" ],
+                "bilinear": true,
+                "layer": 2,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 1 ],
+                "fill": true,
+                "controls": [
+                  { "border": {
+                      "type": "image",
+                      "size": [ "100% + 2px", "100% + 2px" ],
+                      "texture": "textures/ui/BannersTransparent",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 1
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#world_texture_name",
+                    "binding_name_override": "#texture"
+                  },
+                  {
+                    "binding_name": "#world_texture_locationtype",
+                    "binding_name_override": "#texture_file_system"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "play_or_create_panel@aui-setting_screen.play_or_create_stack_bedrock": { "ignored": "(not $is_pregame or $education_edition)", "$button_text_max_size": [ "100%", 20 ] }},
+      { "upload_world_panel@aui-setting_screen.upload_world_stack_bedrock": { "ignored": "(not $is_pregame or $education_edition)", "$button_text_max_size": [ "100%", 20 ] }},
+      { "play_or_host_panel@world_section.play_or_host_stack_edu": {}},
+      { "spacer": { "type": "panel", "size": [ 0, 2 ] }},
+      { "server_settings_visibility_panel": {
+          "type": "stack_panel",
+          "bindings": [
+            {
+              "binding_name": "#server_settings_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "selector_group_label_0@settings_common.selector_group_label": {
+                "ignored": "($is_pregame)",
+                "text": "options.category.server"
+              }
+            },
+            {
+              "server_settings_button@world_section.server_settings_button": {
+                "ignored": "($is_pregame)",
+                "$toggle_group_forced_index": "$server_forced_index"
+              }
+            },
+            {
+              "server_spacer": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            }
+          ]
+        }
+      },
+      { "header00@aui-common.header": { "$text": "World", "ignored": "(not $is_pregame)" }},
+      { "game_button@aui-setting_screen.game_button": { "visible": "(not $education_edition_china)", "$toggle_group_forced_index": "$game_forced_index" }},
+      { "multiplayer_button@aui-setting_screen.multiplayer_button": { "visible": "(not $education_edition)", "$toggle_group_forced_index": "$multiplayer_forced_index" }}
+    ]
+  },
+  "section_header_panelste": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c" ]
+  },
+
+  "section_footer_panelste": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c" ]
+  },
+  "section_header_panels": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c" ],
+    "offset": [ 2, 0 ],
+    "controls": [
+      {
+        "world_sections": {
+          "type": "stack_panel",
+          "ignored": "(not $include_world_section)",
+          "controls": [
+          ]
+        }
+      }
+    ]
+  },
+
+  "section_footer_panels": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c" ],
+    "offset": [ 2, 0 ],
+    "controls": [
+      {
+        "world_sections": {
+          "type": "stack_panel",
+          "ignored": "(not $include_world_section)",
+          "controls": [
+          ]
+        }
+      }
+    ]
+  },
+  "play_or_create_stack_bedrock@world_section.launch_world_button_stack_def": {
+    "ignored": "(not $is_pregame or $education_edition)",
+    "controls": [
+      {
+        "create_or_play_button@aui-setting_screen.action_button": {
+          "size": [ "fill", 35 ],
+          "$button_text": "menu.play",
+          "default_focus_precedence": 1,
+          "$pressed_button_name": "play_world_button",
+          "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+          "variables": [
+            {
+              "requires": "(not $is_world_edit)",
+              "$button_text": "createWorldScreen.create",
+              "$pressed_button_name": "create_world_button"
+            }
+          ]
+        }
+      },
+      {
+        "play_on_realm_button@aui-setting_screen.action_button": {
+          "size": [ "50%", 35 ],
+          "ignored": "(not $is_pregame or $education_edition or $is_editor_mode_enabled)",
+          "$button_text_max_size": [ "100%", 25 ],
+          "$button_text": "menu.playOnRealms",
+          "$pressed_button_name": "play_world_on_realm_button",
+          "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+          "variables": [
+            {
+              "requires": "(not $is_world_edit)",
+              "$button_text": "createWorldScreen.createOnRealms",
+              "$pressed_button_name": "create_world_on_realm_button"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#create_on_realm_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "upload_world_stack_bedrock@world_section.launch_world_button_stack_def": {
+    "ignored": "(not $is_pregame or $education_edition)",
+    "controls": [
+      {
+        "upload_world_button@aui-setting_screen.action_button": {
+          "size": [ "fill", 35 ],
+          "$button_text": "createWorldScreen.upload",
+          "$pressed_button_name": "upload_world_button"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#upload_world_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "addons_selector_panel": {
+    "type": "stack_panel",
+    "$tts_section_header": "options.category.addons",
+    "visible": "(not $education_edition_china)",
+    "controls": [
+      { "header00@aui-common.header": { "$text": "Resources/Addons" }},
+      { "level_texture_pack_button@world_section.level_texture_pack_button": { "$toggle_group_forced_index": "$level_texture_pack_toggle_index" }},
+      { "addon_button@world_section.addon_button": { "$toggle_group_forced_index": "$addon_toggle_index" }}
+    ]
+  },
+  "multiplayer_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "multiplayer_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/multiplayer_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/multiplayer_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.group.multiplayer",
+    "$toggle_property_bag": {
+      "#panel_title": "createWorldScreen.multiplayer.settings"
+    }
+  },
+  "game_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "game_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/controller_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/controller_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.category.game",
+    "$toggle_property_bag": {
+      "#panel_title": "createWorldScreen.game.settings"
+    }
+  },
+  "general_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "general_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/general_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/general_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.general",
+    "$toggle_property_bag": {
+      "#panel_title": "options.generalTitle"
+    }
+  },
+  "account_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "account_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/account_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/account_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.account",
+    "$toggle_property_bag": {
+      "#panel_title": "options.accountTitle"
+    }
+  },
+  "about_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "arcuiabout_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/arcui_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/arcui_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "About/Changelog"
+  },
+  "creator_button@aui-toggle.section_toggle_base": {
+    "ignored": "$ignore_creator_section",
+    "$toggle_view_binding_name": "creator_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/creator_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/creator_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.creator",
+    "$toggle_property_bag": {
+      "#panel_title": "options.creatorTitle"
+    }
+  },
+  "accessibility_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "accessibility_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/accessibility_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/accessibility_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.accessibility",
+    "$toggle_property_bag": {
+      "#panel_title": "options.accessibility.title"
+    }
+  },
+  "profile_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "profile_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/profile_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/profile_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.profile",
+    "$toggle_property_bag": {
+      "#panel_title": "options.profileTitle"
+    }
+  },
+  "sound_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "sound_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/sound_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/sound_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.sounds",
+    "$toggle_property_bag": {
+      "#panel_title": "options.sounds.title"
+    }
+  },
+  "keyboard_and_mouse_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "keyboard_and_mouse_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/keyboard_and_mouse_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/keyboard_and_mouse_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.keyboardAndMouse",
+    "$toggle_property_bag": {
+      "#panel_title": "options.keyboardAndMouseSettings"
+    }
+  },
+  "touch_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "touch_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/touch_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/touch_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.touch",
+    "$toggle_property_bag": {
+      "#panel_title": "options.touchSettings"
+    }
+  },
+  "controller_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "controller_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/controller_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/controller_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.controller",
+    "$toggle_property_bag": {
+      "#panel_title": "options.controllerSettings"
+    }
+  },
+  "language_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "language_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/language_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/language_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.language",
+    "$toggle_property_bag": {
+      "#panel_title": "options.language"
+    }
+  },
+  "how_to_play_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "how_to_play_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/help_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/help_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "menu.howToPlay",
+    "visible": "(not $education_edition_china)",
+    "$toggle_property_bag": {
+      "#panel_title": "menu.howToPlay"
+    }
+  },
+  "video_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "video_button_toggle",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/video_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/video_glyph_color",
+    "$glyph_size": [ 22, 22 ],
+    "$button_text": "options.video",
+    "$toggle_property_bag": {
+      "#panel_title": "options.videoTitle"
+    }
+  },
+  "option_toggle@settings_common.option_generic": { "$control_name": "aui-toggle.option_toggle_control", "$one_line_layout": true },
+  "option_slider@settings_common.option_generic": { "$control_name": "aui-setting_screen.option_slider_control" },
+  "option_custom_control@settings_common.option_generic": {},
+  "action_button@aui-button.light_text_button": {
+    "$pressed_button_name|default": "unset_button_name",
+    "$button_text|default": "unset $button_text",
+    "size": [ "100%", 30 ],
+    "anchor_from": "center",
+    "anchor_to": "center"
+  },
+  "link_button@aui-button.hyperlink_button": {
+    "$button_text|default": "unset $button_text",
+    "size": [ "100%", 30 ],
+    "$button_size_override": [ "100%", "100% + 1px" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "property_bag": {
+      "#hyperlink": "unset #hyperlink in property_bag"
+    }
+  },
+  "arrow_reset": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 8, 8 ],
+    "offset": [ 0, -1 ],
+    "texture": ".aui/.aui-assets/icons/reset"
+  },
+  "reset_binding_button@aui-button.dark_glyph_style": {
+    "layer": 1,
+    "$button_content": "aui-setting_screen.arrow_reset",
+    "$pressed_button_name": "button.reset_binding"
+  },
+  "binding_button@aui-button.light_content_button": {
+    "$pressed_button_name": "button.binding_button",
+    "$button_content": "controls_section.binding_button_content",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$keymapping_collection"
+      }
+    ]
+  },
+  "image_binding_button@aui-button.light_content_button": {
+    "$pressed_button_name": "button.binding_button",
+    "$button_content": "aui-setting_screen.image_binding_button_content",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$keymapping_collection"
+      }
+    ]
+  },
+
+  "image_binding_button_content@common_buttons.button_content_panel": {
+    "controls": [
+      {
+        "base_icon_image": {
+          "type": "image",
+          "size": [ 26, 26 ],
+          "layer": 1,
+          "$gameplay_key_icon|default": "#binding_icon_sprite",
+          "bindings": [
+            {
+              "binding_name": "$gameplay_key_icon",
+              "binding_name_override": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "$keymapping_collection"
+            }
+          ]
+        }
+      },
+      {
+        "default_label@common.new_button_label": {
+          "text": "#binding_button_text",
+          "bindings": [
+            {
+              "binding_name": "#binding_button_text",
+              "binding_type": "collection",
+              "binding_collection_name": "$keymapping_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "option_slider_control": {
+    "type": "panel",
+    "size": [ "100%", 10 ],
+    "controls": [
+      {
+        "slider@aui-common.slider": {
+          "$slider_box_size": [ 10, 10 ],
+          "$auivar-slideroffset|default": [ 0, 0 ],
+          "$auivar-slidersize|default": [ "100%", 10 ],
+          "$auivar-slideranchor|default": "center",
+          "size": "$auivar-slidersize",
+          "offset": "$auivar-slideroffset",
+          "anchor_from": "$auivar-slideranchor",
+          "anchor_to": "$auivar-slideranchor",
+          "$option_label|default": "",
+          "$slider_tts_header": "$option_label",
+          "$slider_tts_header_binding_type": "global",
+          "enabled": "$enabled",
+          "$slider_enabled_binding_name": "$option_enabled_binding_name",
+          "$slider_enabled_binding_type": "global",
+          "variables": [
+            {
+              "requires": "(not $option_enabled_binding_name or not $enabled)",
+              "$slider_enabled_binding_name": "#not_data_bound",
+              "$slider_enabled_binding_type": "none"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "dropdown_radio_button@settings_common.option_generic": {
+    "controls": [
+      { "radio_with_label_core@aui-setting_screen.radio_with_label_core": {
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+  "radio_with_label": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "fill", "30px" ],
+    "$enabled|default": true,
+    "controls": [
+      { "radio_with_label_core@aui-setting_screen.radio_with_label_core": {} }
+    ]
+  },
+  "radio_with_label_core@common.radio_toggle": {
+    "$unchecked_control|default": "aui-setting_screen.radio_visualsunchecked",
+    "$checked_control|default": "aui-setting_screen.radio_visualschecked",
+    "$unchecked_hover_control|default": "aui-setting_screen.radio_visualsuncheckedhover",
+    "$checked_hover_control|default": "aui-setting_screen.radio_visualscheckedhover",
+    "$unchecked_locked_control|default": "aui-setting_screen.radio_visualsuncheckedlocked",
+    "$unchecked_locked_hover_control|default": "aui-setting_screen.radio_visualsuncheckedlocked",
+    "$checked_locked_control|default": "aui-setting_screen.radio_visualscheckedlocked",
+    "$checked_locked_hover_control|default": "aui-setting_screen.radio_visualscheckedlocked",
+    "$radio_toggle_group": true,
+    "size": [ "100%", "100%c" ],
+    "$toggle_name|default": "$toggle_state_binding_name",
+    "$toggle_enabled_binding_name": "$option_enabled_binding_name",
+    "enabled": "$enabled",
+    "$toggle_enabled_binding_type": "global",
+    "variables": [
+      {
+        "requires": "(not $option_enabled_binding_name or not $enabled)",
+        "$toggle_enabled_binding_name": "#not_data_bound",
+        "$toggle_enabled_binding_type": "none"
+      }
+    ]
+  },
+  "radio_visuals": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$auivar-radioalpha|default": 1,
+    "$radio_label_bindings|default": [],
+    "$radio_label_color|default": "$main_header_text_color",
+    "$radio_label_font_type|default": "default",
+    "$radio_anchor|default": "top_left",
+    "anchor_from": "$radio_anchor",
+    "anchor_to": "$radio_anchor",
+    "controls": [
+      { "lynxui_radioimage": {
+          "type": "image",
+          "texture": "$radio_texture",
+          "alpha": "$auivar-radioalpha",
+          "layer": 1,
+          "size": [ "100%", "100%" ]
+        }
+      },
+      { "lynxui_radiolabel": {
+          "type": "label",
+          "text": "$radio_label_text",
+          "font_type": "$radio_label_font_type",
+          "color": "$radio_label_color",
+          "size": [ "100% - 10px", "default" ],
+          "alpha": "$auivar-radioalpha",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "text_alignment": "center",
+          "$auivar-offset|default": [ 0, 0 ],
+          "offset": "$auivar-offset",
+          "layer": 2,
+          "$is_pressed|default": false,
+          "bindings": "$radio_label_bindings",
+          "variables": [
+            {
+              "requires": "$is_pressed",
+              "$auivar-offset": [ 0, 1 ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "radio_visualsunchecked@aui-setting_screen.radio_visuals": { "$radio_texture": ".aui/.aui-assets/toggles/global/idle", "$radio_label_color": "$7_color_format" },
+  "radio_visualsuncheckedhover@aui-setting_screen.radio_visuals": { "$radio_texture": ".aui/.aui-assets/toggles/global/hover", "$radio_label_color": "$light_button_hover_text_color" },
+  "radio_visualsuncheckedlocked@aui-setting_screen.radio_visuals": { "$radio_texture": ".aui/.aui-assets/toggles/global/idle", "$radio_label_color": "$light_button_pressed_text_color" },
+  "radio_visualschecked@aui-setting_screen.radio_visuals": { "$radio_texture": ".aui/.aui-assets/toggles/global/pressed", "$radio_label_color": "$light_button_pressed_text_color", "$is_pressed": true },
+  "radio_visualscheckedhover@aui-setting_screen.radio_visuals": { "$radio_texture": ".aui/.aui-assets/toggles/global/pressedhover", "$radio_label_color": "$light_button_hover_text_color", "$is_pressed": true },
+  "radio_visualscheckedlocked@aui-setting_screen.radio_visuals": { "$radio_texture": ".aui/.aui-assets/toggles/global/pressed", "$radio_label_color": "$light_button_default_text_color", "$is_pressed": true }
+}

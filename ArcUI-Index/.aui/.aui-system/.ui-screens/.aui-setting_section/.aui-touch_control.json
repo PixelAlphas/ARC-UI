@@ -408,7 +408,7 @@
       { "pudding00": { "type": "panel", "size": ["100%", 2] } },
       { "touch_scheme_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-touch_control.touch_scheme_element", "$text": "options.controlMode.title" }},
       { "pudding01": { "type": "panel", "size": ["100%", 2] } },
-      { "touch_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-touch_control.touch_element", "$text": "Touch Controls Settings" }},
+      { "touch_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-touch_control.touch_element", "$text": "arc-ui.settingtitle.touch" }},
       { "pudding02": { "type": "panel", "size": ["100%", 2] } },
       { "reset_button@aui-setting_screen.action_button": {
           "$pressed_button_name": "button.reset_touch_bindings",

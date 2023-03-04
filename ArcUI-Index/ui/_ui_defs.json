@@ -29,6 +29,7 @@
     ".aui/.aui-system/.ui-screens/.aui-pause_screen.json",
 
   // /* - UI System Templates
+    ".aui/.aui-system/.ui-templates/.aui-anim.json",
     ".aui/.aui-system/.ui-templates/.aui-common.json",
     ".aui/.aui-system/.ui-templates/.aui-button.json",
     ".aui/.aui-system/.ui-templates/.aui-toggle.json"

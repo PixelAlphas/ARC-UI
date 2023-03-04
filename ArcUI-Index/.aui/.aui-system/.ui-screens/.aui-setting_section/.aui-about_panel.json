@@ -1,5 +1,43 @@
 {
   "namespace": "aui-setting_about",
+  "changelog_element@auicore_configloader.core": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "label010": {
+          "type": "label",
+          "ignored": "(not $show_changelog)",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "arc-ui.setting.changelogtitle.enabled",
+          "shadow": false
+        }
+      },
+      { "label011": {
+          "type": "label",
+          "ignored": "$show_changelog",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "arc-ui.setting.changelogtitle.disabled",
+          "shadow": false
+        }
+      },
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}},
+      { "label010": {
+          "type": "label",
+          "ignored": "(not $show_changelog)",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "arc-ui.setting.changelogdesc.001",
+          "shadow": false
+        }
+      },
+      { "pudding02": { "type": "panel", "size": [ 1, 10 ]}}
+    ]
+  },
   "config_element@auicore_configloader.core": { 
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
@@ -11,7 +49,7 @@
           "type": "label",
           "size": [ "100%", "default" ],
           "max_size": [ "100%", "default" ],
-          "text": "Configuration Details",
+          "text": "arc-ui.settingtitle.changelog.config",
           "shadow": false
         }
       },
@@ -47,8 +85,8 @@
           "$valuetext|default": "§cINVAILD VALUES",
           "shadow": false,
           "variables": [
-            { "requires": "($Testvalue)", "$valuetext": "('§7- Test Values : ' + '§aTrue')" },
-            { "requires": "(not $Testvalue)", "$valuetext": "('§7- Test Values : ' + '§cFalse')" }
+            { "requires": "($Testvalue)", "$valuetext": "('§a█§7 Test Values : ' + '§aTrue')" },
+            { "requires": "(not $Testvalue)", "$valuetext": "('§c█§7 Test Values : ' + '§cFalse')" }
           ]
         }
       },
@@ -60,9 +98,112 @@
           "$valuetext|default": "§cINVAILD VALUES",
           "shadow": false,
           "variables": [
-            { "requires": "($is_DebugMode)", "$valuetext": "('§7- Debug mode : ' + '§aTrue')" },
-            { "requires": "(not $is_DebugMode)", "$valuetext": "('§7- Debug mode : ' + '§cFalse')" }
+            { "requires": "($show_changelog)", "$valuetext": "('§a█§7 Shows update changelog in about menu : ' + '§aTrue')" },
+            { "requires": "(not $show_changelog)", "$valuetext": "('§c█§7 Shows update changelog in about menu : ' + '§cFalse')" }
           ]
+        }
+      },
+      {
+        "labelstack01": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 10 ],
+          "controls": [
+            {
+              "label01": {
+                "type": "label",
+                "text": "█ ",
+                "alpha": "$bottom_bar_background_alpha"
+              }
+            },
+            {
+              "label02": {
+                "type": "label",
+                "text": "('§7< Status bar alpha (' + $bottom_bar_background_alpha + ')')"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "labelstack02": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 10 ],
+          "controls": [
+            {
+              "label01": {
+                "type": "label",
+                "text": "█ ",
+                "color": "$bottom_bar_background_color"
+              }
+            },
+            {
+              "label02": {
+                "type": "label",
+                "text": "§7< Status bar color"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "labelstack03": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 10 ],
+          "controls": [
+            {
+              "label01": {
+                "type": "label",
+                "text": "█ ",
+                "color": "$bottom_bar_font_color"
+              }
+            },
+            {
+              "label02": {
+                "type": "label",
+                "text": "§7< Status bar color [Label/Font]"
+              }
+            }
+          ]
+        }
+      },
+      { "label07": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "('§7- Status bar font-type : §f' + $bottom_bar_font_type)",
+          "shadow": false
+        }
+      },
+      { "label08": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUES",
+          "shadow": false,
+          "variables": [
+            { "requires": "($moving_lawnmower)", "$valuetext": "('§a█§7 Moving lawnmower : ' + '§aTrue')" },
+            { "requires": "(not $moving_lawnmower)", "$valuetext": "('§c█§7 Moving lawnmower : ' + '§cFalse')" }
+          ]
+        }
+      },
+      { "label09": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "('§7- Lawnmower speed : §f' + $ml_speed)",
+          "shadow": false
+        }
+      },
+      { "label10": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "('§7- Custom lawnmower image path : §f' + $ml_custom_image)",
+          "shadow": false
         }
       },
       { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
@@ -82,11 +223,124 @@
           "type": "label",
           "size": [ "100%", "default" ],
           "max_size": [ "100%", "default" ],
-          "text": "Arc-UI Version\n§7- v1.0-beta2§7\n- Feb 25, 2023 §g[ Build date ]§7\n- 1.19.62 §g[ Currently Developed in ]",
+          "text": "Arcdustry-UI (ARC-UI) Version\n§7- v1.0-beta-2§7\n- Mar 2, 2023 §g[ Build date ]§7\n- 1.19.62 §g[ Currently Developed in ]",
           "shadow": false
         }
       },
       { "pudding03": { "type": "panel", "size": [ 1, 10 ]}},
+      { "media": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "mcpedl": {
+                "type": "panel",
+                "size": [ "100%", 20 ],
+                "controls": [
+                  {
+                    "logo": {
+                      "type": "image",
+                      "size": [ 22, 22 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "texture": ".aui/.aui-assets/icons/mcpedllogo"
+                    }
+                  },
+                  {
+                    "label01": {
+                      "type": "label",
+                      "text": "MCPEDL Profile",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [ 28, -5 ]
+                    }
+                  },
+                  {
+                    "label02": {
+                      "type": "label",
+                      "text": "§7mcpedl.com/arcdustry",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [ 28, 5 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "discord": {
+                "type": "panel",
+                "size": [ "100%", 20 ],
+                "controls": [
+                  {
+                    "logo": {
+                      "type": "image",
+                      "size": [ 22, 22 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "texture": ".aui/.aui-assets/icons/discordlogo"
+                    }
+                  },
+                  {
+                    "label01": {
+                      "type": "label",
+                      "text": "Discord Profile/DM",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [ 28, -5 ]
+                    }
+                  },
+                  {
+                    "label02": {
+                      "type": "label",
+                      "text": "§7Pixel#7591",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [ 28, 5 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "youtube": {
+                "type": "panel",
+                "size": [ "100%", 20 ],
+                "controls": [
+                  {
+                    "logo": {
+                      "type": "image",
+                      "size": [ 22, 22 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "texture": ".aui/.aui-assets/icons/ytlogo"
+                    }
+                  },
+                  {
+                    "label01": {
+                      "type": "label",
+                      "text": "YouTube",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [ 28, -5 ]
+                    }
+                  },
+                  {
+                    "label02": {
+                      "type": "label",
+                      "text": "§7youtube.com/@ArcthesiaHarlow",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [ 28, 5 ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "pudding04": { "type": "panel", "size": [ 1, 10 ]}},
       { "label01": {
           "type": "label",
           "size": [ "100%", "default" ],
@@ -95,7 +349,7 @@
           "shadow": false
         }
       },
-      { "pudding04": { "type": "panel", "size": [ 1, 10 ]}}
+      { "pudding05": { "type": "panel", "size": [ 1, 10 ]}}
     ]
   },
   "root_section": {
@@ -113,9 +367,11 @@
     ],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "about_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_about.about_element", "$text": "About ARC-UI" }},
+      { "about_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_about.about_element", "$text": "arc-ui.settingtitle.about" }},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "config_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_about.config_element", "$text": "Configuration" }}
+      { "config_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_about.config_element", "$text": "arc-ui.settingtitle.about-config" }},
+      { "pudding02": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "changelog_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_about.changelog_element", "$text": "arc-ui.settingtitle.about-changelog" }}
     ]
   }
 }

@@ -220,7 +220,7 @@
     ],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "keyboard_and_mouse_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-km_control.keyboard_and_mouse_element", "$text": "Keyboard & mouse settings" }},
+      { "keyboard_and_mouse_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-km_control.keyboard_and_mouse_element", "$text": "arc-ui.settingtitle.keyboardandmouse" }},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
       { "keyboard_keymap_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-km_control.keyboard_keymap_element", "$text": "options.keyboardLayout", "bindings": [{ "binding_name": "#keyboard_show_standard_keyboard_options", "binding_name_override": "#visible" }]}},
       { "keyboard_keymap_full_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-km_control.keyboard_keymap_full_element", "$text": "options.fullKeyboardLayout", "bindings": [{ "binding_name": "#keyboard_show_full_keyboard_options", "binding_name_override": "#visible" }]}},

@@ -6,7 +6,7 @@
     "$toggle_view_binding_name|default": "this_toggle",
     "$template_toggle|default": "common_toggles.light_template_toggle",
     "$default_border_visible": false,
-    "$hover_border_visible": false,
+    "$hover_border_visible": true,
     "$pressed_border_visible": false,
     "$locked_border_visible": false,
     "$button_image_size": [ "100%", "100%" ],

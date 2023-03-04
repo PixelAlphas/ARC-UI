@@ -183,9 +183,9 @@
     ],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "text_to_speak_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_accessibility.text_to_speak_element", "$text": "Text To Speech Settings" }},
+      { "text_to_speak_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_accessibility.text_to_speak_element", "$text": "arc-ui.settingtitle.accessibility-tts" }},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "visuality_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_accessibility.visuality_element", "$text": "Visuality Settings" }},
+      { "visuality_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_accessibility.visuality_element", "$text": "arc-ui.settingtitle.accessibility-visuality" }},
       { "pudding02": { "type": "panel", "size": [ "100%", 2 ]}},
       { "notification_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_accessibility.notification_element", "$text": "options.notificationDuration" }},
       { "pudding03": { "type": "panel", "size": [ "100%", 2 ]}},

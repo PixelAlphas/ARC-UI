@@ -13,6 +13,21 @@
       }
     ]
   },
+  "lawnmower@auicore_configloader.core": { 
+    "type": "panel",
+    "controls": [
+      { "ihatethissomuch": {
+          "type": "image",
+          "ignored": "(not ($moving_lawnmower))",
+          "texture": "$ml_custom_image",
+          "size": [ "30%", "30%" ],
+          "anchor_to": "right_middle",
+          "anchor_from": "right_middle",
+          "offset": "@aui-anim.lawnmowermoving"
+        }
+      }
+    ]
+  },
   "title_logo": {
     "type": "image",
     "texture": "textures/ui/title",
@@ -193,11 +208,11 @@
           "controls": [
             { "contentline": {
                 "type": "image",
-                "size": [ "100% + 2px", 1 ],
+                "size": [ "100% + 4px", 1 ],
                 "texture": "textures/ui/White",
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
-                "offset": [ -0.5, 13 ]
+                "offset": [ 0.5, 13 ]
               }
             }
           ]
@@ -320,28 +335,26 @@
       }
     ]
   },
-  "status_bottom_bar": {
+  "status_bottom_bar@auicore_configloader.core": {
     "type": "panel",
     "$auivar-bar_texture|default": "textures/ui/White",
-    "$auivar-bar_alpha|default": 0.0,
     "$auivar-bar_contents|default": "",
     "$auivar-logo_texture|default": ".aui/.aui-assets/harlowlogo",
-    "$auivar-bar_label_cf|default": "$f_color_format",
-    "$auivar-ver_text|default": "Arc-UI Beta 1 [v1.0-beta2]",
+    "$auivar-ver_text|default": "Arcdustry-UI [ v1.0-beta-2 ]",
     "$auivar-screen_name|default": "\"Unknown\"",
     "$auivar-label_no_mcver|default": false,
-    "$auivar-label_font|default": "kazesawa",
     "controls": [
       {
         "texture_bar": {
           "type": "image",
           "texture": "$auivar-bar_texture",
+          "color": "$bottom_bar_background_color",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "125%", 100 ],
           "offset": [ 0, 80 ],
           "layer": -2,
-          "alpha": "$auivar-bar_alpha"
+          "alpha": "$bottom_bar_background_alpha"
         }
       },
       {
@@ -357,38 +370,38 @@
       {
         "ui_ver_label": {
           "type": "label",
-          "color": "$auivar-bar_label_cf",
+          "color": "$bottom_bar_font_color",
           "text": "$auivar-ver_text",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": "$auivar-ver_offset",
           "$auivar-ver_offset|default": [ 22, -8.5 ],
-          "font_type": "$auivar-label_font"
+          "font_type": "$bottom_bar_font_type"
         }
       },
       {
         "screen_name": {
           "type": "label",
           "visible": "$auivar-label_no_mcver",
-          "color": "$auivar-bar_label_cf",
+          "color": "$bottom_bar_font_color",
           "text": "$auivar-screen_name",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [ 22, -2 ],
           "font_scale_factor": 0.75,
-          "font_type": "$auivar-label_font"
+          "font_type": "$bottom_bar_font_type"
         }
       },
       {
         "mc_ver_label": {
           "type": "label",
-          "color": "$auivar-bar_label_cf",
+          "color": "$bottom_bar_font_color",
           "text": "#text",
           "ignored": "$auivar-label_no_mcver",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [ 22, -2 ],
-          "font_type": "$auivar-label_font",
+          "font_type": "$bottom_bar_font_type",
           "font_scale_factor": 0.75,
           "bindings": [
             { "binding_name": "#version" },
@@ -399,7 +412,6 @@
           ]
         }
       },
-      // leaving this for controller/keyboard tooltips
       { "contents@$auivar-bar_contents": {}}
     ]
   }

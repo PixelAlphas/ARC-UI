@@ -15,7 +15,7 @@
     ],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "sound_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_sound.sound_element", "$text": "Sound Settings" }},
+      { "sound_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_sound.sound_element", "$text": "arc-ui.settingtitle.sound" }},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
       { "reset_button@aui-setting_screen.action_button": {
           "ignored": "(not $is_pregame)",

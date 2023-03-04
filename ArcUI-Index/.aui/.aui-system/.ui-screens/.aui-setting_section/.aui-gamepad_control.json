@@ -228,7 +228,7 @@
     ],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "gamepad_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-gamepad_control.gamepad_element", "$text": "Controller settings" }},
+      { "gamepad_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-gamepad_control.gamepad_element", "$text": "arc-ui.settingtitle.gamepad" }},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
       { "gamepad_keymap_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-gamepad_control.gamepad_keymap_element", "$text": "options.controllerLayout" }},
       { "pudding02": { "type": "panel", "size": [ "100%", 2 ]}},

@@ -1,6 +1,20 @@
-{ "namespace": "auicore-configsource",
-  "element": { "type":"panel","$key":"Test","$ver":"1.0-Alpha",
-  "$Testvalue": true,
-  "$configname": "Default",
-  "$is_DebugMode": false
+{ "namespace": "auicore-configsource", "element": { "type":"panel","$key":"i_like_my_chair","$ver":"1.0-Beta2",
+  
+  // bottom bar lists :D
+  "$bottom_bar_background_alpha": 0, // transparent ( 0-1 ) [ Default : 0 ]
+  "$bottom_bar_background_color": [ 1, 1, 1, 0 ], // RBG values but divided by 1 | can be adjusted by use of variables
+  "$bottom_bar_font_color": "$f_color_format", // RBG values but divided by 1 | can be adjusted by use of variables
+  "$bottom_bar_font_type": "kazesawa", // fonts, can crash if not usin it correctly [ Default : "kazasawa" ]
+                                       // Available fonts - kazesawa, dainbold, MinecraftTen and default
+  
+  // Common settings
+  "$configname": "Default", // Your configurations name. no impact in gameplay
+  "$Testvalue": true, // literally what it said. [ Default : true ]
+  "$show_changelog": false, // displays changelog in "About/Changelog" settings section.
+                          // Default : true
+                          // note - it is implemented, but too lazy to literally insert the entirety of changelog
+                          //        on this yet
+  "$moving_lawnmower": false, // lawnmower on your start screen. [ Default : false ]
+  "$ml_speed": 10, // speed of lawnmower. the less value, the FASTEST its moving. [ Default : 10 ]
+  "$ml_custom_image": ".aui/.aui-assets/lawnmower" // custom image for lawnmower
 }}

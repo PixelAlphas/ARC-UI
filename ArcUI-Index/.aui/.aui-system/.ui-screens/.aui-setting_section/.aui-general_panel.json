@@ -7,18 +7,6 @@
     "anchor_to": "top_middle",
     "controls": [
       { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
-      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}},
-      { "label01": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "§c§l/!\\ §r§7Just a head up, This section is yet unfinished and unpolished due to it's porting. any suggestions are really appreciated!",
-          "shadow": false
-        }
-      },
-      { "pudding02": { "type": "panel", "size": [ 1, 10 ]}},
-      { "pudding_line@aui-common.pudding_line": {}},
-      { "pudding021": { "type": "panel", "size": [ 1, 10 ]}},
       { "cross_platform_enabled_toggle@settings_common.option_toggle": {
           "ignored": "(not $supports_cross_platform_play_toggle)",
           "$option_label": "options.crossPlatformPlay",
@@ -82,91 +70,7 @@
           "$focus_override_down": "FOCUS_OVERRIDE_STOP"
         }
       },
-      {
-        "build_info_label_panel": {
-          "type": "stack_panel",
-          "size": [ "100%", "100%c" ],
-          "controls": [
-            {
-              "build_id_label": {
-                "type": "label",
-                "color": "$body_text_color",
-                "offset": [ 2, 0 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "text": "#build_id",
-                "bindings": [
-                  {
-                    "binding_name": "#build_id"
-                  }
-                ]
-              }
-            },
-            {
-              "protocol_version_label": {
-                "type": "label",
-                "color": "$body_text_color",
-                "offset": [ 2, 0 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "text": "#protocol_version",
-                "bindings": [
-                  {
-                    "binding_name": "#protocol_version"
-                  }
-                ]
-              }
-            },
-            {
-              "treatment_ids_label": {
-                "type": "label",
-                "color": "$body_text_color",
-                "offset": [ 2, 0 ],
-                "size": [ "100%", "default" ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "text": "#treatment_ids",
-                "bindings": [
-                  {
-                    "binding_name": "#treatment_ids"
-                  }
-                ]
-              }
-            },
-            {
-              "build_date_label": {
-                "type": "label",
-                "color": "$body_text_color",
-                "offset": [ 2, 0 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "text": "#build_date",
-                "bindings": [
-                  {
-                    "binding_name": "#build_date"
-                  }
-                ]
-              }
-            },
-            {
-              "world_converter_label": {
-                "type": "label",
-                "color": "$body_text_color",
-                "offset": [ 2, 0 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "text": "#world_conversion_version",
-                "bindings": [
-                  {
-                    "binding_name": "#world_conversion_version"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      { "pudding03": { "type": "panel", "size": [ 1, 10 ]}}
+      { "pudding01": { "type": "panel", "size": [ "100%", 10 ]}}
     ]
   },
   "auto_update_mode_element": {
@@ -212,7 +116,7 @@
           ]
         }
       },
-      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
+      { "pudding01": { "type": "panel", "size": [ "100%", 10 ]}}
     ]
   },
   "root_section": {

@@ -249,7 +249,7 @@
           "type": "label",
           "size": [ "100%", "default" ],
           "max_size": [ "100%", "default" ],
-          "text": "§7§oThese features are experiments and not meant to be used on almost every platforms, this can cause several visuals issues, performance downgraded and crashes. Be cautious about it!",
+          "text": "arc-ui.setting.video-experiment.warn",
           "shadow": false
         }
       },
@@ -502,11 +502,11 @@
     ],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "ui_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_video.ui_element", "$text": "Interface Settings" }},
+      { "ui_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_video.ui_element", "$text": "arc-ui.settingtitle.video-interface" }},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "video_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_video.video_element", "$text": "Graphical Settings" }},
+      { "video_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_video.video_element", "$text": "arc-ui.settingtitle.video-graphic" }},
       { "pudding02": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "video_exp_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_video.video_exp_element", "$text": "Experiment features" }},
+      { "video_exp_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_video.video_exp_element", "$text": "arc-ui.settingtitle.video-experiment" }},
       { "pudding03": { "type": "panel", "size": [ "100%", 2 ]}},
       { "reset_button@aui-setting_screen.action_button": {
           "ignored": "(not $is_pregame)",

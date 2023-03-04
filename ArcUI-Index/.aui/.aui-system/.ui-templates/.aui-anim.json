@@ -1,0 +1,11 @@
+{
+  "namespace": "aui-anim",
+  "lawnmowermoving": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": "$ml_speed",
+    "from": [ "150%", "20%" ],
+    "to": [ "-150%", "20%" ],
+    "next": "@aui-anim.lawnmowermoving"
+  }
+}

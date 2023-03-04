@@ -53,7 +53,7 @@
     ],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "htp_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_htp.htp_element", "$text": "How to play...?" }}
+      { "htp_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_htp.htp_element", "$text": "arc-ui.settingtitle.howtoplay" }}
     ]
   }
 }

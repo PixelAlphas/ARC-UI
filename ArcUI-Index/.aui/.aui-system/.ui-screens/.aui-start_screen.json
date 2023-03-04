@@ -11,6 +11,7 @@
     "type": "panel",
     "controls": [
       { "status_bottom_bar@aui-common.status_bottom_bar": {}},
+      { "lawnmowerwhyisthisathing@aui-common.lawnmower": {}},
       { "buttons_element@aui-start_screen.buttons_element": {}},
       { "xbox_element@aui-start_screen.xbox_element": {}}
     ]

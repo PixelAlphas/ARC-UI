@@ -1,3 +1,36 @@
+--- v1.0 Beta 2 Release (Feb ??, 2023) ---
+/*
+ * -- Plastic chair shall rise --
+ * Quality life changes and so on
+*/
+
+[+] Adjusted bottom bar, should look really decent now
+[+] Adjusted Users area in start and pause screen
+[+] Fixed a crashes with missing fonts
+[+] Finalized 'account' and 'general' settings sections
+[+] Adjusted settings line bar
+[+] Added highlights for pause screen navigations
+[+] Added funny looking moving lawnmower
+[+] About/Changelog screen are now officially has changelog!
+    can also be disabled in configurations if the settings
+    is loading more time than what it should be
+[+] Optimization and improvements and code cleaning
+[+] - Experiments features ( Configuration ) -
+    > Theme
+      - You heard me right! a theme is coming to Arc-UI!
+        a LynxsiumUI/OverwhelmUI core feature!
+      - Able to adjust bottom/status bar color and it's font
+      - More coming soon
+    > Moving image on start screen ( lawnmower )
+      [ NOT IMPLEMENTED AT THE MOMENT ]
+    > Controller tooltips [ NOT IMPLEMENTED AT THE MOMENTS ]
+      - Displays accordingly controller button prompts on your
+        screen, you'll also need a tooltips enabled by disabing
+        something on controller settings.
+      - If this was a pass, it'll go ahead with keyboard tooltips
+        right away. shouldn't need any fixes due to those works
+        same way.
+      
 --- v1.0 Beta 1 Release (Feb 22, 2023) ---
 /*
  * -- Changes stuff before closing --

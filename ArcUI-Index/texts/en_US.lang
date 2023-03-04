@@ -1,0 +1,27 @@
+## Setting sections title
+arc-ui.settingtitle.about=About ARC-UI
+arc-ui.settingtitle.about-config=Configuration
+arc-ui.settingtitle.about-changelog=Changelog
+arc-ui.settingtitle.accessibility-tts=Text To Speech Settings
+arc-ui.settingtitle.accessibility-visuality=Visuality Settings
+arc-ui.settingtitle.account=Account settings
+arc-ui.settingtitle.account-alt=Additional Settings
+arc-ui.settingtitle.creator=Creator Settings
+arc-ui.settingtitle.gamepad=Controller settings
+arc-ui.settingtitle.howtoplay=How to play...?
+arc-ui.settingtitle.keyboardandmouse=Keyboard & mouse settings
+arc-ui.settingtitle.lang=LANGUAGE settings
+arc-ui.settingtitle.sound=Sound Settings
+arc-ui.settingtitle.touch=Touch Controls Settings
+arc-ui.settingtitle.video-interface=Interface Settings
+arc-ui.settingtitle.video-graphic=Graphical Settings
+arc-ui.settingtitle.video-experiment=Experiment features
+
+## About/changelog screen
+arc-ui.settingtitle.changelog.config=Configuration Details
+arc-ui.setting.changelogtitle.enabled=This Arcdustry-UI update changelog
+arc-ui.setting.changelogtitle.disabled=Changelog on setting is §cdisabled.§f You can still check Arcdustry-UI's update changelog in §e"ARC-UI/changelog.txt"
+arc-ui.setting.changelogdesc.001=[+] honestly im joking. i can't put the entire changelog in this thing, although ILL do it when Arcdustry-UI became stable release more than beta release :)
+
+## video screen
+arc-ui.setting.video-experiment.warn=§7§oThese features are experiments and not meant to be used on almost every platforms, this can cause several visuals issues, performance downgraded and crashes. Be cautious about it!

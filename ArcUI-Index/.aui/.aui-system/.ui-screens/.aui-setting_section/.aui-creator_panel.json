@@ -108,7 +108,7 @@
     ],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ] }},
-      { "option_content_log_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_creator.option_content_log_element", "$text": "Creator Settings" }},
+      { "option_content_log_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_creator.option_content_log_element", "$text": "arc-ui.settingtitle.creator" }},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ] }},
       { "content_log_location_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_creator.content_log_location_element", "$text": "contentlog.logLocationSectionName" }}
     ]

@@ -247,7 +247,7 @@
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "bindings": [ { "binding_name": "(not #list_has_display_objective)", "binding_name_override": "#visible" }],
-          "controls": [ { "players_grid@pause.players_grid": { "grid_item_template": "aui-pause_screen.lynxui_playergriditem" } }]
+          "controls": [ { "players_grid@pause.players_grid": { "grid_item_template": "aui-pause_screen.player_grid_item" } }]
         }
       },
       { "scoreboard_player_grid": {
@@ -296,7 +296,6 @@
                 "offset": [ 2, 0 ],
                 "text_alignment": "center",
                 "text": "#player_rank",
-                "color": [ 0.75, 0.75, 0.75 ],
                 "bindings": [
                   {
                     "binding_name": "#player_rank",
@@ -353,6 +352,15 @@
                 "layer": 10,
                 "button_mappings": [ { "from_button_id": "button.menu_select", "to_button_id": "button.player_profile_card", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.player_profile_card", "mapping_type": "focused" }],
                 "$pressed_button_name": "button.score_player_profile_card",
+                "controls": [
+                  { "hover": {
+                      "type": "image",
+                      "alpha": 0.7,
+                      "size": [ "100%", "100%" ],
+                      "texture": "textures/ui/White"
+                    }
+                  }
+                ],
                 "bindings": [
                   { "binding_name": "#button_disabled", "binding_type": "collection", "binding_collection_name": "$sb_collection_name", "binding_name_override": "#visible" },
                   { "binding_name": "#can_click_player_button", "binding_type": "collection", "binding_collection_name": "$sb_collection_name", "binding_name_override": "#enabled"},
@@ -404,6 +412,15 @@
             { "permission_button@common.button": {
                 "size": [ "100%", "100%" ],
                 "layer": 10,
+                "controls": [
+                  { "hover": {
+                      "type": "image",
+                      "alpha": 0.7,
+                      "size": [ "100%", "100%" ],
+                      "texture": "textures/ui/White"
+                    }
+                  }
+                ],
                 "button_mappings": [ { "from_button_id": "button.menu_select", "to_button_id": "button.menu_permission", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.menu_permission", "mapping_type": "focused" }],
                 "bindings": [ { "binding_type": "collection_details", "binding_collection_name": "players_collection" }]
               }
@@ -413,7 +430,7 @@
       }
     ]
   },
-  "lynxui_playergriditem": {
+  "player_grid_item": {
     "type": "stack_panel",
     "size": [ "100%", 18 ],
     "orientation": "horizontal",
@@ -475,6 +492,15 @@
             { "lgamertag_button@common.button": {
                 "size": [ "100%", "100%" ],
                 "layer": 10,
+                "controls": [
+                  { "hover": {
+                      "type": "image",
+                      "alpha": 0.7,
+                      "size": [ "100%", "100%" ],
+                      "texture": "textures/ui/White"
+                    }
+                  }
+                ],
                 "button_mappings": [ { "from_button_id": "button.menu_select", "to_button_id": "button.player_profile_card", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.player_profile_card", "mapping_type": "focused" }],
                 "bindings": [ { "binding_name": "#button_enabled", "binding_type": "collection", "binding_collection_name": "players_collection", "binding_name_override": "#visible" },{ "binding_type": "collection_details", "binding_collection_name": "players_collection"}]
               }
@@ -498,6 +524,15 @@
             { "permission_button@common.button": {
                 "size": [ "100%", "100%" ],
                 "layer": 10,
+                "controls": [
+                  { "hover": {
+                      "type": "image",
+                      "alpha": 0.7,
+                      "size": [ "100%", "100%" ],
+                      "texture": "textures/ui/White"
+                    }
+                  }
+                ],
                 "button_mappings": [ { "from_button_id": "button.menu_select", "to_button_id": "button.menu_permission", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.menu_permission", "mapping_type": "focused" }],
                 "bindings": [ { "binding_type": "collection_details", "binding_collection_name": "players_collection" }]
               }

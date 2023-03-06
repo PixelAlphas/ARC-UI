@@ -16,5 +16,8 @@
                           //        on this yet
   "$moving_lawnmower": false, // lawnmower on your start screen. [ Default : false ]
   "$ml_speed": 10, // speed of lawnmower. the less value, the FASTEST its moving. [ Default : 10 ]
-  "$ml_custom_image": ".aui/.aui-assets/lawnmower" // custom image for lawnmower
+  "$ml_custom_image": ".aui/.aui-assets/lawnmower", // custom image for lawnmower
+  "$129_more_lawnmower": false // adds additional 129 lawnmowers. ( why did i create this ) [ Default : false ]
+                               // note that speed is unmodifable in this one, but textures can be changed by the same
+                               // methods.
 }}

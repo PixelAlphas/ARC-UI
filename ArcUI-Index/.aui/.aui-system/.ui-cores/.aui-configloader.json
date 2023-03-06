@@ -14,7 +14,8 @@
         "$show_changelog|default": true,
         "$moving_lawnmower|default": false,
         "$ml_speed|default": 10,
-        "$ml_custom_image|default": ".aui/.aui-assets/lawnmower"
+        "$ml_custom_image|default": ".aui/.aui-assets/lawnmower",
+        "$129_more_lawnmower|default": false
       }
     ]
   }

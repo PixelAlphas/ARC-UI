@@ -206,6 +206,19 @@
           "shadow": false
         }
       },
+      { "label11": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUES",
+          "shadow": false,
+          "variables": [
+            { "requires": "($129_more_lawnmower)", "$valuetext": "('§a█§7 129+ more moving lawnmower : ' + '§aTrue')" },
+            { "requires": "(not $129_more_lawnmower)", "$valuetext": "('§c█§7 129+ more moving lawnmower : ' + '§cFalse')" }
+          ]
+        }
+      },
       { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
     ]
   },
@@ -223,7 +236,7 @@
           "type": "label",
           "size": [ "100%", "default" ],
           "max_size": [ "100%", "default" ],
-          "text": "Arcdustry-UI (ARC-UI) Version\n§7- v1.0-beta-2§7\n- Mar 2, 2023 §g[ Build date ]§7\n- 1.19.62 §g[ Currently Developed in ]",
+          "text": "Arcdustry-UI (ARC-UI) Version\n§7- v1.0-beta-2.1§7\n- Mar 6, 2023 §g[ Build date ]§7\n- 1.19.62 §g[ Currently Developed in ]",
           "shadow": false
         }
       },

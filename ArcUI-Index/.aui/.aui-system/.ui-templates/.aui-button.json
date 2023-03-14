@@ -240,7 +240,7 @@
       }
     ]
   },
-  "advanced_button_panel": {
+  "advanced_button_panel@auicore_configloader.core": {
     "type": "panel",
     "$button_alpha|default": 1,
     "layer": 1,
@@ -273,7 +273,7 @@
           "layer": 1,
           "alpha": "$button_image_alpha",
           "fill": "$button_image_fill",
-          "color": "$button_image_color",
+          "color": "$primary_color",
           "anims": "$button_image_anims"
         }
       },

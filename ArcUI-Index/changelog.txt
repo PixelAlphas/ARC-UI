@@ -1,4 +1,47 @@
---- v1.0 Beta 2 Release (Feb ??, 2023) ---
+--- v1.0 Stable Release (Mar 10, 2023) ---
+/*
+ * -- it's just a beginnings --
+ * Arc-UI are finally out of beta, with cool list of
+ * features!
+/*
+
+[ -- ADDITIONS / UPDATES-- ]
+[+] Revamped Sound screen with icons, descriptions and better
+    calgory
+[+] Revamped Safe zone screen the way sound screen has.
+[+] Fianlized configurations
+[+] Added Theme ( Configurations )
+[+] Added 129 Lawnmowers ( Configurations )
+[+] Added Compact pause screen ( Configurations )
+[+] Added Usable changelog in about screen
+[+] Added Warning screen upon launching
+[+] Added Highlights for pause screen arrow button
+[+] Added Credits and Social media in about screen
+[+] Added More supports for .lang format, allowing creators to
+    change the language they want
+[+] Added couple of elements that can be disabled on configurations
+[+] Revamped About/Changelog screen with proper calgories
+
+[ -- BUG FIXES -- ]
+[+] Fixed the slider bar having incorrect color
+[+] Fixed "Safe zone screen" slider icons where some has incorrect
+    icons
+[+] Fixed overlapping issues with pause screen
+[+] Fixed issue where the game could potentially crashes by leaving
+    and joining too fast
+
+[ -- ADJUSTMENTS -- ]
+[+] Adjusted the highlight hover in settings and pause screen
+    to fit visuality better
+[+] ARC-UI/Arcdustry-UI requirements is now on
+    "Settings>About/Changelog" Section.
+[+] Adjusted ALL glyphs/icons related to buttons and sliders into
+    white due to theme support.
+[+] Changed ALL glyphs/icons related buttons and slider into
+    white just for theming support
+[+] Optimizations and stability
+
+--- v1.0 Beta 2 Release (Mar 6, 2023) ---
 /*
  * -- Plastic chair shall rise --
  * Quality life changes and so on

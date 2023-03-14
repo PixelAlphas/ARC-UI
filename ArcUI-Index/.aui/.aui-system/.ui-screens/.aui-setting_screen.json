@@ -337,6 +337,72 @@
       }
     ]
   },
+  "toggle_button_control@auicore_configloader.core": {
+    "type": "panel",
+    "$glyph_offset|default": [ 5, 0 ],
+    "$glyph_anchor_from|default": "left_middle",
+    "$glyph_anchor_to|default": "left_middle",
+    "$button_label_offset|default": [ 34, 0 ],
+    "layer": 2,
+    "controls": [
+      {
+        "glyph": {
+          "type": "image",
+          "anchor_from": "$glyph_anchor_from",
+          "anchor_to": "$glyph_anchor_to",
+          "offset": "$glyph_offset",
+          "texture": "$glyph_texture",
+          "size": "$glyph_size",
+          "layer": 3,
+          "color": "$glyph_color",
+          "alpha": "$content_alpha",
+          "$glyph_bindings|default": [],
+          "bindings": "$glyph_bindings"
+        }
+      },
+      {
+        "glyph_color": {
+          "type": "image",
+          "anchor_from": "$glyph_anchor_from",
+          "anchor_to": "$glyph_anchor_to",
+          "offset": "$glyph_offset",
+          "texture": "$glyph_color_texture",
+          "size": "$glyph_size",
+          "layer": 4,
+          "color": "$setting_button_icon_color",
+          "alpha": "$content_alpha",
+          "$glyph_color_bindings|default": [],
+          "bindings": "$glyph_color_bindings"
+        }
+      },
+      {
+        "tab_button_text": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ "100% - 38px", "default" ],
+          "max_size": [ "100% - 38px", "100% - 4px" ],
+          "offset": "$button_label_offset",
+          "text": "$button_text",
+          "layer": 3,
+          "color": "$text_color",
+          "alpha": "$content_alpha",
+          "$button_text_binding_type|default": "none",
+          "$button_text_grid_collection_name|default": "",
+          "$button_text_binding_condition|default": "none",
+          "bindings": [
+            {
+              "binding_type": "$button_text_binding_type",
+              "binding_condition": "$button_text_binding_condition",
+              "binding_collection_name": "$button_text_grid_collection_name",
+              "binding_name": "$button_text",
+              "binding_name_override": "$button_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
   "upload_world_stack_bedrock@world_section.launch_world_button_stack_def": {
     "ignored": "(not $is_pregame or $education_edition)",
     "controls": [
@@ -671,7 +737,7 @@
       }
     ]
   },
-  "radio_visuals": {
+  "radio_visuals@auicore_configloader.core": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "$auivar-radioalpha|default": 1,
@@ -687,7 +753,8 @@
           "texture": "$radio_texture",
           "alpha": "$auivar-radioalpha",
           "layer": 1,
-          "size": [ "100%", "100%" ]
+          "size": [ "100%", "100%" ],
+          "color": "$primary_color"
         }
       },
       { "lynxui_radiolabel": {

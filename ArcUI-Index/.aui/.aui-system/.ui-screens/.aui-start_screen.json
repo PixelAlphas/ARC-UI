@@ -7,13 +7,58 @@
       { "contents@aui-start_screen.global_contents": {}}
     ]
   },
-  "global_contents": {
+  "global_contents@auicore_configloader.core": {
     "type": "panel",
     "controls": [
       { "status_bottom_bar@aui-common.status_bottom_bar": {}},
       { "lawnmowerwhyisthisathing@aui-common.lawnmower": {}},
       { "buttons_element@aui-start_screen.buttons_element": {}},
-      { "xbox_element@aui-start_screen.xbox_element": {}}
+      { "xbox_element@aui-start_screen.xbox_element": {}},
+      { "warning_element@aui-start_screen.warning_element": {}}
+    ]
+  },
+  "warning_element": {
+    "type": "image",
+    "ignored": "(not $show_warning_notification)",
+    "texture": "textures/ui/Black",
+    "size": [ "100%c + 10px", "100%cm + 8px" ],
+    "layer": 10,
+    "alpha": 0.7,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, -116 ],
+    "anims": [
+      "aui-anim.warning_text_movement00"
+    ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%cm", "100%c" ],
+          "orientation": "vertical",
+          "controls": [
+            {
+              "label01": {
+                "type": "label",
+                "text": "Warning!",
+                "font_type": "MinecraftTen",
+                "text_alignment": "center",
+                "color": [ 1, 0.8627, 0 ],
+                "layer": 11,
+                "size": [ "default", 14 ]
+              }
+            },
+            {
+              "label02": {
+                "type": "label",
+                "layer": 11,
+                "text": "× Pocket UI is not supported\n  Can cause potential crashes.\n\n× If you applied this pack for\n  the first time, restart the game!\n  for font to load.",
+                "color": [ 1, 0.8627, 0 ]
+              }
+            }
+          ]
+        }
+      }
     ]
   },
   "xbox_element": {

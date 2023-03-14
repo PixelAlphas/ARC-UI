@@ -62,7 +62,7 @@
   "section_toggle_base@common_toggles.light_ui_toggle": {
     "size": [ "100%", "30px" ],
     "$button_size_override": [ "100%", "100% + 1px" ],
-    "$button_type_panel": "settings_common.toggle_button_control",
+    "$button_type_panel": "aui-setting_screen.toggle_button_control",
     "$default_border_visible": false,
     "$hover_border_visible": false,
     "$button_image_fill": true,
@@ -108,7 +108,7 @@
       { "requires": "(not $option_enabled_binding_name or not $enabled)", "$toggle_enabled_binding_name": "#not_data_bound", "$toggle_enabled_binding_type": "none" }
     ]
   },
-  "option_toggle_state_template": {
+  "option_toggle_state_template@auicore_configloader.core": {
     "type": "panel",
     "size": [ "100%", 10 ],
     "controls": [
@@ -119,7 +119,8 @@
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "offset": [ -4, 0 ],
-          "size": [ 10, 10 ]
+          "size": [ 10, 10 ],
+          "color": "$toggle_icon_color"
         }
       },
       {
@@ -127,7 +128,8 @@
           "type": "image",
           "texture": "$auivar-toggle_bg",
           "size": [ "100% + 4px", 20 ],
-          "layer": -2
+          "layer": -2,
+          "color": "$toggle_background_color"
         }
       }
     ]

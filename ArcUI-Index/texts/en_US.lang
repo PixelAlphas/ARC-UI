@@ -12,16 +12,73 @@ arc-ui.settingtitle.howtoplay=How to play...?
 arc-ui.settingtitle.keyboardandmouse=Keyboard & mouse settings
 arc-ui.settingtitle.lang=LANGUAGE settings
 arc-ui.settingtitle.sound=Sound Settings
+arc-ui.settingtitle.sound-main=Main Settings
 arc-ui.settingtitle.touch=Touch Controls Settings
 arc-ui.settingtitle.video-interface=Interface Settings
 arc-ui.settingtitle.video-graphic=Graphical Settings
 arc-ui.settingtitle.video-experiment=Experiment features
 
-## About/changelog screen
+## Safe zone screen
+arc-ui.setting.safezone.title.main=Safe zone settings
+arc-ui.setting.safezone.title.exp=experiment settings
+arc-ui.setting.safezone.main=Adjust whenever the game screen does not fit your screen well.
+arc-ui.setting.safezone.exp=Unintentionally a hidden option, marked as experiment due to how wanky for it to setup.
+arc-ui.setting.safezone.allcorner=§7Expand and decrease in all corner
+arc-ui.setting.safezone.horizontal=§7Expand and decrease in left & right side
+arc-ui.setting.safezone.vertical=§7Expand and decrease in up & bottom side
+arc-ui.setting.safezone.horizontalpos=§7Move the screen between left & right ( EXP: won't work if these above are default )
+arc-ui.setting.safezone.verticalpos=§7Move the screen between up & bottom ( EXP: won't work if these above are default )
+
+## Sound section
+arc-ui.setting.sound.main=§7The true volume slider - basically. just your usual volume, this will affect the entire game sounds and musics. rendering specific sound slider useless.
+arc-ui.setting.sound.music=§7Game music volume, only affects a music related. such as main menu, overworld, creative mode and etc.
+arc-ui.setting.sound.sound=§7Game sound volume, only affects a sound related. such as walking, breaking blocks, playing discs and etc.
+arc-ui.setting.sound.ambient=§7Cave sounds, ambients and so on.
+arc-ui.setting.sound.block=§7Placing blocks, walking, breaking and so on.
+arc-ui.setting.sound.hostile=§7Hostile mob sounds.
+arc-ui.setting.sound.neutral=§7Neutral mob sounds.
+arc-ui.setting.sound.player=§7Player hurt sounds.
+arc-ui.setting.sound.record=§7Disc related sounds.
+arc-ui.setting.sound.weather=§7Weather, rains, storms.
+arc-ui.setting.sound.tts=§7Text-to-speech volume.
+
+## About/changelog section
 arc-ui.settingtitle.changelog.config=Configuration Details
 arc-ui.setting.changelogtitle.enabled=This Arcdustry-UI update changelog
 arc-ui.setting.changelogtitle.disabled=Changelog on setting is §cdisabled.§f You can still check Arcdustry-UI's update changelog in §e"ARC-UI/changelog.txt"
-arc-ui.setting.changelogdesc.001=[+] honestly im joking. i can't put the entire changelog in this thing, although ILL do it when Arcdustry-UI became stable release more than beta release :)
+arc-ui.setting.changelogdesc.001=§l- v1.0 Stable Release (Mar 10, 2023) -
+arc-ui.setting.changelogdesc.002=§r
+arc-ui.setting.changelogdesc.003=§e- Just a beginnings -
+arc-ui.setting.changelogdesc.004=Arcdustry-UI are finally out of beta!
+arc-ui.setting.changelogdesc.005=§r
+arc-ui.setting.changelogdesc.006=§e§l[ -- ADDITIONS / UPDATES-- ]
+arc-ui.setting.changelogdesc.007=§7[§a+§7]§f Revamped Sound screen with icons, descriptions and better calgory
+arc-ui.setting.changelogdesc.008=§7[§a+§7]§f Revamped Safe zone screen the way sound screen has
+arc-ui.setting.changelogdesc.009=§7[§a+§7]§f Revamped About/Changelog screen with proper calgories
+arc-ui.setting.changelogdesc.010=§7[§a+§7]§f Added Theme §7§o( Configurations )
+arc-ui.setting.changelogdesc.011=§7[§a+§7]§f Added 129 Lawnmowers §7§o( Configurations )
+arc-ui.setting.changelogdesc.012=§7[§a+§7]§f Added Compact pause screen §7§o( Configurations )
+arc-ui.setting.changelogdesc.013=§7[§a+§7]§f Added Usable changelog in about screen
+arc-ui.setting.changelogdesc.014=§7[§a+§7]§f Added Warning screen upon launching
+arc-ui.setting.changelogdesc.015=§7[§a+§7]§f Added Highlights for pause screen arrow button
+arc-ui.setting.changelogdesc.016=§7[§a+§7]§f Added Credits and Social media in about screen
+arc-ui.setting.changelogdesc.017=§7[§a+§7]§f Added More supports for .lang format, allowing creators to change the language they want
+arc-ui.setting.changelogdesc.018=§7[§a+§7]§f Added couple of elements that can be disabled on configurations
+arc-ui.setting.changelogdesc.019=§7[§a+§7]§f Fianlized configurations
+arc-ui.setting.changelogdesc.020=§r
+arc-ui.setting.changelogdesc.021=§e§l[ -- BUG FIXES -- ]
+arc-ui.setting.changelogdesc.022=§7[§a+§7]§f Fixed the slider bar having incorrect color
+arc-ui.setting.changelogdesc.023=§7[§a+§7]§f Fixed "Safe zone screen" slider icons where some has incorrect icons
+arc-ui.setting.changelogdesc.024=§7[§a+§7]§f Fixed overlapping issues with pause screen
+arc-ui.setting.changelogdesc.025=§7[§a+§7]§f Fixed issue where the game could potentially crashes by leaving and joining too fast
+arc-ui.setting.changelogdesc.026=§r
+arc-ui.setting.changelogdesc.027=§e§l[ -- ADJUSTMENTS -- ]
+arc-ui.setting.changelogdesc.028=§7[§a+§7]§f Adjusted the highlight hover in settings and pause screen to fit visuality better
+arc-ui.setting.changelogdesc.029=§7[§a+§7]§f ARC-UI/Arcdustry-UI requirements is now on §5"Settings>About/Changelog"§f Section.
+arc-ui.setting.changelogdesc.030=§7[§a+§7]§f Adjusted ALL glyphs/icons related to buttons and sliders into white due to theme support.
+arc-ui.setting.changelogdesc.031=§7[§a+§7]§f Changed ALL glyphs/icons related buttons and slider into white just for theming support
+arc-ui.setting.changelogdesc.032=§7[§a+§7]§f Optimizations and stability
 
-## video screen
+
+## video section
 arc-ui.setting.video-experiment.warn=§7§oThese features are experiments and not meant to be used on almost every platforms, this can cause several visuals issues, performance downgraded and crashes. Be cautious about it!

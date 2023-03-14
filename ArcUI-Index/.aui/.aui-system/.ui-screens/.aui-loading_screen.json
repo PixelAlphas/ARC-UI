@@ -115,27 +115,7 @@
         }
       }
     ]
-  },
-  "progress_title_world_panelold": {
-    "type": "stack_panel",
-    "orientation": "vertical",
-    "size": [ "95%", 70 ],
-    "controls": [
-      { "progress_title_text@progress.progress_title_text": {
-          "shadow": false,
-          "size": [ "100%", 20 ],
-          "font_size": "large",
-          "text": "#title_text",
-          "text_alignment": "left",
-          "bindings": [ { "binding_name": "#title_text" }]}},
-      { "progress_bar_text@progress.progress_bar_text": {
-          "shadow": false,
-          "size": [ "100%", 20 ],
-          "localize": false,
-          "text": "#progress_text",
-          "text_alignment": "left",
-          "bindings": [ { "binding_name": "#progress_text" }]}}]},
-  "world_modal_progress_panel@progress.world_modal_progress_panel": {
+  },"world_modal_progress_panel@progress.world_modal_progress_panel": {
     "size": [ "100%", "100%" ],
     "controls": [
       { "base_content": {

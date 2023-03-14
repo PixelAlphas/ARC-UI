@@ -1,23 +1,65 @@
-{ "namespace": "auicore-configsource", "element": { "type":"panel","$key":"i_like_my_chair","$ver":"1.0-Beta2",
+{ "namespace": "auicore-configsource", "element": { "type":"panel","$key":"lawnmower","$ver":"1.0-stable",
   
   // bottom bar lists :D
-  "$bottom_bar_background_alpha": 0, // transparent ( 0-1 ) [ Default : 0 ]
-  "$bottom_bar_background_color": [ 1, 1, 1, 0 ], // RBG values but divided by 1 | can be adjusted by use of variables
-  "$bottom_bar_font_color": "$f_color_format", // RBG values but divided by 1 | can be adjusted by use of variables
-  "$bottom_bar_font_type": "kazesawa", // fonts, can crash if not usin it correctly [ Default : "kazasawa" ]
-                                       // Available fonts - kazesawa, dainbold, MinecraftTen and default
-  
+    "$bottom_bar_background_alpha": 0, // transparent ( 0-1 ) [ Default : 0 ]
+      // ^ Change the bottom bar transparency
+    "$bottom_bar_background_color": [ 1, 1, 1, 0 ], // RBG values but divided by 1 | can be adjusted by use of variables
+      // ^ Change the bottom bar color
+    "$bottom_bar_font_color": "$f_color_format", // RBG values but divided by 1 | can be adjusted by use of variables
+      // ^ Change the bottom bar text/font color
+    "$bottom_bar_font_type": "kazesawa", // fonts, can crash if not usin it correctly [ Default : "kazasawa" ]
+                                         // Available fonts - kazesawa, dainbold, MinecraftTen and default
+      // ^ Change the bottom bar font
+
+  // - Theme related settings -
+    "$primary_color": [ 1, 1, 1 ], // RBG values but divided by 1
+      // ^ Uses it as button primary color, such as start/pause screen buttons, settings buttons and common buttons
+    "$setting_button_icon_color": [ 1, 1, 1 ], // RBG values but divided by 1
+      // ^ Change every setting icons color.
+    "$slider_icon_color": [ 1, 1, 1 ], // RBG values but divided by 1
+      // ^ Change every slider icons color.
+    "$slider_color": [ 1, 1, 1 ], // RBG values but divided by 1
+      // ^ Change slider color
+    "$slider_hover_color": [ 1, 1, 1 ], // RBG values but divided by 1
+      // ^ Change slider color for hover.
+    "$slider_background_color": [ 0.1, 0.1, 0.1 ], // RBG values but divided by 1
+      // ^ Change slider background color
+    "$slider_background_hover_color": [ 0.2, 0.2, 0.2 ], // RBG values but divided by 1
+      // ^ Change slider background color for hover.
+    "$background_menu_color": [ 0, 0, 0, 0.75 ], // RBG values but divided by 1
+      // ^ Change the menu background for Start screen (main menu) and pause screen.
+    "$background_standard_color_top": [ 0, 0, 0, 0.75 ], // RBG values but divided by 1
+      // ^ Change the standard background for every standard screens [ TOP ]
+    "$background_standard_color_bottom": [ 0, 0, 0, 0.75 ], // RBG values but divided by 1
+      // ^ Change the standard background for every standard screens [ BOTTOM ]
+    "$toggle_icon_color": [ 1, 1, 1 ], // RBG values but divided by 1
+      // ^ Change toggle icon color.
+    "$toggle_background_color": [ 1, 1, 1 ], // RBG values but divided by 1
+      // ^ Change toggle background color.
+      
   // Common settings
-  "$configname": "Default", // Your configurations name. no impact in gameplay
-  "$Testvalue": true, // literally what it said. [ Default : true ]
-  "$show_changelog": false, // displays changelog in "About/Changelog" settings section.
-                          // Default : true
-                          // note - it is implemented, but too lazy to literally insert the entirety of changelog
-                          //        on this yet
-  "$moving_lawnmower": false, // lawnmower on your start screen. [ Default : false ]
-  "$ml_speed": 10, // speed of lawnmower. the less value, the FASTEST its moving. [ Default : 10 ]
-  "$ml_custom_image": ".aui/.aui-assets/lawnmower", // custom image for lawnmower
-  "$129_more_lawnmower": false // adds additional 129 lawnmowers. ( why did i create this ) [ Default : false ]
-                               // note that speed is unmodifable in this one, but textures can be changed by the same
-                               // methods.
+    "$configname": "Default",
+      // ^ Yours configurations name. no impact in gameplay
+    "$Testvalue": true, // [ Default : true ]
+      // ^ A testing value to see if UI detects them properly. ( UNUSED )
+  
+  // Misc settings
+    "$moving_lawnmower": false, // lawnmower on your start screen. [ Default : false ]
+      // ^ adds one moving lawnmower in your start/main screen.
+        "$ml_speed": 10, // speed of lawnmower. the less value, the FASTEST its moving. [ Default : 10 ]
+           // ^ Moving lawnmower speed
+        "$ml_custom_image": ".aui/.aui-assets/lawnmower", 
+           // ^ Custom image for lawnmower / 129 more lawnmower
+    
+    "$129_more_lawnmower": false,
+      // ^ adds 129 moving lawnmower in your start/main screen. warning though that its speed is unadjustable
+      //   and secondly, it can cause lags 
+    "$show_changelog": true, // [ Default : false ]
+      // ^ Displays changelog in "About/Changelog" settings section
+    "$show_warning_notification": true, // [ Default : false ]
+      // ^ Displays a warning for mobile and notify about restarting after applying the pack.
+    "$pause_screen_compact_mode": false // [ Default : false ]
+      // ^ Enables alternative version of pause screen just to look more nicer to interact
+      //   thus very lite-ish. pretty cool if you don't like the current pause screen style and wants more
+      //   compacted.
 }}

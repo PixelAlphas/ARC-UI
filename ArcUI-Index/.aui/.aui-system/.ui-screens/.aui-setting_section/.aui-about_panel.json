@@ -1,105 +1,103 @@
 {
   "namespace": "aui-setting_about",
-  "changelog_element@auicore_configloader.core": { 
+  "changelog_element": { 
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
       { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
-      { "label010": {
-          "type": "label",
-          "ignored": "(not $show_changelog)",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "arc-ui.setting.changelogtitle.enabled",
-          "shadow": false
-        }
-      },
-      { "label011": {
-          "type": "label",
-          "ignored": "$show_changelog",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "arc-ui.setting.changelogtitle.disabled",
-          "shadow": false
-        }
-      },
+      { "label01@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogtitle.enabled" }},
+      { "label02@aui-common.label_element": { "ignored": "$show_changelog", "text": "arc-ui.setting.changelogtitle.disabled" }},
       { "pudding01": { "type": "panel", "size": [ 1, 10 ]}},
-      { "label010": {
-          "type": "label",
-          "ignored": "(not $show_changelog)",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "arc-ui.setting.changelogdesc.001",
-          "shadow": false
-        }
-      },
+      { "label-line_001@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.001" }},
+      { "label-line_002@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.002" }},
+      { "label-line_003@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.003" }},
+      { "label-line_004@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.004" }},
+      { "label-line_005@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.005" }},
+      { "label-line_006@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.006" }},
+      { "label-line_007@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.007" }},
+      { "label-line_008@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.008" }},
+      { "label-line_009@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.009" }},
+      { "label-line_010@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.010" }},
+      { "label-line_011@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.011" }},
+      { "label-line_012@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.012" }},
+      { "label-line_013@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.013" }},
+      { "label-line_014@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.014" }},
+      { "label-line_015@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.015" }},
+      { "label-line_016@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.016" }},
+      { "label-line_017@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.017" }},
+      { "label-line_018@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.018" }},
+      { "label-line_019@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.019" }},
+      { "label-line_020@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.020" }},
+      { "label-line_021@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.021" }},
+      { "label-line_022@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.022" }},
+      { "label-line_023@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.023" }},
+      { "label-line_024@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.024" }},
+      { "label-line_025@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.025" }},
+      { "label-line_026@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.026" }},
+      { "label-line_027@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.027" }},
+      { "label-line_028@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.028" }},
+      { "label-line_029@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.029" }},
+      { "label-line_030@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.030" }},
+      { "label-line_031@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.031" }},
+      { "label-line_032@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.setting.changelogdesc.032" }},
       { "pudding02": { "type": "panel", "size": [ 1, 10 ]}}
     ]
   },
-  "config_element@auicore_configloader.core": { 
+  "config_element": { 
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
       { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
-      { "label01": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "arc-ui.settingtitle.changelog.config",
-          "shadow": false
-        }
-      },
-      { "label02": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "('§7- Config name : §f' + $configname)",
-          "shadow": false
-        }
-      },
-      { "label03": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "('§7- Config key : §f' + $key)",
-          "shadow": false
-        }
-      },
-      { "label04": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "('§7- Config ver : §f' + $ver)",
-          "shadow": false
-        }
-      },
-      { "label05": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
+      { "label01@aui-common.label_element": { "text": "arc-ui.settingtitle.changelog.config" }},
+      { "label02@aui-common.label_element": { "text": "('§7- Config name : §f' + $configname)" }},
+      { "label03@aui-common.label_element": { "text": "('§7- Config key : §f' + $key)" }},
+      { "label04@aui-common.label_element": { "text": "('§7- Config ver : §f' + $ver)" }},
+      { "label05@aui-common.label_element": {
           "text": "$valuetext",
           "$valuetext|default": "§cINVAILD VALUES",
-          "shadow": false,
           "variables": [
             { "requires": "($Testvalue)", "$valuetext": "('§a█§7 Test Values : ' + '§aTrue')" },
             { "requires": "(not $Testvalue)", "$valuetext": "('§c█§7 Test Values : ' + '§cFalse')" }
           ]
         }
       },
-      { "label06": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
+      { "label06@aui-common.label_element": {
           "text": "$valuetext",
           "$valuetext|default": "§cINVAILD VALUES",
-          "shadow": false,
           "variables": [
-            { "requires": "($show_changelog)", "$valuetext": "('§a█§7 Shows update changelog in about menu : ' + '§aTrue')" },
-            { "requires": "(not $show_changelog)", "$valuetext": "('§c█§7 Shows update changelog in about menu : ' + '§cFalse')" }
+            { "requires": "($show_changelog)", "$valuetext": "('§a█§7 Shows changelog in about menu : ' + '§aTrue')" },
+            { "requires": "(not $show_changelog)", "$valuetext": "('§c█§7 Shows changelog in about menu : ' + '§cFalse')" }
+          ]
+        }
+      },
+      { "label11@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUES",
+          "variables": [
+            { "requires": "($129_more_lawnmower)", "$valuetext": "('§a█§7 129+ More moving lawnmower : ' + '§aTrue')" },
+            { "requires": "(not $129_more_lawnmower)", "$valuetext": "('§c█§7 129+ More moving lawnmower : ' + '§cFalse')" }
+          ]
+        }
+      },
+      { "label12@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUES",
+          "variables": [
+            { "requires": "($pause_screen_compact_mode)", "$valuetext": "('§a█§7 Pause screen compact mode : ' + '§aTrue')" },
+            { "requires": "(not $pause_screen_compact_mode)", "$valuetext": "('§c█§7 Pause screen compact mode : ' + '§cFalse')" }
+          ]
+        }
+      },
+      { "label13@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUES",
+          "variables": [
+            { "requires": "($show_warning_notification)", "$valuetext": "('§a█§7 Show notification upon launch : ' + '§aTrue')" },
+            { "requires": "(not $show_warning_notification)", "$valuetext": "('§c█§7 Show notification upon launch : ' + '§cFalse')" }
           ]
         }
       },
@@ -169,56 +167,30 @@
           ]
         }
       },
-      { "label07": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "('§7- Status bar font-type : §f' + $bottom_bar_font_type)",
-          "shadow": false
-        }
-      },
-      { "label08": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
+      { "label07@aui-common.label_element": { "text": "('§7- Status bar font-type : §f' + $bottom_bar_font_type)" }},
+      { "label08@aui-common.label_element": {
           "text": "$valuetext",
           "$valuetext|default": "§cINVAILD VALUES",
-          "shadow": false,
           "variables": [
             { "requires": "($moving_lawnmower)", "$valuetext": "('§a█§7 Moving lawnmower : ' + '§aTrue')" },
             { "requires": "(not $moving_lawnmower)", "$valuetext": "('§c█§7 Moving lawnmower : ' + '§cFalse')" }
           ]
         }
       },
-      { "label09": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "('§7- Lawnmower speed : §f' + $ml_speed)",
-          "shadow": false
-        }
-      },
-      { "label10": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "('§7- Custom lawnmower image path : §f' + $ml_custom_image)",
-          "shadow": false
-        }
-      },
-      { "label11": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "$valuetext",
-          "$valuetext|default": "§cINVAILD VALUES",
-          "shadow": false,
-          "variables": [
-            { "requires": "($129_more_lawnmower)", "$valuetext": "('§a█§7 129+ more moving lawnmower : ' + '§aTrue')" },
-            { "requires": "(not $129_more_lawnmower)", "$valuetext": "('§c█§7 129+ more moving lawnmower : ' + '§cFalse')" }
-          ]
-        }
-      },
+      { "label09@aui-common.label_element": { "text": "('§7- Lawnmower speed : §f' + $ml_speed)" }},
+      { "label10@aui-common.label_element": { "text": "('§7- Custom lawnmower image path : §f' + $ml_custom_image)" }},
+      { "labelstack04": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$primary_color" }},{ "label02": { "type": "label", "text": "§7< Primary color" }}]}},
+      { "labelstack05": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$setting_button_icon_color" }},{ "label02": { "type": "label", "text": "§7< Settings icons color" }}]}},
+      { "labelstack06": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_icon_color" }},{ "label02": { "type": "label", "text": "§7< Slider icons color" }}]}},
+      { "labelstack07": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_color" }},{ "label02": { "type": "label", "text": "§7< Slider color" }}]}},
+      { "labelstack08": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_hover_color" }},{ "label02": { "type": "label", "text": "§7< Slider hover color" }}]}},
+      { "labelstack09": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_background_color" }},{ "label02": { "type": "label", "text": "§7< Slider background color" }}]}},
+      { "labelstack10": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_background_hover_color" }},{ "label02": { "type": "label", "text": "§7< Slider background hover color" }}]}},
+      { "labelstack11": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$background_menu_color" }},{ "label02": { "type": "label", "text": "§7< Main background color" }}]}},
+      { "labelstack12": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$background_standard_color_top" }},{ "label02": { "type": "label", "text": "§7< Standard background color (Top)" }}]}},
+      { "labelstack13": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$background_standard_color_bottom" }},{ "label02": { "type": "label", "text": "§7< Standard background color (Bottom)" }}]}},
+      { "labelstack14": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$toggle_icon_color" }},{ "label02": { "type": "label", "text": "§7< Option/toggle icon color" }}]}},
+      { "labelstack15": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$toggle_background_color" }},{ "label02": { "type": "label", "text": "§7< Option/toggle hover background color" }}]}},
       { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
     ]
   },
@@ -232,26 +204,17 @@
       { "pudding01": { "type": "panel", "size": [ 1, 10 ]}},
       { "titlelogo": { "type": "image", "texture": "textures/ui/title", "size": [ "100%", 30 ] }},
       { "pudding02": { "type": "panel", "size": [ 1, 10 ]}},
-      { "label00": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "Arcdustry-UI (ARC-UI) Version\n§7- v1.0-beta-2.1§7\n- Mar 6, 2023 §g[ Build date ]§7\n- 1.19.62 §g[ Currently Developed in ]",
-          "shadow": false
-        }
-      },
+      { "label00@aui-common.label_element": { "text": "Arcdustry-UI (ARC-UI) Version\n§7- v1.0-stable§7\n- Mar 10, 2023 §g[ Build date ]§7\n- 1.19.63 §g[ Currently Developed in ]\n§7- Supported Versions : §e1.19.50 , 1.19.60 , 1.19.62 , 1.19.63" }},
       { "pudding03": { "type": "panel", "size": [ 1, 10 ]}},
       { "media": {
           "type": "stack_panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "mcpedl": {
+            { "mcpedl": {
                 "type": "panel",
                 "size": [ "100%", 20 ],
                 "controls": [
-                  {
-                    "logo": {
+                  { "logo": {
                       "type": "image",
                       "size": [ 22, 22 ],
                       "anchor_from": "left_middle",
@@ -341,7 +304,7 @@
                   {
                     "label02": {
                       "type": "label",
-                      "text": "§7youtube.com/@ArcthesiaHarlow",
+                      "text": "§7youtube.com/@Arcdustry",
                       "anchor_from": "left_middle",
                       "anchor_to": "left_middle",
                       "offset": [ 28, 5 ]
@@ -354,18 +317,11 @@
         }
       },
       { "pudding04": { "type": "panel", "size": [ 1, 10 ]}},
-      { "label01": {
-          "type": "label",
-          "size": [ "100%", "default" ],
-          "max_size": [ "100%", "default" ],
-          "text": "Greetings! Thanks for stopping by! ARC-UI is created by §eArcdustry§f formally known as §ePixelHarlow§f! Thanks for testing by, since its just a regular beta stage, things may get changed and some not. if you have suggestions, feel free to join Arc-UI discord server and suggest from there!\n\nRegardless, have a great day!",
-          "shadow": false
-        }
-      },
+      { "label01@aui-common.label_element": { "text": "Greetings! Thanks for stopping by! ARC-UI is created by §eArcdustry§f formally known as §ePixelHarlow§f! Thanks for testing by, since its just a regular beta stage, things may get changed and some not. if you have suggestions, feel free to join Arc-UI discord server and suggest from there!\n\nRegardless, have a great day!" }},
       { "pudding05": { "type": "panel", "size": [ 1, 10 ]}}
     ]
   },
-  "root_section": {
+  "root_section@auicore_configloader.core": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",

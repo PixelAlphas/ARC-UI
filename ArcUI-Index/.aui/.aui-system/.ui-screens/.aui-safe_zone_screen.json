@@ -8,11 +8,35 @@
       { "binding_name": "$slider_tts_text_value" }
     ],
     "controls": [
-      { "safe_zone_slider_all@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.safe_zone_slider_all", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_allcorner" }},
-      { "safe_zone_slider_x@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.safe_zone_slider_x", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_horizontalpos" }},
-      { "safe_zone_slider_y@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.safe_zone_slider_y", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_verticalpos" }},
-      { "screen_position_slider_x@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.screen_position_slider_x", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_horizontal" }},
-      { "screen_position_slider_y@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.screen_position_slider_y", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_vertical" }}
+      { "main_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-safe_zone_screen.main_element", "$text": "arc-ui.setting.safezone.title.main" }},
+      { "safe_zone_slider_all@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.safe_zone_slider_all", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_allcorner", "$auivar-header_text": "arc-ui.setting.safezone.allcorner" }},
+      { "safe_zone_slider_x@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.safe_zone_slider_x", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_horizontal", "$auivar-header_text": "arc-ui.setting.safezone.horizontal" }},
+      { "safe_zone_slider_y@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.safe_zone_slider_y", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_vertical", "$auivar-header_text": "arc-ui.setting.safezone.vertical" }},
+      { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "exp_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-safe_zone_screen.exp_element", "$text": "arc-ui.setting.safezone.title.exp" }},
+      { "screen_position_slider_x@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.screen_position_slider_x", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_horizontalpos", "$auivar-header_text": "arc-ui.setting.safezone.horizontalpos" }},
+      { "screen_position_slider_y@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.screen_position_slider_y", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_verticalpos", "$auivar-header_text": "arc-ui.setting.safezone.verticalpos"}},
+      { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}}
+    ]
+  },
+  "exp_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "label01@aui-common.label_element": { "text": "arc-ui.setting.safezone.exp" }}
+    ]
+  },
+  "main_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "label01@aui-common.label_element": { "text": "arc-ui.setting.safezone.main" }}
     ]
   },
   "safe_zone_slider_x@aui-setting_screen.option_slider": {

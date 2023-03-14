@@ -1,14 +1,21 @@
 {
   "namespace": "aui-pause_screen",
-  "root_contents": {
+  "root_contents@auicore_configloader.core": {
     "type": "panel",
+    "$auivar-button_compact_mode|default": "aui-pause_screen.buttons_element",
+    "variables": [
+      {
+        "requires": "$pause_screen_compact_mode",
+        "$auivar-button_compact_mode": "aui-pause_screen_compact.buttons_element"
+      }
+    ],
     "controls": [
       { "status_bottom_bar@aui-common.status_bottom_bar": {
           "$auivar-screen_name": "\"Pause Screen\"",
           "$auivar-label_no_mcver": true
         }
       },
-      { "buttons_element@aui-pause_screen.buttons_element": {}},
+      { "buttons_element@$auivar-button_compact_mode": {}},
       { "general_element@aui-pause_screen.general_element": {}},
       { "playerlist_element@aui-pause_screen.playerlist_element": {}}
     ]
@@ -96,10 +103,18 @@
       }
     ]
   },
-  "playerlist_element": {
+  "playerlist_element@auicore_configloader.core": {
     "type": "panel",
     "controls": [
-      { "playerlist_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-pause_screen.scrolling_panel", "$auivar-bgsize": [ "30%", "100% - 25px" ], "anchor_to": "right_middle", "anchor_from": "right_middle", "$text": "Player Lists", "offset": [ -4, -8 ], "bindings": [{ "binding_type": "view", "source_control_name": "auitoggle-playerlist", "source_property_name": "#toggle_state", "target_property_name": "#visible" }]}},
+      { "playerlist_element@aui-common.header_background_element": {
+          "$auivar-header_contents": "aui-pause_screen.scrolling_panel",
+          "$auivar-bgsize": [ "30%", "100% - 25px" ],
+          "anchor_to": "right_middle",
+          "anchor_from": "right_middle",
+          "$text": "Player Lists",
+          "offset": [ -4, -8 ],
+          "bindings": [{ "binding_type": "view", "source_control_name": "auitoggle-playerlist", "source_property_name": "#toggle_state", "target_property_name": "#visible" }]
+      }},
       { "playerlist_panel": {
           "type": "panel",
           "size": [ "30%", "100%" ],
@@ -355,7 +370,7 @@
                 "controls": [
                   { "hover": {
                       "type": "image",
-                      "alpha": 0.7,
+                      "alpha": 0.5,
                       "size": [ "100%", "100%" ],
                       "texture": "textures/ui/White"
                     }
@@ -415,7 +430,7 @@
                 "controls": [
                   { "hover": {
                       "type": "image",
-                      "alpha": 0.7,
+                      "alpha": 0.5,
                       "size": [ "100%", "100%" ],
                       "texture": "textures/ui/White"
                     }
@@ -495,7 +510,7 @@
                 "controls": [
                   { "hover": {
                       "type": "image",
-                      "alpha": 0.7,
+                      "alpha": 0.5,
                       "size": [ "100%", "100%" ],
                       "texture": "textures/ui/White"
                     }
@@ -527,7 +542,7 @@
                 "controls": [
                   { "hover": {
                       "type": "image",
-                      "alpha": 0.7,
+                      "alpha": 0.5,
                       "size": [ "100%", "100%" ],
                       "texture": "textures/ui/White"
                     }

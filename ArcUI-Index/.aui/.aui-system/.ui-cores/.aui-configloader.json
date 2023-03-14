@@ -3,7 +3,7 @@
   "core@auicore-configsource.element": {
     "variables": [
       { "requires": "(not ($key = 'i_like_my_chair'))",
-        "$ver|default": "1.0-Beta2",
+        "$ver|default": "1.0-stable",
         "$key|default": "failback",
         "$Testvalue|default": false,
         "$configname|default": "Failmode Default",
@@ -13,9 +13,23 @@
         "$bottom_bar_font_type|default": "kazesawa",
         "$show_changelog|default": true,
         "$moving_lawnmower|default": false,
+        "$pause_screen_compact_mode|default": false,
         "$ml_speed|default": 10,
         "$ml_custom_image|default": ".aui/.aui-assets/lawnmower",
-        "$129_more_lawnmower|default": false
+        "$129_more_lawnmower|default": false,
+        "$slider_icon_color|default": [ 1, 1, 1 ],
+        "$primary_color|default": [ 1, 1, 1 ],
+        "$setting_button_icon_color|default": [ 1, 1, 1 ],
+        "$background_menu_color|default": [ 0, 0, 0, 0.75 ],
+        "$background_standard_color_top|default": [ 0, 0, 0, 0.75 ],
+        "$background_standard_color_bottom|default": [ 0, 0, 0, 0.75 ],
+        "$toggle_icon_color|default": [ 1, 1, 1 ],
+        "$toggle_background_color|default": [ 1, 1, 1 ],
+        "$slider_color|default": [ 1, 1, 1 ],
+        "$slider_hover_color|default": [ 1, 1, 1 ],
+        "$slider_background_color|default": [ 0.1, 0.1, 0.1 ],
+        "$slider_background_hover_color|default": [ 0.2, 0.2, 0.2 ],
+        "$show_warning_notification|default": false
       }
     ]
   }

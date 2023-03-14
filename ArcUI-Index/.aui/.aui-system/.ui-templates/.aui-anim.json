@@ -1,5 +1,30 @@
 {
   "namespace": "aui-anim",
+  "warning_text_movement00": {
+    "anim_type": "wait",
+    "duration": 2,
+    "next": "@aui-anim.warning_text_movement01"
+  },
+  "warning_text_movement01": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.5,
+    "from": [ 0, -120 ],
+    "to": [ 0, 4 ],
+    "next": "@aui-anim.warning_text_movement02"
+  },
+  "warning_text_movement02": {
+    "anim_type": "wait",
+    "duration": 12,
+    "next": "@aui-anim.warning_text_movement03"
+  },
+  "warning_text_movement03": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": 0.5,
+    "from": [ 0, 4 ],
+    "to": [ 0, -120 ]
+  },
   "lawnmowermoving": { "anim_type": "offset", "easing": "linear", "duration": "$ml_speed", "from": [ "150%", "20%" ], "to": [ "-150%", "20%" ], "next": "@aui-anim.lawnmowermoving" },
   "lawnmowermoving1": { "anim_type": "offset", "easing": "linear", "duration": 8, "from": [ "150%", "10%" ], "to": [ "-150%", "10%" ], "next": "@aui-anim.lawnmowermoving1" },
   "lawnmowermoving2": { "anim_type": "offset", "easing": "linear", "duration": 6, "from": [ "150%", "30%" ], "to": [ "-150%", "30%" ], "next": "@aui-anim.lawnmowermoving2" },

@@ -5,16 +5,12 @@ ARC-UI is essentially a reskin of bedrock's vanilla UI to have faithful feelings
 
 ## What's in it?
 ( Like I said, alpha stage. )
-* A full customizable configuration supports (currently implementing)
-* Usable controls supports (currently implementing)
+* A full customizable configuration supports
+* Usable controls supports
 * Better visuals and style, better with any resource packs on top of it!
 * Keeping Vanilla as possible
 * Low-end supports, with pretty decent optimization
 * Developed in mobile
-
-## Progress
-* Configuration implementations - (ongoing)
-* Proper implementations of others - (ongoing)
 
 ## Goal of this
 * Better interface with controller in mind

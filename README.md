@@ -38,4 +38,8 @@ This project is created in mobile as it's purpose for controller users in mind, 
 - thermonuclear war, or you getting fired because the alarm app failed.
 
 ARC-UI/Arcdustry-UI is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License by [AUTHOR NAME].
+<<<<<<< HEAD
 Permissions that extend beyond the scope of this license may be obtained from Arcdustry.
+=======
+Permissions that extend beyond the scope of this license may be obtained from Arcdustry.
+>>>>>>> branch 'main' of https://github.com/PixelAlphas/ARC-UI

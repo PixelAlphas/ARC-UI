@@ -510,7 +510,7 @@
     "$auivar-bar_texture|default": "textures/ui/White",
     "$auivar-bar_contents|default": "",
     "$auivar-logo_texture|default": ".aui/.aui-assets/harlowlogo",
-    "$auivar-ver_text|default": "Arcdustry-UI [ v1.0-stable ]",
+    "$auivar-ver_text|default": "Arcdustry-UI [ v1.0.1 ]",
     "$auivar-screen_name|default": "\"Unknown\"",
     "$auivar-label_no_mcver|default": false,
     "controls": [
@@ -585,4 +585,5 @@
       { "contents@$auivar-bar_contents": {}}
     ]
   }
+}  }
 }

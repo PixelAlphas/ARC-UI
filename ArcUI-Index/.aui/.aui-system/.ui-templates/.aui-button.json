@@ -180,7 +180,30 @@
       }
     ]
   },
+  "tab_panel@auicore_configloader.core": {
+    "type": "panel",
+    "$tab_content|default": "common_tabs.empty_tab_content",
+    "$tab_image|default": "common_tabs.tab_image",
+    "controls": [
+      { "tab_image@$tab_image": {
+          "size": [ "100%", "100%" ],
+          "layer": 2,
+          "color": "$primary_color"
+      }},
+      { "tab_content_sizer": {
+          "type": "panel",
+          "$tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
+          "size": "$tab_content_size",
+          "controls": [
+            { "tab_content@$tab_content": {
+                "layer": 3
+            }}
+          ]
+      }}
+    ]
+  },
   "playtab@common_tabs.base_tab": {
+    "$tab_panel|default": "aui-button.tab_panel",
     "$unchecked_default_image": ".aui/.aui-assets/buttons/global/black_button",
     "$unchecked_hover_image": ".aui/.aui-assets/buttons/global/black_button_hover",
     "$unchecked_locked_image": ".aui/.aui-assets/buttons/global/black_button",

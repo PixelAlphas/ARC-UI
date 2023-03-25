@@ -1,3 +1,21 @@
+--- v1.0.1 Release (Mar 25, 2023) ---
+/*
+ * Late update due to working on another UI
+*/
+
+[ -- ADDITIONS / UPDATES -- ]
+[+] Play screen tab now has icons and got theme support
+[+] Pause screen (compact) now has theme support
+[+] Theme now efficiently works all A-UI related screen now.
+
+[ -- BUG FIXES -- ]
+[-] none
+
+[ -- ADJUSTMENTS -- ]
+[=] internal stuff
+[+] Code optimization and cleaning
+[+] Updated version requirements
+
 --- v1.0 Stable Release (Mar 10, 2023) ---
 /*
  * -- it's just a beginnings --
@@ -40,6 +58,7 @@
 [+] Changed ALL glyphs/icons related buttons and slider into
     white just for theming support
 [+] Optimizations and stability
+
 
 --- v1.0 Beta 2 Release (Mar 6, 2023) ---
 /*

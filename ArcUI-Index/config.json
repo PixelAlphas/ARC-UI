@@ -12,10 +12,10 @@
       // ^ Change the bottom bar font
 
   // - Theme related settings -
-    "$primary_color": [ 1, 1, 1 ], // RBG values but divided by 1
+    "$primary_color": [ 1, 0.5, 0 ], // RBG values but divided by 1
       // ^ Uses it as button primary color, such as start/pause screen buttons, settings buttons and common buttons
-    "$setting_button_icon_color": [ 1, 1, 1 ], // RBG values but divided by 1
-      // ^ Change every setting icons color.
+    "$setting_button_icon_color": [ 0, 0.5, 1 ], // RBG values but divided by 1
+      // ^ Change every AUI's related icons color. ( ONLY BUTTONS )
     "$slider_icon_color": [ 1, 1, 1 ], // RBG values but divided by 1
       // ^ Change every slider icons color.
     "$slider_color": [ 1, 1, 1 ], // RBG values but divided by 1
@@ -58,8 +58,11 @@
       // ^ Displays changelog in "About/Changelog" settings section
     "$show_warning_notification": true, // [ Default : false ]
       // ^ Displays a warning for mobile and notify about restarting after applying the pack.
-    "$pause_screen_compact_mode": false // [ Default : false ]
+    "$pause_screen_compact_mode": true, // [ Default : false ]
       // ^ Enables alternative version of pause screen just to look more nicer to interact
       //   thus very lite-ish. pretty cool if you don't like the current pause screen style and wants more
       //   compacted.
+    "$white_button_theme": false // [ Default : false ]
+      // ^ Changes every darken button into light/white theme instead, looks cool for theme or want to have
+      //   vanilla feels.
 }}

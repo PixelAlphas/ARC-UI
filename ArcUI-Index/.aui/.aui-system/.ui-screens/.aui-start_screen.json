@@ -251,18 +251,15 @@
           "$default_button_texture": ".aui/.aui-assets/nothingness",
           "$hover_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed",
           "$pressed_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed"
-        }
-      },
-      {
-        "setting_button@aui-button.dark_glyph_style": {
+      }},
+      { "setting_button@aui-button.dark_glyph_style": {
           "size": [ 145, 25 ],
           "$pressed_button_name": "button.menu_settings",
           "$auivar-text": "OPTIONS",
           "$default_button_texture": ".aui/.aui-assets/nothingness",
           "$hover_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed",
           "$pressed_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed"
-        }
-      },
+      }},
       {
         "achievemenet_button@aui-button.dark_glyph_style": {
           "size": [ 145, 25 ],
@@ -292,6 +289,10 @@
           "$hover_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed",
           "$pressed_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed"
         }
+      }
+    ]
+  }
+}     }
       }
     ]
   }

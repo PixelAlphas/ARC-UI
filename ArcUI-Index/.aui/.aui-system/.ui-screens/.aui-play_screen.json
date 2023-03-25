@@ -1,5 +1,13 @@
 {
   "namespace": "aui-play_screen",
+  "icon_template": {
+    "type": "image",
+    "size": [ 22, 22 ],
+    "color": "$setting_button_icon_color"
+  },
+  "world_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/general_glyph_color" },
+  "friend_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/multiplayer_glyph_color" },
+  "server_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/server_glyph_icon" },
   "default_play_screen_panel@aui-play_screen.play_screen_panel": {
     "$tab_content_panel": "aui-play_screen.default_tab_content_panel_layout"
   },
@@ -49,7 +57,7 @@
     "controls": [
       { "icon_section": {
           "type": "panel",
-          "offset": [ 3, 0 ],
+          "offset": [ 0, 0 ],
           "controls": [
             { "icon@$tab_icon": { "layer": 2, "anchor_from": "left_middle", "anchor_to": "left_middle" }}
           ]
@@ -64,7 +72,7 @@
                 "text": "$tab_text_name",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
-                "offset": [ 22, 0 ],
+                "offset": [ 25, 0 ],
                 "color": "$text_color"
               }
             }
@@ -98,7 +106,7 @@
                 "controls": [
                   { "count@play.common_button_text": {
                       "layer": 1,
-                      "offset": [ 0.5, 1 ],
+                      "offset": [ 0, 1 ],
                       "text": "$count_text_name",
                       "color": "$count_text_color",
                       "bindings": [
@@ -128,7 +136,7 @@
   },
   "world_navigation_tab@aui-play_screen.top_tab": {
     "$tab_view_binding_name": "world_navigation_tab_toggle",
-    "$tab_icon": "play.worlds_icon",
+    "$tab_icon": "aui-play_screen.world_icon",
     "$count_text_name": "#world_item_count",
     "$tab_text_name": "selectWorld.tab.worlds",
     "$toggle_group_forced_index": 0,
@@ -141,7 +149,7 @@
   },
   "friends_navigation_tab@aui-play_screen.top_tab": {
     "$tab_view_binding_name": "friends_navigation_tab_toggle",
-    "$tab_icon": "play.friends_icon_2",
+    "$tab_icon": "aui-play_screen.friend_icon",
     "$count_text_name": "#friend_world_item_count",
     "$tab_text_name": "selectWorld.tab.friends",
     "$toggle_group_forced_index": 1,
@@ -149,7 +157,7 @@
   },
   "server_navigation_tab@aui-play_screen.top_tab": {
     "$tab_view_binding_name": "server_navigation_tab_toggle",
-    "$tab_icon": "play.server_tab_icon",
+    "$tab_icon": "aui-play_screen.server_icon",
     "$count_text_name": "#server_world_item_count",
     "$tab_text_name": "selectWorld.tab.thirdParty",
     "$toggle_group_forced_index": 2,
@@ -190,7 +198,7 @@
       { "menu_title@aui-common.menu_title": { "$auivar-title_text": "PLAY" }}
     ]
   },
-  "root_contents": {
+  "root_contents@auicore_configloader.core": {
     "type": "panel",
     "controls": [
       { "contents@aui-play_screen.global_contents": {}},

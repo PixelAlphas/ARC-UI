@@ -30,7 +30,7 @@
       { "$toggle_view_binding_name@$template_toggle": {} }
     ]
   },
-  "toggle_button_core": {
+  "toggle_button_core@auicore_configloader.core": {
     "type": "panel",
     "controls": [
       {
@@ -50,6 +50,7 @@
         "toggle_button_image": {
           "type": "image",
           "layer": 3,
+          "color": "$primary_color",
           "size": "$auivar-toggle_image_size",
           "texture": "$auivar-toggle_image",
           "anchor_from": "$auivar-toggle_image_anchor",
@@ -70,7 +71,11 @@
     "$hover_texture": ".aui/.aui-assets/buttons/global/black_button_hover",
     "$pressed_texture": ".aui/.aui-assets/buttons/global/black_button_pressed",
     "$pressed_no_hover_texture": ".aui/.aui-assets/buttons/global/black_button_pressed",
-
+    "$default_texture_color": "$primary_color",
+    "$default_checked_texture_color": "$primary_color",
+    "$hover_texture_color": "$primary_color",
+    "$hover_checked_texture_color": "$primary_color",
+    
     "$default_checked_text_color": "$light_button_pressed_text_color",
     "$default_text_color": "$light_button_pressed_text_color",
 

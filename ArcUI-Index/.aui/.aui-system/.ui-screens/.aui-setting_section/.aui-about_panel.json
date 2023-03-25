@@ -204,7 +204,7 @@
       { "pudding01": { "type": "panel", "size": [ 1, 10 ]}},
       { "titlelogo": { "type": "image", "texture": "textures/ui/title", "size": [ "100%", 30 ] }},
       { "pudding02": { "type": "panel", "size": [ 1, 10 ]}},
-      { "label00@aui-common.label_element": { "text": "Arcdustry-UI (ARC-UI) Version\n§7- v1.0-stable§7\n- Mar 10, 2023 §g[ Build date ]§7\n- 1.19.63 §g[ Currently Developed in ]\n§7- Supported Versions : §e1.19.50 , 1.19.60 , 1.19.62 , 1.19.63" }},
+      { "label00@aui-common.label_element": { "text": "Arcdustry-UI (ARC-UI) Version\n§7- v1.0.1§7\n- Mar 25, 2023 §g[ Build date ]§7\n- 1.19.71 §g[ Currently Developed in ]\n§7- Supported Versions : §e1.19.50 , 1.19.60 , 1.19.62 , 1.19.63 , 1.19.70 , 1.19.71" }},
       { "pudding03": { "type": "panel", "size": [ 1, 10 ]}},
       { "media": {
           "type": "stack_panel",

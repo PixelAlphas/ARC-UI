@@ -1,6 +1,6 @@
 {
   "namespace": "aui-setting_screen",
-  "root_contents": {
+  "root_contents@auicore_configloader.core": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls": [
@@ -109,7 +109,7 @@
       { "addons_selector_panel@aui-setting_screen.addons_selector_panel": { "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))", "$level_texture_pack_toggle_index": "$level_texture_pack_index", "$addon_toggle_index": "$addon_index" }}
     ]
   },
-  "section_content_panels": {
+  "section_content_panels@auicore_configloader.core": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -160,7 +160,7 @@
       }
     ]
   },
-  "selector_pane_content": {
+  "selector_pane_content@auicore_configloader.core": {
     "type": "stack_panel",
     "$tts_section_header": "realmsSettingsScreen.worldSectionTitle",
     "variables": { "requires": "$is_pregame", "$tts_section_header": "options.editSettings" },

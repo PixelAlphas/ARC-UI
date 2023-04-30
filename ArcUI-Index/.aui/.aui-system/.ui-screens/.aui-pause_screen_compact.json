@@ -1,5 +1,4 @@
-{
-  "namespace": "aui-pause_screen_compact",
+{ "namespace": "aui-pause_screen_compact",
   "icon_template@auicore_configloader.core": {
     "type": "image",
     "layer": 2,
@@ -18,8 +17,7 @@
     "controls": [
       { "buttons_element_left@aui-pause_screen_compact.buttons_element_left": {}},
       { "buttons_element_right@aui-pause_screen_compact.buttons_element_right": {}}
-    ]
-  },
+  ]},
   "buttons_element_right": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -32,8 +30,7 @@
         "source_control_name": "auitoggle-playerlist",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
-      }
-    ],
+    }],
     "controls": [
       { "achievemenet_button@aui-pause_screen_compact.pause_icon_button": {
           "size": [ 25, 25 ],
@@ -46,8 +43,7 @@
           "$pressed_button_name": "button.menu_quit",
           "$auivar-temp_icon": ".aui/.aui-assets/icons/exit"
       }}
-    ]
-  },
+  ]},
   "buttons_element_left": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -60,22 +56,15 @@
           "size": [ 75, 25 ],
           "$pressed_button_name": "button.menu_continue",
           "$button_text": "RESUME"
-        }
-      },
-      {
-        "setting_button@aui-button.light_text_button": {
+      }},
+      { "setting_button@aui-button.light_text_button": {
           "size": [ 75, 25 ],
           "$pressed_button_name": "button.menu_settings",
           "$button_text": "OPTIONS"
-        }
-      },
-      {
-        "skin_button@aui-button.light_text_button": {
+      }},
+      { "skin_button@aui-button.light_text_button": {
           "size": [ 75, 25 ],
           "$pressed_button_name": "button.to_profile_or_skins_screen",
           "$button_text": "SKINS"
-        }
-      }
-    ]
-  }
-}
+      }}
+]}}

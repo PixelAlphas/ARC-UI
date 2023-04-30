@@ -3,6 +3,12 @@
     "$selector_stack_panel": "aui-setting_screen.selector_stack_panel",
     "$section_content_panels": "aui-setting_screen.section_content_panels",
     "$section_header_panels": "aui-setting_screen.section_header_panels",
-    "$section_footer_panels": "aui-setting_screen.section_footer_panels"
+    "$section_footer_panels": "aui-setting_screen.section_footer_panels",
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ]
   }
 }

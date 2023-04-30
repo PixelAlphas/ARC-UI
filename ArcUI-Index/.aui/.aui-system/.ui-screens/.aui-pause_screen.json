@@ -1,37 +1,39 @@
-{
-  "namespace": "aui-pause_screen",
+{ "namespace": "aui-pause_screen",
   "root_contents@auicore_configloader.core": {
     "type": "panel",
     "$auivar-button_compact_mode|default": "aui-pause_screen.buttons_element",
     "variables": [
-      {
-        "requires": "$pause_screen_compact_mode",
+      { "requires": "$pause_screen_compact_mode",
         "$auivar-button_compact_mode": "aui-pause_screen_compact.buttons_element"
-      }
-    ],
+    }],
     "controls": [
       { "status_bottom_bar@aui-common.status_bottom_bar": {
           "$auivar-screen_name": "\"Pause Screen\"",
           "$auivar-label_no_mcver": true
-        }
-      },
+      }},
       { "buttons_element@$auivar-button_compact_mode": {}},
       { "general_element@aui-pause_screen.general_element": {}},
       { "playerlist_element@aui-pause_screen.playerlist_element": {}}
-    ]
-  },
+  ]},
   "general_element": {
     "type": "panel",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
+    "$auivar:anim_from|default": [ 0, "-25%" ],
+    "$auivar:anim_to|default": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@aui-anim.screen_outro_anim_push",
+      "@aui-anim.screen_outro_anim_pop",
+      "@aui-anim.screen_intro_anim_push",
+      "@aui-anim.screen_intro_anim_pop"
+    ],
     "bindings": [
-      {
-        "binding_type": "view",
+      { "binding_type": "view",
         "source_control_name": "auitoggle-playerlist",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
-      }
-    ],
+    }],
     "controls": [
       { "information_panel": {
           "type": "stack_panel",
@@ -70,11 +72,8 @@
                                   "size": [ 22, 22 ],
                                   "layer": 1,
                                   "texture": "pack_icon"
-                                }
-                              }
-                            ]
-                          }
-                        },
+                              }}
+                        ]}},
                         { "padding_01": { "type": "panel", "size": [ 2, "100%" ] }},
                         { "label_panel": {
                             "type": "panel",
@@ -85,26 +84,24 @@
                                   "$auivar-userlabel_isbottom": true,
                                   "bindings": [
                                     { "binding_name": "#worldname" }
-                                  ]
-                                }
-                              },
+                              ]}},
                               { "message_label@aui-start_screen.userlabel_element": { "text": "§7Currently playing" }}
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+                        ]}}
+                  ]}}
+            ]}}
+      ]}}
+  ]},
   "playerlist_element@auicore_configloader.core": {
     "type": "panel",
+    "$auivar:anim_from|default": [ "25%", 0 ],
+    "$auivar:anim_to|default": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@aui-anim.screen_outro_anim_push",
+      "@aui-anim.screen_outro_anim_pop",
+      "@aui-anim.screen_intro_anim_push",
+      "@aui-anim.screen_intro_anim_pop"
+    ],
     "controls": [
       { "playerlist_element@aui-common.header_background_element": {
           "$auivar-header_contents": "aui-pause_screen.scrolling_panel",
@@ -121,16 +118,13 @@
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "bindings": [
-            {
-              "binding_type": "view",
+            { "binding_type": "view",
               "source_control_name": "auitoggle-playerlist",
               "source_property_name": "#toggle_state",
               "target_property_name": "#visible"
-            }
-          ],
+          }],
           "controls": [
-            { 
-              "close_playerlist@aui-toggle.toggle_button": {
+            { "close_playerlist@aui-toggle.toggle_button": {
                 "size": [ 32, "50%" ],
                 "offset": [ -35, 0 ],
                 "anchor_from": "left_middle",
@@ -146,11 +140,8 @@
                 "$toggle_group_forced_index": 2,
                 "$radio_toggle_group": true,
                 "$toggle_group_default_selected": 0
-              }
-            }
-          ]
-        }
-      },
+            }}
+      ]}},
       { "open_playerlist@aui-toggle.toggle_button": {
           "size": [ 32, "50%" ],
           "anchor_from": "right_middle",
@@ -168,17 +159,13 @@
           "$radio_toggle_group": true,
           "$toggle_group_default_selected": 0,
           "bindings": [
-            {
-              "binding_type": "view",
+            { "binding_type": "view",
               "source_control_name": "auitoggle-playerlist",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
-            }
-          ]
-        }
-      }
-    ]
-  },
+          }]
+      }}
+  ]},
   "scrolling_panel@common.scrolling_panel": {
     "size": [ "100%", "100%" ],
     "$scrolling_pane_size": [ "100%", "100%" ],
@@ -190,12 +177,20 @@
   "buttons_element": {
     "type": "stack_panel",
     "orientation": "vertical",
-    "size": [ "100%", 200 ],
-    "offset": [ 18, -20 ],
+    "size": [ 145, "100%c" ],
+    "offset": [ 18, -10 ],
     "layer": 1,
-    "use_child_anchors": false,
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
+    "$auivar:anim_from|default": [ "-25%", -10 ],
+    "$auivar:anim_to|default": [ 18, -10 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@aui-anim.screen_outro_anim_push",
+      "@aui-anim.screen_outro_anim_pop",
+      "@aui-anim.screen_intro_anim_push",
+      "@aui-anim.screen_intro_anim_pop"
+    ],
     "controls": [
       { "title_logo@aui-common.title_logo": {}},
       { "play_button@aui-button.dark_glyph_style": {
@@ -205,50 +200,40 @@
           "$default_button_texture": ".aui/.aui-assets/nothingness",
           "$hover_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed",
           "$pressed_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed"
-        }
-      },
-      {
-        "setting_button@aui-button.dark_glyph_style": {
+      }},
+      { "setting_button@aui-button.dark_glyph_style": {
           "size": [ 145, 25 ],
           "$pressed_button_name": "button.menu_settings",
           "$auivar-text": "OPTIONS",
           "$default_button_texture": ".aui/.aui-assets/nothingness",
           "$hover_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed",
           "$pressed_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed"
-        }
-      },
-      {
-        "achievemenet_button@aui-button.dark_glyph_style": {
+      }},
+      { "achievemenet_button@aui-button.dark_glyph_style": {
           "size": [ 145, 25 ],
           "$pressed_button_name": "button.menu_achievements",
           "$auivar-text": "ACHIEVEMENTS",
           "$default_button_texture": ".aui/.aui-assets/nothingness",
           "$hover_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed",
           "$pressed_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed"
-        }
-      },
-      {
-        "skin_button@aui-button.dark_glyph_style": {
+      }},
+      { "skin_button@aui-button.dark_glyph_style": {
           "size": [ 145, 25 ],
           "$pressed_button_name": "button.to_profile_or_skins_screen",
           "$auivar-text": "CHARACTER CREATOR",
           "$default_button_texture": ".aui/.aui-assets/nothingness",
           "$hover_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed",
           "$pressed_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed"
-        }
-      },
-      {
-        "quit_button@aui-button.dark_glyph_style": {
+      }},
+      { "quit_button@aui-button.dark_glyph_style": {
           "size": [ 145, 25 ],
           "$pressed_button_name": "button.menu_quit",
           "$auivar-text": "QUIT",
           "$default_button_texture": ".aui/.aui-assets/nothingness",
           "$hover_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed",
           "$pressed_button_texture": ".aui/.aui-assets/buttons/start_screen/pressed"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "playerlist_scroll": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -263,8 +248,7 @@
           "anchor_to": "top_middle",
           "bindings": [ { "binding_name": "(not #list_has_display_objective)", "binding_name_override": "#visible" }],
           "controls": [ { "players_grid@pause.players_grid": { "grid_item_template": "aui-pause_screen.player_grid_item" } }]
-        }
-      },
+      }},
       { "scoreboard_player_grid": {
           "type": "stack_panel",
           "size": [ "100%", "100%c" ],
@@ -272,29 +256,20 @@
           "anchor_to": "top_middle",
           "bindings": [ { "binding_name": "#list_has_display_objective", "binding_name_override": "#visible" }],
           "controls": [
-            {
-              "scored_players_grid_panel@scoreboard.players_scored_grid_list": {
+            { "scored_players_grid_panel@scoreboard.players_scored_grid_list": {
                 "$sb_collection_name": "scoreboard_scored_list_collection",
                 "factory": {
                   "name": "scored_list_factory",
                   "control_name": "aui-pause_screen.scoreboard_grid_item"
-                }
-              }
-            },
-            {
-              "unscored_players_grid_panel@scoreboard.players_unscored_grid_list": {
+            }}},
+            { "unscored_players_grid_panel@scoreboard.players_unscored_grid_list": {
                 "$sb_collection_name": "scoreboard_unscored_list_collection",
                 "factory": {
                   "name": "scored_list_factory",
                   "control_name": "aui-pause_screen.scoreboard_grid_item"
-                }
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+            }}}
+      ]}}
+  ]},
   "scoreboard_grid_item": {
     "type": "stack_panel",
     "size": [ "100%", 18 ],
@@ -312,19 +287,13 @@
                 "text_alignment": "center",
                 "text": "#player_rank",
                 "bindings": [
-                  {
-                    "binding_name": "#player_rank",
+                  { "binding_name": "#player_rank",
                     "binding_type": "collection",
                     "binding_collection_name": "$sb_collection_name"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "gamertag_image_panel": {
+                }]
+            }}
+      ]}},
+      { "gamertag_image_panel": {
           "type": "panel",
           "size": [ 21, "100%" ],
           "bindings": [ { "binding_name": "#gamerpic_visible", "binding_type": "collection", "binding_collection_name": "players_collection", "binding_name_override": "#visible" }],
@@ -340,13 +309,9 @@
                 "bindings": [
                 { "binding_name": "#player_icon", "binding_type": "collection", "binding_collection_name": "$sb_collection_name", "binding_name_override": "#texture" },
                 { "binding_name": "#player_icon_filesystem", "binding_type": "collection", "binding_collection_name": "$sb_collection_name", "binding_name_override": "#texture_file_system" }]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "gamertag_panel": {
+            }}
+      ]}},
+      { "gamertag_panel": {
           "type": "panel",
           "size": [ "fill", "100%" ],
           "controls": [
@@ -359,9 +324,7 @@
                 "text": "#player_name",
                 "bindings": [
                   { "binding_name": "#player_name", "binding_type": "collection", "binding_collection_name": "$sb_collection_name" }
-                ]
-              }
-            },
+            ]}},
             { "lgamertag_button@common.button": {
                 "size": [ "100%", "100%" ],
                 "layer": 10,
@@ -373,21 +336,14 @@
                       "alpha": 0.5,
                       "size": [ "100%", "100%" ],
                       "texture": "textures/ui/White"
-                    }
-                  }
-                ],
+                }}],
                 "bindings": [
                   { "binding_name": "#button_disabled", "binding_type": "collection", "binding_collection_name": "$sb_collection_name", "binding_name_override": "#visible" },
                   { "binding_name": "#can_click_player_button", "binding_type": "collection", "binding_collection_name": "$sb_collection_name", "binding_name_override": "#enabled"},
                   { "binding_type": "collection_details", "binding_collection_name": "$sb_collection_name" }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "score": {
+            ]}}
+      ]}},
+      { "score": {
           "type": "panel",
           "size": [ 32, "100%" ],
           "controls": [
@@ -400,19 +356,13 @@
                 "offset": [ 2, 0 ],
                 "text": "#player_score",
                 "bindings": [
-                  {
-                    "binding_name": "#player_score",
+                  { "binding_name": "#player_score",
                     "binding_type": "collection",
                     "binding_collection_name": "$sb_collection_name"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "permission_panel": {
+                }]
+            }}
+      ]}},
+      { "permission_panel": {
           "type": "panel",
           "size": [ 32, "100%" ],
           "controls": [
@@ -422,8 +372,7 @@
                 "texture": "#player_permission_level_icon_texture",
                 "size": [ 15, 15 ],
                 "bindings": [ { "binding_name": "#player_permission_level_icon_texture", "binding_name_override": "#texture", "binding_type": "collection", "binding_collection_name": "players_collection" }]
-              }
-            },
+            }},
             { "permission_button@common.button": {
                 "size": [ "100%", "100%" ],
                 "layer": 10,
@@ -433,31 +382,23 @@
                       "alpha": 0.5,
                       "size": [ "100%", "100%" ],
                       "texture": "textures/ui/White"
-                    }
-                  }
-                ],
+                }}],
                 "button_mappings": [ { "from_button_id": "button.menu_select", "to_button_id": "button.menu_permission", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.menu_permission", "mapping_type": "focused" }],
                 "bindings": [ { "binding_type": "collection_details", "binding_collection_name": "players_collection" }]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+          }}]
+      }}
+  ]},
   "player_grid_item": {
     "type": "stack_panel",
     "size": [ "100%", 18 ],
     "orientation": "horizontal",
     "controls": [
-      {
-        "gamertag_image_panel": {
+      { "gamertag_image_panel": {
           "type": "panel",
           "size": [ 21, "100%" ],
           "bindings": [ { "binding_name": "#gamerpic_visible", "binding_type": "collection", "binding_collection_name": "players_collection", "binding_name_override": "#visible" }],
           "controls": [
-            { 
-              "player_gamer_pic": {
+            { "player_gamer_pic": {
                 "type": "image",
                 "texture": "#texture",
                 "size": [ 16, 16 ],
@@ -466,13 +407,9 @@
                 "anchor_to": "top_right",
                 "texture_file_system": "#texture_source",
                 "bindings": [{ "binding_name": "#texture", "binding_type": "collection", "binding_collection_name": "players_collection" },{ "binding_name": "#texture_source", "binding_name_override": "#texture_file_system", "binding_type": "collection", "binding_collection_name": "players_collection" },{ "binding_name": "#gamerpic_visible", "binding_type": "collection", "binding_collection_name": "players_collection", "binding_name_override": "#visible" }]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "lan_icon_panel": {
+            }}
+      ]}},
+      { "lan_icon_panel": {
           "type": "panel",
           "size": [ 21, "100%" ],
           "bindings": [ { "binding_name": "#local_icon_visible", "binding_type": "collection", "binding_collection_name": "players_collection", "binding_name_override": "#visible" }],
@@ -484,13 +421,9 @@
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "layer": 2
-              }
-            }
-          ]
-        }
-      },
-      {
-        "gamertag_panel": {
+            }}
+      ]}},
+      { "gamertag_panel": {
           "type": "panel",
           "size": [ "fill", "100%" ],
           "controls": [
@@ -502,8 +435,7 @@
                 "anchor_to": "left_middle",
                 "text": "#gamertag",
                 "bindings": [ { "binding_name": "#gamertag", "binding_type": "collection", "binding_collection_name": "players_collection" }]
-              }
-            },
+            }},
             { "lgamertag_button@common.button": {
                 "size": [ "100%", "100%" ],
                 "layer": 10,
@@ -513,18 +445,12 @@
                       "alpha": 0.5,
                       "size": [ "100%", "100%" ],
                       "texture": "textures/ui/White"
-                    }
-                  }
-                ],
+                }}],
                 "button_mappings": [ { "from_button_id": "button.menu_select", "to_button_id": "button.player_profile_card", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.player_profile_card", "mapping_type": "focused" }],
                 "bindings": [ { "binding_name": "#button_enabled", "binding_type": "collection", "binding_collection_name": "players_collection", "binding_name_override": "#visible" },{ "binding_type": "collection_details", "binding_collection_name": "players_collection"}]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "permission_panel": {
+            }}
+      ]}},
+      { "permission_panel": {
           "type": "panel",
           "size": [ 32, "100%" ],
           "controls": [
@@ -534,8 +460,7 @@
                 "texture": "#player_permission_level_icon_texture",
                 "size": [ 15, 15 ],
                 "bindings": [ { "binding_name": "#player_permission_level_icon_texture", "binding_name_override": "#texture", "binding_type": "collection", "binding_collection_name": "players_collection" }]
-              }
-            },
+            }},
             { "permission_button@common.button": {
                 "size": [ "100%", "100%" ],
                 "layer": 10,
@@ -545,16 +470,9 @@
                       "alpha": 0.5,
                       "size": [ "100%", "100%" ],
                       "texture": "textures/ui/White"
-                    }
-                  }
-                ],
+                }}],
                 "button_mappings": [ { "from_button_id": "button.menu_select", "to_button_id": "button.menu_permission", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.menu_permission", "mapping_type": "focused" }],
                 "bindings": [ { "binding_type": "collection_details", "binding_collection_name": "players_collection" }]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  }
-}
+            }}
+      ]}}
+]}}

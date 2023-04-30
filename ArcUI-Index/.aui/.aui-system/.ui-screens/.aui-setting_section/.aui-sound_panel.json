@@ -1,5 +1,4 @@
-{
-  "namespace": "aui-setting_sound",
+{ "namespace": "aui-setting_sound",
   "empty_element": {
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
@@ -7,8 +6,7 @@
     "anchor_to": "top_middle",
     "controls": [
       { "pudding00": { "type": "panel", "size": [ 1, 20 ]}}
-    ]
-  },
+  ]},
   "main_vol@aui-setting_screen.option_slider": {
     "$option_label": "#main_volume_slider_label",
     "$slider_name": "main_volume",
@@ -104,13 +102,11 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "bindings": [
-      {
-        "binding_type": "view",
+      { "binding_type": "view",
         "source_control_name": "sound_button_toggle",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
-      }
-    ],
+    }],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
       { "main_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_sound.empty_element", "$text": "arc-ui.settingtitle.sound-main" }},
@@ -133,11 +129,6 @@
           "$pressed_button_name": "button.reset_settings",
           "$button_text": "options.resetSettings",
           "$focus_override_down": "FOCUS_OVERRIDE_STOP",
-          "property_bag": {
-            "reset_group": "audio"
-          }
-        }
-      }
-    ]
-  }
-}
+          "property_bag": { "reset_group": "audio" }
+      }}
+]}}

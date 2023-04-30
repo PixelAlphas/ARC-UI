@@ -1,5 +1,4 @@
-{
-  "namespace": "aui-setting_lang",
+{ "namespace": "aui-setting_lang",
   "lang_element": {
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
@@ -16,27 +15,21 @@
           "grid_dimension_binding": "#language_grid_dimension",
           "collection_name": "languages",
           "bindings": [{ "binding_name": "#language_grid_dimension", "binding_condition": "visible" }]
-        }
-      },
+      }},
       { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
-    ]
-  },
+  ]},
   "root_section": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "bindings": [
-      {
-        "binding_type": "view",
+      { "binding_type": "view",
         "source_control_name": "language_button_toggle",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
-      }
-    ],
+    }],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
       { "lang_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_lang.lang_element", "$text": "arc-ui.settingtitle.lang" }}
-    ]
-  }
-}
+]}}

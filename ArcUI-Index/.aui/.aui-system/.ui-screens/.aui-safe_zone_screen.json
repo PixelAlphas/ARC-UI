@@ -17,8 +17,7 @@
       { "screen_position_slider_x@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.screen_position_slider_x", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_horizontalpos", "$auivar-header_text": "arc-ui.setting.safezone.horizontalpos" }},
       { "screen_position_slider_y@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.screen_position_slider_y", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_verticalpos", "$auivar-header_text": "arc-ui.setting.safezone.verticalpos"}},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}}
-    ]
-  },
+  ]},
   "exp_element": { 
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
@@ -27,8 +26,7 @@
     "controls": [
       { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
       { "label01@aui-common.label_element": { "text": "arc-ui.setting.safezone.exp" }}
-    ]
-  },
+  ]},
   "main_element": { 
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
@@ -37,8 +35,7 @@
     "controls": [
       { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
       { "label01@aui-common.label_element": { "text": "arc-ui.setting.safezone.main" }}
-    ]
-  },
+  ]},
   "safe_zone_slider_x@aui-setting_screen.option_slider": {
     "$option_label": "#safe_zone_x_slider_label",
     "$slider_name": "safe_zone_x",
@@ -83,19 +80,15 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      {
-        "safezone_bounds_markers": {
+      { "safezone_bounds_markers": {
           "type": "panel",
           "controls": [
             { "top_left_marker@safe_zone.corner_tl": {} },
             { "top_right_marker@safe_zone.corner_tr": {} },
             { "bottom_left_marker@safe_zone.corner_bl": {} },
             { "bottom_right_marker@safe_zone.corner_br": {} }
-          ]
-        }
-      },
-      {
-        "main_content_panel": {
+      ]}},
+      { "main_content_panel": {
           "type": "panel",
           "size": [ 300, 200 ],
           "controls": [
@@ -114,11 +107,8 @@
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "offset": [ 0, 0 ]
-                    }
-                  }
-                ]
-              }
-            },
+                  }}
+            ]}},
             { "safezone_desc": {
                 "type": "label",
                 "text": "options.safeZone.description",
@@ -127,8 +117,7 @@
                 "layer": 1,
                 "offset": [ 4, 15 ],
                 "size": [ "125%", "default" ]
-              }
-            },
+            }},
             { "scrolling_panel@common.scrolling_panel": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -142,8 +131,7 @@
                 "$scroll_bar_right_padding_size": [ 0, 0 ],
                 "$show_background": false,
                 "$bar_visible": false
-              }
-            },
+            }},
             { "confirm_button@aui-button.light_text_button": {
                 "layer": 1,
                 "size": [ 150, 25 ],
@@ -151,11 +139,6 @@
                 "anchor_from": "bottom_middle",
                 "$pressed_button_name": "button.confirm_button",
                 "$button_text": "gui.confirm"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  }
-}
+            }}
+      ]}}
+]}}

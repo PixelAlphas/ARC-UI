@@ -2,6 +2,12 @@
   "play_screen@common.base_screen": {
     "$screen_content": "aui-play_screen.root_contents",
     "$screen_bg_content": "aui-common.menu_screen_background",
-    "$world_picker_screen": false
+    "$world_picker_screen": false,
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ]
   }
 }

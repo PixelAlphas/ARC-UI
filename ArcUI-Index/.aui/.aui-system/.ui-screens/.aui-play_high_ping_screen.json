@@ -1,26 +1,22 @@
-{
-  "namespace": "aui-play_high_ping_screen",
+{ "namespace": "aui-play_high_ping_screen",
   "root_contents@popup_dialog.modal_input_panel": {
     "size": [ "100%", "100%" ],
     "controls": [
       { "high_ping_popup_content@aui-play_high_ping_screen.high_ping_popup_content": { "layer": 1 }},
       { "gamepad_helpers@common.gamepad_helpers_a_and_b": { "layer": 1, "anchor_from": "bottom_middle", "anchor_to": "bottom_middle", "offset": [ 0, "31px" ] }}
-    ]
-  },
+  ]},
   "high_ping_popup_content": {
     "type": "panel",
     "size": [ 300, 200 ],
     "layer": 20,
     "controls": [
-      {
-        "background": {
+      { "background": {
           "type": "image",
           "texture": "textures/ui/Black",
           "alpha": 0.7,
           "layer": -5,
           "size": [ "100% + 16px", "100% + 16px" ]
-        }
-      },
+      }},
       { "main_title": {
           "type": "panel",
           "anchor_from": "top_middle",
@@ -36,11 +32,8 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [ 0, 0 ]
-              }
-            }
-          ]
-        }
-      },
+            }}
+      ]}},
       { "high_ping_desc": { "type": "label", "text": "networkWorld.highPingWarning.line1", "anchor_from": "top_middle", "anchor_to": "top_middle", "layer": 1, "offset": [ 0, 30 ], "size": [ "90%", "default" ] }},
       { "high_ping_desc2": { "type": "label", "text": "networkWorld.highPingWarning.line2", "text_alignment": "center", "anchor_from": "bottom_middle", "anchor_to": "bottom_middle", "layer": 1, "offset": [ 0, -35 ], "size": [ "75%", "default" ] }},
       { "button_stack": {
@@ -53,9 +46,5 @@
             { "proceed_button@aui-button.light_text_button": { "size": [ 150, "default" ], "$pressed_button_name": "button.join_server_anyway", "$button_text": "networkWorld.join" }},
             { "space": { "type": "panel", "size": [ 4, "default" ] }},
             { "back_button@aui-button.light_text_button": { "size": [ 150, "default" ], "$pressed_button_name": "button.cancel_join_server", "$button_text": "gui.cancel" }}
-          ]
-        }
-      }
-    ]
-  }
-}
+      ]}}
+]}}

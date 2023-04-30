@@ -1,5 +1,4 @@
-{
-  "namespace": "aui-common",
+{ "namespace": "aui-common",
   "pudding_line": { 
     "type": "panel",
     "size": [ "100%", 5 ],
@@ -9,10 +8,25 @@
           "color": "$option_description_text_color",
           "texture": "textures/ui/White",
           "size": [ "100% - 10px", 1 ]
-        }
-      }
-    ]
-  },
+      }}
+  ]},
+  "close_button_panel": {
+    "type": "panel",
+    "layer": 1,
+    "size": "$close_button_panel_size",
+    "$button_alpha|default": 1,
+    "controls": [
+      { "close_button_image@common.close_button_image": {
+        "alpha": "$button_alpha",
+        "color": "$setting_button_icon_color"
+      }}
+  ]},
+  "close_button@common.close_button": {
+    "controls": [
+      { "default@aui-common.close_button_panel": { "$close_button_texture": ".aui/.aui-assets/icons/close_button_idle"}},
+      { "hover@aui-common.close_button_panel": { "$close_button_texture": ".aui/.aui-assets/icons/close_button_hover"}},
+      { "pressed@aui-common.close_button_panel": { "$close_button_texture": ".aui/.aui-assets/icons/close_button_pressed"}}
+  ]},
   "label_element": {
     "type": "label",
     "size": [ "100%", "default" ],
@@ -159,16 +173,17 @@
       { "ihatethissomuch@aui-common.ihatethissomuch": { "ignored": "(not ($129_more_lawnmower))", "offset": "@aui-anim.lawnmowermoving126" }},
       { "ihatethissomuch@aui-common.ihatethissomuch": { "ignored": "(not ($129_more_lawnmower))", "offset": "@aui-anim.lawnmowermoving127" }},
       { "ihatethissomuch@aui-common.ihatethissomuch": { "ignored": "(not ($129_more_lawnmower))", "offset": "@aui-anim.lawnmowermoving128" }}
-
-    ]
-  },
+  ]},
   "title_logo": {
-    "type": "image",
-    "texture": "textures/ui/title",
-    "size": [ "35%", 75 ],
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle"
-  },
+    "type": "panel",
+    "size": [ "100%", 50 ],
+    "controls": [
+      { "title_logos": {
+          "type": "image",
+          "texture": "textures/ui/title",
+          "size": [ "100%", 50 ]
+      }}
+  ]},
   "experience_bar_template": {
     "type": "image",
     "size": [ "100%", "100%" ],
@@ -225,8 +240,7 @@
       { "binding_type": "$slider_enabled_binding_type", "binding_condition": "$slider_enabled_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "$slider_enabled_binding_name", "binding_name_override": "#enabled" },
       { "binding_type": "$slider_tts_binding_type", "binding_condition": "$slider_tts_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "$slider_tts_text_value" },
       { "binding_type": "$slider_tts_header_binding_type", "binding_condition": "$slider_tts_header_binding_condition", "binding_collection_name": "$slider_header_collection_name", "binding_name": "$slider_tts_header" }
-    ]
-  },
+  ]},
   "slider_button_state": { "type": "image", "layer": 2, "texture": "" },
   "slider_button_layout@aui-common.slider_button_state": { "texture": "" },
   "slider_button_hover_layout@aui-common.slider_button_state": { "texture": "" },
@@ -256,13 +270,9 @@
                 "alpha": 0,
                 "layer": 5,
                 "bindings": [ { "binding_type": "$slider_enabled_binding_type", "binding_condition": "$slider_enabled_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "(not $slider_enabled_binding_name)", "binding_name_override": "#visible" }]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+            }}
+      ]}}
+  ]},
   "slider_background_template@auicore_configloader.core": {
     "type": "image",
     "texture": "textures/ui/White"
@@ -286,9 +296,7 @@
           "controls": [
             { "$background_control_name@$background_control": { "layer": 1 }},
             { "$progress_control_name@$progress_control": { "layer": 3, "clip_direction": "$progress_clip_direction", "clip_pixelperfect": false }}
-          ]
-        }
-      },
+      ]}},
       { "transparent_grey": {
           "type": "image",
           "ignored": "$is_holographic",
@@ -296,10 +304,8 @@
           "alpha": 0,
           "layer": 4,
           "bindings": [ { "binding_type": "$slider_enabled_binding_type", "binding_condition": "$slider_enabled_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "(not $slider_enabled_binding_name)", "binding_name_override": "#visible" }]
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "slider_bar_hover@aui-common.slider_bar_default": { "color": "$slider_hover_border_color", "$background_control": "aui-common.slider_background_hover", "$progress_control": "aui-common.slider_progress_hover", "$background_control_name": "slider_background_hover", "$progress_control_name": "slider_progress_hover" },
   "slider_step": { "type": "image", "texture": "textures/ui/Black", "size": [ 2, 6 ], "layer": 4, "offset": "$step_offset" },
   "slider_step_hover@common.slider_step": { "texture": "textures/ui/White" },
@@ -312,8 +318,7 @@
     "size": [ "100%", 20 ],
     "controls": [
       { "header_background_element@aui-common.header_background_element": {}}
-    ]
-  },
+  ]},
   "header_background_element":{
     "type": "image",
     "$auivar-bgsize|default": [ "default", "100%cm" ],
@@ -351,13 +356,9 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [ 0.5, 13 ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+            }}
+      ]}}
+  ]},
   "header_background_slider@auicore_configloader.core":{
     "type": "image",
     "$auivar-bgsize|default": [ "default", "100%cm" ],
@@ -397,37 +398,23 @@
                       "offset": "$auivar-header_image_offset",
                       "anchor_from": "left_middle",
                       "anchor_to": "left_middle"
-                    }
-                  },
+                  }},
                   { "header_contents@$auivar-header_contents": { "size": [ "100% - 34px", 28 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 28, 1 ]}}
-                ]
-              }
-            },
-            {
-              "header_desc_label": {
+            ]}},
+            { "header_desc_label": {
                 "type": "label",
                 "size": [ "95%", "default" ],
                 "max_size": [ "95%", "default" ],
                 "text": "$auivar-header_text"
-              }
-            },
-            {
-              "puddings": {
-                "type": "panel",
-                "size": [ "default", 5 ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+            }},
+            { "puddings": { "type": "panel", "size": [ "default", 5 ]}}
+      ]}}
+  ]},
   "header": {
     "type": "panel",
     "size": [ "100%", 24 ],
     "controls": [
-      {
-        "background":{
+      { "background":{
           "type": "image",
           "size": [ "default", 20 ],
           "offset": [ 0, -2 ],
@@ -436,8 +423,7 @@
           "alpha": 0.7,
           "texture": "textures/ui/Black",
           "controls": [
-            {
-              "header_label":{
+            { "header_label":{
                 "type": "label",
                 "text": "$text",
                 "layer": 1,
@@ -447,13 +433,9 @@
                 "anchor_to": "center",
                 "text_alignment": "center",
                 "max_size": [ "90%", 10 ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+            }}
+      ]}}
+  ]},
   "menu_title": {
     "type": "label",
     "$auivar-title_text|default": "have you ever heard lawnmower?",
@@ -463,7 +445,16 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [ 13, 10 ],
-    "shadow": false
+    "shadow": false,
+    "$auivar:anim_from|default": [ 13, "-20% - 10px" ],
+    "$auivar:anim_to|default": [ 13, 10 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@aui-anim.screen_outro_anim_push",
+      "@aui-anim.screen_outro_anim_pop",
+      "@aui-anim.screen_intro_anim_push",
+      "@aui-anim.screen_intro_anim_pop"
+    ]
   },
   "gradient_renderer_template": {
     "type": "custom",
@@ -480,10 +471,8 @@
           "color2": [ 0, 0, 0, 0.0 ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle"
-        }
-      }
-    ]
-  }, 
+      }}
+  ]}, 
   "menu_screen_background@auicore_configloader.core": {
     "type": "panel",
     "controls": [
@@ -493,29 +482,41 @@
           "color2": [ 0, 0, 0, 0 ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle"
-        }
-      },
+      }},
       { "gradient02@aui-common.gradient_renderer_template": {
           "size": [ "100%", "45%" ],
           "color1": [ 0, 0, 0, 0 ],
           "color2": "$background_standard_color_bottom",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "status_bottom_bar@auicore_configloader.core": {
     "type": "panel",
     "$auivar-bar_texture|default": "textures/ui/White",
     "$auivar-bar_contents|default": "",
     "$auivar-logo_texture|default": ".aui/.aui-assets/harlowlogo",
-    "$auivar-ver_text|default": "Arcdustry-UI [ v1.0.1 ]",
+    "$auivar-ver_text|default": "Arcdustry-UI [ v1.1 ]",
     "$auivar-screen_name|default": "\"Unknown\"",
     "$auivar-label_no_mcver|default": false,
+    "$auivar:back_button|default": false,
+    "$auivar:anim_from|default": [ 0, "25%" ],
+    "$auivar:anim_to|default": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@aui-anim.screen_outro_anim_push",
+      "@aui-anim.screen_outro_anim_pop",
+      "@aui-anim.screen_intro_anim_push",
+      "@aui-anim.screen_intro_anim_pop"
+    ],
     "controls": [
-      {
-        "texture_bar": {
+      { "close_button@aui-common.close_button": {
+          "ignored": "(not $auivar:back_button)",
+          "size": [ 24, 24 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left"
+      }},
+      { "texture_bar": {
           "type": "image",
           "texture": "$auivar-bar_texture",
           "color": "$bottom_bar_background_color",
@@ -525,20 +526,17 @@
           "offset": [ 0, 80 ],
           "layer": -2,
           "alpha": "$bottom_bar_background_alpha"
-        }
-      },
-      {
-        "arc_logo": {
+      }},
+      { "arc_logo": {
+          "ignored": "$auivar:back_button",
           "type": "image",
           "texture": "$auivar-logo_texture",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "size": [ 16, 16 ],
           "offset": [ 4, -2 ]
-        }
-      },
-      {
-        "ui_ver_label": {
+      }},
+      { "ui_ver_label": {
           "type": "label",
           "color": "$bottom_bar_font_color",
           "text": "$auivar-ver_text",
@@ -546,11 +544,13 @@
           "anchor_to": "bottom_left",
           "offset": "$auivar-ver_offset",
           "$auivar-ver_offset|default": [ 22, -8.5 ],
-          "font_type": "$bottom_bar_font_type"
-        }
-      },
-      {
-        "screen_name": {
+          "font_type": "$bottom_bar_font_type",
+          "variables": [
+            { "requires": "$auivar:back_button",
+              "$auivar-ver_text": "Back"
+          }]
+      }},
+      { "screen_name": {
           "type": "label",
           "visible": "$auivar-label_no_mcver",
           "color": "$bottom_bar_font_color",
@@ -560,10 +560,8 @@
           "offset": [ 22, -2 ],
           "font_scale_factor": 0.75,
           "font_type": "$bottom_bar_font_type"
-        }
-      },
-      {
-        "mc_ver_label": {
+      }},
+      { "mc_ver_label": {
           "type": "label",
           "color": "$bottom_bar_font_color",
           "text": "#text",
@@ -578,12 +576,7 @@
             { "binding_type": "view",
               "source_property_name": "('Bedrock ' + #version + ' | ©Mojang AD')",
               "target_property_name": "#text"
-            }
-          ]
-        }
-      },
+          }]
+      }},
       { "contents@$auivar-bar_contents": {}}
-    ]
-  }
-}  }
-}
+]}}

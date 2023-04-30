@@ -19,6 +19,7 @@
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-gamepad_control.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-touch_control.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-content_log.json",
+    ".aui/.aui-system/.ui-screens/.aui-content_log.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_screen.json",
     ".aui/.aui-system/.ui-screens/.aui-start_screen.json",
     ".aui/.aui-system/.ui-screens/.aui-safe_zone_screen.json",

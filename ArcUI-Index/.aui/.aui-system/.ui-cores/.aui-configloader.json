@@ -1,5 +1,4 @@
-{
-  "namespace": "auicore_configloader",
+{ "namespace": "auicore_configloader",
   "core@auicore-configsource.element": {
     "variables": [
       { "requires": "(not ($key = 'i_like_my_chair'))",
@@ -29,8 +28,7 @@
         "$slider_hover_color|default": [ 1, 1, 1 ],
         "$slider_background_color|default": [ 0.1, 0.1, 0.1 ],
         "$slider_background_hover_color|default": [ 0.2, 0.2, 0.2 ],
-        "$show_warning_notification|default": false
-      }
-    ]
-  }
-}
+        "$show_warning_notification|default": false,
+        "$no_marketplace_button|default": false
+    }]
+}}

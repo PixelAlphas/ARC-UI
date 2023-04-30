@@ -1,5 +1,4 @@
-{
-  "namespace": "aui-setting_htp",
+{ "namespace": "aui-setting_htp",
   "htp_element": {
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
@@ -14,8 +13,7 @@
           "text_alignment": "center",
           "text": "menu.howToPlay.generalMessage",
           "shadow": false
-        }
-      },
+      }},
       { "pudding01": { "type": "panel", "size": [ 1, 10 ]}},
       { "label01": {
           "type": "label",
@@ -25,35 +23,25 @@
           "text": "#how_to_play_gamepad_helper_label_text",
           "shadow": false,
           "bindings": [
-            {
-              "binding_name": "#how_to_play_gamepad_helper_label_text"
-            },
-            {
-              "binding_name": "#how_to_play_gamepad_helper_label_visible",
+            { "binding_name": "#how_to_play_gamepad_helper_label_text" },
+            { "binding_name": "#how_to_play_gamepad_helper_label_visible",
               "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
+          }]
+      }},
       { "pudding02": { "type": "panel", "size": [ 1, 10 ], "bindings": [ { "binding_name": "#how_to_play_gamepad_helper_label_visible", "binding_name_override": "#visible" }]}}
-    ]
-  },
+  ]},
   "root_section": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "bindings": [
-      {
-        "binding_type": "view",
+      { "binding_type": "view",
         "source_control_name": "how_to_play_button_toggle",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
-      }
-    ],
+    }],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
       { "htp_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_htp.htp_element", "$text": "arc-ui.settingtitle.howtoplay" }}
-    ]
-  }
-}
+]}}

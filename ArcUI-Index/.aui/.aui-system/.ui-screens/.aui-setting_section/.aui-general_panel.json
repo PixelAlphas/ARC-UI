@@ -1,5 +1,4 @@
-{
-  "namespace": "aui-setting_general",
+{ "namespace": "aui-setting_general",
   "general_element": {
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
@@ -13,8 +12,7 @@
           "$option_binding_name": "#crossplatform_toggle",
           "$option_enabled_binding_name": "#crossplatform_toggle_enabled",
           "$toggle_name": "crossplatform_toggle"
-        }
-      },
+      }},
       { "mobile_data_option_toggle@settings_common.option_toggle": {
           "ignored": "($is_console or $is_settopbox or $win10_edition or $osx_edition or $education_edition_china)",
           "$option_label": "options.allowCellularData",
@@ -23,56 +21,47 @@
           "$toggle_name": "allow_cellular_data",
           "$has_option_description": true,
           "$option_description": "options.allowCellularData.message"
-        }
-      },
+      }},
       { "websocket_option_toggle@settings_common.option_toggle": {
           "$option_label": "options.websocketEncryption",
           "$option_binding_name": "#websocket_encryption",
           "$option_enabled_binding_name": "#websocket_encryption_enabled",
           "$toggle_name": "websocket_encryption",
           "ignored": "($console_edition or $education_edition_china)"
-        }
-      },
+      }},
       { "only_allow_trusted_skins_toggle@settings_common.option_toggle": {
           "$option_label": "options.onlyTrustedSkinsAllowed",
           "$option_binding_name": "#only_trusted_skins_allowed",
           "$option_enabled_binding_name": "#only_trusted_skins_allowed_enabled",
           "$toggle_name": "only_trusted_skins_allowed"
-        }
-      },
+      }},
       { "credits_button@aui-setting_screen.action_button": {
           "$pressed_button_name": "button.credits",
           "$button_text": "options.credits"
-        }
-      },
+      }},
       { "terms_and_conditions_content_popup_button@aui-setting_screen.action_button": {
           "ignored": "((not $is_holographic and not $fire_tv) or not $thirdpartyconsole)",
           "$pressed_button_name": "button.terms_and_conditions_popup",
           "$button_text": "options.termsAndConditions"
-        }
-      },
+      }},
       { "attribution_popup_button@aui-setting_screen.action_button": {
           "ignored": "(not $is_holographic and not $fire_tv)",
           "$pressed_button_name": "button.attribution_popup",
           "$button_text": "options.attribution"
-        }
-      },
+      }},
       { "licensed_content_popup_button@aui-setting_screen.action_button": {
           "ignored": "(not $is_holographic and not $fire_tv)",
           "$pressed_button_name": "button.licensed_content_popup",
           "$button_text": "options.licensed_content",
           "$focus_override_down": "FOCUS_OVERRIDE_STOP"
-        }
-      },
+      }},
       { "font_license_popup_button@aui-setting_screen.action_button": {
           "$pressed_button_name": "button.font_license_popup",
           "$button_text": "options.font_license",
           "$focus_override_down": "FOCUS_OVERRIDE_STOP"
-        }
-      },
+      }},
       { "pudding01": { "type": "panel", "size": [ "100%", 10 ]}}
-    ]
-  },
+  ]},
   "auto_update_mode_element": {
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
@@ -85,58 +74,44 @@
           "$option_label": "options.autoUpdateEnabled",
           "$option_binding_name": "#auto_update_enabled",
           "$toggle_name": "auto_update_enabled"
-        }
-      },
+      }},
       { "stack_panel": {
           "type": "stack_panel",
           "size": [ "100%", 30 ],
           "orientation": "horizontal",
           "controls": [
-            {
-              "threesec@aui-setting_screen.dropdown_radio_button": {
+            { "auto_update_off@aui-setting_screen.dropdown_radio_button": {
                 "size": [ "fill", 30 ],
                 "$toggle_state_binding_name": "#auto_update_mode_off",
                 "$radio_label_text": "options.autoUpdateMode.off"
-              }
-            },
-            {
-              "tensec@aui-setting_screen.dropdown_radio_button": {
+            }},
+            { "auto_update_wifi_only@aui-setting_screen.dropdown_radio_button": {
                 "size": [ "fill", 30 ],
                 "$toggle_state_binding_name": "#auto_update_mode_on_wifi_only",
                 "$radio_label_text": "options.autoUpdateMode.on.withWifiOnly"
-              }
-            },
-            {
-              "thirtysec@aui-setting_screen.dropdown_radio_button": {
+            }},
+            { "auto_update_on@aui-setting_screen.dropdown_radio_button": {
                 "size": [ "fill", 30 ],
                 "$toggle_state_binding_name": "#auto_update_mode_on_with_cellular",
                 "$radio_label_text": "options.autoUpdateMode.on.withCellular"
-              }
-            }
-          ]
-        }
-      },
+          }}]
+      }},
       { "pudding01": { "type": "panel", "size": [ "100%", 10 ]}}
-    ]
-  },
+  ]},
   "root_section": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "bindings": [
-      {
-        "binding_type": "view",
+      { "binding_type": "view",
         "source_control_name": "general_button_toggle",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
-      }
-    ],
+    }],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
       { "general_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_general.general_element", "$text": "options.networkSettings" }},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
       { "auto_update_mode_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_general.auto_update_mode_element", "$text": "options.autoUpdateMode" }}
-    ]
-  }
-}
+]}}

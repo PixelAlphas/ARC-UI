@@ -1,7 +1,29 @@
+--- v1.1 Release (Apr 29, 2023) ---
+× Cool stuff is there!
+
+[ -- ADDITIONS / UPDATES -- ]
+[+] Added Screen animations for normal screens
+[+] Added additional back button for setting/play screen
+[+] Improved Color theme system
+[+] Added option to get rid of marketplace [CONFIG]
+[+] Every screen has additional layout and visuals changes
+[+] Updated to support 1.19.80-81
+[-] Removed dialog's close button in response to new close button
+    replacement
+
+[ -- BUG FIXES -- ]
+[+] Fixed couple of alignment issues
+[+] Improved the stability of UI
+[+] Fixed where animations sometime wouldn't work on couple devices
+
+[ -- ADJUSTMENTS -- ]
+[+] Reworked few stuff
+[+] Code improvements and optimization
+[+] Updated Version requirements
+[+] Renamed and fixed misspelling in en lang
+
 --- v1.0.1 Release (Mar 25, 2023) ---
-/*
- * Late update due to working on another UI
-*/
+× Late update due to working on another UI
 
 [ -- ADDITIONS / UPDATES -- ]
 [+] Play screen tab now has icons and got theme support

@@ -33,4 +33,4 @@ ARC-UI is essentially a reskin of bedrock's vanilla UI to have faithful feelings
 - Take the Arcdustry-UI/Arc-UI every assets and reupload them without author's permission
 - thermonuclear war, or you getting fired because the alarm app failed. ( a joke )
 
-ARC-UI/Arcdustry-UI is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License by [AUTHOR NAME].
+ARC-UI/Arcdustry-UI is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License by Arcdustry.

@@ -75,7 +75,7 @@
           "$option_enabled_binding_name": "#darkness_enabled",
           "$label_bindings": [{ "binding_name": "$option_label" }]
       }},
-      { "label": {
+      { "darlness_label": {
           "type": "label",
           "size": [ "100%", "default" ],
           "max_size": [ "100%", "default" ],
@@ -83,9 +83,42 @@
           "shadow": false,
           "color": "$7_color_format"
       }},
-      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
-    ]
-  },
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}},
+      { "glint_strength_slider@aui-setting_screen.option_slider": {
+          "$option_label": "#glint_strength_slider_label",
+          "$slider_name": "glint_strength",
+          "$slider_value_binding_name": "#glint_strength",
+          "$slider_tts_text_value": "#glint_strength_text_value",
+          "$option_enabled_binding_name": "#glint_strength_enabled",
+          "$label_bindings": [{ "binding_name": "$option_label" }]
+      }},
+      { "glint_strength_label": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "options.glintStrength.message",
+          "shadow": false,
+          "color": "$7_color_format"
+      }},
+      { "pudding02": { "type": "panel", "size": [ 1, 10 ]}},
+      { "glint_speed_slider@aui-setting_screen.option_slider": {
+          "$option_label": "#glint_speed_slider_label",
+          "$slider_name": "glint_speed",
+          "$slider_value_binding_name": "#glint_speed",
+          "$slider_tts_text_value": "#glint_speed_text_value",
+          "$option_enabled_binding_name": "#glint_speed_enabled",
+          "$label_bindings": [{ "binding_name": "$option_label" }]
+      }},
+      { "glint_speed_label": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "max_size": [ "100%", "default" ],
+          "text": "options.glintspeed.message",
+          "shadow": false,
+          "color": "$7_color_format"
+      }},
+      { "pudding03": { "type": "panel", "size": [ 1, 10 ]}}
+  ]},
   "text_to_speak_element": {
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],

@@ -1,8 +1,8 @@
 { "namespace": "auicore_configloader",
   "core@auicore-configsource.element": {
     "variables": [
-      { "requires": "(not ($key = 'i_like_my_chair'))",
-        "$ver|default": "1.0-stable",
+      { "requires": "(not ($key = 'distorted_fate') and ($ver = '1.2'))",
+        "$ver|default": "1.2",
         "$key|default": "failback",
         "$Testvalue|default": false,
         "$configname|default": "Failmode Default",

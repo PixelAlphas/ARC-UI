@@ -17,14 +17,18 @@
   "warning_element": {
     "type": "image",
     "ignored": "(not $show_warning_notification)",
-    "texture": "textures/ui/Black",
+    "texture": "textures/ui/White",
     "size": [ "100%c + 10px", "100%cm + 8px" ],
     "layer": 10,
     "alpha": 0.7,
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, -116 ],
-    "anims": [ "aui-anim.warning_text_movement00" ],
+    "color": "aui-anim.warning_flashing00",
+    "anims": [ 
+      "aui-anim.warning_text_movement00",
+      "aui-anim.warning_flashing00"
+    ],
     "controls": [
       { "stack_panel": {
           "type": "stack_panel",

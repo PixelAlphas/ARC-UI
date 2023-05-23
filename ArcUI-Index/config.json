@@ -1,9 +1,9 @@
-{ "namespace": "auicore-configsource", "element": { "type":"panel","$key":"lawnmower","$ver":"1.0-stable",
+{ "namespace": "auicore-configsource", "element": { "type":"panel","$key|default":"distorted_fatee","$ver|default":"1.2",
   
   // bottom bar lists :D
-    "$bottom_bar_background_alpha": 0, // transparent ( 0-1 ) [ Default : 0 ]
+    "$bottom_bar_background_alpha": 0.7, // transparent ( 0-1 ) [ Default : 0 ]
       // ^ Change the bottom bar transparency
-    "$bottom_bar_background_color": [ 1, 1, 1, 0 ], // RBG values but divided by 1 | can be adjusted by use of variables
+    "$bottom_bar_background_color": [ 0, 0, 0 ], // RBG values but divided by 1 | can be adjusted by use of variables
       // ^ Change the bottom bar color
     "$bottom_bar_font_color": "$f_color_format", // RBG values but divided by 1 | can be adjusted by use of variables
       // ^ Change the bottom bar text/font color

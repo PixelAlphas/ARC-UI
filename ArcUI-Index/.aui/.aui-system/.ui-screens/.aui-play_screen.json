@@ -1,5 +1,4 @@
-{
-  "namespace": "aui-play_screen",
+{ "namespace": "aui-play_screen",
   "icon_template": {
     "type": "image",
     "size": [ 22, 22 ],
@@ -34,10 +33,10 @@
     "controls": [
       { "content@$scroll_tab_content": {
           "layer": 2,
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "size": [ "100%", "100% - 60px" ],
-          "offset": [ 0, 10 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ "100%", "100% - 55px" ],
+          "offset": [ 0, -18 ],
           "ttsSectionContainer": true
     }}],
     "bindings": [
@@ -48,10 +47,10 @@
   }]},
   "play_screen_panel": {
     "type": "panel",
-    "size": [ "100% - 135px", "100%" ],
+    "size": [ "100% - 85px", "100%" ],
     "offset": [ 0, 0 ],
-    "anchor_from": "bottom_right",
-    "anchor_to": "bottom_right",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
     "controls": [
       { "tab_content_panel@$tab_content_panel": { "layer": 2 }}
   ]},
@@ -154,26 +153,26 @@
   },
   "worlds_tab_content_panel@aui-play_screen.common_tab_content_panel": {
     "$visible_bind_toggle_source_control": "world_navigation_tab_toggle",
-    "$scroll_tab_content": "play.worlds_scroll_content"
+    "$scroll_tab_content": "aui-play_screen_world_section.root_contents"
   },
   "friends_tab_content_panel@aui-play_screen.common_tab_content_panel": {
     "$visible_bind_toggle_source_control": "friends_navigation_tab_toggle",
-    "$scroll_tab_content": "play.friends_scroll_content"
+    "$scroll_tab_content": "aui-play_screen_friend_section.root_contents"
   },
   "server_tab_content_panel@aui-play_screen.common_tab_content_panel": {
     "$visible_bind_toggle_source_control": "server_navigation_tab_toggle",
-    "$scroll_tab_content": "play.server_scroll_content"
+    "$scroll_tab_content": "aui-play_screen_server_section.root_contents"
   },
   "buttons_element": {
     "type": "stack_panel",
-    "orientation": "vertical",
-    "size": [ 125, 75 ],
-    "offset": [ 4, 0 ],
+    "orientation": "horizontal",
+    "size": [ 275, 25 ],
+    "offset": [ 0, 8 ],
     "layer": 3,
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle",
-    "$auivar:anim_from|default": [ "-25%", 0 ],
-    "$auivar:anim_to|default": [ 4, 0 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$auivar:anim_from|default": [ 0, "-25%" ],
+    "$auivar:anim_to|default": [ 0, 8 ],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
       "@aui-anim.screen_outro_anim_push",
@@ -182,9 +181,9 @@
       "@aui-anim.screen_intro_anim_pop"
     ],
     "controls": [
-      { "world_navigation_tab@aui-play_screen.world_navigation_tab": { "size": [ "100%", 25 ]}},
-      { "friends_navigation_tab@aui-play_screen.friends_navigation_tab": { "size": [ "100%", 25 ]}},
-      { "server_navigation_tab@aui-play_screen.server_navigation_tab": { "size": [ "100%", 25 ]}}
+      { "world_navigation_tab@aui-play_screen.world_navigation_tab": { "size": [ "fill", "100%" ]}},
+      { "friends_navigation_tab@aui-play_screen.friends_navigation_tab": { "size": [ "fill", "100%" ]}},
+      { "server_navigation_tab@aui-play_screen.server_navigation_tab": { "size": [ "fill", "100%" ]}}
   ]},
   "global_contents": {
     "type": "panel",

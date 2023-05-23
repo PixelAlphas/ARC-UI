@@ -2,10 +2,10 @@
   // /* - Config Core - */ //
     "config.json",
 
-  // /* - UI System Cores - */ //
-    ".aui/.aui-system/.ui-cores/.aui-configloader.json",
-
   // /* - UI System Screens - */ //
+    ".aui/.aui-system/.ui-screens/.aui-play_section/.aui-world_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-play_section/.aui-friend_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-play_section/.aui-server_section.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-about_panel.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-account_panel.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-accessibility_panel.json",
@@ -19,6 +19,7 @@
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-gamepad_control.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-touch_control.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-content_log.json",
+    ".aui/.aui-system/.ui-screens/.aui-chat_screen.json",
     ".aui/.aui-system/.ui-screens/.aui-content_log.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_screen.json",
     ".aui/.aui-system/.ui-screens/.aui-start_screen.json",
@@ -31,6 +32,7 @@
     ".aui/.aui-system/.ui-screens/.aui-pause_screen_compact.json",
 
   // /* - UI System Templates
+    ".aui/.aui-system/.ui-templates/.aui-config_loader.json",
     ".aui/.aui-system/.ui-templates/.aui-anim.json",
     ".aui/.aui-system/.ui-templates/.aui-common.json",
     ".aui/.aui-system/.ui-templates/.aui-button.json",

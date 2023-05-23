@@ -1,5 +1,43 @@
 {
   "namespace": "aui-anim",
+  // Warning Flashing
+  "warning_flashing00": {
+    "anim_type": "wait",
+    "duration": 2,
+    "next": "@aui-anim.warning_flashing01"
+  },
+  "warning_flashing01": {
+    "anim_type": "color",
+    "duration": 0.5,
+    "from": [ 1, 0.8627, 0 ],
+    "to": [ 0, 0, 0 ],
+    "next": "@aui-anim.warning_flashing02"
+  },
+  "warning_flashing02": {
+    "anim_type": "wait",
+    "duration": 1,
+    "next": "@aui-anim.warning_flashing03"
+  },
+  "warning_flashing03": {
+    "anim_type": "color",
+    "duration": 0.5,
+    "from": [ 1, 0.8627, 0 ],
+    "to": [ 0, 0, 0 ],
+    "next": "@aui-anim.warning_flashing04"
+  },
+  "warning_flashing04": {
+    "anim_type": "wait",
+    "duration": 1,
+    "next": "@aui-anim.warning_flashing05"
+  },
+  "warning_flashing05": {
+    "anim_type": "color",
+    "duration": 0.5,
+    "from": [ 1, 0.8627, 0 ],
+    "to": [ 0, 0, 0 ]
+  },
+  
+  // Warning movements
   "warning_text_movement00": {
     "anim_type": "wait",
     "duration": 2,

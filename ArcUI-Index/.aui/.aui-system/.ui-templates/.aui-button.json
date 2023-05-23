@@ -134,6 +134,7 @@
     "$button_image_fill|default": true,
     "controls": [
       { "default@$button_state_panel": {
+          "$secondary_text_color": "$light_button_secondary_default_text_color",
           "$new_ui_button_texture": "$default_button_texture",
           "$text_color": "$dark_button_default_text_color",
           "$content_alpha": 1,
@@ -144,6 +145,7 @@
         }
       },
       { "hover@$button_state_panel": {
+          "$secondary_text_color": "$light_button_secondary_hover_text_color",
           "$new_ui_button_texture": "$hover_button_texture",
           "$text_color": "$dark_button_hover_text_color",
           "$content_alpha": 1,
@@ -156,6 +158,7 @@
         }
       },
       { "pressed@$button_state_panel": {
+          "$secondary_text_color": "$light_button_secondary_pressed_text_color",
           "$new_ui_button_texture": "$pressed_button_texture",
           "$text_color": "$dark_button_pressed_text_color",
           "$content_alpha": 1,
@@ -168,6 +171,7 @@
         }
       },
       { "locked@$button_state_panel": {
+          "$secondary_text_color": "$light_button_secondary_locked_text_color",
           "$new_ui_button_texture": "$locked_button_texture",
           "$text_color": "$dark_button_locked_text_color",
           "$content_alpha": 1,

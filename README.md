@@ -4,7 +4,6 @@ A reskinned bedrock's vanilla UI to have controller feelings!
 ARC-UI is essentially a reskin of bedrock's vanilla UI to have faithful feelings if minecraft should be a console game. This UI pack is inspired from Valve's source game with steam deck UI
 
 ## What's in it?
-( Like I said, alpha stage. )
 * A full customizable configuration supports
 * Usable controls supports
 * Better visuals and style, better with any resource packs on top of it!
@@ -21,16 +20,16 @@ ARC-UI is essentially a reskin of bedrock's vanilla UI to have faithful feelings
 
 **You are permitted to:**
 
-- Examine the code and works to learn more about the creation and development of UI pack
-- Change the code or works to suit your needs
-- Use the modified usage of code as your choice
-- Re-distribute or Reupload the Arcdustry-UI/Arc-UI elsewhere, with approval of the author.
+- Look at the code and learn how it works, with ton of concepts is there. (Open-source'd in github!)
+- Make use as it's base with credits.
+- Make and share customized "config.json" file to other people, I.e making theme color of your respective and aesthetic.
+- Change UI code and use it as private use.
 
 **You are NOT permitted to:**
 
 - Negate the accreditation of the original author.
-- Paste the shortest link with ads and making profit out of it, negating the MCPEDL page.
+- Paste the shortest link with ads and making profit out of it, negating the MCPEDL and Github page.
 - Take the Arcdustry-UI/Arc-UI every assets and reupload them without author's permission
 - thermonuclear war, or you getting fired because the alarm app failed. ( a joke )
 
-ARC-UI/Arcdustry-UI is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License by [AUTHOR NAME].
+ARC-UI/Arcdustry-UI is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License by Arcdustry.

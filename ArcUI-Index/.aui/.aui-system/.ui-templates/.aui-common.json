@@ -1,4 +1,89 @@
 { "namespace": "aui-common",
+  "changelog_v2_core": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "$auivar:changelog_version|default": "ARC-UIv1.0",
+    "$auivar:changelog_control|default": [],
+    "controls": [
+      { "toggle_button@aui-toggle.text_toggle": {
+          "$toggle_view_binding_name": "$auivar:changelog_version",
+          "$toggle_name": "$auivar:changelog_version",
+          "size": [ "100%", 20 ],
+          "$button_type_panel": "common_buttons.button_content_panel",
+          "$button_content": "aui-common.changelog_v2_contents"
+      }},
+      { "changelog_control": {
+          "type": "image",
+          "size": [ "100%", "100%c + 8px" ],
+          "texture": ".aui/.aui-assets/changelogbackground",
+          "controls": [
+            { "stack": {
+                "type": "stack_panel",
+                "layer": 1,
+                "size": [ "100% - 12px", "100%c" ],
+                "controls": "$auivar:changelog_control"
+          }}],
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "$auivar:changelog_version",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+      }]}},
+      { "padding_2": {
+          "type": "panel",
+          "size": [ 0, 3 ]
+      }}
+  ]},
+  "changelog_v2_contents": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "label_core": {
+          "type": "stack_panel",
+          "size": [ "100%", 10 ],
+          "offset": [ 2, 0 ],
+          "orientation": "horizontal",
+          "controls": [
+            { "changelog_label": {
+                "type": "label",
+                "text": "Arc-UI - ",
+                "color": "$text_color"
+            }},
+            { "versions": {
+                "type": "label",
+                "text": "$auivar:changelog_version",
+                "color": "$text_color"
+            }}
+      ]}},
+      { "dropdown_chevron_icon": {
+          "type": "panel",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -5, 0 ],
+          "size": [ 11, 11 ],
+          "controls": [
+            { "down_arrow": {
+                "type": "image",
+                "texture": "textures/ui/chevron_white_down",
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "$auivar:changelog_version",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                }]
+            }},
+            { "up_arrow": {
+                "type": "image",
+                "texture": "textures/ui/chevron_white_up",
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "$auivar:changelog_version",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                }]
+            }}
+      ]}}
+  ]},
   "pudding_line": { 
     "type": "panel",
     "size": [ "100%", 5 ],
@@ -178,7 +263,7 @@
     "type": "panel",
     "size": [ "100%", 50 ],
     "controls": [
-      { "title_logos": {
+      { "texture": {
           "type": "image",
           "texture": "textures/ui/title",
           "size": [ "100%", 50 ]
@@ -330,7 +415,7 @@
     "alpha": "$auivar-bgalpha",
     "size": "$auivar-bgsize",
     "offset": "$auivar-offsetsize",
-    "anchor_from": "#$auivar-bganchor",
+    "anchor_from": "$auivar-bganchor",
     "anchor_to": "$auivar-bganchor",
     "texture": "$auivar-bgtexture",
     "controls": [
@@ -441,13 +526,13 @@
     "$auivar-title_text|default": "have you ever heard lawnmower?",
     "text": "$auivar-title_text",
     "font_type": "dainbold",
-    "font_scale_factor": 3,
+    "font_scale_factor": 2,
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "offset": [ 13, 10 ],
+    "offset": [ 13, 8 ],
     "shadow": false,
     "$auivar:anim_from|default": [ 13, "-20% - 10px" ],
-    "$auivar:anim_to|default": [ 13, 10 ],
+    "$auivar:anim_to|default": [ 13, 8 ],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
       "@aui-anim.screen_outro_anim_push",
@@ -496,7 +581,7 @@
     "$auivar-bar_texture|default": "textures/ui/White",
     "$auivar-bar_contents|default": "",
     "$auivar-logo_texture|default": ".aui/.aui-assets/harlowlogo",
-    "$auivar-ver_text|default": "Arcdustry-UI [ v1.1 ]",
+    "$auivar-ver_text|default": "Arcdustry-UI [ 5/19/2023-v1.2 ]",
     "$auivar-screen_name|default": "\"Unknown\"",
     "$auivar-label_no_mcver|default": false,
     "$auivar:back_button|default": false,

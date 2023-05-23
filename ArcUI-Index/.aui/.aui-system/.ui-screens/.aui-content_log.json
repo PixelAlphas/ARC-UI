@@ -2,7 +2,7 @@
   "content_log_element": {
     "type": "panel",
     "size": [ "100% - 8px", "100% - 28px" ],
-    "offset": [ 0, 10 ],
+    "offset": [ 0, 3 ],
     "controls": [
       { "main_stack_panel@content_log_history.main_stack_panel": {}}
   ]},

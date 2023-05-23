@@ -1,8 +1,6 @@
-{
-  "namespace": "settings_common",
+{ "namespace": "settings_common",
   "option_toggle_control": {
     "size": [ "100%", "100%c" ],
-    
     "$unchecked_control": "aui-toggle.option_toggle_off",
     "$checked_control": "aui-toggle.option_toggle_on",
     "$unchecked_hover_control": "aui-toggle.option_toggle_off_hover",
@@ -17,21 +15,16 @@
   },
   "option_generic_core/one_line_layout": {
     "modifications": [
-      {
-        "array_name": "controls",
+      { "array_name": "controls",
         "control_name": "option_descriptive_text",
         "operation": "insert_before",
         "value": [
-          {
-            "spacer": {
+          { "spacer": {
               "type": "panel",
               "size": [ 1, 4 ]
-            }
-          }
-        ]
-      }
-    ]
-  },
+          }}
+      ]}
+  ]},
   "dynamic_dialog_screen@common.base_screen": {
     "type": "screen",
     "cache_screen": false,
@@ -51,5 +44,4 @@
   },
   "screen_base": {
     "$dialog_content": "aui-setting_screen.dialog_content"
-  }
-}
+}}

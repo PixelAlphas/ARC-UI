@@ -1,3 +1,40 @@
+--- v1.2 Release (May 19, 2023) ---
+× Probably large update i suppose.
+
+[ -- ADDITIONS / UPDATES -- ]
+[+] New Trailer for the UI once for all!
+[+] Updated Accessibility Section with 2 new slider from 1.19.82/83
+[+] Updated structure of UI folders
+[+] Updated Back button icon
+[+] Updated the UI layouts.
+[+] Updated About Section
+[+] Revamped Play Screen with proper layout and sections
+[+] Added Changelog v2 (rip v1)
+[+] Added PlanetMinecraft Profile/Icon in response of Arcdustry-UI being
+    uploaded in PlanetMinecraft!
+[+] Added Missing options from 1.19.80+
+[-] Removed Version requirements, instead are now reimplemented in
+    Changelog v2
+[-] Removed Build date, instead are now reimplemented in Changelog v2
+
+[ -- BUG FIXES -- ]
+[+] Fixed animations being wanky
+[+] Fixed the issue where sometimes pause screen may crash the game
+[+] Fixed another alignment issues, again
+[+] Fixed being unable to use tab with controller in play screen
+[+] Fixed grammar in couple of settings sections
+
+[ -- ADJUSTMENTS -- ]
+[+] Improvements to UI stability
+[+] Improved the loading screen animations
+[+] Improved the warning dialog
+[+] Decreased the UI loading delays
+[+] UI is now abit smaller for large screen usage
+[+] Code Optimizations and cleaning
+[+] UI file path is changed to probably feel less empty
+[+] Added date next to version
+
+
 --- v1.1 Release (Apr 29, 2023) ---
 × Cool stuff is there!
 
@@ -190,13 +227,16 @@
  * create comments and massive improvement to my coding
  * experience. which, result better productitiy.
  *
- * Expeft faster update and code improvement for mow.
+ * Expect faster update and code improvement for now.
 */
 
 - [ Whats new? ] -
 [+] Complete rewrite from scratch.
 [+] Assets UI files may now switch from .json to .jsonc for
     comments
+
+
+
 
 --- v0.1 Alpha 2.4 (Nov 27, 2022) ---
 /* -- UI Updates --

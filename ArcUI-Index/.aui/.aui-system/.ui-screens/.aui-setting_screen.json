@@ -9,7 +9,7 @@
       { "menu_title@aui-common.menu_title": { "$auivar-title_text": "SETTINGS" }},
       { "stack_panel": {
           "type": "stack_panel",
-          "size": [ "100%", "100% - 60px" ],
+          "size": [ "100%", "100% - 34px" ],
           "controls": [
             { "content_panel": {
                 "type": "panel",
@@ -39,8 +39,9 @@
     "anchor_to": "top_middle",
     "controls": [
       { "selector_area@settings_common.selector_area": {
-          "$auivar:anim_from|default": [ "-25%", 21 ],
-          "$auivar:anim_to|default": [ 0, 21 ],
+          "$auivar:anim_from|default": [ "-25%", 16 ],
+          "$auivar:anim_to|default": [ 0, 16 ],
+          "offset": [ 2, 16 ],
           "animation_reset_name": "screen_animation_reset",
           "anims": [
             "@aui-anim.screen_outro_anim_push",
@@ -49,8 +50,9 @@
             "@aui-anim.screen_intro_anim_pop"
       ]}},
       { "content_area@settings_common.content_area": {
-          "$auivar:anim_from|default": [ "25%", 21 ],
-          "$auivar:anim_to|default": [ 0, 21 ],
+          "$auivar:anim_from|default": [ "25%", 16 ],
+          "$auivar:anim_to|default": [ 0, 16 ],
+          "offset": [ 0, 16 ],
           "animation_reset_name": "screen_animation_reset",
           "anims": [
             "@aui-anim.screen_outro_anim_push",
@@ -67,7 +69,6 @@
     "$default_selector_toggle_index": 0,
     "ttsSectionContainer": true,
     "controls": [
-      { "pudding00": { "ignored": "(not $include_world_section)", "type": "panel", "size": [ 2, 2 ]}},
       { "buttons_panel": {
           "type": "stack_panel",
           "controls": [

@@ -1,4 +1,21 @@
---- v1.3 Release Final (???, 2023) ---
+--- v1.3.1 (Jun 8/9, 2023) ---
+× whoops accidentally broke something
+
+[ -- ADDITIONS / UPDATES -- ]
+[+] Added couple of .lang stuff
+[+] Added Realms options in world tab ( Vanilla instead only )
+
+[ -- BUG FIXES -- ]
+[+] Play screen title are not spaced
+[+] Realm options just randomly stops working
+[+] fixed versioning issues lmao i forogt
+
+[-- ADJUSTMENTS -- ]
+[+] improved UI just it
+[-] there'll be no v1.3.1 changelog in UI
+
+
+--- v1.3 Release Final (Jun 8, 2023) ---
 × The only update that i was really dedicated.
 × Arcdustry-UI will no longer uses "ARC-UI".
 

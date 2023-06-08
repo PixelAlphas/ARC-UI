@@ -1,9 +1,9 @@
 { "format_version": 2,
   "header": {
-    "name": "Arcdustry-UI Pack [ 6/9/2023-v1.3 ]",
-    "description": "Reskinned UI made by Arcdustry (Harlow)\n[6/9/2023-v1.3]",
+    "name": "Arcdustry-UI Pack [ 6/9/2023-v1.3.1 ]",
+    "description": "Reskinned UI made by Arcdustry (Harlow)\n[6/9/2023-v1.3.1]",
     "uuid": "1d412f94-dce6-4bbb-8ee1-c94ec7606d71",
-    "version": [ 1, 3, 0 ],
+    "version": [ 1, 3, 1 ],
     "min_engine_version": [ 1, 19, 70 ]
   },
   "modules": [

@@ -1,81 +1,78 @@
 ## - Settings Sections Title -
 ## Note: Character case doesn't matter since the font will outputs
 ##       all the same characters.
-arc-ui.settingtitle.about=About ARC-UI
-arc-ui.settingtitle.about-config=Configuration
-arc-ui.settingtitle.about-changelog=Changelog
-arc-ui.settingtitle.accessibility-tts=Text To Speech Settings
-arc-ui.settingtitle.accessibility-visuality=Visuality Settings
-arc-ui.settingtitle.account=Account settings
-arc-ui.settingtitle.account-alt=Additional Settings
-arc-ui.settingtitle.creator=Creator Settings
-arc-ui.settingtitle.gamepad=Controller settings
-arc-ui.settingtitle.howtoplay=How to play
-arc-ui.settingtitle.keyboardandmouse=Keyboard & mouse settings
-arc-ui.settingtitle.lang=Language settings
-arc-ui.settingtitle.sound=Sound Settings
-arc-ui.settingtitle.sound-main=Main Settings
-arc-ui.settingtitle.touch=Touch Controls Settings
-arc-ui.settingtitle.video-interface=Interface Settings
-arc-ui.settingtitle.video-graphic=Graphical Settings
-arc-ui.settingtitle.video-experiment=Experiment
+arc-ui.settingtitle.about=Sobre a ARC-UI
+arc-ui.settingtitle.about-config=Configurações
+arc-ui.settingtitle.about-changelog=Registro de mudanças
+arc-ui.settingtitle.accessibility-tts=Configurações de texto em fala
+arc-ui.settingtitle.accessibility-visuality=Configurações de visibilidade
+arc-ui.settingtitle.account=Configurações de conta
+arc-ui.settingtitle.account-alt=Configurações adicionais
+arc-ui.settingtitle.creator=Configurações de criador
+arc-ui.settingtitle.gamepad=Configurações de controle
+arc-ui.settingtitle.howtoplay=Como jogar
+arc-ui.settingtitle.keyboardandmouse=Configurações de teclado e mouse
+arc-ui.settingtitle.lang=Configurações de idioma
+arc-ui.settingtitle.sound=Configurações de som
+arc-ui.settingtitle.sound-main=Configurações principais
+arc-ui.settingtitle.touch=Configurações dos controles de toque
+arc-ui.settingtitle.video-interface=Configurações de interface
+arc-ui.settingtitle.video-graphic=Configurações de gráficos
+arc-ui.settingtitle.video-experiment=Configurações experimentais
 
 ## - Start Section -
 ## Note: Character case doesn't matter since the font will outputs
 ##       probably the same.
 ## > Regular ( Start screen & Pause screen )
-arc-ui.mainmenu.regular.start=PLAY
-arc-ui.mainmenu.regular.setting=OPTIONS
-arc-ui.mainmenu.regular.skin=CHARACTER CREATOR
-arc-ui.mainmenu.regular.achievement=ACHIEVEMENT
+arc-ui.mainmenu.regular.start=JOGAR
+arc-ui.mainmenu.regular.setting=OPÇÕES
+arc-ui.mainmenu.regular.skin=CRIADOR DE PERSONAGEM
+arc-ui.mainmenu.regular.achievement=CONQUISTAS
 arc-ui.mainmenu.regular.marketplace=MARKETPLACE
-arc-ui.mainmenu.regular.more=MORE
-arc-ui.mainmenu.regular.exit=EXIT GAME
+arc-ui.mainmenu.regular.more=MAIS
+arc-ui.mainmenu.regular.exit=SAIR DO JOGO
 ## > Pause ( Pause screen only )
-arc-ui.mainmenu.pause.start=RESUME SESSION
-arc-ui.mainmenu.pause.exit=EXIT SESSION
-
-## - Play Section -
-## Note: Character case doesn't matter since the font will outputs
-##       probably the same.
-arc-ui.playscreen.title.controlcenter=Control Center
-arc-ui.playscreen.title.realm=Realms
-arc-ui.playscreen.title.world=World
+arc-ui.mainmenu.pause.start=CONTINUAR JOGO
+arc-ui.mainmenu.pause.exit=SALVAR E SAIR
 
 ## - Safe zone screen -
-arc-ui.setting.safezone.title.main=Safe zone settings
-arc-ui.setting.safezone.title.exp=experiment settings
-arc-ui.setting.safezone.main=Adjust whenever the game screen does not fit your screen well.
-arc-ui.setting.safezone.exp=Unintentionally was a hidden option, it was for console's feature
-arc-ui.setting.safezone.allcorner=§7Expand and decrease in all corner
-arc-ui.setting.safezone.horizontal=§7Expand and decrease in left & right side
-arc-ui.setting.safezone.vertical=§7Expand and decrease in up & bottom side
-arc-ui.setting.safezone.horizontalpos=§7Move the screen between left & right ( EXP: won't work if the following non-exp settings are default )
-arc-ui.setting.safezone.verticalpos=§7Move the screen between up & bottom ( EXP: won't work if the following non-exp settings are default )
+arc-ui.setting.safezone.title.main=Configurações da Zona Segura
+arc-ui.setting.safezone.title.exp=Configurações experimentais
+arc-ui.setting.safezone.main=Ajuste quando a tela do jogo não se encaixar bem em sua tela. 
+arc-ui.setting.safezone.exp=Não intencionalmente era uma opção oculta, era para um recurso da versão de console
+arc-ui.setting.safezone.allcorner=§7Expandir e diminuir em todos os cantos
+arc-ui.setting.safezone.horizontal=§7Expandir e diminuir entre os lados esquerdo e direito
+arc-ui.setting.safezone.vertical=§7Expandir entre a parte superior e inferior
+arc-ui.setting.safezone.horizontalpos=§7Mover a tela entre a esquerda e a direita (EXP: não funcionará se as configurações não experimentais a seguir forem padrão)
+arc-ui.setting.safezone.verticalpos=§7Mover a tela entre a parte superior e inferior (EXP: não funcionará se as configurações não experimentais a seguir forem padrão)
 
 ## - Sound section -
-arc-ui.setting.sound.main=§7Game Client volume - Affects the game client volume ranged from music to sounds. Note that ALL volume option won't change!
-arc-ui.setting.sound.music=§7Musics volume - Only affects a musics related. such as main menu, overworld, creative mode and etc.
-arc-ui.setting.sound.sound=§7Sounds volume - Only affects a sounds related. such as walking, breaking blocks, playing discs and etc.
-arc-ui.setting.sound.ambient=§7Ambient volume - Cave ambients and so on.
-arc-ui.setting.sound.block=§7Placing blocks - walking, breaking blocks and so on.
-arc-ui.setting.sound.hostile=§7Hostile mob sounds.
-arc-ui.setting.sound.neutral=§7Neutral mob sounds.
-arc-ui.setting.sound.player=§7Player hurt sounds.
-arc-ui.setting.sound.record=§7Disc related sounds.
-arc-ui.setting.sound.weather=§7Weather, rains, storms.
-arc-ui.setting.sound.tts=§7Text-to-speech volume.
+arc-ui.setting.sound.main=§7Volume do jogo - Afeta o volume do jogo desde das músicas aos sons. Observe que esta opção não afeta as outras opções de volume!
+arc-ui.setting.sound.music=§7Volume das músicas - Afeta o volume relacionado às músicas, como: as do menu principal, do mundo superior, do modo criativo etc.	# Overworld translation (mundo superior) taken from Xbox Achievements
+arc-ui.setting.sound.sound=§7Volume dos sons - Afeta o volume relacionado aos sons, como andar, quebrar blocos, tocar discos etc.
+arc-ui.setting.sound.ambient=§7Volume do ambiente - Afeta o volume relacionado aos sons do ambiente, como os das cavernas e assim por diante 
+arc-ui.setting.sound.block=§7Volume dos blocos - Afeta o volume relacionado aos sons dos blocos, como andar sobre eles, quebrá-los e assim por diante.
+arc-ui.setting.sound.hostile=§7Volume dos sons de criaturas hostis.
+arc-ui.setting.sound.neutral=§7Volume dos sons de criaturas amigáveis.
+arc-ui.setting.sound.player=§7Volume dos sons de dano do jogador.
+arc-ui.setting.sound.record=§7Volume dos discos.
+arc-ui.setting.sound.weather=§7Volume dos sons de clima, chuva e tempestade.
+arc-ui.setting.sound.tts=§7Volume da conversão de texto em fala
 
 ## - About section -
-arc-ui.settingtitle.changelog.config=Configuration Details
-arc-ui.setting.changelogtitle.enabled=All Arcdustry-UI Changelog goes here, you can click the dropdown order to see changelog!
-arc-ui.setting.changelogtitle.disabled=Changelog on setting is §cdisabled.§f You can still check Arcdustry-UI's update changelog in §e"ARC-UI/changelog.txt"
+arc-ui.settingtitle.changelog.config=Detalhes de configuração
+arc-ui.setting.changelogtitle.enabled=Todos os registros de mudanças ficam aqui, você pode clicar nos itens da lista decrescente para vê-los!	# Not sure if the translation of “dropdown order” is “lista decrescente” in this context
+arc-ui.setting.changelogtitle.disabled=O registro de mudanças na configuração está §cdisabled.§f Você ainda pode checar o registro de mudanças de Arcdustry-UI em §e"ARC-UI/changelog.txt"
 
 ## - Changelog section V2 -
-arc-ui.setting.changelogv2desc.addition-update=§a§l[ -- ADDITIONS / UPDATES -- ]
-arc-ui.setting.changelogv2desc.bug-fixes=§a§l[ -- BUG FIXES -- ]
-arc-ui.setting.changelogv2desc.changes=§a§l[ -- ADJUSTMENTS -- ]
+arc-ui.setting.changelogv2desc.addition-update=§a§l[ -- ADIÇÕES / ATUALIZAÇÕES -- ]
+arc-ui.setting.changelogv2desc.bug-fixes=§a§l[ -- CORREÇÕES DE BUGS -- ]
+arc-ui.setting.changelogv2desc.changes=§a§l[ -- AJUSTES -- ]
 
+## video section
+arc-ui.setting.video-experiment.warn=§7§oAs opções a seguir são experimentais e, definitivamente, não foram criadas para serem ativadas em qualquer plataforma. Vários opções daqui estão ativadas em poucas plataformas. Elas podem causar os seguintes problemas: crashes inesperados, baixo desempenho ou a opção não funcionará inteiramente. Tenha cuidado em que você está fazendo, porque não sou responsável por elas.
+
+# Translator note: all the changelog remains untranslated because is too long and I do not see reason to translate it. Maybe in the future I can change my mind.
 ## v0.1-alpha-1
 arc-ui.section.changelogv2desc.v0-1-alpha-1.001=§o× Released in - Oct 3, 2022
 arc-ui.section.changelogv2desc.v0-1-alpha-1.002=§o× Supported - 1.19.30+
@@ -295,50 +292,3 @@ arc-ui.section.changelogv2desc.v1-2.026=§7[§a+§7]§f UI is now abit smaller f
 arc-ui.section.changelogv2desc.v1-2.027=§7[§a+§7]§f Code Optimizations and cleaning
 arc-ui.section.changelogv2desc.v1-2.028=§7[§a+§7]§f UI file path is changed to probably feel less empty
 arc-ui.section.changelogv2desc.v1-2.029=§7[§a+§7]§f Added date next to version
-
-## v1.3
-arc-ui.section.changelogv2desc.v1-3-final.001=§o× Released in - Jun 9, 2023
-arc-ui.section.changelogv2desc.v1-3-final.002=§o× Supported - 1.18.83+
-arc-ui.section.changelogv2desc.v1-3-final.003=§e× -- The final update --
-arc-ui.section.changelogv2desc.v1-3-final.004=§e× The only update that i was really dedicated.
-arc-ui.section.changelogv2desc.v1-3-final.005=§7[§a+§7]§f New Trailer again
-arc-ui.section.changelogv2desc.v1-3-final.006=§7[§a+§7]§f Revamped Start Screen
-arc-ui.section.changelogv2desc.v1-3-final.007=§7[§a+§7]§f Revamped Pause Screen
-arc-ui.section.changelogv2desc.v1-3-final.008=§7[§a+§7]§f Revamped Settings Screen
-arc-ui.section.changelogv2desc.v1-3-final.009=§7[§a+§7]§f Revamped Play Screen
-arc-ui.section.changelogv2desc.v1-3-final.010=§7[§a+§7]§f Revamped Arcdustry-UI Logo
-arc-ui.section.changelogv2desc.v1-3-final.011=§7[§a+§7]§f Revamped touch control's scheme icon
-arc-ui.section.changelogv2desc.v1-3-final.012=§7[§a+§7]§f Revamped Some icons in settings screen
-arc-ui.section.changelogv2desc.v1-3-final.013=§7[§a+§7]§f Changed all icons into more brighten colors
-arc-ui.section.changelogv2desc.v1-3-final.014=§7[§a+§7]§f Changed Back button texture to have Lynxsium-UI thing
-arc-ui.section.changelogv2desc.v1-3-final.015=§7[§a+§7]§f Added "More" Options in both Start/Pause screen
-arc-ui.section.changelogv2desc.v1-3-final.016=§7[§a+§7]§f Added OLED theme mode (Configuration)
-arc-ui.section.changelogv2desc.v1-3-final.017=§7[§a+§7]§f Added UI Support to 1.20.0
-arc-ui.section.changelogv2desc.v1-3-final.018=§7[§a+§7]§f Added Background aswell blur version (Configuration) Able to change texture in 'arcdustry-ui/custom_texture' folders
-arc-ui.section.changelogv2desc.v1-3-final.019=§7[§a+§7]§f Added Arcdustry-UI Legacy layout (Configuration)
-arc-ui.section.changelogv2desc.v1-3-final.020=§7[§a+§7]§f Added Lockable bottom bar / status bar due to OLED theme mode, can be unlocked in configuration
-arc-ui.section.changelogv2desc.v1-3-final.021=§7[§a+§7]§f Added Icons on start screen
-arc-ui.section.changelogv2desc.v1-3-final.022=§7[§a+§7]§f Added Helper icons on play screen (Controller and Keyboard)
-arc-ui.section.changelogv2desc.v1-3-final.023=§7[§a+§7]§f Added Optional start/pause screen background panel incase of user's visuality. (Configuration)
-arc-ui.section.changelogv2desc.v1-3-final.024=§7[§a+§7]§f Added a slider's button because people thinks its missing
-arc-ui.section.changelogv2desc.v1-3-final.025=§7[§a+§7]§f Added "custom_texture" folder for customization
-arc-ui.section.changelogv2desc.v1-3-final.026=§7[§a+§7]§f Added Theme's code from Lynxsium-UI that may improve my progress
-arc-ui.section.changelogv2desc.v1-3-final.027=§7[§a+§7]§f Merged Lynxsium-UI together i think lol
-arc-ui.section.changelogv2desc.v1-3-final.028=§7[§a+§7]§f Fixed Misspelling on mojang copyright text
-arc-ui.section.changelogv2desc.v1-3-final.029=§7[§c-§7]§f Removed About Section in Setting screen
-arc-ui.section.changelogv2desc.v1-3-final.030=§7[§c-§7]§f Removed Pause Screen Compact version
-arc-ui.section.changelogv2desc.v1-3-final.031=§7[§a+§7]§f Fixed game freezes in the start up or during gameplay
-arc-ui.section.changelogv2desc.v1-3-final.032=§7[§a+§7]§f Fixed another another alignment issues again...
-arc-ui.section.changelogv2desc.v1-3-final.033=§7[§a+§7]§f Fixed some screen being SMALL
-arc-ui.section.changelogv2desc.v1-3-final.034=§7[§a+§7]§f Fixed some tooltips that doesnt show up lol
-arc-ui.section.changelogv2desc.v1-3-final.035=§7[§a+§7]§f Massive Optimizations
-arc-ui.section.changelogv2desc.v1-3-final.036=§7[§a+§7]§f Improvements to UI stability
-arc-ui.section.changelogv2desc.v1-3-final.037=§7[§a+§7]§f UI now will use less resources as possible i think
-arc-ui.section.changelogv2desc.v1-3-final.038=§7[§a+§7]§f Improved Color theme system
-arc-ui.section.changelogv2desc.v1-3-final.039=§7[§a+§7]§f Changed *almost* all panel texture into white instead since it'll improve theme system better
-arc-ui.section.changelogv2desc.v1-3-final.040=§7[§a+§7]§f Improvements to screen animations
-arc-ui.section.changelogv2desc.v1-3-final.041=§7[§a+§7]§f Updated Changelog
-arc-ui.section.changelogv2desc.v1-3-final.042=§7[§a+§7]§f Updated .Lang system/file
-
-## video section
-arc-ui.setting.video-experiment.warn=§7§oThese features are an experiment, and are definitely not meant to be enabled on any platforms. several features here are enabled on few platforms and therefore may not compatible with all platforms. this may cause the following issues - unintentional crashes, performance downgraded or feature won't work entirely. be cautious on what are you doing, I'm not responsible for this.

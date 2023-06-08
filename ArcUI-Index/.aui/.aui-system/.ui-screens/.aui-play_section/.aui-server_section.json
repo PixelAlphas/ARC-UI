@@ -210,7 +210,8 @@
     "use_child_anchors": true,
     "controls": [
       { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "control_center_label@aui-common.header": { "$text": "control center" }},
+      { "control_center_label@aui-common.header": { "$text": "arc-ui.playscreen.title.controlcenter" }},
+      { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
       { "add_server_button@aui-play_screen_server_section.add_server_toggle_button": {}},
       { "feature_server_failure": {
           "type": "stack_panel",
@@ -279,6 +280,7 @@
             }},
             { "padding_01": { "type": "panel", "size": [ "100%", 2 ]}},
             { "featured_servers_label@aui-common.header": { "$text": "thirdPartyWorld.Featured" }},
+            { "padding_01": { "type": "panel", "size": [ "100%", 2 ]}},
             { "third_party_featured_grid@play.third_party_featured_server_grid": {
               "size": [ "100% - 8px", "default" ],
               "anchor_from": "center",
@@ -303,6 +305,7 @@
           "controls": [
             { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
             { "featured_servers_label@aui-common.header": { "$text": "thirdPartyWorld.Additional" }},
+            { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
             { "third_party_featured_grid@play.more_servers_grid": {
                 "size": [ "100% - 8px", "default" ],
                 "anchor_from": "center",

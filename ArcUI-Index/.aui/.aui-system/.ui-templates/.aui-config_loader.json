@@ -1,12 +1,13 @@
 { "namespace": "auicore_configloader",
   "core@auicore-configsource.element": {
+    "$auivar:config_theme_alpha|default": 0.75,
     "variables": [
       { "requires": "(not ($key = 'distorted_fate') and ($ver = '1.2'))",
         "$ver|default": "1.2",
         "$key|default": "failback",
         "$Testvalue|default": false,
         "$configname|default": "Failmode Default",
-        "$bottom_bar_background_alpha|default": 0,
+        "$bottom_bar_background_alpha|default": 0.75,
         "$bottom_bar_background_color|default": [ 0, 0, 0, 0 ],
         "$bottom_bar_font_color|default": "$f_color_format",
         "$bottom_bar_font_type|default": "kazesawa",
@@ -29,6 +30,13 @@
         "$slider_background_color|default": [ 0.1, 0.1, 0.1 ],
         "$slider_background_hover_color|default": [ 0.2, 0.2, 0.2 ],
         "$show_warning_notification|default": false,
-        "$no_marketplace_button|default": false
+        "$no_marketplace_button|default": false,
+        "$background_renderer|default": false,
+        "$gradient_renderer|default": true,
+        "$oled_mode|default": false,
+        "$allow_bottom_bar_customization|default": false
+      },
+      { "requires": "($oled_mode)",
+        "$auivar:config_theme_alpha": 1
     }]
 }}

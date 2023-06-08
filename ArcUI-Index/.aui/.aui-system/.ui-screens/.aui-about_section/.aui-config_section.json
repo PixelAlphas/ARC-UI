@@ -1,0 +1,124 @@
+{ "namespace": "aui-config_section",
+  "root_section": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "padding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "label01@aui-common.label_element": { "text": "arc-ui.settingtitle.changelog.config" }},
+      { "label02@aui-common.label_element": { "text": "('§7- Config name : §f' + $configname)" }},
+      { "label03@aui-common.label_element": { "text": "('§7- Config key : §f' + $key)" }},
+      { "label04@aui-common.label_element": { "text": "('§7- Config ver : §f' + $ver)" }},
+      { "label05@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUE",
+          "variables": [
+            { "requires": "($Testvalue)", "$valuetext": "('§a█§7 Test Values : ' + '§aTrue')" },
+            { "requires": "(not $Testvalue)", "$valuetext": "('§c█§7 Test Values : ' + '§cFalse')" }
+      ]}},
+      { "label06@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUE",
+          "variables": [
+            { "requires": "($show_changelog)", "$valuetext": "('§a█§7 Shows changelog in about menu : ' + '§aTrue')" },
+            { "requires": "(not $show_changelog)", "$valuetext": "('§c█§7 Shows changelog in about menu : ' + '§cFalse')" }
+      ]}},
+      { "label11@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUE",
+          "variables": [
+            { "requires": "($129_more_lawnmower)", "$valuetext": "('§a█§7 129+ More moving lawnmower : ' + '§aTrue')" },
+            { "requires": "(not $129_more_lawnmower)", "$valuetext": "('§c█§7 129+ More moving lawnmower : ' + '§cFalse')" }
+      ]}},
+      { "label12@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUE",
+          "variables": [
+            { "requires": "($pause_screen_compact_mode)", "$valuetext": "('§a█§7 Pause screen compact mode : ' + '§aTrue')" },
+            { "requires": "(not $pause_screen_compact_mode)", "$valuetext": "('§c█§7 Pause screen compact mode : ' + '§cFalse')" }
+      ]}},
+      { "label13@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUE",
+          "variables": [
+            { "requires": "($show_warning_notification)", "$valuetext": "('§a█§7 Show notification upon launch : ' + '§aTrue')" },
+            { "requires": "(not $show_warning_notification)", "$valuetext": "('§c█§7 Show notification upon launch : ' + '§cFalse')" }
+      ]}},
+      { "label13@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUE",
+          "variables": [
+            { "requires": "($no_marketplace_button)", "$valuetext": "('§a█§7 Remove marketplace option : ' + '§aTrue')" },
+            { "requires": "(not $no_marketplace_button)", "$valuetext": "('§c█§7 Remove marketplace option : ' + '§cFalse')" }
+      ]}},
+      { "labelstack01": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 10 ],
+          "controls": [
+            { "label01": {
+                "type": "label",
+                "text": "█ ",
+                "alpha": "$bottom_bar_background_alpha"
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "('§7< Status bar alpha (' + $bottom_bar_background_alpha + ')')"
+          }}
+      ]}},
+      { "labelstack02": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 10 ],
+          "controls": [
+            { "label01": {
+                "type": "label",
+                "text": "█ ",
+                "color": "$bottom_bar_background_color"
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "§7< Status bar color"
+          }}
+      ]}},
+      { "labelstack03": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 10 ],
+          "controls": [
+            { "label01": {
+                "type": "label",
+                "text": "█ ",
+                "color": "$bottom_bar_font_color"
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "§7< Status bar color [Label/Font]"
+          }}
+      ]}},
+      { "label07@aui-common.label_element": { "text": "('§7- Status bar font-type : §f' + $bottom_bar_font_type)" }},
+      { "label08@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUES",
+          "variables": [
+            { "requires": "($moving_lawnmower)", "$valuetext": "('§a█§7 Moving lawnmower : ' + '§aTrue')" },
+            { "requires": "(not $moving_lawnmower)", "$valuetext": "('§c█§7 Moving lawnmower : ' + '§cFalse')" }
+      ]}},
+      { "label09@aui-common.label_element": { "text": "('§7- Lawnmower speed : §f' + $ml_speed)" }},
+      { "label10@aui-common.label_element": { "text": "('§7- Custom lawnmower image path : §f' + $ml_custom_image)" }},
+      { "labelstack04": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$primary_color" }},{ "label02": { "type": "label", "text": "§7< Primary color" }}]}},
+      { "labelstack05": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$setting_button_icon_color" }},{ "label02": { "type": "label", "text": "§7< Settings icons color" }}]}},
+      { "labelstack06": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_icon_color" }},{ "label02": { "type": "label", "text": "§7< Slider icons color" }}]}},
+      { "labelstack07": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_color" }},{ "label02": { "type": "label", "text": "§7< Slider color" }}]}},
+      { "labelstack08": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_hover_color" }},{ "label02": { "type": "label", "text": "§7< Slider hover color" }}]}},
+      { "labelstack09": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_background_color" }},{ "label02": { "type": "label", "text": "§7< Slider background color" }}]}},
+      { "labelstack10": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$slider_background_hover_color" }},{ "label02": { "type": "label", "text": "§7< Slider background hover color" }}]}},
+      { "labelstack11": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$background_menu_color" }},{ "label02": { "type": "label", "text": "§7< Main background color" }}]}},
+      { "labelstack12": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$background_standard_color_top" }},{ "label02": { "type": "label", "text": "§7< Standard background color (Top)" }}]}},
+      { "labelstack13": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$background_standard_color_bottom" }},{ "label02": { "type": "label", "text": "§7< Standard background color (Bottom)" }}]}},
+      { "labelstack14": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$toggle_icon_color" }},{ "label02": { "type": "label", "text": "§7< Option/toggle icon color" }}]}},
+      { "labelstack15": { "type": "stack_panel", "orientation": "horizontal", "size": [ "100%", 10 ], "controls": [{ "label01": { "type": "label", "text": "█ ", "color": "$toggle_background_color" }},{ "label02": { "type": "label", "text": "§7< Option/toggle hover background color" }}]}},
+      { "padding01": { "type": "panel", "size": [ 1, 10 ]}}
+]}}
+  

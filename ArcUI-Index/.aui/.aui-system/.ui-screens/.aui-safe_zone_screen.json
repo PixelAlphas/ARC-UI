@@ -1,6 +1,6 @@
 {
   "namespace": "aui-safe_zone_screen",
-  "content_panel": {
+  "content_panel@auicore_configloader.core": {
     "type": "stack_panel",
     "size": [ "100% - 2px", "default" ],
     "$label_bindings": [
@@ -77,7 +77,7 @@
     "$slider_select_on_hover": true,
     "$slider_tts_text_value": "#safe_zone_all_text_value"
   },
-  "root_contents": {
+  "root_contents@auicore_configloader.core": {
     "type": "panel",
     "controls": [
       { "safezone_bounds_markers": {

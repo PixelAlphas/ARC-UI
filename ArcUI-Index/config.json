@@ -1,7 +1,18 @@
 { "namespace": "auicore-configsource", "element": { "type":"panel","$key|default":"distorted_fatee","$ver|default":"1.2",
   
   // bottom bar lists :D
-    "$bottom_bar_background_alpha": 0.7, // transparent ( 0-1 ) [ Default : 0 ]
+
+  // - Theme related settings -
+    "$primary_color": [ 1, 1, 1 ], // RBG values but divided by 1
+      // ^ Uses it as button primary color, such as start/pause screen buttons, settings buttons and common buttons
+    "$setting_button_icon_color": [ 1, 1, 1 ], // RBG values but divided by 1
+      // ^ Change every AUI's related icons color. ( ONLY BUTTONS )
+    "$oled_mode": false, // true/false
+      // ^ Change the theme into pure black for OLED displays.
+    "$allow_bottom_bar_customization": false, // true/false
+      // ^ Allows status bar to be customized, since they're locked by default so the OLED theme can be applied.
+      //   enabling this option will make bottom bar unaffected with OLED mode.
+    "$bottom_bar_background_alpha": 0.75, // transparent ( 0-1 ) [ Default : 0 ]
       // ^ Change the bottom bar transparency
     "$bottom_bar_background_color": [ 0, 0, 0 ], // RBG values but divided by 1 | can be adjusted by use of variables
       // ^ Change the bottom bar color
@@ -9,13 +20,7 @@
       // ^ Change the bottom bar text/font color
     "$bottom_bar_font_type": "kazesawa", // fonts, can crash if not usin it correctly [ Default : "kazasawa" ]
                                          // Available fonts - kazesawa, dainbold, MinecraftTen and default
-      // ^ Change the bottom bar font
-
-  // - Theme related settings -
-    "$primary_color": [ 1, 1, 1 ], // RBG values but divided by 1
-      // ^ Uses it as button primary color, such as start/pause screen buttons, settings buttons and common buttons
-    "$setting_button_icon_color": [ 1, 1, 1 ], // RBG values but divided by 1
-      // ^ Change every AUI's related icons color. ( ONLY BUTTONS )
+      // ^ Change the bottom bar fonts
     "$slider_icon_color": [ 1, 1, 1 ], // RBG values but divided by 1
       // ^ Change every slider icons color.
     "$slider_color": [ 1, 1, 1 ], // RBG values but divided by 1
@@ -26,16 +31,23 @@
       // ^ Change slider background color
     "$slider_background_hover_color": [ 0.2, 0.2, 0.2 ], // RBG values but divided by 1
       // ^ Change slider background color for hover.
+    "$gradient_renderer": true, // false/true
+      // ^ Enable the gradient render as background
     "$background_menu_color": [ 0, 0, 0, 0.75 ], // RBG values but divided by 1
-      // ^ Change the menu background for Start screen (main menu) and pause screen.
+      // ^ Change the gradient background for Start screen (main menu) and pause screen.
     "$background_standard_color_top": [ 0, 0, 0, 0.75 ], // RBG values but divided by 1
-      // ^ Change the standard background for every standard screens [ TOP ]
+      // ^ Change the gradient background for every standard screens [ TOP ]
     "$background_standard_color_bottom": [ 0, 0, 0, 0.75 ], // RBG values but divided by 1
-      // ^ Change the standard background for every standard screens [ BOTTOM ]
+      // ^ Change the gradient background for every standard screens [ BOTTOM ]
     "$toggle_icon_color": [ 1, 1, 1 ], // RBG values but divided by 1
       // ^ Change toggle icon color.
     "$toggle_background_color": [ 1, 1, 1 ], // RBG values but divided by 1
       // ^ Change toggle background color.
+    "$background_renderer": false, // false/true, texture can be editable via
+                                   // "custom_texture/background"
+                                   // "custom_texture/background_blur"
+      // ^ Enable the background aswell blur ones.
+      
       
   // Common settings
     "$configname": "Default",
@@ -58,10 +70,10 @@
       // ^ Displays changelog in "About/Changelog" settings section
     "$show_warning_notification": true, // [ Default : false ]
       // ^ Displays a warning for mobile and notify about restarting after applying the pack.
-    "$pause_screen_compact_mode": false, // [ Default : false ]
-      // ^ Enables alternative version of pause screen just to look more nicer to interact
-      //   thus very lite-ish. pretty cool if you don't like the current pause screen style and wants more
-      //   compacted.
-    "$no_marketplace_button": false // [ Default : false ]
+    "$no_marketplace_button": false, // [ Default : false ]
       // ^ Removes marketplace button in start screen
+    "$legacy_ui_layout": false, // [ Default : false ]
+      // ^ Enables Old Arcdustry-UI layout
+    "$main_menu_background": false // [ Default : false ]
+      // ^ Enables background for play/pause screen as accessibility
 }}

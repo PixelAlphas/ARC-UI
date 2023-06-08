@@ -1,8 +1,14 @@
 { "ui_defs": [
   // /* - Config Core - */ //
     "config.json",
+    
+  // /* - Module - */ //
+    "ui/arcdustry_custom/percentage_template.json",
 
   // /* - UI System Screens - */ //
+    ".aui/.aui-system/.ui-screens/.aui-about_section/.aui-about_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-about_section/.aui-config_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-about_section/.aui-changelog_section.json",
     ".aui/.aui-system/.ui-screens/.aui-play_section/.aui-world_section.json",
     ".aui/.aui-system/.ui-screens/.aui-play_section/.aui-friend_section.json",
     ".aui/.aui-system/.ui-screens/.aui-play_section/.aui-server_section.json",
@@ -19,6 +25,7 @@
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-gamepad_control.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-touch_control.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-content_log.json",
+    ".aui/.aui-system/.ui-screens/.aui-about_ui_screen.json",
     ".aui/.aui-system/.ui-screens/.aui-chat_screen.json",
     ".aui/.aui-system/.ui-screens/.aui-content_log.json",
     ".aui/.aui-system/.ui-screens/.aui-setting_screen.json",

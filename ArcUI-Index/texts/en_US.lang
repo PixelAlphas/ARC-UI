@@ -20,6 +20,21 @@ arc-ui.settingtitle.video-interface=Interface Settings
 arc-ui.settingtitle.video-graphic=Graphical Settings
 arc-ui.settingtitle.video-experiment=Experiment
 
+## - Start Section -
+## Note: Character case doesn't matter since the font will outputs
+##       probably the same.
+## > Regular ( Start screen & Pause screen )
+arc-ui.mainmenu.regular.start=PLAY
+arc-ui.mainmenu.regular.setting=OPTIONS
+arc-ui.mainmenu.regular.skin=CHARACTER CREATOR
+arc-ui.mainmenu.regular.achievement=ACHIEVEMENT
+arc-ui.mainmenu.regular.marketplace=MARKETPLACE
+arc-ui.mainmenu.regular.more=MORE
+arc-ui.mainmenu.regular.exit=EXIT GAME
+## > Pause ( Pause screen only )
+arc-ui.mainmenu.pause.start=RESUME SESSION
+arc-ui.mainmenu.pause.exit=EXIT SESSION
+
 ## - Safe zone screen -
 arc-ui.setting.safezone.title.main=Safe zone settings
 arc-ui.setting.safezone.title.exp=experiment settings
@@ -273,6 +288,50 @@ arc-ui.section.changelogv2desc.v1-2.026=§7[§a+§7]§f UI is now abit smaller f
 arc-ui.section.changelogv2desc.v1-2.027=§7[§a+§7]§f Code Optimizations and cleaning
 arc-ui.section.changelogv2desc.v1-2.028=§7[§a+§7]§f UI file path is changed to probably feel less empty
 arc-ui.section.changelogv2desc.v1-2.029=§7[§a+§7]§f Added date next to version
+
+## v1.3
+arc-ui.section.changelogv2desc.v1-3-final.001=§o× Released in - Jun 9, 2023
+arc-ui.section.changelogv2desc.v1-3-final.002=§o× Supported - 1.18.83+
+arc-ui.section.changelogv2desc.v1-3-final.003=§e× -- The final update --
+arc-ui.section.changelogv2desc.v1-3-final.004=§e× The only update that i was really dedicated.
+arc-ui.section.changelogv2desc.v1-3-final.005=§7[§a+§7]§f New Trailer again
+arc-ui.section.changelogv2desc.v1-3-final.006=§7[§a+§7]§f Revamped Start Screen
+arc-ui.section.changelogv2desc.v1-3-final.007=§7[§a+§7]§f Revamped Pause Screen
+arc-ui.section.changelogv2desc.v1-3-final.008=§7[§a+§7]§f Revamped Settings Screen
+arc-ui.section.changelogv2desc.v1-3-final.009=§7[§a+§7]§f Revamped Play Screen
+arc-ui.section.changelogv2desc.v1-3-final.010=§7[§a+§7]§f Revamped Arcdustry-UI Logo
+arc-ui.section.changelogv2desc.v1-3-final.011=§7[§a+§7]§f Revamped touch control's scheme icon
+arc-ui.section.changelogv2desc.v1-3-final.012=§7[§a+§7]§f Revamped Some icons in settings screen
+arc-ui.section.changelogv2desc.v1-3-final.013=§7[§a+§7]§f Changed all icons into more brighten colors
+arc-ui.section.changelogv2desc.v1-3-final.014=§7[§a+§7]§f Changed Back button texture to have Lynxsium-UI thing
+arc-ui.section.changelogv2desc.v1-3-final.015=§7[§a+§7]§f Added "More" Options in both Start/Pause screen
+arc-ui.section.changelogv2desc.v1-3-final.016=§7[§a+§7]§f Added OLED theme mode (Configuration)
+arc-ui.section.changelogv2desc.v1-3-final.017=§7[§a+§7]§f Added UI Support to 1.20.0
+arc-ui.section.changelogv2desc.v1-3-final.018=§7[§a+§7]§f Added Background aswell blur version (Configuration) Able to change texture in 'arcdustry-ui/custom_texture' folders
+arc-ui.section.changelogv2desc.v1-3-final.019=§7[§a+§7]§f Added Arcdustry-UI Legacy layout (Configuration)
+arc-ui.section.changelogv2desc.v1-3-final.020=§7[§a+§7]§f Added Lockable bottom bar / status bar due to OLED theme mode, can be unlocked in configuration
+arc-ui.section.changelogv2desc.v1-3-final.021=§7[§a+§7]§f Added Icons on start screen
+arc-ui.section.changelogv2desc.v1-3-final.022=§7[§a+§7]§f Added Helper icons on play screen (Controller and Keyboard)
+arc-ui.section.changelogv2desc.v1-3-final.023=§7[§a+§7]§f Added Optional start/pause screen background panel incase of user's visuality. (Configuration)
+arc-ui.section.changelogv2desc.v1-3-final.024=§7[§a+§7]§f Added a slider's button because people thinks its missing
+arc-ui.section.changelogv2desc.v1-3-final.025=§7[§a+§7]§f Added "custom_texture" folder for customization
+arc-ui.section.changelogv2desc.v1-3-final.026=§7[§a+§7]§f Added Theme's code from Lynxsium-UI that may improve my progress
+arc-ui.section.changelogv2desc.v1-3-final.027=§7[§a+§7]§f Merged Lynxsium-UI together i think lol
+arc-ui.section.changelogv2desc.v1-3-final.028=§7[§a+§7]§f Fixed Misspelling on mojang copyright text
+arc-ui.section.changelogv2desc.v1-3-final.029=§7[§c-§7]§f Removed About Section in Setting screen
+arc-ui.section.changelogv2desc.v1-3-final.030=§7[§c-§7]§f Removed Pause Screen Compact version
+arc-ui.section.changelogv2desc.v1-3-final.031=§7[§a+§7]§f Fixed game freezes in the start up or during gameplay
+arc-ui.section.changelogv2desc.v1-3-final.032=§7[§a+§7]§f Fixed another another alignment issues again...
+arc-ui.section.changelogv2desc.v1-3-final.033=§7[§a+§7]§f Fixed some screen being SMALL
+arc-ui.section.changelogv2desc.v1-3-final.034=§7[§a+§7]§f Fixed some tooltips that doesnt show up lol
+arc-ui.section.changelogv2desc.v1-3-final.035=§7[§a+§7]§f Massive Optimizations
+arc-ui.section.changelogv2desc.v1-3-final.036=§7[§a+§7]§f Improvements to UI stability
+arc-ui.section.changelogv2desc.v1-3-final.037=§7[§a+§7]§f UI now will use less resources as possible i think
+arc-ui.section.changelogv2desc.v1-3-final.038=§7[§a+§7]§f Improved Color theme system
+arc-ui.section.changelogv2desc.v1-3-final.039=§7[§a+§7]§f Changed *almost* all panel texture into white instead since it'll improve theme system better
+arc-ui.section.changelogv2desc.v1-3-final.040=§7[§a+§7]§f Improvements to screen animations
+arc-ui.section.changelogv2desc.v1-3-final.041=§7[§a+§7]§f Updated Changelog
+arc-ui.section.changelogv2desc.v1-3-final.042=§7[§a+§7]§f Updated .Lang system/file
 
 ## video section
 arc-ui.setting.video-experiment.warn=§7§oThese features are an experiment, and are definitely not meant to be enabled on any platforms. several features here are enabled on few platforms and therefore may not compatible with all platforms. this may cause the following issues - unintentional crashes, performance downgraded or feature won't work entirely. be cautious on what are you doing, I'm not responsible for this.

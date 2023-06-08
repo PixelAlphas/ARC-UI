@@ -6,59 +6,6 @@
     "offset": [ 0, 1 ],
     "$spatialPatternsPadding": [ "100%", 8 ],
     "controls": [
-      { "gamertag_rewrite": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": [ "95%", 30 ],
-          "controls": [
-            { "gamerpic": {
-                "type": "image",
-                "size": [ 30, 30 ],
-                "layer": 1,
-                "bindings": [
-                  { "binding_name": "#gamerpic_texture_path",
-                    "binding_name_override": "#texture"
-                  },
-                  { "binding_name": "#gamerpic_texture_location_type",
-                    "binding_name_override": "#texture_file_system"
-                }]
-            }},
-            { "labels": { 
-                "type": "panel",
-                "size": [ "fill", 30 ],
-                "controls": [
-                  { "label_descriptor": {
-                      "type": "label",
-                      "color": "$main_header_text_color",
-                      "layer": 1,
-                      "anchor_to": "left_middle",
-                      "anchor_from": "left_middle",
-                      "text": "§7Currently logged as",
-                      "offset": [ 4, -10 ]
-                  }},
-                  { "gamertag_label": {
-                      "type": "label",
-                      "color": "$main_header_text_color",
-                      "layer": 1,
-                      "text": "#gamertag_label",
-                      "anchor_to": "left_middle",
-                      "anchor_from": "left_middle",
-                      "offset": [ 4, 0 ],
-                      "bindings": [{ "binding_name": "#gamertag_label" }]
-                  }},
-                  { "gamertag_label": {
-                      "type": "label",
-                      "color": "$main_header_text_color",
-                      "layer": 1,
-                      "text": "§8§ohello there",
-                      "anchor_to": "left_middle",
-                      "anchor_from": "left_middle",
-                      "offset": [ 4, 10 ]
-                }}]
-          }}]
-      }},
-      { "pudding02": { "type": "panel", "size": [ 1, 2 ]}},
-      { "pudding_line@aui-common.pudding_line": {}},
       { "pudding02-1": { "type": "panel", "size": [ 1, 2 ]}},
       { "xboxlive_deep_link_buttons_rewrite": {
           "type": "panel",
@@ -71,26 +18,16 @@
                 "anchor_to": "top_left",
                 "$pressed_button_name": "change_gamertag_button",
                 "$button_text": "options.changeGamertag",
-                "offset": [ 0, -0.5 ],
-                "size": [ "50% + 0.5px", 31 ]
+                "size": [ "100%", 30 ]
             }},
             { "change_gamertag_button_mobile@aui-setting_screen.link_button": {
                 "ignored": "(not ($is_windows_10_mobile or $is_ios or $is_android))",
-                "size": [ "50% + 0.5px", 30 ],
+                "size": [ "100%", 30 ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$button_text": "options.changeGamertag",
                 "property_bag": { "#hyperlink": "https://social.xbox.com/changegamertag" }
-            }},
-            { "action_button@aui-setting_screen.action_button": {
-                "$pressed_button_name": "sign_out_button",
-                "ignored": "($build_platform_UWP or not $is_pregame or $requires_xbl_signin_to_play)",
-                "$button_text": "xbox.signOut",
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "offset": [ 0, -0.5 ],
-                "size": [ "50% + 0.5px", 31 ]
-          }}]
+            }}]
       }}
   ]},
   "account_alt_element": {

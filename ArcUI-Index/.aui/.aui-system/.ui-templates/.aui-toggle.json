@@ -1,5 +1,4 @@
-{
-  "namespace": "aui-toggle",
+{ "namespace": "aui-toggle",
   "text_toggle@common_toggles.light_ui_toggle": {
     "$unchecked_control": "aui-toggle.toggle_unchecked",
     "$checked_control": "aui-toggle.toggle_checked",
@@ -40,8 +39,7 @@
     "$ui_button_panel|default": "aui-button.advanced_button_panel",
     "controls": [
       { "button_panel@$ui_button_panel": {} }
-    ]
-  },
+  ]},
   "toggle_unchecked@aui-toggle.toggle_state_panel": {
     "$new_ui_button_texture": "$default_texture",
     "$content_alpha": "$default_texture_alpha",
@@ -174,8 +172,9 @@
     ]
   },
   "section_toggle_base@common_toggles.light_ui_toggle": {
-    "size": [ "100%", "30px" ],
-    "$button_size_override": [ "100%", "100% + 1px" ],
+    "size": [ "100%", 30 ],
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_size_override": [ "100%", "100%" ],
     "$button_type_panel": "aui-setting_screen.toggle_button_control",
     "$default_border_visible": false,
     "$hover_border_visible": false,
@@ -188,14 +187,11 @@
     "$default_checked_texture_color": "$primary_color",
     "$hover_texture_color": "$primary_color",
     "$hover_checked_texture_color": "$primary_color",
-    
     "$default_checked_text_color": "$light_button_pressed_text_color",
     "$default_text_color": "$light_button_pressed_text_color",
-
     "$radio_toggle_group": true,
     "$toggle_name": "navigation_tab",
     "$toggle_group_default_selected": "$default_selector_toggle_index",
-
     "$toggle_tab_focus_binding_type": "global",
     "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
     "$toggle_on_hover_binding_type": "global",
@@ -224,14 +220,12 @@
     "enabled": "$enabled",
     "variables": [
       { "requires": "(not $option_enabled_binding_name or not $enabled)", "$toggle_enabled_binding_name": "#not_data_bound", "$toggle_enabled_binding_type": "none" }
-    ]
-  },
+  ]},
   "option_toggle_state_template@auicore_configloader.core": {
     "type": "panel",
     "size": [ "100%", 10 ],
     "controls": [
-      {
-        "toggle_image": {
+      { "toggle_image": {
           "type": "image",
           "texture": "$auivar-toggle_texture",
           "anchor_from": "right_middle",
@@ -239,19 +233,15 @@
           "offset": [ -4, 0 ],
           "size": [ 10, 10 ],
           "color": "$toggle_icon_color"
-        }
-      },
-      {
-        "toggle_background": {
+      }},
+      { "toggle_background": {
           "type": "image",
           "texture": "$auivar-toggle_bg",
           "size": [ "100% + 4px", 20 ],
           "layer": -2,
           "color": "$toggle_background_color"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "option_toggle_state_templates": {
     "type": "image",
     "size": [ 10, 10 ],

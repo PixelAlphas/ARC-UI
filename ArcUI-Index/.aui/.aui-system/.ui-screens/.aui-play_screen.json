@@ -185,9 +185,123 @@
       { "friends_navigation_tab@aui-play_screen.friends_navigation_tab": { "size": [ "fill", "100%" ]}},
       { "server_navigation_tab@aui-play_screen.server_navigation_tab": { "size": [ "fill", "100%" ]}}
   ]},
+  "label_template": { "type": "label" },
+  
+  "text_with_outline": {
+    "type": "label",
+    "shadow": false,
+    "text": "$label",
+    "controls": [
+      { "shadow01@label_template": {
+          "text": "$label",
+          "color": [ 0, 0, 0 ],
+          "offset": [ -1, 0 ],
+          "layer": -2
+      }},
+      { "shadow02@label_template": {
+          "text": "$label",
+          "color": [ 0, 0, 0 ],
+          "offset": [ 1, 0 ],
+          "layer": -2
+      }},
+      { "shadow03@label_template": {
+          "text": "$label",
+          "color": [ 0, 0, 0 ],
+          "offset": [ 0, -1 ],
+          "layer": -2
+      }},
+      { "shadow04@label_template": {
+          "text": "$label",
+          "color": [ 0, 0, 0 ],
+          "offset": [ 0, 1 ],
+          "layer": -2
+      }}
+  ]},
   "global_contents": {
     "type": "panel",
     "controls": [
+      { "gamepad_helper_element": {
+          "type": "panel",
+          "controls": [
+            { "left_arrow@aui-play_screen.text_with_outline": {
+                "$label": ">",
+                "offset": [ 172, 15 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  { "binding_name": "#bumper_tooltips_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "right_arrow@aui-play_screen.text_with_outline": {
+                "$label": "<",
+                "offset": [ -172, 15 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  { "binding_name": "#bumper_tooltips_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "gamepad_helper_left_bumper@common.gamepad_helper_left_bumper": {
+                "offset": [ -155, 7 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$hide_description": true,
+                "bindings": [
+                  { "binding_name": "#bumper_tooltips_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "gamepad_helper_right_bumper@common.gamepad_helper_right_bumper": {
+                "offset": [ 155, 7 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$hide_description": true,
+                "bindings": [
+                  { "binding_name": "#bumper_tooltips_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }}
+      ]}},
+      { "keyboard_helper_element": {
+          "type": "panel",
+          "controls": [
+            { "left_arrow@aui-play_screen.text_with_outline": {
+                "$label": ">",
+                "offset": [ 167, 15 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  { "binding_name": "#keyboard_helper_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "right_arrow@aui-play_screen.text_with_outline": {
+                "$label": "<",
+                "offset": [ -167, 15 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  { "binding_name": "#keyboard_helper_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "keyboard_helper_left_bracket@common.keyboard_left_trigger": {
+                "offset": [ -153, 11 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$hide_description": true,
+                "$text_color": [ 1, 1, 1 ]
+            }},
+            { "keyboard_helper_right_bracket@common.keyboard_right_trigger": {
+                "offset": [ 153, 11 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$hide_description": true,
+                "$text_color": [ 1, 1, 1 ]
+            }}
+      ]}},
       { "status_bottom_bar@aui-common.status_bottom_bar": { "$auivar-screen_name": "\"Play Screen\"", "$auivar-label_no_mcver": true }},
       { "buttons_element@aui-play_screen.buttons_element": {}},
       { "default_play_screen_panel@aui-play_screen.default_play_screen_panel": {}},

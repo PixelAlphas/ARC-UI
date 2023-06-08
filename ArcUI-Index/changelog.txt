@@ -1,7 +1,60 @@
+--- v1.3 Release Final (???, 2023) ---
+× The only update that i was really dedicated.
+× Arcdustry-UI will no longer uses "ARC-UI".
+
+[ -- ADDITIONS / UPDATES -- ]
+[+] New Trailer again
+[+] Revamped Start Screen
+[+] Revamped Pause Screen
+[+] Revamped Settings Screen
+[+] Revamped Play Screen
+[+] Revamped Arcdustry-UI Logo
+[+] Revamped touch control's scheme icon
+[+] Revamped Some icons in setting menu
+[+] Changed all icons into more brighten colors
+[+] Changed Back button texture to have Lynxsium-UI thing
+[+] Added "More" Options in both Start/Pause screen
+[+] Added OLED theme mode (Configuration)
+[+] Added UI Support to 1.20.0
+[+] Added Option to disable gradient render (Configuration)
+[+] Added Background aswell blur version (Configuration)
+    Able to change texture in 'arcdustry-ui/custom_texture' folder
+[+] Added Arcdustry-UI Legacy layout (Configuration)
+[+] Added Lockable bottom bar / status bar due to OLED theme mode,
+    can be unlocked in configuration
+[+] Added Icons on start screen
+[+] Added Helper icons on play screen (Controller and Keyboard)
+[+] Added Optional start/pause screen background panel incase of
+    user's visuality. (Configuration)
+[+] Added a slider's button because people thinks its missing
+[+] Added "custom_texture" folder for customization
+[+] Added Theme's code from Lynxsium-UI that may improve my progress
+[+] Merged Lynxsium-UI together i think lol
+[+] Fixed Misspelling on mojang copyright text
+[-] Removed About Section in Setting screen
+[-] Removed Pause Screen Compact version
+
+[ -- BUG FIXES -- ]
+[+] Fixed game freezes in the start up or during gameplay
+[+] Fixed another another alignment issues again...
+[+] Fixed some screen being SMALL
+[+] Fixed some tooltips that doesnt show up lol
+
+[ -- ADJUSTMENTS -- ]
+[+] Massive Optimizations
+[+] Improvements to UI stability
+[+] UI now will use less resources as possible i think
+[+] Improved Color theme system
+[+] Changed *almost* all panel texture into white instead since it'll
+    improve theme system better
+[+] Improvements to screen animations
+[+] Updated Changelog
+[+] Updated .lang file/system
+
 --- v1.2 Release (May 19, 2023) ---
 × Probably large update i suppose.
 
-[ -- ADDITIONS / UPDATES -- ]
+[ -- 12 ADDITIONS / UPDATES -- ]
 [+] New Trailer for the UI once for all!
 [+] Updated Accessibility Section with 2 new slider from 1.19.82/83
 [+] Updated structure of UI folders
@@ -17,7 +70,7 @@
     Changelog v2
 [-] Removed Build date, instead are now reimplemented in Changelog v2
 
-[ -- BUG FIXES -- ]
+[ -- 5 BUG FIXES -- ]
 [+] Fixed animations being wanky
 [+] Fixed the issue where sometimes pause screen may crash the game
 [+] Fixed another alignment issues, again

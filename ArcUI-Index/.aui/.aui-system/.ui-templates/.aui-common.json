@@ -2,7 +2,7 @@
   "changelog_v2_core": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
-    "$auivar:changelog_version|default": "ARC-UIv1.0",
+    "$auivar:changelog_version|default": "ARC-UIm.0",
     "$auivar:changelog_control|default": [],
     "controls": [
       { "toggle_button@aui-toggle.text_toggle": {
@@ -46,7 +46,7 @@
           "controls": [
             { "changelog_label": {
                 "type": "label",
-                "text": "Arc-UI - ",
+                "text": "Arcdustry-UI - ",
                 "color": "$text_color"
             }},
             { "versions": {
@@ -311,7 +311,6 @@
     "$slider_box_hover_layout|default": "aui-common.slider_button_hover_layout",
     "$slider_box_locked_layout|default": "aui-common.slider_button_locked_layout",
     "$slider_box_indent_layout|default": "aui-common.slider_button_indent_layout",
-    "$slider_box_size": [ 22, 22 ],
     "$slider_step_factory_control_ids": { "slider_step": "@aui-common.slider_step", "slider_step_hover": "@aui-common.slider_step_hover", "slider_step_progress": "@aui-common.slider_step_progress", "slider_step_progress_hover": "@aui-common.slider_step_progress_hover" },
     "controls": [
       { "slider_box@aui-common.slider_box": { "$slider_box_layout": "$slider_box_layout", "$slider_box_size": "$slider_box_size", "$slider_track_button": "$slider_name" }},
@@ -326,15 +325,15 @@
       { "binding_type": "$slider_tts_binding_type", "binding_condition": "$slider_tts_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "$slider_tts_text_value" },
       { "binding_type": "$slider_tts_header_binding_type", "binding_condition": "$slider_tts_header_binding_condition", "binding_collection_name": "$slider_header_collection_name", "binding_name": "$slider_tts_header" }
   ]},
-  "slider_button_state": { "type": "image", "layer": 2, "texture": "" },
-  "slider_button_layout@aui-common.slider_button_state": { "texture": "" },
-  "slider_button_hover_layout@aui-common.slider_button_state": { "texture": "" },
-  "slider_button_locked_layout@aui-common.slider_button_state": { "texture": "" },
-  "slider_button_indent_layout@aui-common.slider_button_state": { "texture": "" },
+  "slider_button_state": { "type": "image", "layer": 2, "texture": ".aui/.aui-assets/buttons/slider/slider_button_default" },
+  "slider_button_layout@aui-common.slider_button_state": { "texture": ".aui/.aui-assets/buttons/slider/slider_button_default" },
+  "slider_button_hover_layout@aui-common.slider_button_state": { "texture": ".aui/.aui-assets/buttons/slider/slider_button_hover" },
+  "slider_button_locked_layout@aui-common.slider_button_state": { "texture": ".aui/.aui-assets/buttons/slider/slider_button_indent" },
+  "slider_button_indent_layout@aui-common.slider_button_state": { "texture": ".aui/.aui-assets/buttons/slider/slider_button_locked" },
   "slider_box": {
     "type": "slider_box",
     "layer": 4,
-    "size": "$slider_box_size",
+    "size": [ 4, 14 ],
     "anchor_to": "center",
     "anchor_from": "center",
     "default_control": "default",
@@ -408,11 +407,11 @@
     "type": "image",
     "$auivar-bgsize|default": [ "default", "100%cm" ],
     "$auivar-offsetsize|default": [ 0, 0 ],
-    "$auivar-bgalpha|default": 0.7,
     "$auivar-bganchor|default": "bottom_middle",
-    "$auivar-bgtexture|default": "textures/ui/Black",
+    "$auivar-bgtexture|default": ".aui/.aui-assets/text_background",
     "$auivar-header_contents|default": "",
-    "alpha": "$auivar-bgalpha",
+    "color": "$background_menu_color",
+    "alpha": "$auivar:config_theme_alpha",
     "size": "$auivar-bgsize",
     "offset": "$auivar-offsetsize",
     "anchor_from": "$auivar-bganchor",
@@ -448,16 +447,16 @@
     "type": "image",
     "$auivar-bgsize|default": [ "default", "100%cm" ],
     "$auivar-offsetsize|default": [ 0, 0 ],
-    "$auivar-bgalpha|default": 0.7,
     "$auivar-bganchor|default": "bottom_middle",
-    "$auivar-bgtexture|default": "textures/ui/Black",
+    "$auivar-bgtexture|default": ".aui/.aui-assets/text_background",
     "$auivar-header_contents|default": "",
     "$auivar-header_image|default": "textures/ui/error",
     "$auivar-header_image_size|default": [ 20, 20 ],
     "$auivar-header_image_alpha|default": 1,
     "$auivar-header_image_offset|default": [ 4, 0 ],
     "$auivar-header_text|default": "trollage",
-    "alpha": "$auivar-bgalpha",
+    "color": "$background_menu_color",
+    "alpha": "$auivar:config_theme_alpha",
     "size": "$auivar-bgsize",
     "offset": "$auivar-offsetsize",
     "anchor_from": "$auivar-bganchor",
@@ -497,29 +496,32 @@
   ]},
   "header": {
     "type": "panel",
-    "size": [ "100%", 24 ],
+    "size": [ "100%", 14 ],
     "controls": [
-      { "background":{
+      { "background": {
           "type": "image",
-          "size": [ "default", 20 ],
-          "offset": [ 0, -2 ],
+          "texture": ".aui/.aui-assets/text_background",
+          "size": [ "100%", "100%" ],
+          "color": "$background_menu_color",
+          "alpha": "$auivar:config_theme_alpha"
+      }},
+      { "list_label": {
+          "type": "label",
+          "size": [ "100% - 8px", 10 ],
+          "font_type": "MinecraftTen",
+          "text": "$text",
+          "color": "$primary_color",
+          "offset": [ 0, -2 ]
+      }},
+      { "outline": {
+          "type": "image",
+          "color": "$primary_color",
+          "texture": "textures/ui/White",
+          "size": [ "100% - 8px", 1 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
-          "alpha": 0.7,
-          "texture": "textures/ui/Black",
-          "controls": [
-            { "header_label":{
-                "type": "label",
-                "text": "$text",
-                "layer": 1,
-                "offset": [ 0, -2 ],
-                "font_type": "MinecraftTen",
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "text_alignment": "center",
-                "max_size": [ "90%", 10 ]
-            }}
-      ]}}
+          "offset": [ 0, -1 ]
+      }}
   ]},
   "menu_title": {
     "type": "label",
@@ -550,18 +552,28 @@
     "type": "panel",
     "controls": [
       { "gradient@aui-common.gradient_renderer_template": {
+          "ignored": "(not $gradient_renderer)",
           "size": [ "45%", "100%" ],
           "gradient_direction": "horizontal",
           "color1": "$background_menu_color",
           "color2": [ 0, 0, 0, 0.0 ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle"
+      }},
+      { "background_renderer": {
+          "ignored": "(not $background_renderer)",
+          "type": "image",
+          "layer": -120,
+          "fill": true,
+          "texture": "custom_texture/background",
+          "size": [ "100%", "100%" ]
       }}
   ]}, 
   "menu_screen_background@auicore_configloader.core": {
     "type": "panel",
     "controls": [
       { "gradient01@aui-common.gradient_renderer_template": {
+          "ignored": "(not $gradient_renderer)",
           "size": [ "100%", "20%" ],
           "color1": "$background_standard_color_top",
           "color2": [ 0, 0, 0, 0 ],
@@ -569,11 +581,20 @@
           "anchor_to": "top_middle"
       }},
       { "gradient02@aui-common.gradient_renderer_template": {
+          "ignored": "(not $gradient_renderer)",
           "size": [ "100%", "45%" ],
           "color1": [ 0, 0, 0, 0 ],
           "color2": "$background_standard_color_bottom",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
+      }},
+      { "background_renderer": {
+          "ignored": "(not $background_renderer)",
+          "type": "image",
+          "layer": -120,
+          "fill": true,
+          "texture": "custom_texture/background_blur",
+          "size": [ "100%", "100%" ]
       }}
   ]},
   "status_bottom_bar@auicore_configloader.core": {
@@ -581,7 +602,7 @@
     "$auivar-bar_texture|default": "textures/ui/White",
     "$auivar-bar_contents|default": "",
     "$auivar-logo_texture|default": ".aui/.aui-assets/harlowlogo",
-    "$auivar-ver_text|default": "Arcdustry-UI [ 5/19/2023-v1.2 ]",
+    "$auivar-ver_text|default": "Arcdustry-UI [ v1.3-final ]",
     "$auivar-screen_name|default": "\"Unknown\"",
     "$auivar-label_no_mcver|default": false,
     "$auivar:back_button|default": false,
@@ -610,7 +631,11 @@
           "size": [ "125%", 100 ],
           "offset": [ 0, 80 ],
           "layer": -2,
-          "alpha": "$bottom_bar_background_alpha"
+          "alpha": "$bottom_bar_background_alpha",
+          "variables": [
+            { "requires": "(($oled_mode) and not ($allow_bottom_bar_customization))",
+              "$bottom_bar_background_alpha": "$auivar:config_theme_alpha"
+          }]
       }},
       { "arc_logo": {
           "ignored": "$auivar:back_button",
@@ -659,9 +684,41 @@
           "bindings": [
             { "binding_name": "#version" },
             { "binding_type": "view",
-              "source_property_name": "('Bedrock ' + #version + ' | ©Mojang AD')",
+              "source_property_name": "('Bedrock ' + #version + ' | ©Mojang AB')",
               "target_property_name": "#text"
           }]
       }},
       { "contents@$auivar-bar_contents": {}}
-]}}
+  ]},
+  "player_head_element": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "clips_children": true,
+    "controls": [
+      { "skin_renderer": {
+          "type": "custom",
+          "layer": 5,
+          "renderer": "paper_doll_renderer",
+          "size": [ 42, 92 ],
+          "offset": [ 0, 8 ]
+      }}
+  ]},
+  "warning_element": {
+    "type": "image",
+    "ignored": "(not $show_warning_notification)",
+    "texture": "textures/ui/White",
+    "size": [ "100%c + 10px", "100%cm + 8px" ],
+    "layer": 10,
+    "alpha": "$auivar:config_theme_alpha",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, -116 ],
+    "color": "aui-anim.warning_flashing00",
+    "anims": [ 
+      "aui-anim.warning_text_movement00",
+      "aui-anim.warning_flashing00"
+    ],
+    "$auivar:warning_element_controls|default": [],
+    "controls": "$auivar:warning_element_controls"
+  }
+}

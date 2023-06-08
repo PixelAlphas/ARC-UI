@@ -115,7 +115,7 @@
     "$button_offset|default": [ 0, 0 ],
     "$button_pressed_offset|default": [ 0, 1 ],
     "$pressed_alpha|default": false,
-    "$button_content|default": "aui-button.aui_buttoniconcontent",
+    "$button_content|default": "common.empty_panel",
     "$button_type_panel|default": "common_buttons.button_content_panel",
     "$button_state_panel|default": "aui-button.advanced_button_panel",
     "$default_state|default": false,
@@ -153,8 +153,7 @@
           "$border_layer": 3,
           "$pressed_alpha": true,
           "$hover_state": true,
-          "layer": 2,
-          "$textoffset": [ 7, -1 ]
+          "layer": 2
         }
       },
       { "pressed@$button_state_panel": {
@@ -166,8 +165,7 @@
           "$border_color": "$dark_border_pressed_color",
           "$border_layer": 3,
           "$pressed_state": true,
-          "layer": 3,
-          "$textoffset": [ 7, -1 ]
+          "layer": 3
         }
       },
       { "locked@$button_state_panel": {
@@ -241,32 +239,110 @@
     "$checked_locked_glyph_color": "$tab_checked_locked_glyph_color",
     "$checked_locked_hover_glyph_color": "$tab_checked_locked_hover_glyph_color"
   },
-  "aui_buttoniconcontent": {
+  "button_icon_content": {
     "type": "panel",
     "layer": 3,
-    "$auivar-text|default": "§7Text's Title not written.",
+    "$auivar:text_bubble|default": false,
+    "$auivar:text_bubble_offset|default": [ 0, -25 ],
+    "$auivar:text_bubble_with_description|default": false,
+    "$auivar:button_icon|default": true,
+    "$auivar:button_icon_text|default": "§7Error: Title variable failure",
     "controls": [
-     { "lxui_textcontent": {
+     { "text_content": {
           "type": "panel",
+          "ignored": "$auivar:text_bubble",
           "controls": [
-            { "aui_titletext": {
+            { "title_text": {
                 "type": "label",
-                "offset": "$textoffset",
-                "$textoffset|default": [ 3, -1 ],
-                "layer": 1,
-                "anchor_from": "left_middle",
+                "text": "$auivar:button_icon_text",
                 "color": "$text_color",
+                "$auivar:start_offset|default": [ 3, -1 ],
+                "offset": "$auivar:start_offset",
+                "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
+                "layer": 1,
                 "font_type": "dainbold",
                 "enable_profanity_filter": false,
-                "text": "$auivar-text"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+                "variables": [
+                  { "requires": "((($hover_state) or ($pressed_state)) and ($auivar:button_icon)",
+                    "$auivar:start_offset": [ 27, -1 ]
+                  },
+                  { "requires": "((($hover_state) or ($pressed_state)) and (not $auivar:button_icon))",
+                    "$auivar:start_offset": [ 7, -1 ]
+                  },
+                  { "requires": "(($auivar:button_icon) and not (($hover_state) or ($pressed_state)))",
+                    "$auivar:start_offset": [ 23, -1 ]
+                }]
+            }},
+            { "title_icon": {
+                "ignored": "(not $auivar:button_icon)",
+                "type": "image",
+                "texture": "$auivar:start_icon_path",
+                "color": "$text_color",
+                "size": [ 16, 16 ],
+                "$auivar:start_offset|default": [ 3, 0 ],
+                "offset": "$auivar:start_offset",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "layer": 1,
+                "variables": [
+                  { "requires": "(($hover_state) or ($pressed_state))",
+                    "$auivar:start_offset": [ 7, 0 ]
+                }]
+            }}
+      ]}},
+      { "text_bubble": {
+          "type": "panel",
+          "ignored": "(not $auivar:text_bubble)",
+          "controls": [
+            { "title_text": {
+                "type": "image",
+                "visible": "$pressed_alpha",
+                "texture": ".aui/.aui-assets/text_background",
+                "size": [ "100%c + 12px", "100%c + 5px" ],
+                "alpha": 0.75,
+                "offset": "$auivar:text_bubble_offset",
+                "color": [ 0, 0, 0 ],
+                "controls": [
+                  { "stack_panel": {
+                      "type": "stack_panel",
+                      "size": [ "100%c", "100%c" ],
+                      "orientation": "vertical",
+                      "controls": [
+                        { "title": {
+                            "type": "label",
+                            "text": "$auivar:button_icon_text",
+                            "font_type": "MinecraftTen",
+                            "layer": 11,
+                            "shadow": false,
+                            "size": [ "default", 14 ]
+                        }},
+                        { "description": {
+                            "type": "label",
+                            "layer": 1,
+                            "shadow": false,
+                            "max_size": [ "100%", "100%c" ],
+                            "ignored": "(not $auivar:text_bubble_with_description)",
+                            "text": "$auivar:button_icon_text_description"
+                        }}
+                  ]}}
+            ]}},
+            { "title_icon": {
+                "ignored": "(not $auivar:button_icon)",
+                "type": "image",
+                "texture": "$auivar:start_icon_path",
+                "color": "$text_color",
+                "size": [ 16, 16 ],
+                "$auivar:start_offset|default": [ 0, -1 ],
+                "offset": "$auivar:start_offset",
+                "layer": 1,
+                "variables": [
+                  { "requires": "(($hover_state) or ($pressed_state))",
+                    "$auivar:start_offset": [ 0, 0 ]
+                }]
+            }}
+      ]}}
+  ]},
   "advanced_button_panel@auicore_configloader.core": {
     "type": "panel",
     "$button_alpha|default": 1,

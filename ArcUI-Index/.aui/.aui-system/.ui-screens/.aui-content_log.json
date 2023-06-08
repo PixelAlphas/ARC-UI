@@ -6,7 +6,7 @@
     "controls": [
       { "main_stack_panel@content_log_history.main_stack_panel": {}}
   ]},
-  "root_contents": {
+  "root_contents@auicore_configloader.core": {
     "type": "panel",
     "$auivar:back_button": true,
     "controls": [

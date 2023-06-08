@@ -1,0 +1,7 @@
+{ "tabbed_upsell_screen": {
+    "force_render_below": false,
+    "load_screen_immediately": true,
+    "$use_loading_bars": false,
+    "$screen_content": "aui-about_ui.root_contents",
+    "$screen_bg_content": "aui-common.menu_screen_background"
+}}

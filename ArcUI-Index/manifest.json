@@ -1,20 +1,16 @@
-{ 
-  "format_version": 2,
+{ "format_version": 2,
   "header": {
-    "name": "Arcdustry-UI Pack [ 5/19/2023-v1.2 ]",
-    "description": "Reskinned UI made by Arcdustry (Harlow)\n[5/19/2023-v1.2]",
+    "name": "Arcdustry-UI Pack [ 6/9/2023-v1.3 ]",
+    "description": "Reskinned UI made by Arcdustry (Harlow)\n[6/9/2023-v1.3]",
     "uuid": "1d412f94-dce6-4bbb-8ee1-c94ec7606d71",
-    "version": [ 1, 2, 0 ],
+    "version": [ 1, 3, 0 ],
     "min_engine_version": [ 1, 19, 70 ]
   },
   "modules": [
-    {
-      "type": "resources",
+    { "type": "resources",
       "uuid": "65227565-5dde-9709-6b90-0ab29d04ee5a",
       "version": [ 1, 0, 0 ]
-    }
-  ],
+  }],
   "metadata": {
     "authors": [ "Arcdustry (Harlow)" ]
-  } 
-}
+}}

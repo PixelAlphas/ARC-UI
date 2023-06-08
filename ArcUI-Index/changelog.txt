@@ -4,6 +4,7 @@
 [ -- ADDITIONS / UPDATES -- ]
 [+] Added couple of .lang stuff
 [+] Added Realms options in world tab ( Vanilla instead only )
+[+] Added Brazilian Portuguese Language ( Contributed by santiago046 )
 
 [ -- BUG FIXES -- ]
 [+] Play screen title are not spaced

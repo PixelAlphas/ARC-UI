@@ -1,5 +1,4 @@
-{
-  "namespace": "aui-button",
+{ "namespace": "aui-button",
   "light_content_button@aui-button.light_text_button": {
     "$button_type_panel": "common_buttons.button_content_panel"
   },
@@ -7,8 +6,7 @@
     "$pressed_button_name": "button.menu_open_uri",
     "property_bag": {
       "#hyperlink": ""
-    }
-  },
+  }},
   "light_text_button@aui-button.dark_button_assets": {
     "$button_offset|default": [ 0, 0 ],
     "$button_pressed_offset|default": [ 0, 1 ],
@@ -46,8 +44,7 @@
     "$button_image_size": [ "100%", "100%" ],
     "$border_visible|default": false,
     "controls": [
-      {
-        "default@$button_state_panel": {
+      { "default@$button_state_panel": {
           "$new_ui_button_texture": "$default_button_texture",
           "$text_color": "$default_text_color",
           "$content_alpha": "$default_content_alpha",
@@ -60,10 +57,8 @@
           "$border_alpha": "$border_default_alpha",
           "$default_state": true,
           "layer": 1
-        }
-      },
-      {
-        "hover@$button_state_panel": {
+      }},
+      { "hover@$button_state_panel": {
           "$new_ui_button_texture": "$hover_button_texture",
           "$text_color": "$light_button_hover_text_color",
           "$secondary_text_color": "$light_button_secondary_hover_text_color",
@@ -75,10 +70,8 @@
           "$hover_state": true,
           "$button_alpha": "$default_hover_alpha",
           "layer": 2
-        }
-      },
-      {
-        "pressed@$button_state_panel": {
+      }},
+      { "pressed@$button_state_panel": {
           "$new_ui_button_texture": "$pressed_button_texture",
           "$text_color": "$light_button_pressed_text_color",
           "$secondary_text_color": "$light_button_secondary_pressed_text_color",
@@ -91,10 +84,8 @@
           "$button_alpha": "$default_pressed_alpha",
           "$pressed_state": true,
           "layer": 3
-        }
-      },
-      {
-        "locked@$button_state_panel": {
+      }},
+      { "locked@$button_state_panel": {
           "$new_ui_button_texture": "$locked_button_texture",
           "$text_color": "$light_button_locked_text_color",
           "$secondary_text_color": "$light_button_secondary_locked_text_color",
@@ -106,11 +97,8 @@
           "$border_layer": "$border_locked_layer",
           "$locked_state": true,
           "layer": 1
-        }
-      }
-    ]
-  },
-  
+      }}
+  ]},
   "dark_glyph_style@aui-button.dark_button_assets": {
     "$button_offset|default": [ 0, 0 ],
     "$button_pressed_offset|default": [ 0, 1 ],
@@ -142,8 +130,7 @@
           "$border_layer": 2,
           "$default_state": true,
           "layer": 1
-        }
-      },
+      }},
       { "hover@$button_state_panel": {
           "$secondary_text_color": "$light_button_secondary_hover_text_color",
           "$new_ui_button_texture": "$hover_button_texture",
@@ -154,8 +141,7 @@
           "$pressed_alpha": true,
           "$hover_state": true,
           "layer": 2
-        }
-      },
+      }},
       { "pressed@$button_state_panel": {
           "$secondary_text_color": "$light_button_secondary_pressed_text_color",
           "$new_ui_button_texture": "$pressed_button_texture",
@@ -166,8 +152,7 @@
           "$border_layer": 3,
           "$pressed_state": true,
           "layer": 3
-        }
-      },
+      }},
       { "locked@$button_state_panel": {
           "$secondary_text_color": "$light_button_secondary_locked_text_color",
           "$new_ui_button_texture": "$locked_button_texture",
@@ -178,10 +163,8 @@
           "$border_layer": 1,
           "$locked_state": true,
           "layer": 1
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "tab_panel@auicore_configloader.core": {
     "type": "panel",
     "$tab_content|default": "common_tabs.empty_tab_content",
@@ -199,21 +182,19 @@
           "controls": [
             { "tab_content@$tab_content": {
                 "layer": 3
-            }}
-          ]
-      }}
-    ]
-  },
+          }}
+      ]}}
+  ]},
   "playtab@common_tabs.base_tab": {
     "$tab_panel|default": "aui-button.tab_panel",
-    "$unchecked_default_image": ".aui/.aui-assets/buttons/global/black_button",
-    "$unchecked_hover_image": ".aui/.aui-assets/buttons/global/black_button_hover",
-    "$unchecked_locked_image": ".aui/.aui-assets/buttons/global/black_button",
-    "$unchecked_locked_hover_image": ".aui/.aui-assets/global/black_button",
-    "$checked_default_image": ".aui/.aui-assets/buttons/global/white_button",
-    "$checked_hover_image": ".aui/.aui-assets/buttons/global/white_button_hover",
-    "$checked_locked_image": ".aui/.aui-assets/buttons/global/white_button",
-    "$checked_locked_hover_image": ".aui/.aui-assets/global/white_button",
+    "$unchecked_default_image|default": ".aui/.aui-assets/buttons/global/black_button",
+    "$unchecked_hover_image|default": ".aui/.aui-assets/buttons/global/black_button_hover",
+    "$unchecked_locked_image|default": ".aui/.aui-assets/buttons/global/black_button",
+    "$unchecked_locked_hover_image|default": ".aui/.aui-assets/global/black_button",
+    "$checked_default_image|default": ".aui/.aui-assets/buttons/global/white_button",
+    "$checked_hover_image|default": ".aui/.aui-assets/buttons/global/white_button_hover",
+    "$checked_locked_image|default": ".aui/.aui-assets/buttons/global/white_button",
+    "$checked_locked_hover_image|default": ".aui/.aui-assets/global/white_button",
     "$unchecked_text_color": "$tab_unchecked_text_color",
     "$unchecked_hover_text_color": "$tab_unchecked_hover_text_color",
     "$unchecked_locked_text_color": "$tab_unchecked_locked_text_color",
@@ -366,8 +347,7 @@
     "$button_image_fill|default": false,
     "$button_image_color|default": [ 1.0, 1.0, 1.0 ],
     "controls": [
-      {
-        "$button_image@$button_image": {
+      { "$button_image@$button_image": {
           "ignored": "(not $button_image_visible)",
           "size": "$button_image_size",
           "offset": "$image_offset",
@@ -378,28 +358,21 @@
           "fill": "$button_image_fill",
           "color": "$primary_color",
           "anims": "$button_image_anims"
-        }
-      },
-      {
-        "button_content": {
+      }},
+      { "button_content": {
           "type": "panel",
           "$button_content_size|default": [ "100% - 6px", "100% - 6px" ],
           "size": "$button_content_size",
           "controls": [
             { "$button_type_panel@$button_type_panel": { "layer": 3 }}
-          ]
-        }
-      },
-      {
-        "border@common_buttons.focus_border": {
+      ]}},
+      { "border@common_buttons.focus_border": {
           "color": "$border_color",
           "layer": "$border_layer",
           "alpha": "$border_alpha",
           "ignored": "(not $border_visible)"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "hover_background_core": {
     "type": "button",
     "$focus_enabled|default": false,
@@ -430,16 +403,13 @@
           "$new_ui_button_texture": "$default_button_texture",
           "$default_state": true,
           "layer": 1
-        }
-      },
+      }},
       { "hover@$button_state_panel": {
           "$new_ui_button_texture": "$hover_button_texture",
           "$hover_state": true,
           "layer": 2
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "dark_button_assets@common.button": {
     "$default_content_alpha|default": 1,
     "$hover_content_alpha|default": 1,
@@ -449,5 +419,4 @@
     "$locked_button_texture|default": ".aui/.aui-assets/buttons/global/all_button_locked",
     "locked_control": "locked",
     "$locked_alpha": 1
-  }
-}
+}}

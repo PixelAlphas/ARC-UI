@@ -1,3 +1,67 @@
+--- v2.0 (Jun 16, 2023) ---
+× A true v1.3 public release for now and yes
+× it is final version.
+
+[ -- ADDITIONS / UPDATES -- ]
+[+] New Trailer again
+[+] Revamped/Rewrite Start Screen
+[+] Revamped/Rewrite Pause Screen
+[+] Revamped Settings Screen
+[+] Revamped/Rewrite Play Screen
+[+] Revamped Arcdustry-UI Logo
+[+] Revamped touch control's scheme icon
+[+] Revamped Some icons in setting menu
+[+] Revamped Play Screen's tab and icons
+[+] Updated Loading Icon
+[+] Changed all icons into more brighten colors
+[+] Changed Back button texture to have Lynxsium-UI thing
+[+] Added Variant of loading screen when you enter nether or the end,
+    vice versa
+[+] Added couple of .lang stuff
+[+] Added Realms options in world tab ( Vanilla style only )
+[+] Added Brazilian Portuguese Language ( Contributed by santiago046 )
+[+] Added "More" Options in both Start/Pause screen
+[+] Added OLED theme mode (Configuration)
+[+] Added UI Support to 1.20.0
+[+] Added Option to disable gradient render (Configuration)
+[+] Added Background aswell blur version (Configuration)
+    Able to change texture in 'arcdustry-ui/custom_texture' folder
+[+] Added Arcdustry-UI Legacy layout (Configuration)
+[+] Added Lockable bottom bar / status bar due to OLED theme mode,
+    can be unlocked in configuration
+[+] Added Icons on start screen
+[+] Added Helper icons on play screen (Controller and Keyboard)
+[+] Added Optional start/pause screen background panel incase of
+    user's visuality. (Configuration)
+[+] Added a slider's button because people thinks its missing
+[+] Added "custom_texture" folder for customization
+[+] Added Theme's code from Lynxsium-UI that may improve my progress
+[+] Merged Lynxsium-UI together i think lol
+[+] Fixed Misspelling on mojang copyright text
+[-] Removed About Section in Setting screen
+[-] Removed Pause Screen Compact version
+
+[ -- BUG FIXES -- ]
+[+] Play screen title are not spaced
+[+] Realm options just randomly stops working
+[+] Fixed versioning issues lmao i forogt
+[+] Fixed game freezes in the start up or during gameplay
+[+] Fixed another another alignment issues again...
+[+] Fixed some screen being SMALL
+[+] Fixed some tooltips that doesnt show up
+[+] Fixed the realm download prompt not showing up
+
+[ -- ADJUSTMENTS -- ]
+[+] Massive Optimizations
+[+] Improvements to UI stability
+[+] UI now will use less resources as possible i think
+[+] Improved Color theme system
+[+] Changed *almost* all panel texture into white instead since it'll
+    improve theme system better
+[+] Improvements to screen animations
+[+] Updated Changelog
+[+] Updated .lang file/system
+
 --- v1.3.1 (Jun 8/9, 2023) ---
 × whoops accidentally broke something
 

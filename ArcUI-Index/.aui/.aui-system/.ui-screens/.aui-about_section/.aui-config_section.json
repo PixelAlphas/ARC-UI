@@ -35,13 +35,6 @@
           "text": "$valuetext",
           "$valuetext|default": "§cINVAILD VALUE",
           "variables": [
-            { "requires": "($pause_screen_compact_mode)", "$valuetext": "('§a█§7 Pause screen compact mode : ' + '§aTrue')" },
-            { "requires": "(not $pause_screen_compact_mode)", "$valuetext": "('§c█§7 Pause screen compact mode : ' + '§cFalse')" }
-      ]}},
-      { "label13@aui-common.label_element": {
-          "text": "$valuetext",
-          "$valuetext|default": "§cINVAILD VALUE",
-          "variables": [
             { "requires": "($show_warning_notification)", "$valuetext": "('§a█§7 Show notification upon launch : ' + '§aTrue')" },
             { "requires": "(not $show_warning_notification)", "$valuetext": "('§c█§7 Show notification upon launch : ' + '§cFalse')" }
       ]}},
@@ -51,6 +44,20 @@
           "variables": [
             { "requires": "($no_marketplace_button)", "$valuetext": "('§a█§7 Remove marketplace option : ' + '§aTrue')" },
             { "requires": "(not $no_marketplace_button)", "$valuetext": "('§c█§7 Remove marketplace option : ' + '§cFalse')" }
+      ]}},
+      { "label14@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUE",
+          "variables": [
+            { "requires": "($legacy_ui_layout)", "$valuetext": "('§a█§7 Legacy UI : ' + '§aTrue')" },
+            { "requires": "(not $legacy_ui_layout)", "$valuetext": "('§c█§7 Legacy UI : ' + '§cFalse')" }
+      ]}},
+      { "label15@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUE",
+          "variables": [
+            { "requires": "($main_menu_background)", "$valuetext": "('§a█§7 Background for menu buttons : ' + '§aTrue')" },
+            { "requires": "(not $main_menu_background)", "$valuetext": "('§c█§7 Background for menu buttons : ' + '§cFalse')" }
       ]}},
       { "labelstack01": {
           "type": "stack_panel",

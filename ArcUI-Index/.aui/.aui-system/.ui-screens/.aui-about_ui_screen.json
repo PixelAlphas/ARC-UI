@@ -5,7 +5,6 @@
     "controls": [
       { "gamepad_helper_element": {
           "type": "panel",
-          
           "controls": [
             { "left_arrow@aui-play_screen.text_with_outline": {
                 "$label": ">",
@@ -171,7 +170,7 @@
     "anchor_to": "top_left",
     "controls": [
       { "padding00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "changelog_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-changelog_section.root_section", "$text": "arc-ui.settingtitle.about-changelog" }},
+      { "changelog_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-changelog_section.root_section", "$text": "arc-ui.about.changelog.config.title" }},
       { "padding01": { "type": "panel", "size": [ "100%", 2 ]}}
   ]},
   "changelog_tab_content_panel@aui-play_screen.common_tab_content_panel": {
@@ -198,10 +197,8 @@
           "controls": [
             { "text@play.common_button_text": {
                 "layer": 3,
-                "font_type": "dainbold",
                 "text": "$tab_text_name",
-                "offset": [ 0, 0 ],
-                "color": "$text_color"
+                "offset": [ 0, 0 ]
             }}
       ]}}
   ]},

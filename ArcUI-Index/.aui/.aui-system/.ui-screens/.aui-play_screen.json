@@ -4,9 +4,9 @@
     "size": [ 22, 22 ],
     "color": "$setting_button_icon_color"
   },
-  "world_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/general_glyph_color" },
-  "friend_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/multiplayer_glyph_color" },
-  "server_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/server_glyph_icon" },
+  "world_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/play_screen/world_glyph_icon" },
+  "friend_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/play_screen/multiplayer_glyph_icon" },
+  "server_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/play_screen/server_glyph_icon" },
   "default_play_screen_panel@aui-play_screen.play_screen_panel": {
     "$tab_content_panel": "aui-play_screen.default_tab_content_panel_layout"
   },
@@ -68,20 +68,18 @@
           "controls": [
             { "text@play.common_button_text": {
                 "layer": 3,
-                "font_type": "dainbold",
                 "text": "$tab_text_name",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
-                "offset": [ 25, 0 ],
-                "color": "$text_color"
+                "offset": [ 24, -5 ]
             }}
       ]}},
       { "count_section": {
           "type": "panel",
           "size": [ "100%c", "100%c" ],
-          "offset": [ -3, 0 ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
+          "offset": [ 23, 5 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
           "variables": [
             { "requires": "$is_checked_state",
               "$count_background_image": "textures/ui/numberBGFront",
@@ -96,13 +94,11 @@
                 "type": "image",
                 "texture": "$count_background_image",
                 "size": [ "100%c + 2px", "100%c" ],
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle",
                 "layer": 3,
                 "controls": [
                   { "count@play.common_button_text": {
                       "layer": 1,
-                      "offset": [ 0, 1 ],
+                      "offset": [ 0.51, 1 ],
                       "text": "$count_text_name",
                       "color": "$count_text_color",
                       "bindings": [
@@ -114,6 +110,14 @@
   "top_tab@aui-button.playtab": {
     "$toggle_tts_enabled_binding_type": "global",
     "$radio_toggle_group": true,
+    "$unchecked_default_image": ".aui/.aui-assets/buttons/global/tab_box_idle",
+    "$unchecked_hover_image": ".aui/.aui-assets/buttons/global/tab_box_hover",
+    "$unchecked_locked_image": ".aui/.aui-assets/buttons/global/tab_box_idle",
+    "$unchecked_locked_hover_image": ".aui/.aui-assets/global/tab_box_idle",
+    "$checked_default_image": ".aui/.aui-assets/buttons/global/tab_box_pressed",
+    "$checked_hover_image": ".aui/.aui-assets/buttons/global/tab_box_pressedhover",
+    "$checked_locked_image": ".aui/.aui-assets/buttons/global/tab_box_pressed",
+    "$checked_locked_hover_image": ".aui/.aui-assets/global/tab_box_pressed",
     "$toggle_name": "navigation_tab",
     "$toggle_group_default_selected": "$default_tab",
     "anchor_to": "top_left",

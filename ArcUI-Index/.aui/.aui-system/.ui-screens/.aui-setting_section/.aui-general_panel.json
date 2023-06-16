@@ -1,4 +1,137 @@
 { "namespace": "aui-setting_general",
+  "gamertag_controls": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "offset": [ 0, 1 ],
+    "$spatialPatternsPadding": [ "100%", 8 ],
+    "controls": [
+      { "pudding02-1": { "type": "panel", "size": [ 1, 2 ]}},
+      { "xboxlive_deep_link_buttons_rewrite": {
+          "type": "panel",
+          "size": [ "100%", 33 ],
+          "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls)",
+          "controls": [
+            { "change_gamertag_button@aui-setting_screen.action_button": {
+                "ignored": "($is_windows_10_mobile or $is_ios or $is_android)",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$pressed_button_name": "change_gamertag_button",
+                "$button_text": "options.changeGamertag",
+                "size": [ "100%", 30 ]
+            }},
+            { "change_gamertag_button_mobile@aui-setting_screen.link_button": {
+                "ignored": "(not ($is_windows_10_mobile or $is_ios or $is_android))",
+                "size": [ "100%", 30 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$button_text": "options.changeGamertag",
+                "property_bag": { "#hyperlink": "https://social.xbox.com/changegamertag" }
+            }}]
+      }}
+  ]},
+  "account_alt_element": {
+    "type": "stack_panel",
+    "size": ["95%", "100%c"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "manage_account_button@aui-setting_screen.action_button": {
+          "ignored": "($is_ios or $is_android)",
+          "size": [ "100%", 30 ],
+          "$pressed_button_name": "manage_account_button",
+          "$button_text": "options.manageAccount"
+      }},
+      { "manage_account_button_mobile@aui-setting_screen.link_button": {
+          "ignored": "(not ($is_ios or $is_android))",
+          "size": [ "100%", 30 ],
+          "$button_text": "options.manageAccount",
+          "property_bag": { "#hyperlink": "https://account.xbox.com/Settings" }
+      }},
+      { "check_realms_invites_button@aui-setting_screen.action_button": {
+          "$pressed_button_name": "realms_invites_button",
+          "$button_text": "options.realms.checkInvites",
+          "size": [ "100%", 30 ]
+      }},
+      { "manage_invites_popup_button@aui-setting_screen.action_button": {
+          "ignored": "(not $is_holographic and not $fire_tv and not $thirdpartyconsole)",
+          "size": [ "100%", 30 ],
+          "$pressed_button_name": "button.manage_invites_popup",
+          "$button_text": "options.xboxLive.privacyControl"
+      }},
+      { "link_button@aui-setting_screen.link_button": {
+          "ignored": "($is_holographic or $fire_tv or $education_edition or $thirdpartyconsole)",
+          "size": [ "100%", 30 ],
+          "$button_text": "options.xboxLive.privacyControl",
+          "$focus_id": "manage_invites",
+          "$focus_override_right": "manage_invites",
+          "property_bag": { "#hyperlink": "https://account.xbox.com/Settings" }
+      }},
+      { "pudding00": { "type": "panel", "size": [ 1, 10 ]}}
+  ]},
+  "account_element": {
+    "type": "stack_panel",
+    "size": ["95%", "100%c"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ] } },
+      { "use_sso@settings_common.option_toggle": {
+          "ignored": "$ignore_profile_sso_toggle",
+          "$option_label": "options.adUseSingleSignOn",
+          "$option_binding_name": "#ad_use_single_sign_on",
+          "$toggle_name": "ad_use_single_sign_on"
+      }},
+      { "name_controls@settings_common.option_custom_control": {
+          "ignored": "$education_edition",
+          "$option_label": "options.name",
+          "$control_name": "general_section.name_controls",
+          "bindings": [
+            { "binding_name": "#can_change_name",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "padding": {
+          "type": "panel",
+          "size": [ "100%", 5 ],
+          "ignored": "(not $is_pregame or not $is_xboxlive_enabled)",
+          "bindings": [
+            { "binding_name": "#can_change_name",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "pudding_line@aui-common.pudding_line": {}},
+            { "pudding00": { "type": "panel", "size": [ "100%", 4 ]}}
+      ]}},
+      { "sign_in": {
+          "ignored": "(not $is_pregame or not $is_xboxlive_enabled)",
+          "type": "panel",
+          "size": [ "100%", 33 ],
+          "bindings": [
+            { "binding_name": "#not_logged_in",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "action_button@aui-setting_screen.action_button": {
+                "$pressed_button_name": "sign_in_button",
+                "$button_text": "xbox.signInLong",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "size": [ "100%", 30 ],
+                "offset": [ 0, 2 ]
+            }}
+      ]}},
+      { "pudding00": { "type": "panel", "size": [ "100%", 6 ], "ignored": "(not $is_pregame or not $is_xboxlive_enabled)", "bindings": [{ "binding_name": "#can_change_name", "binding_name_override": "#visible" }]}},
+      { "gamertag_controls@settings_common.option_custom_control": {
+          "$show_option_label": false,
+          "$control_name": "aui-setting_general.gamertag_controls",
+          "bindings": [
+            { "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+          }]
+      }}
+  ]},
   "general_element": {
     "type": "stack_panel",
     "size": [ "95%", "100%c" ],
@@ -100,7 +233,7 @@
   ]},
   "root_section": {
     "type": "stack_panel",
-    "size": [ "100%", "100%c" ],
+    "size": ["100%", "100%c"],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "bindings": [
@@ -111,7 +244,12 @@
     }],
     "controls": [
       { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "general_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_general.general_element", "$text": "options.networkSettings" }},
+      { "account_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_general.account_element", "$text": "arc-ui.settingtitle.account" }},
       { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "auto_update_mode_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_general.auto_update_mode_element", "$text": "options.autoUpdateMode" }}
+      { "general_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_general.general_element", "$text": "options.networkSettings" }},
+      { "pudding02": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "auto_update_mode_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_general.auto_update_mode_element", "$text": "options.autoUpdateMode" }},
+      { "pudding03": { "type": "panel", "size": [ "100%", 2 ], "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls)"}},
+      { "account_alt_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-setting_general.account_alt_element", "$text": "arc-ui.settingtitle.account-alt", "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls)" }},
+      { "pudding04": { "type": "panel", "size": [ "100%", 2 ]}}
 ]}}

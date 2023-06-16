@@ -9,7 +9,7 @@
       { "padding01": { "type": "panel", "size": [ 1, 10 ]}},
       { "titlelogo": { "type": "image", "texture": "textures/ui/title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 10 ]}},
-      { "label00@aui-common.label_element": { "text": "Arcdustry-UI (ARC-UI) Version\n§7- v1.3-final (v1.3.1) [ 6/9/2023-v1.3.1 ]\n§7- Settings version : 1.20.0.1" }},
+      { "label00@aui-common.label_element": { "text": "Arcdustry-UI (ARC-UI) Version\n§7- v2.0 [ 6/16/2023-v2.0 ]\n§7- Settings version : 1.20.0.1\n§7- By Arcdustry" }},
       { "padding03": { "type": "panel", "size": [ 1, 10 ]}},
       { "media": {
           "type": "stack_panel",
@@ -121,6 +121,11 @@
           }}]
       }},
       { "padding04": { "type": "panel", "size": [ 1, 10 ]}},
-      { "label01@aui-common.label_element": { "text": "Greetings! Thanks for stopping by! Arcdustry-UI was created by, of course. Arcdustry! ( known as PixelAlphas ) This project was pretty much been in development for probably almost year! around 10 months of course. Thanks for trying it out! and regardless, have a nice day!" }},
-      { "padding05": { "type": "panel", "size": [ 1, 10 ]}}
+      { "label01@aui-common.label_element": { "text": "arc-ui.about.uiinfo" }},
+      { "padding05": { "type": "panel", "size": [ 1, 10 ]}},
+      { "label01@aui-common.label_element": { "text": "arc-ui.about.credit.title" }},
+      { "label02@aui-common.label_element": { "text": "arc-ui.about.credit.harlow" }},
+      { "label02@aui-common.label_element": { "text": "arc-ui.about.credit.valve" }},
+      { "label02@aui-common.label_element": { "text": "arc-ui.about.credit.brazil.lang" }},
+      { "padding06": { "type": "panel", "size": [ 1, 10 ]}}
 ]}}

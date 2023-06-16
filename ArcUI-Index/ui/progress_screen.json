@@ -1,7 +1,7 @@
 {
-  "overworld_loading_progress_screen": { "$screen_bg_content": "progress.overworld_loading_background", "$screen_content": "aui-loading_screen.world_convert_modal_progress_screen_content", "$progress_title_text": "progressScreen.loading"},
-  "nether_loading_progress_screen": { "$screen_bg_content": "progress.nether_loading_background", "$screen_content": "aui-loading_screen.world_convert_modal_progress_screen_content", "$progress_title_text": "progressScreen.loading"},
-  "theend_loading_progress_screen": { "$screen_bg_content": "progress.theend_loading_background", "$screen_content": "aui-loading_screen.world_convert_modal_progress_screen_content", "$progress_title_text": "progressScreen.loading"},
+  "overworld_loading_progress_screen": { "$screen_bg_content": "progress.overworld_loading_background", "$screen_content": "aui-loading_screen.world_convert_modal_progress_screen_otherworld_content", "$progress_title_text": "arc-ui.loadingscreen.overworld"},
+  "nether_loading_progress_screen": { "$screen_bg_content": "progress.nether_loading_background", "$screen_content": "aui-loading_screen.world_convert_modal_progress_screen_otherworld_content", "$progress_title_text": "arc-ui.loadingscreen.nether"},
+  "theend_loading_progress_screen": { "$screen_bg_content": "progress.theend_loading_background", "$screen_content": "aui-loading_screen.world_convert_modal_progress_screen_otherworld_content", "$progress_title_text": "arc-ui.loadingscreen.end"},
   "world_convert_modal_progress_screen": { "$screen_content": "aui-loading_screen.world_convert_modal_progress_screen_content"},
   "realms_loading_progress_screen": { "$screen_content": "aui-loading_screen.world_modal_progress_panel", "$screen_bg_content": "common.empty_panel", "$use_custom_panorama": "(not $is_holographic)"},
   "world_loading_progress_screen": { "$screen_content": "aui-loading_screen.world_convert_modal_progress_screen_content", "$screen_bg_content": "aui-common.menu_screen_background", "$use_custom_panorama": "(not $is_holographic)"},

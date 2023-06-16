@@ -1,4 +1,4 @@
-{ "namespace": "auicore-configsource", "element": { "type":"panel","$key|default":"distorted_fatee","$ver|default":"1.2",
+{ "namespace": "auicore-configsource", "element": { "type":"panel","$key|default":"distorted_fatee","$ver|default":"2.0",
   
   // bottom bar lists :D
 

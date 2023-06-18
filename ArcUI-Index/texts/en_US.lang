@@ -20,6 +20,12 @@ arc-ui.settingtitle.video-interface=Interface Settings
 arc-ui.settingtitle.video-graphic=Graphical Settings
 arc-ui.settingtitle.video-experiment=Experiment
 
+## - Warning Tooltips -
+## Note: Not used atm, will be soon in 2.0.2
+arc-ui.warning.title=Warning!
+arc-ui.warning.start.label01=× Pocket UI is not supported! This can cause potential UI issues or crashes.
+arc-ui.warning.start.label02=× If you applied this pack for the first time, restart the game! for font to load.
+
 ## - Entering Dimensions -
 arc-ui.loadingscreen.overworld=Entering The Overworld...
 arc-ui.loadingscreen.nether=Entering The Nether...
@@ -360,6 +366,15 @@ arc-ui.section.changelogv2desc.v2-0-final.049=§7[§a+§7]§f Changed *almost* a
 arc-ui.section.changelogv2desc.v2-0-final.050=§7[§a+§7]§f Improvements to screen animations
 arc-ui.section.changelogv2desc.v2-0-final.051=§7[§a+§7]§f Updated Changelog
 arc-ui.section.changelogv2desc.v2-0-final.052=§7[§a+§7]§f Updated .lang file/system
+
+## 2.1
+arc-ui.section.changelogv2desc.v2-0-1.001=§o× Released in - Jun 18, 2023
+arc-ui.section.changelogv2desc.v2-0-1.002=§o× Supported - 1.20.0.1+
+arc-ui.section.changelogv2desc.v2-0-1.003=§e× -- Bug fixes moment --
+arc-ui.section.changelogv2desc.v2-0-1.004=§e× Bug fixes for v2.0, Update is recommended.
+arc-ui.section.changelogv2desc.v2-0-1.005=§7[§a+§7]§f Updated Brazil Portuguese for UI
+arc-ui.section.changelogv2desc.v2-0-1.006=§7[§a+§7]§f Fixed general and control setting section not being loaded in-game
+arc-ui.section.changelogv2desc.v2-0-1.007=§7[§a+§7]§f Fixed Warning tooltips not being there
 
 ## video section
 arc-ui.setting.video-experiment.warn=§7§oThese features are an experiment, and are definitely not meant to be enabled on any platforms. several features here are enabled on few platforms and therefore may not compatible with all platforms. this may cause the following issues - unintentional crashes, performance downgraded or feature won't work entirely. be cautious on what are you doing, I'm not responsible for this.

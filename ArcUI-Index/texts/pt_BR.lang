@@ -14,11 +14,27 @@ arc-ui.settingtitle.howtoplay=Como jogar
 arc-ui.settingtitle.keyboardandmouse=Configurações de teclado e mouse
 arc-ui.settingtitle.lang=Configurações de idioma
 arc-ui.settingtitle.sound=Configurações de som
-arc-ui.settingtitle.sound-main=Configurações principais
+arc-ui.settingtitle.sound-main=Configurações principais de som
 arc-ui.settingtitle.touch=Configurações dos controles de toque
 arc-ui.settingtitle.video-interface=Configurações de interface
 arc-ui.settingtitle.video-graphic=Configurações de gráficos
 arc-ui.settingtitle.video-experiment=Configurações experimentais
+
+## - Entering Dimensions -
+arc-ui.loadingscreen.overworld=Entrando no Mundo Superior...
+arc-ui.loadingscreen.nether=Entrando no Nether...
+arc-ui.loadingscreen.end=Entrando no Fim...
+
+## - About Screen Title -
+arc-ui.settingtitle.changelog.config=Detalhes de Configuração
+arc-ui.about.uiinfo=Saudações! Obrigado por experimentar esta IU! O objetivo dela era fazer a experiência de controle mais usável para a IU pré-jogo, já que a vanilla não parece boa. Essa IU também irá oferecer a melhor experiência de menu, já que você poderá ter o controle sobre como a interface aparementará, desde a tela de fundo à cores da IU. Por agora, divirta-se!
+arc-ui.about.changelog.config.title=Detalhes de Configuração
+arc-ui.about.changelog.config.enabled=Todo o registro de mudanças das atualizações ficam aqui, você pode clicar nos itens da lista decrescente para vê-los!	# Not sure if the translation of “dropdown order” is “lista decrescente” in this context
+arc-ui.about.changelog.config.disabled=O registro de mudanças está atualmente §cdisabled§r. Você ainda pode checar o registro de mudanças da IU em §e'ARC-UI/changelog.txt`§r ou no GitHub!
+arc-ui.about.credit.title=- Créditos -
+arc-ui.about.credit.harlow=§ePixel Arts, designs de IU, código e testes§r - Harlow (Arcdustry)
+arc-ui.about.credit.valve=§eDesigns da Origins UI e inspiração§r - Valve Software
+arc-ui.about.credit.brazil.lang=§eSuporte ao Português brasileiro§r - Santiago046
 
 ## - Start Section -
 ## Note: Character case doesn't matter since the font will outputs
@@ -35,6 +51,13 @@ arc-ui.mainmenu.regular.exit=SAIR DO JOGO
 arc-ui.mainmenu.pause.start=CONTINUAR JOGO
 arc-ui.mainmenu.pause.exit=SALVAR E SAIR
 
+## - Play Section -
+## Note: Character case doesn't matter since the font will outputs
+##       probably the same.
+arc-ui.playscreen.title.controlcenter=Centro de controle	# I am not satisfied with that translation
+arc-ui.playscreen.title.realm=Realms
+arc-ui.playscreen.title.world=Mundos	# Translated as plural to make more sense
+
 ## - Safe zone screen -
 arc-ui.setting.safezone.title.main=Configurações da Zona Segura
 arc-ui.setting.safezone.title.exp=Configurações experimentais
@@ -48,7 +71,7 @@ arc-ui.setting.safezone.verticalpos=§7Mover a tela entre a parte superior e inf
 
 ## - Sound section -
 arc-ui.setting.sound.main=§7Volume do jogo - Afeta o volume do jogo desde das músicas aos sons. Observe que esta opção não afeta as outras opções de volume!
-arc-ui.setting.sound.music=§7Volume das músicas - Afeta o volume relacionado às músicas, como: as do menu principal, do mundo superior, do modo criativo etc.	# Overworld translation (mundo superior) taken from Xbox Achievements
+arc-ui.setting.sound.music=§7Volume das músicas - Afeta o volume relacionado às músicas, como: as do menu principal, do Mundo Superior, do modo criativo etc.	# Overworld translation (mundo superior) taken from Xbox Achievements
 arc-ui.setting.sound.sound=§7Volume dos sons - Afeta o volume relacionado aos sons, como andar, quebrar blocos, tocar discos etc.
 arc-ui.setting.sound.ambient=§7Volume do ambiente - Afeta o volume relacionado aos sons do ambiente, como os das cavernas e assim por diante 
 arc-ui.setting.sound.block=§7Volume dos blocos - Afeta o volume relacionado aos sons dos blocos, como andar sobre eles, quebrá-los e assim por diante.
@@ -58,11 +81,6 @@ arc-ui.setting.sound.player=§7Volume dos sons de dano do jogador.
 arc-ui.setting.sound.record=§7Volume dos discos.
 arc-ui.setting.sound.weather=§7Volume dos sons de clima, chuva e tempestade.
 arc-ui.setting.sound.tts=§7Volume da conversão de texto em fala
-
-## - About section -
-arc-ui.settingtitle.changelog.config=Detalhes de configuração
-arc-ui.setting.changelogtitle.enabled=Todos os registros de mudanças ficam aqui, você pode clicar nos itens da lista decrescente para vê-los!	# Not sure if the translation of “dropdown order” is “lista decrescente” in this context
-arc-ui.setting.changelogtitle.disabled=O registro de mudanças na configuração está §cdisabled.§f Você ainda pode checar o registro de mudanças de Arcdustry-UI em §e"ARC-UI/changelog.txt"
 
 ## - Changelog section V2 -
 arc-ui.setting.changelogv2desc.addition-update=§a§l[ -- ADIÇÕES / ATUALIZAÇÕES -- ]
@@ -292,3 +310,57 @@ arc-ui.section.changelogv2desc.v1-2.026=§7[§a+§7]§f UI is now abit smaller f
 arc-ui.section.changelogv2desc.v1-2.027=§7[§a+§7]§f Code Optimizations and cleaning
 arc-ui.section.changelogv2desc.v1-2.028=§7[§a+§7]§f UI file path is changed to probably feel less empty
 arc-ui.section.changelogv2desc.v1-2.029=§7[§a+§7]§f Added date next to version
+
+## 2.0
+arc-ui.section.changelogv2desc.v2-0-final.001=§o× Released in - Jun 16, 2023
+arc-ui.section.changelogv2desc.v2-0-final.002=§o× Supported - 1.20.0.1+
+arc-ui.section.changelogv2desc.v2-0-final.003=§e× -- The final update --
+arc-ui.section.changelogv2desc.v2-0-final.004=§e× The only update that i was really dedicated.
+arc-ui.section.changelogv2desc.v2-0-final.005=§7[§a+§7]§f New Trailer again
+arc-ui.section.changelogv2desc.v2-0-final.006=§7[§a+§7]§f Revamped/Rewrite Start Screen
+arc-ui.section.changelogv2desc.v2-0-final.007=§7[§a+§7]§f Revamped/Rewrite Pause Screen
+arc-ui.section.changelogv2desc.v2-0-final.008=§7[§a+§7]§f Revamped Settings Screen
+arc-ui.section.changelogv2desc.v2-0-final.009=§7[§a+§7]§f Revamped/Rewrite Play Screen
+arc-ui.section.changelogv2desc.v2-0-final.010=§7[§a+§7]§f Revamped Arcdustry-UI Logo
+arc-ui.section.changelogv2desc.v2-0-final.011=§7[§a+§7]§f Revamped touch control's scheme icon
+arc-ui.section.changelogv2desc.v2-0-final.012=§7[§a+§7]§f Revamped Some icons in setting menu
+arc-ui.section.changelogv2desc.v2-0-final.013=§7[§a+§7]§f Revamped Play Screen's tab and icons
+arc-ui.section.changelogv2desc.v2-0-final.014=§7[§a+§7]§f Updated Loading Icon
+arc-ui.section.changelogv2desc.v2-0-final.015=§7[§a+§7]§f Changed all icons into more brighten colors
+arc-ui.section.changelogv2desc.v2-0-final.016=§7[§a+§7]§f Changed Back button texture to have Lynxsium-UI thing
+arc-ui.section.changelogv2desc.v2-0-final.017=§7[§a+§7]§f Added Variant of loading screen when you enter nether or the end, vice versa
+arc-ui.section.changelogv2desc.v2-0-final.018=§7[§a+§7]§f Added couple of .lang stuff
+arc-ui.section.changelogv2desc.v2-0-final.019=§7[§a+§7]§f Added Realms options in world tab ( Vanilla style only )
+arc-ui.section.changelogv2desc.v2-0-final.020=§7[§a+§7]§f Added Brazilian Portuguese Language ( Contributed by santiago046 )
+arc-ui.section.changelogv2desc.v2-0-final.021=§7[§a+§7]§f Added "More" Options in both Start/Pause screen
+arc-ui.section.changelogv2desc.v2-0-final.022=§7[§a+§7]§f Added OLED theme mode (Configuration)
+arc-ui.section.changelogv2desc.v2-0-final.023=§7[§a+§7]§f Added UI Support to 1.20.0
+arc-ui.section.changelogv2desc.v2-0-final.024=§7[§a+§7]§f Added Option to disable gradient render (Configuration)
+arc-ui.section.changelogv2desc.v2-0-final.025=§7[§a+§7]§f Added Background aswell blur version (Configuration) Able to change texture in 'arcdustry-ui/custom_texture' folder
+arc-ui.section.changelogv2desc.v2-0-final.026=§7[§a+§7]§f Added Arcdustry-UI Legacy layout (Configuration)
+arc-ui.section.changelogv2desc.v2-0-final.027=§7[§a+§7]§f Added Lockable bottom bar / status bar due to OLED theme mode, can be unlocked in configuration
+arc-ui.section.changelogv2desc.v2-0-final.028=§7[§a+§7]§f Added Icons on start screen
+arc-ui.section.changelogv2desc.v2-0-final.029=§7[§a+§7]§f Added Helper icons on play screen (Controller and Keyboard)
+arc-ui.section.changelogv2desc.v2-0-final.030=§7[§a+§7]§f Added Optional start/pause screen background panel incase of user's visuality. (Configuration)
+arc-ui.section.changelogv2desc.v2-0-final.031=§7[§a+§7]§f Added a slider's button because people thinks its missing
+arc-ui.section.changelogv2desc.v2-0-final.032=§7[§a+§7]§f Added "custom_texture" folder for customization
+arc-ui.section.changelogv2desc.v2-0-final.033=§7[§a+§7]§f Added Theme's code from Lynxsium-UI that may improve my progress
+arc-ui.section.changelogv2desc.v2-0-final.034=§7[§a+§7]§f Merged Lynxsium-UI together i think lol
+arc-ui.section.changelogv2desc.v2-0-final.035=§7[§c-§7]§f Removed About Section in Setting screen
+arc-ui.section.changelogv2desc.v2-0-final.036=§7[§c-§7]§f Removed Pause Screen Compact Version
+arc-ui.section.changelogv2desc.v2-0-final.037=§7[§a+§7]§f Play screen title are not spaced
+arc-ui.section.changelogv2desc.v2-0-final.038=§7[§a+§7]§f Realm options just randomly stops working
+arc-ui.section.changelogv2desc.v2-0-final.039=§7[§a+§7]§f Fixed versioning issues lmao i forogt
+arc-ui.section.changelogv2desc.v2-0-final.040=§7[§a+§7]§f Fixed game freezes in the start up or during gameplay
+arc-ui.section.changelogv2desc.v2-0-final.041=§7[§a+§7]§f Fixed another another alignment issues again...
+arc-ui.section.changelogv2desc.v2-0-final.042=§7[§a+§7]§f Fixed some screen being SMALL
+arc-ui.section.changelogv2desc.v2-0-final.043=§7[§a+§7]§f Fixed some tooltips that doesnt show up
+arc-ui.section.changelogv2desc.v2-0-final.044=§7[§a+§7]§f Fixed the realm download prompt not showing Updated
+arc-ui.section.changelogv2desc.v2-0-final.045=§7[§a+§7]§f Massive Optimizations
+arc-ui.section.changelogv2desc.v2-0-final.046=§7[§a+§7]§f Improvements to UI stability
+arc-ui.section.changelogv2desc.v2-0-final.047=§7[§a+§7]§f UI now will use less resources as possible i think
+arc-ui.section.changelogv2desc.v2-0-final.048=§7[§a+§7]§f Improved Color theme system
+arc-ui.section.changelogv2desc.v2-0-final.049=§7[§a+§7]§f Changed *almost* all panel texture into white instead since it'll improve theme system better
+arc-ui.section.changelogv2desc.v2-0-final.050=§7[§a+§7]§f Improvements to screen animations
+arc-ui.section.changelogv2desc.v2-0-final.051=§7[§a+§7]§f Updated Changelog
+arc-ui.section.changelogv2desc.v2-0-final.052=§7[§a+§7]§f Updated .lang file/system

@@ -1,3 +1,13 @@
+--- v2.0.1 (Jun 18, 2023) ---
+× Bug fixes update for v2.0
+
+[ -- ADDITIONS / UPDATES -- ]
+[+] Updated Brazil Portuguese for UI
+
+[ -- BUG FIXES -- ]
+[+] Fixed general and control setting section not being loaded in-game
+[+] Fixed Warning tooltips not being there
+
 --- v2.0 (Jun 16, 2023) ---
 × A true v1.3 public release for now and yes
 × it is final version.

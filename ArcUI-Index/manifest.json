@@ -1,9 +1,9 @@
 { "format_version": 2,
   "header": {
-    "name": "Arcdustry-UI Pack [ 6/16/2023-v2.0 ]",
-    "description": "Modified Pre-game UI made by Arcdustry (Harlow)\n[6/16/2023-v2.0]",
+    "name": "Arcdustry-UI Pack [ 6/18/2023-v2.0.1 ]",
+    "description": "Modified Pre-game UI made by Arcdustry (Harlow)\n[6/18/2023-v2.0.1]",
     "uuid": "1d412f94-dce6-4bbb-8ee1-c94ec7606d71",
-    "version": [ 2, 0, 0 ],
+    "version": [ 2, 0, 1 ],
     "min_engine_version": [ 1, 19, 70 ]
   },
   "modules": [

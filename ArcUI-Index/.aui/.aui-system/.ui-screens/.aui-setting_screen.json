@@ -112,12 +112,12 @@
             { "pudding01": { "type": "panel", "size": [ 2, 2 ] }},
             { "button_background": {
                 "type": "image",
-                "ignored": "$include_world_section",
                 "texture": ".aui/.aui-assets/buttons/global/black_button",
                 "size": [ "100%", "100%cm + 4px" ],
                 "controls": [
                   { "stack_panel": {
                       "type": "stack_panel",
+                      "ignored": "(not $include_controls_and_settings_sections)",
                       "size": [ "100%", "100%c" ],
                       "controls": [
                         { "how_to_play_button@aui-setting_screen.how_to_play_button": { "$toggle_group_forced_index": "$how_to_play_index", "ignored": "(not $include_controls_and_settings_sections)" }},
@@ -132,7 +132,6 @@
             { "pudding03": { "type": "panel", "size": [ 2, 2 ] }},
             { "button_background": {
                 "type": "image",
-                "ignored": "$include_world_section",
                 "texture": ".aui/.aui-assets/buttons/global/black_button",
                 "size": [ "100%", "100%cm + 4px" ],
                 "controls": [
@@ -399,6 +398,7 @@
     "$tts_section_header": "options.category.addons",
     "visible": "(not $education_edition_china)",
     "controls": [
+      { "pudding00": { "type": "panel", "size": [ 2, 2 ] }},
       { "header00@aui-common.header": { "$text": "Resources/Addons" }},
       { "pudding00": { "type": "panel", "size": [ 1, 1 ] }},
       { "level_texture_pack_button@aui-setting_screen.level_texture_pack_button": { "$toggle_group_forced_index": "$level_texture_pack_toggle_index" }},

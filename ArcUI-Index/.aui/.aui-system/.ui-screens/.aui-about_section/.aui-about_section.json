@@ -9,7 +9,7 @@
       { "padding01": { "type": "panel", "size": [ 1, 10 ]}},
       { "titlelogo": { "type": "image", "texture": "textures/ui/title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 10 ]}},
-      { "label00@aui-common.label_element": { "text": "Arcdustry-UI (ARC-UI) Version\n§7- v2.0 [ 6/16/2023-v2.0 ]\n§7- Settings version : 1.20.0.1\n§7- By Arcdustry" }},
+      { "label00@aui-common.label_element": { "text": "Arcdustry-UI (ARC-UI) Version\n§7- v2.0.1 [ 6/18/2023-v2.0.1 ]\n§7- Settings version : 1.20.0.1\n§7- By Arcdustry" }},
       { "padding03": { "type": "panel", "size": [ 1, 10 ]}},
       { "media": {
           "type": "stack_panel",

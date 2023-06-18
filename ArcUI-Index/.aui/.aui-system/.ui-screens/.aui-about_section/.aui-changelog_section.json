@@ -9,6 +9,23 @@
       { "label01@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.about.changelog.config.enabled" }},
       { "label02@aui-common.label_element": { "ignored": "$show_changelog", "text": "arc-ui.about.changelog.config.disabled" }},
       { "padding01": { "type": "panel", "size": [ 1, 10 ]}},
+      { "v2-0-1@aui-common.changelog_v2_core": {
+          "ignored": "(not $show_changelog)",
+          "$auivar:changelog_version": "v2.0.1",
+          "$auivar:changelog_control": [
+            { "label-line_001@aui-common.label_element": { "text": "arc-ui.section.changelogv2desc.v2-0-1.001" }},
+            { "label-line_002@aui-common.label_element": { "text": "arc-ui.section.changelogv2desc.v2-0-1.002" }},
+            { "padding01": { "type": "panel", "size": [ 0, 10 ] }},
+            { "label-line_003@aui-common.label_element": { "text": "arc-ui.section.changelogv2desc.v2-0-1.003" }},
+            { "label-line_004@aui-common.label_element": { "text": "arc-ui.section.changelogv2desc.v2-0-1.004" }},
+            { "padding02": { "type": "panel", "size": [ 0, 10 ] }},
+            { "label-line_update@aui-common.label_element": { "text": "arc-ui.setting.changelogv2desc.addition-update" }},
+            { "label-line_005@aui-common.label_element": { "text": "arc-ui.section.changelogv2desc.v2-0-1.005" }},
+            { "padding03": { "type": "panel", "size": [ 0, 10 ] }},
+            { "label-line_bug_fixes@aui-common.label_element": { "text": "arc-ui.setting.changelogv2desc.bug-fixes" }},
+            { "label-line_006@aui-common.label_element": { "text": "arc-ui.section.changelogv2desc.v2-0-1.006" }},
+            { "label-line_007@aui-common.label_element": { "text": "arc-ui.section.changelogv2desc.v2-0-1.007" }}
+      ]}},
       { "v2-0@aui-common.changelog_v2_core": {
           "ignored": "(not $show_changelog)",
           "$auivar:changelog_version": "v2.0",

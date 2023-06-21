@@ -1,3 +1,22 @@
+--- v2.0.2 (Jun 21, 2023) ---
+× Small Update for 2.0
+
+[ -- ADDITIONS / UPDATES -- ]
+[+] Added 'invite players' button
+[+] Added Custom background for dimensions
+[+] Added Warning tooltips in start screen for .lang support
+[+] Update to my social media
+
+[ -- BUG FIXES -- ]
+[+] Fixed accessibility and creator section 'ingored' during playing
+    sessions.
+[+] Fixed Progress label are not fading in and out
+
+[ -- ADJUSTMENTS -- ]
+[+] Improvements to UI Stability
+[+] Improvements to theme system
+
+
 --- v2.0.1 (Jun 18, 2023) ---
 × Bug fixes update for v2.0
 

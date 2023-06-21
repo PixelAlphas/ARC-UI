@@ -255,11 +255,27 @@
       { "marketplace_button@aui-start_screen.marketplace_button": {}},
       { "exit_button@aui-start_screen.exit_button": { "$pressed_button_name": "button.menu_quit", "$auivar:button_icon_text": "arc-ui.mainmenu.pause.exit" }}
   ]},
+  "invite_button@aui-button.dark_glyph_style": {
+    "size": [ "100% - 8px", 20 ],
+    "$button_content": "aui-button.button_icon_content",
+    "$auivar:text_bubble": true,
+    "$pressed_button_name": "button.menu_invite_players",
+    "$auivar:start_icon_path": ".aui/.aui-assets/icons/glyph/start_screen/invite_player",
+    "$auivar:button_icon_text": "pauseScreen.invite",
+    "bindings": [
+      { "binding_name": "#invite_button_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      },
+      { "binding_name": "#invite_button_enabled",
+        "binding_name_override": "#enabled"
+  }]},
   "playerlist_scroll": {
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "layer": 6,
+    "use_child_anchors": true,
     "controls": [
       { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
       { "global_player_grid": {
@@ -289,7 +305,10 @@
                   "name": "scored_list_factory",
                   "control_name": "aui-pause_screen.scoreboard_grid_item"
             }}}
-      ]}}
+      ]}},
+      { "pudding01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "invite_button@aui-pause_screen.invite_button": {}},
+      { "pudding02": { "type": "panel", "size": [ 1, 2 ]}}
   ]},
   "scoreboard_grid_item": {
     "type": "stack_panel",

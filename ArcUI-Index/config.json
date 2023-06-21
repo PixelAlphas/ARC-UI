@@ -1,4 +1,4 @@
-{ "namespace": "auicore-configsource", "element": { "type":"panel","$key|default":"distorted_fatee","$ver|default":"2.0",
+{ "namespace": "auicore-configsource", "element": { "type":"panel","$key|default":"distorted_fatee","$ver|default":"2.0.2",
   
   // bottom bar lists :D
 
@@ -47,7 +47,9 @@
                                    // "custom_texture/background"
                                    // "custom_texture/background_blur"
       // ^ Enable the background aswell blur ones.
-      
+    "$custom_loading_background_overworld": false, // Default: false | enables background when entering portal and stuff
+    "$custom_loading_background_nether": false, // Default: false | ^ here
+    "$custom_loading_background_theend": false, // Default: false | ^^ here
       
   // Common settings
     "$configname": "Default",

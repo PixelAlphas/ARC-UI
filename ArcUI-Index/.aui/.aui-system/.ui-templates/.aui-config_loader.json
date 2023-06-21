@@ -2,7 +2,7 @@
   "core@auicore-configsource.element": {
     "$auivar:config_theme_alpha|default": 0.75,
     "variables": [
-      { "requires": "(not ($key = 'distorted_fate') and ($ver = '1.2'))",
+      { "requires": "(not ($key = 'distorted_fate') and ($ver = '2.0.2'))",
         "$ver|default": "1.2",
         "$key|default": "failback",
         "$Testvalue|default": false,
@@ -34,7 +34,10 @@
         "$background_renderer|default": false,
         "$gradient_renderer|default": true,
         "$oled_mode|default": false,
-        "$allow_bottom_bar_customization|default": false
+        "$allow_bottom_bar_customization|default": false,
+        "$custom_loading_background_overworld|default": false,
+        "$custom_loading_background_nether|default": false,
+        "$custom_loading_background_theend|default": false
       },
       { "requires": "($oled_mode)",
         "$auivar:config_theme_alpha": 1

@@ -19,7 +19,7 @@
           "controls": [
             { "label00": {
                 "type": "label",
-                "text": "Warning!",
+                "text": "arc-ui.warning.title",
                 "font_type": "MinecraftTen",
                 "text_alignment": "left",
                 "color": [ 1, 0.8627, 0 ],
@@ -30,7 +30,7 @@
                 "type": "label",
                 "layer": 11,
                 "max_size": [ 300, "default" ],
-                "text": "× Pocket UI is not supported! This can cause potential UI issues or crashes.",
+                "text": "arc-ui.warning.start.label01",
                 "color": [ 1, 0.8627, 0 ]
             }},
             { "padding_00": { "type": "panel", "size": [ 10, 10 ]}},
@@ -38,7 +38,7 @@
                 "type": "label",
                 "layer": 11,
                 "max_size": [ 300, "default" ],
-                "text": "× If you applied this pack for the first time, restart the game! for font to load.",
+                "text": "arc-ui.warning.start.label02",
                 "color": [ 1, 0.8627, 0 ]
             }}
       ]}}
@@ -308,5 +308,7 @@
   "exit_button@aui-start_screen.main_start_button_element": {
     "$pressed_button_name": "button.menu_exit",
     "$auivar:start_icon_path": ".aui/.aui-assets/icons/glyph/start_screen/exit",
+    "$auivar:button_icon_text": "arc-ui.mainmenu.regular.exit"
+}}/glyph/start_screen/exit",
     "$auivar:button_icon_text": "arc-ui.mainmenu.regular.exit"
 }}

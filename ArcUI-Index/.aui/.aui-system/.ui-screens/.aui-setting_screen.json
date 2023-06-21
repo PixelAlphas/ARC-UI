@@ -85,7 +85,7 @@
             { "pudding03": { "type": "panel", "size": [ 1, 1 ], "ignored": "($build_platform_UWP or not $is_pregame or $requires_xbl_signin_to_play)" }},
             { "button_background": {
                 "type": "image",
-                "ignored": "$include_world_section",
+                "color": "$primary_color",
                 "texture": ".aui/.aui-assets/buttons/global/black_button",
                 "size": [ "100%", "100%cm + 4px" ],
                 "controls": [
@@ -112,6 +112,7 @@
             { "pudding01": { "type": "panel", "size": [ 2, 2 ] }},
             { "button_background": {
                 "type": "image",
+                "color": "$primary_color",
                 "texture": ".aui/.aui-assets/buttons/global/black_button",
                 "size": [ "100%", "100%cm + 4px" ],
                 "controls": [
@@ -132,6 +133,7 @@
             { "pudding03": { "type": "panel", "size": [ 2, 2 ] }},
             { "button_background": {
                 "type": "image",
+                "color": "$primary_color",
                 "texture": ".aui/.aui-assets/buttons/global/black_button",
                 "size": [ "100%", "100%cm + 4px" ],
                 "controls": [

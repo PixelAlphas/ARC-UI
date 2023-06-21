@@ -22,7 +22,11 @@
       "@aui-anim.screen_outro_anim_push",
       "@aui-anim.screen_outro_anim_pop",
       "@aui-anim.screen_intro_anim_push",
-      "@aui-anim.screen_intro_anim_pop"
+      "@aui-anim.screen_intro_anim_pop",
+      "@common.screen_exit_animation_push_alpha",
+      "@common.screen_exit_animation_pop_alpha",
+      "@common.screen_entrance_animation_push_alpha",
+      "@common.screen_entrance_animation_pop_alpha"
     ],
     "bindings": [
       { "binding_name": "#loading_spin_animation_visible",
@@ -51,7 +55,11 @@
             "@aui-anim.screen_outro_anim_push",
             "@aui-anim.screen_outro_anim_pop",
             "@aui-anim.screen_intro_anim_push",
-            "@aui-anim.screen_intro_anim_pop"
+            "@aui-anim.screen_intro_anim_pop",
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
           ],
           "bindings": [ { "binding_name": "#title_text" }]
       }},
@@ -69,7 +77,11 @@
             "@aui-anim.screen_outro_anim_push",
             "@aui-anim.screen_outro_anim_pop",
             "@aui-anim.screen_intro_anim_push",
-            "@aui-anim.screen_intro_anim_pop"
+            "@aui-anim.screen_intro_anim_pop",
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
           ],
           "bindings": [ { "binding_name": "#progress_text" }]
       }},
@@ -93,7 +105,11 @@
       "@aui-anim.screen_outro_anim_push",
       "@aui-anim.screen_outro_anim_pop",
       "@aui-anim.screen_intro_anim_push",
-      "@aui-anim.screen_intro_anim_pop"
+      "@aui-anim.screen_intro_anim_pop",
+      "@common.screen_exit_animation_push_alpha",
+      "@common.screen_exit_animation_pop_alpha",
+      "@common.screen_entrance_animation_push_alpha",
+      "@common.screen_entrance_animation_pop_alpha"
     ],
     "controls": [
       { "experience_bar_full@aui-common.experience_bar_full": { "layer": 2, "bindings": [{ "binding_name": "#loading_bar_percentage", "binding_name_override": "#clip_ratio" }]}},
@@ -127,7 +143,11 @@
             "@aui-anim.screen_outro_anim_push",
             "@aui-anim.screen_outro_anim_pop",
             "@aui-anim.screen_intro_anim_push",
-            "@aui-anim.screen_intro_anim_pop"
+            "@aui-anim.screen_intro_anim_pop",
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
           ],
           "bindings": [ { "binding_name": "#title_text" }]
       }},
@@ -146,7 +166,11 @@
             "@aui-anim.screen_outro_anim_push",
             "@aui-anim.screen_outro_anim_pop",
             "@aui-anim.screen_intro_anim_push",
-            "@aui-anim.screen_intro_anim_pop"
+            "@aui-anim.screen_intro_anim_pop",
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
           ],
           "bindings": [ { "binding_name": "#progress_text" }]
       }},
@@ -173,7 +197,11 @@
             "@aui-anim.screen_outro_anim_push",
             "@aui-anim.screen_outro_anim_pop",
             "@aui-anim.screen_intro_anim_push",
-            "@aui-anim.screen_intro_anim_pop"
+            "@aui-anim.screen_intro_anim_pop",
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
           ]
       }},
       { "progress_bar_text@progress.progress_bar_text": {
@@ -190,7 +218,11 @@
             "@aui-anim.screen_outro_anim_push",
             "@aui-anim.screen_outro_anim_pop",
             "@aui-anim.screen_intro_anim_push",
-            "@aui-anim.screen_intro_anim_pop"
+            "@aui-anim.screen_intro_anim_pop",
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
           ],
           "bindings": [ { "binding_name": "#progress_text" }]
       }},
@@ -207,7 +239,11 @@
             "@aui-anim.screen_outro_anim_push",
             "@aui-anim.screen_outro_anim_pop",
             "@aui-anim.screen_intro_anim_push",
-            "@aui-anim.screen_intro_anim_pop"
+            "@aui-anim.screen_intro_anim_pop",
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
           ]
       }}
   ]},
@@ -241,6 +277,69 @@
             { "progress_title_world_panel_otherworld@aui-loading_screen.progress_title_world_panel_otherworld": { "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 4, -3 ]}},
             { "fancy_progress_loading_bars@aui-loading_screen.fancy_progress_loading_bars": {}},
             { "cancel_button_world_loading@aui-loading_screen.cancel_button_world_loading": { "bindings": [ { "binding_name": "#cancel_visible", "binding_name_override": "#visible" }]}}
+      ]}}
+  ]},
+  "progress_screen": {
+    "type": "screen",
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade"
+  ]},
+  "overworld_loading_background_core@aui-loading_screen.progress_screen": {
+    "type": "panel",
+    "controls": [
+      { "config_loader@auicore_configloader.core": {
+          "type": "panel",
+          "controls": [
+            { "overworld_loading_background@progress.overworld_loading_background": { "ignored": "$custom_loading_background_overworld" }},
+            { "overworld_loading_background_custom": {
+                "ignored": "(not $custom_loading_background_overworld)",
+                "type": "image",
+                "layer": -120,
+                "fill": true,
+                "texture": "custom_texture/overworld_background",
+                "size": [ "100%", "100%" ],
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [ "@aui-anim.zoom_out" ]
+            }}
+      ]}}
+  ]},
+  "nether_loading_background_core@aui-loading_screen.progress_screen": {
+    "type": "panel",
+    "controls": [
+      { "config_loader@auicore_configloader.core": {
+          "type": "panel",
+          "controls": [
+            { "nether_loading_background@progress.nether_loading_background": { "ignored": "$custom_loading_background_nether" }},
+            { "nether_loading_background_custom": {
+                "ignored": "(not $custom_loading_background_nether)",
+                "type": "image",
+                "layer": -120,
+                "fill": true,
+                "texture": "custom_texture/nether_background",
+                "size": [ "100%", "100%" ],
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [ "@aui-anim.zoom_out" ]
+            }}
+      ]}}
+  ]},
+  "theend_loading_background_core@aui-loading_screen.progress_screen": {
+    "type": "panel",
+    "controls": [
+      { "config_loader@auicore_configloader.core": {
+          "type": "panel",
+          "controls": [
+            { "theend_loading_background@progress.theend_loading_background": { "ignored": "$custom_loading_background_theend" }},
+            { "theend_loading_background_custom": {
+                "ignored": "(not $custom_loading_background_theend)",
+                "type": "image",
+                "layer": -120,
+                "fill": true,
+                "texture": "custom_texture/theend_background",
+                "size": [ "100%", "100%" ],
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [ "@aui-anim.zoom_out" ]
+            }}
       ]}}
   ]},
   "world_convert_modal_progress_screen_content": {

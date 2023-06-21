@@ -1,6 +1,13 @@
 {
   "namespace": "aui-anim",
   // Warning Flashing
+  "zoom_out": {
+    "anim_type": "size",
+    "duration": 1.5,
+    "easing": "out_cubic",
+    "from": [ "125%", "125%" ],
+    "to": [ "100%", "100%" ]
+  },
   "warning_flashing00": {
     "anim_type": "wait",
     "duration": 2,

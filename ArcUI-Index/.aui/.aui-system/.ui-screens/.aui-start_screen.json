@@ -7,7 +7,41 @@
       { "lawnmowerwhyisthisathing@aui-common.lawnmower": {}},
       { "xbox_element@aui-start_screen.xbox_element": { "ignored": "(not $legacy_ui_layout)" }}, 
       { "buttons_element_dynamic@aui-start_screen.buttons_element_dynamic": {}},
-      { "buttons_element@aui-start_screen.buttons_element": {}}
+      { "buttons_element@aui-start_screen.buttons_element": {}},
+      { "warning_element_start@aui-start_screen.warning_element_start": {}}
+  ]},
+  "warning_element_start@aui-common.warning_element": {
+    "$auivar:warning_element_controls": [
+      { "stack_panel": {
+          "type": "stack_panel",
+          "size": [ 300, "100%c" ],
+          "orientation": "vertical",
+          "controls": [
+            { "label00": {
+                "type": "label",
+                "text": "arc-ui.warning.title",
+                "font_type": "MinecraftTen",
+                "text_alignment": "left",
+                "color": [ 1, 0.8627, 0 ],
+                "layer": 11,
+                "size": [ 300, 14 ]
+            }},
+            { "label01": {
+                "type": "label",
+                "layer": 11,
+                "max_size": [ 300, "default" ],
+                "text": "arc-ui.warning.start.label01",
+                "color": [ 1, 0.8627, 0 ]
+            }},
+            { "padding_00": { "type": "panel", "size": [ 10, 10 ]}},
+            { "label02": {
+                "type": "label",
+                "layer": 11,
+                "max_size": [ 300, "default" ],
+                "text": "arc-ui.warning.start.label02",
+                "color": [ 1, 0.8627, 0 ]
+            }}
+      ]}}
   ]},
   "xbox_element": {
     "type": "panel",
@@ -274,5 +308,7 @@
   "exit_button@aui-start_screen.main_start_button_element": {
     "$pressed_button_name": "button.menu_exit",
     "$auivar:start_icon_path": ".aui/.aui-assets/icons/glyph/start_screen/exit",
+    "$auivar:button_icon_text": "arc-ui.mainmenu.regular.exit"
+}}/glyph/start_screen/exit",
     "$auivar:button_icon_text": "arc-ui.mainmenu.regular.exit"
 }}

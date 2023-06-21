@@ -4,9 +4,9 @@
     "size": [ 22, 22 ],
     "color": "$setting_button_icon_color"
   },
-  "world_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/play_screen/world_glyph_icon" },
-  "friend_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/play_screen/multiplayer_glyph_icon" },
-  "server_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/play_screen/server_glyph_icon" },
+  "world_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/play_screen/world_glyph_icon", "color": "$setting_button_icon_color" },
+  "friend_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/play_screen/multiplayer_glyph_icon", "color": "$setting_button_icon_color" },
+  "server_icon@aui-play_screen.icon_template": { "texture": ".aui/.aui-assets/icons/glyph/play_screen/server_glyph_icon", "color": "$setting_button_icon_color" },
   "default_play_screen_panel@aui-play_screen.play_screen_panel": {
     "$tab_content_panel": "aui-play_screen.default_tab_content_panel_layout"
   },

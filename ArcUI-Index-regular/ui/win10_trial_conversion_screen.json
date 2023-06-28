@@ -1,0 +1,4 @@
+{ "win10_trial_conversion_screen": {
+    "$screen_content": "aui-about_ui.root_contents",
+    "$screen_bg_content": "aui-common.menu_screen_background"
+}}

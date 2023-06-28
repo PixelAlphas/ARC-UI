@@ -1,0 +1,16 @@
+{ "format_version": 2,
+  "header": {
+    "name": "Arcdustry-UI Pack | REGULAR",
+    "description": "Modified Pre-game UI made by Arcdustry (Harlow)\n[ 6/28/2023-v2.1-RC1 ]",
+    "uuid": "75411d6c-e780-4a8b-9c47-d01b128d1f11",
+    "version": [ 2, 0, 3 ],
+    "min_engine_version": [ 1, 20, 0 ]
+  },
+  "modules": [
+    { "type": "resources",
+      "uuid": "66523f2e-ad34-4eef-b433-d95e5bb6ca3f",
+      "version": [ 1, 0, 0 ]
+  }],
+  "metadata": {
+    "authors": [ "Arcdustry (Harlow)" ]
+}}

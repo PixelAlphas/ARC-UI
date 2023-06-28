@@ -1,0 +1,190 @@
+{ "namespace": "aui-km_control",
+  "keyboard_and_mouse_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "option_slider_0@aui-setting_screen.option_slider": {
+          "$option_label": "#keyboard_mouse_sensitivity_slider_label",
+          "$slider_name": "keyboard_mouse_sensitivity",
+          "$slider_value_binding_name": "#keyboard_mouse_sensitivity",
+          "$slider_tts_text_value": "#keyboard_mouse_sensitivity_text_value",
+          "$option_enabled_binding_name": "#keyboard_mouse_sensitivity_enabled",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$label_bindings": [{ "binding_name": "$option_label" }]
+      }},
+      { "option_slider_damen@aui-setting_screen.option_slider": {
+          "$option_label": "#spyglass_mouse_dampening_slider_label",
+          "$slider_name": "spyglass_mouse_dampening",
+          "$slider_value_binding_name": "#spyglass_mouse_dampening",
+          "$slider_tts_text_value": "#spyglass_mouse_dampening_text_value",
+          "$option_enabled_binding_name": "#keyboard_mouse_sensitivity_enabled",
+          "$label_bindings": [{ "binding_name": "$option_label" }]
+      }},
+      { "option_slider_1@aui-setting_screen.option_slider": {
+          "ignored": "(not $is_holographic)",
+          "$option_label": "#vr_ui_mouse_sensitivity_slider_label",
+          "$slider_name": "vr_ui_mouse_sensitivity",
+          "$slider_value_binding_name": "#vr_ui_mouse_sensitivity",
+          "$slider_tts_text_value": "#vr_ui_mouse_sensitivity_text_value",
+          "$option_enabled_binding_name": "#vr_ui_mouse_sensitivity_enabled",
+          "$label_bindings": [{ "binding_name": "$option_label" }]
+      }},
+      { "option_toggle_0@settings_common.option_toggle": {
+          "$option_label": "options.invertYAxis",
+          "$option_binding_name": "#keyboard_mouse_invert_y_axis",
+          "$option_enabled_binding_name": "#keyboard_mouse_invert_y_axis_enabled",
+          "$toggle_name": "keyboard_mouse_invert_y_axis",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle_1@settings_common.option_toggle": {
+          "$option_label": "options.autojump",
+          "$option_binding_name": "#keyboard_mouse_autojump",
+          "$option_enabled_binding_name": "#keyboard_mouse_autojump_enabled",
+          "$toggle_name": "keyboard_mouse_autojump",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle_2@settings_common.option_toggle": {
+          "ignored": true,
+          "$option_label": "options.toggleCrouch",
+          "$option_binding_name": "#keyboard_mouse_toggle_crouch",
+          "$option_enabled_binding_name": "#keyboard_mouse_toggle_crouch_enabled",
+          "$toggle_name": "keyboard_mouse_toggle_crouch"
+      }},
+      { "option_toggle_full_keyboard_gameplay@settings_common.option_toggle": {
+          "$option_label": "options.fullKeyboardGameplay",
+          "$option_binding_name": "#keyboard_show_full_keyboard_options",
+          "$option_enabled_binding_name": "#keyboard_show_full_keyboard_options_enabled",
+          "$toggle_name": "keyboard_show_full_keyboard_options",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle_hide_keyboard_tooltips@settings_common.option_toggle": {
+          "ignored": "(not $education_edition)",
+          "$option_label": "options.hideKeyboardTooltips",
+          "$option_binding_name": "#hide_keyboard_tooltips",
+          "$option_enabled_binding_name": "#hint_toggles_enabled",
+          "$toggle_name": "hide_keyboard_tooltips",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }}
+  ]},
+  "keyboard_keymap_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "keyboard_keymapping_grid@aui-km_control.keymapping_grid": {}},
+      { "control_alt_chord_keymapping_grid@aui-km_control.keymapping_grid": { "$keymapping_grid_dimension": "#keyboard_standard_control_alt_chord_grid_dimension", "$keymapping_collection": "keyboard_standard_control_alt_chord_collection" }},
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
+  ]},
+  "keyboard_keymap_full_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "option_slider_smooth_rotation_speed@aui-setting_screen.option_slider": {
+          "$option_label": "#keyboard_smooth_rotation_speed_slider_label",
+          "$slider_name": "keyboard_smooth_rotation_speed",
+          "$slider_value_binding_name": "#keyboard_smooth_rotation_speed",
+          "$slider_tts_text_value": "#keyboard_smooth_rotation_speed_text_value",
+          "$option_enabled_binding_name": "#keyboard_smooth_rotation_speed_enabled",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$label_bindings": [{ "binding_name": "$option_label"}]
+      }},
+      { "keyboard_full_keymapping_grid@aui-km_control.full_keymapping_grid": {}},
+      { "control_alt_chord_keymapping_grid@aui-km_control.keymapping_grid": { "$keymapping_grid_dimension": "#keyboard_full_control_alt_chord_grid_dimension", "$keymapping_collection": "keyboard_full_control_alt_chord_collection" }},
+      { "pudding01": { "type": "panel", "size": [ 1, 10 ]}}
+  ]},
+  "full_keymapping_grid@aui-km_control.keymapping_grid": {
+    "$keymapping_grid_dimension": "#keyboard_full_grid_dimension",
+    "$keymapping_collection": "keyboard_full_collection"
+  },
+  "keymapping_grid": {
+    "type": "grid",
+    "size": [ "100%", "default" ],
+    "layer": 1,
+    "grid_item_template": "aui-km_control.keymapping_item",
+    "grid_dimension_binding": "$keymapping_grid_dimension",
+    "collection_name": "$keymapping_collection",
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "bindings": [{ "binding_name": "$keymapping_grid_dimension" }
+  ]},
+  "keymapping_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "layer": 1,
+    "size": [ "100%", 20 ],
+    "controls": [
+      { "panel": { 
+          "type": "panel",
+          "size": [ "fill", "default" ],
+          "controls": [
+            { "keymapping_label_control": {
+                "type": "label",
+                "color": "$generic_button_text_color",
+                "size": [ "100%", "default" ],
+                "layer": 1,
+                "offset": [ 0, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "text": "#keymapping_name",
+                "bindings": [
+                  { "binding_name": "#keymapping_name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$keymapping_collection"
+                }]
+          }}]
+      }},
+      { "keymapping_button_0@aui-setting_screen.binding_button": {
+          "$button_tts_header": "#audible_keymapping_name",
+          "size": [ "40%", "100% + 1px" ],
+          "bindings": [
+            { "binding_type": "collection_details",
+              "binding_collection_name": "$keymapping_collection"
+            },
+            { "binding_name":  "#audible_keymapping_name",
+              "binding_type":  "collection",
+              "binding_collection_name": "$keymapping_collection"
+          }]
+      }},
+      { "keymapping_button_1@aui-setting_screen.reset_binding_button": {
+          "size": [ 20, "100% + 1px" ],
+          "$pressed_button_name": "button.reset_binding",
+          "$button_tts_header": "accessibility.settings.reset",
+          "bindings": [
+            { "binding_type": "collection_details",
+              "binding_collection_name": "$keymapping_collection"
+        }]}
+  }]},
+  "root_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$keymapping_grid_dimension": "#keyboard_standard_grid_dimension",
+    "$keymapping_collection": "keyboard_standard_collection",
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "keyboard_and_mouse_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "keyboard_and_mouse_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-km_control.keyboard_and_mouse_element", "$text": "arc-ui.settingtitle.keyboardandmouse" }},
+      { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "keyboard_keymap_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-km_control.keyboard_keymap_element", "$text": "options.keyboardLayout", "bindings": [{ "binding_name": "#keyboard_show_standard_keyboard_options", "binding_name_override": "#visible" }]}},
+      { "keyboard_keymap_full_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-km_control.keyboard_keymap_full_element", "$text": "options.fullKeyboardLayout", "bindings": [{ "binding_name": "#keyboard_show_full_keyboard_options", "binding_name_override": "#visible" }]}},
+      { "pudding02": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "reset_button@aui-setting_screen.action_button": {
+          "$pressed_button_name": "button.reset_keyboard_bindings",
+          "$button_text": "controllerLayoutScreen.resetAllBindings",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }}
+]}}

@@ -1,0 +1,47 @@
+{ "namespace": "settings_common",
+  "option_toggle_control": {
+    "size": [ "100%", "100%c" ],
+    "$unchecked_control": "aui-toggle.option_toggle_off",
+    "$checked_control": "aui-toggle.option_toggle_on",
+    "$unchecked_hover_control": "aui-toggle.option_toggle_off_hover",
+    "$checked_hover_control": "aui-toggle.option_toggle_on_hover",
+    "$unchecked_locked_control": "aui-toggle.option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "aui-toggle.option_toggle_off_locked",
+    "$checked_locked_control": "aui-toggle.option_toggle_on_locked",
+    "$checked_locked_hover_control": "aui-toggle.option_toggle_on_locked"
+  },
+  "option_generic_core": {
+    "$label_offset": [ 0, 1 ]
+  },
+  "option_generic_core/one_line_layout": {
+    "modifications": [
+      { "array_name": "controls",
+        "control_name": "option_descriptive_text",
+        "operation": "insert_before",
+        "value": [
+          { "pudding01": {
+              "type": "panel",
+              "size": [ 1, 4 ]
+          }}
+      ]}
+  ]},
+  "dynamic_dialog_screen@common.base_screen": {
+    "type": "screen",
+    "cache_screen": false,
+    "button_mappings": [
+      { "from_button_id": "button.menu_cancel", "to_button_id": "button.menu_exit", "mapping_type": "global" },
+      { "from_button_id": "button.menu_tab_left", "to_button_id": "button.menu_tab_left", "mapping_type": "global", "scope": "view" },
+      { "from_button_id": "button.menu_tab_right", "to_button_id": "button.menu_tab_right", "mapping_type": "global", "scope": "view" }
+    ],
+    "variables": [
+      { "requires": "($is_realm_slot or $realm_no_world_edit)", "$screen_background_control": "realms_slots.realms_background" }
+    ],
+    "$screen_content": "aui-setting_screen.root_contents",
+    "$header_bar_control": "common.empty_panel",
+    "$header_safezone_control": "common.empty_panel",
+    "$screen_bg_content": "aui-common.menu_screen_background",
+    "$is_full_screen_layout": false
+  },
+  "screen_base": {
+    "$dialog_content": "aui-setting_screen.dialog_content"
+}}

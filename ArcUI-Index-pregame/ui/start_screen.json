@@ -1,0 +1,24 @@
+{ "start_screen": {
+    "$screen_content": "aui-start_screen.root_contents",
+    "$screen_bg_content": "aui-common.screen_background",
+    "button_mappings": [
+      { "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      { "ignored": "(not $nx_os)",
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.menu_offline",
+        "mapping_type": "global"
+      },
+      { "ignored": "(not $can_swap_vr_mode)",
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.menu_swap_vr_mode",
+        "mapping_type": "global"
+      },
+      { "ignored": "(not $can_swap_vr_mode)",
+        "from_button_id": "button.menu_swap_vr_mode",
+        "to_button_id": "button.menu_swap_vr_mode",
+        "mapping_type": "global"
+    }]
+}}

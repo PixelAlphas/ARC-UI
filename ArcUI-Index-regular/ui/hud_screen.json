@@ -1,0 +1,292 @@
+{ "start_cap_image": { "alpha": 1 },
+  "heart_image": { "alpha": 1 },
+  "hotbar_slot_image": { "alpha": 1 },
+  "hotbar_slot_selected_image": { "layer": 5 },
+  "hotbar_panel": {
+    "controls": [
+      { "left_pudding": {
+          "type": "panel",
+          "size": [ 20, 22 ],
+          "bindings": [
+            { "binding_name": "#hotbar_elipses_right_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+          }]
+      }},
+      { "hotbar_elipses_panel_left@hud.hotbar_elipses_panel_left_content": {}},
+      { "hotbar_start_cap@hud.hotbar_start_cap": {}},
+      { "hotbar_grid@hud.hotbar_grid": {} },
+      { "hotbar_end_cap@hud.hotbar_end_cap": {}},
+      { "hotbar_elipses_panel_right@hud.hotbar_elipses_panel_right_content": {}},
+      { "right_pudding": {
+          "type": "panel",
+          "size": [ 20, 22 ],
+          "bindings": [
+            { "binding_name": "#hotbar_elipses_left_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+          }]
+      }}
+  ]},
+  "hotbar_elipses_panel_left_content": {
+    "$hotbar_elipses_button_size": [ 20, 22 ],
+    "controls": [
+      { "button@hud.hotbar_elipses_button": {} }
+  ]},
+  "hotbar_elipses_panel_right_content": {
+    "$hotbar_elipses_button_size": [ 20, 22 ],
+    "controls": [
+      { "button@hud.hotbar_elipses_button": {} }
+  ]},
+  "borderless_button@common.button": {
+    "controls": [
+      { "elipses@elipses_image_rewrite": {}}
+  ]},
+  "elipses_image_rewrite": {
+    "type": "image",
+    "texture": "textures/ui/elipses",
+    "size": [ 16, 16 ],
+    "layer": 4
+  },
+  "exp_progress_bar_and_hotbar_pocket/resizing_xp_bar_with_hotbar/progress_text_label": { "offset": [ 0, 3 ]},
+  "exp_progress_bar_and_hotbar": {
+    "type": "panel",
+    "size": [ "100%c", 31 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -13 ],
+    "controls": [
+      { "experience_bar_and_label": {
+          "type": "panel",
+          "size": [ 182, 5 ],
+          "controls": [
+            { "experience_bar": {
+                "type": "panel",
+                "use_anchored_offset": true,
+                "controls": [
+                  { "empty_progress_bar@empty_progress_bar": {
+                      "size": [ "100%", 5 ],
+                      "layer": 1,
+                      "controls": [
+                        { "full_progress_bar@full_progress_bar": {
+                            "size": [ "100%", 5 ],
+                            "layer": 2
+                        }}
+                    ]}
+                }],
+                "bindings": [
+                  { "binding_name": "#show_survival_ui",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "progress_text_percentage@progress_text_percentage": {
+                "offset": [ 0, -15 ]
+            }},
+            { "progress_text_label@progress_text_label": {
+                "offset": [ 0, 3 ],
+                "layer": 7
+          }}]
+      }},
+      { "hotbar@hotbar_chooser": { "offset": [ 4, 15.5 ]}},
+      { "item_text_factory": {
+          "size": [ 100, 10 ],
+          "type": "factory",
+          "control_ids": {
+            "item_text": "@hud.item_name_text",
+            "jukebox_text": "@hud.jukebox_popup_text"
+      }}}
+  ]},
+  "progress_text_percentage": {
+    "type": "panel",
+    "$percentage_text_binding_name": "#exp_progress",
+    "$percentage_text_binding_type": "global",
+    "controls": [
+      { "000@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.000, "$max": 0.005, "$label": "0%%" }},
+      { "001@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.005, "$max": 0.015, "$label": "1%%" }},
+      { "002@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.015, "$max": 0.025, "$label": "2%%" }},
+      { "003@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.025, "$max": 0.035, "$label": "3%%" }},
+      { "004@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.035, "$max": 0.045, "$label": "4%%" }},
+      { "005@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.045, "$max": 0.055, "$label": "5%%" }},
+      { "006@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.055, "$max": 0.065, "$label": "6%%" }},
+      { "007@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.065, "$max": 0.075, "$label": "7%%" }},
+      { "008@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.075, "$max": 0.085, "$label": "8%%" }},
+      { "009@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.085, "$max": 0.095, "$label": "9%%" }},
+      { "010@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.095, "$max": 0.105, "$label": "10%%" }},
+      { "011@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.105, "$max": 0.115, "$label": "11%%" }},
+      { "012@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.115, "$max": 0.125, "$label": "12%%" }},
+      { "013@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.125, "$max": 0.135, "$label": "13%%" }},
+      { "014@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.135, "$max": 0.145, "$label": "14%%" }},
+      { "015@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.145, "$max": 0.155, "$label": "15%%" }},
+      { "016@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.155, "$max": 0.165, "$label": "16%%" }},
+      { "017@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.165, "$max": 0.175, "$label": "17%%" }},
+      { "018@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.175, "$max": 0.185, "$label": "18%%" }},
+      { "019@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.185, "$max": 0.195, "$label": "19%%" }},
+      { "020@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.195, "$max": 0.205, "$label": "20%%" }},
+      { "021@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.205, "$max": 0.215, "$label": "21%%" }},
+      { "022@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.215, "$max": 0.225, "$label": "22%%" }},
+      { "023@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.225, "$max": 0.235, "$label": "23%%" }},
+      { "024@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.235, "$max": 0.245, "$label": "24%%" }},
+      { "025@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.245, "$max": 0.255, "$label": "25%%" }},
+      { "026@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.255, "$max": 0.265, "$label": "26%%" }},
+      { "027@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.265, "$max": 0.275, "$label": "27%%" }},
+      { "028@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.275, "$max": 0.285, "$label": "28%%" }},
+      { "029@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.285, "$max": 0.295, "$label": "29%%" }},
+      { "030@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.295, "$max": 0.305, "$label": "30%%" }},
+      { "031@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.305, "$max": 0.315, "$label": "31%%" }},
+      { "032@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.315, "$max": 0.325, "$label": "32%%" }},
+      { "033@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.325, "$max": 0.335, "$label": "33%%" }},
+      { "034@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.335, "$max": 0.345, "$label": "34%%" }},
+      { "035@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.345, "$max": 0.355, "$label": "35%%" }},
+      { "036@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.355, "$max": 0.365, "$label": "36%%" }},
+      { "037@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.365, "$max": 0.375, "$label": "37%%" }},
+      { "038@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.375, "$max": 0.385, "$label": "38%%" }},
+      { "039@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.385, "$max": 0.395, "$label": "39%%" }},
+      { "040@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.395, "$max": 0.405, "$label": "40%%" }},
+      { "041@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.405, "$max": 0.415, "$label": "41%%" }},
+      { "042@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.415, "$max": 0.425, "$label": "42%%" }},
+      { "043@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.425, "$max": 0.435, "$label": "43%%" }},
+      { "044@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.435, "$max": 0.445, "$label": "44%%" }},
+      { "045@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.445, "$max": 0.455, "$label": "45%%" }},
+      { "046@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.455, "$max": 0.465, "$label": "46%%" }},
+      { "047@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.465, "$max": 0.475, "$label": "47%%" }},
+      { "048@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.475, "$max": 0.485, "$label": "48%%" }},
+      { "049@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.485, "$max": 0.495, "$label": "49%%" }},
+      { "050@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.495, "$max": 0.505, "$label": "50%%" }},
+      { "051@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.505, "$max": 0.515, "$label": "51%%" }},
+      { "052@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.515, "$max": 0.525, "$label": "52%%" }},
+      { "053@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.525, "$max": 0.535, "$label": "53%%" }},
+      { "054@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.535, "$max": 0.545, "$label": "54%%" }},
+      { "055@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.545, "$max": 0.555, "$label": "55%%" }},
+      { "056@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.555, "$max": 0.565, "$label": "56%%" }},
+      { "057@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.565, "$max": 0.575, "$label": "57%%" }},
+      { "058@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.575, "$max": 0.585, "$label": "58%%" }},
+      { "059@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.585, "$max": 0.595, "$label": "59%%" }},
+      { "060@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.595, "$max": 0.605, "$label": "60%%" }},
+      { "061@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.605, "$max": 0.615, "$label": "61%%" }},
+      { "062@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.615, "$max": 0.625, "$label": "62%%" }},
+      { "063@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.625, "$max": 0.635, "$label": "63%%" }},
+      { "064@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.635, "$max": 0.645, "$label": "64%%" }},
+      { "065@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.645, "$max": 0.655, "$label": "65%%" }},
+      { "066@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.655, "$max": 0.665, "$label": "66%%" }},
+      { "067@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.665, "$max": 0.675, "$label": "67%%" }},
+      { "068@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.675, "$max": 0.685, "$label": "68%%" }},
+      { "069@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.685, "$max": 0.695, "$label": "69%%" }},
+      { "070@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.695, "$max": 0.705, "$label": "70%%" }},
+      { "071@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.705, "$max": 0.715, "$label": "71%%" }},
+      { "072@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.715, "$max": 0.725, "$label": "72%%" }},
+      { "073@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.725, "$max": 0.735, "$label": "73%%" }},
+      { "074@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.735, "$max": 0.745, "$label": "74%%" }},
+      { "075@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.745, "$max": 0.755, "$label": "75%%" }},
+      { "076@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.755, "$max": 0.765, "$label": "76%%" }},
+      { "077@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.765, "$max": 0.775, "$label": "77%%" }},
+      { "078@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.775, "$max": 0.785, "$label": "78%%" }},
+      { "079@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.785, "$max": 0.795, "$label": "79%%" }},
+      { "080@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.795, "$max": 0.805, "$label": "80%%" }},
+      { "081@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.805, "$max": 0.815, "$label": "81%%" }},
+      { "082@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.815, "$max": 0.825, "$label": "82%%" }},
+      { "083@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.825, "$max": 0.835, "$label": "83%%" }},
+      { "084@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.835, "$max": 0.845, "$label": "84%%" }},
+      { "085@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.845, "$max": 0.855, "$label": "85%%" }},
+      { "086@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.855, "$max": 0.865, "$label": "86%%" }},
+      { "087@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.865, "$max": 0.875, "$label": "87%%" }},
+      { "088@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.875, "$max": 0.885, "$label": "88%%" }},
+      { "089@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.885, "$max": 0.895, "$label": "89%%" }},
+      { "090@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.895, "$max": 0.905, "$label": "90%%" }},
+      { "091@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.905, "$max": 0.915, "$label": "91%%" }},
+      { "092@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.915, "$max": 0.925, "$label": "92%%" }},
+      { "093@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.925, "$max": 0.935, "$label": "93%%" }},
+      { "094@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.935, "$max": 0.945, "$label": "94%%" }},
+      { "095@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.945, "$max": 0.955, "$label": "95%%" }},
+      { "096@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.955, "$max": 0.965, "$label": "96%%" }},
+      { "097@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.965, "$max": 0.975, "$label": "97%%" }},
+      { "098@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.975, "$max": 0.985, "$label": "98%%" }},
+      { "099@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.985, "$max": 0.995, "$label": "99%%" }},
+      { "100@arcdustry-percentage.texture_ratio_percentage_with_outline": { "$min": 0.995, "$max": 1.001, "$label": "100%%" }}
+  ]},
+  "progress_text_label": {
+    "shadow": false,
+    "color": [ 0.7450, 0.6470, 0.9568 ],
+    "controls": [
+      { "shadow01@progress_text_label_template": {
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ -1, 0 ],
+          "layer": -2
+      }},
+      { "shadow02@progress_text_label_template": {
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ 1, 0 ],
+          "layer": -2
+      }},
+      { "shadow03@progress_text_label_template": {
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ 0, -1 ],
+          "layer": -2
+      }},
+      { "shadow04@progress_text_label_template": {
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ 0, 1 ],
+          "layer": -2
+      }}
+  ]},
+  "progress_text_label_template": {
+    "type": "label",
+    "text": "#level_number",
+    "color": [ 0.7450, 0.6470, 0.9568 ],
+    "bindings": [
+      { "binding_name": "#level_number",
+        "binding_type": "global"
+      },
+      { "binding_name": "#level_number_visible",
+        "binding_type": "global",
+        "binding_name_override": "#visible"
+  }]},
+  "gui_hotbar_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [ 20, 22 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$stack_count_required|default": true,
+    "$durability_bar_required|default": true,
+    "$storage_bar_required|default": true,
+    "controls": [
+      { "hotbar_slot_selected_image@hotbar_slot_selected_image": {} },
+      { "hotbar_renderer@hotbar_renderer": {} },
+      { "hotbar_parent": {
+          "type": "panel",
+          "size": [ 18, 18 ],
+          "controls": [
+            { "item_icon@hotbar_hud_item_icon": {
+                "layer": 8,
+                "size": [ 16, 16 ]
+            }},
+            { "item_count@common.stack_count_label": {
+                "layer": 9,
+                "$item_collection_name": "$hotbar_collection_name",
+                "$stack_count_collection_name": "$hotbar_collection_name",
+                "bindings": [
+                  { "binding_name": "#inventory_stack_count",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$stack_count_collection_name"
+                  },
+                  { "binding_name": "#stack_count_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$stack_count_collection_name"
+                }]
+            }},
+            { "hotbar_hint@edu_common.hotbar_hint": {} },
+            { "item_dura@item_durability": {
+                "layer": 10
+            }},
+            { "item_store@item_storage": {
+                "layer": 10
+            }},
+            { "container_item_lock_overlay@hud.container_item_lock_overlay": {
+                "layer": 10,
+                "size": [ 16, 16 ]
+            }}
+      ]}},
+      { "cooldown_renderer@cooldown_renderer": { "layer": 10 } },
+      { "hotbar_slot_button@gui_hotbar_slot_button_prototype": {} }
+]}}

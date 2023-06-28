@@ -1,0 +1,16 @@
+{ "format_version": 2,
+  "header": {
+    "name": "Arcdustry-UI Config [ 6/25/2023-v2.0.3 ]",
+    "description": "Configuration Module for Arcdustry-UI\n[6/25/2023-v2.0.3]",
+    "uuid": "ce443779-5f6f-4acc-96f0-ca25e2f0fa04",
+    "version": [ 2, 0, 2 ],
+    "min_engine_version": [ 1, 19, 70 ]
+  },
+  "modules": [
+    { "type": "resources",
+      "uuid": "e414a772-6376-444d-975a-400d900f2128",
+      "version": [ 1, 0, 0 ]
+  }],
+  "metadata": {
+    "authors": [ "Arcdustry (Harlow)" ]
+}}

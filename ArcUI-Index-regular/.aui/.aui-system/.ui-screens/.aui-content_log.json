@@ -1,0 +1,15 @@
+{ "namespace": "aui-content_log",
+  "content_log_element": {
+    "type": "panel",
+    "size": [ "100% - 8px", "100% - 28px" ],
+    "offset": [ 0, 3 ],
+    "controls": [
+      { "main_stack_panel@content_log_history.main_stack_panel": {}}
+  ]},
+  "root_contents@auicore_configloader.core": {
+    "type": "panel",
+    "$auivar:back_button": true,
+    "controls": [
+      { "status_bottom_bar@aui-common.status_bottom_bar": { "$auivar-screen_name": "\"Content Log History\"", "$auivar-label_no_mcver": true }},
+      { "content_log_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-content_log.content_log_element", "$text": "contentlog.history.title", "$auivar-bgsize|default": [ "85%", "85%" ], "$auivar-bganchor|default": "center" }}
+]}}

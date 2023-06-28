@@ -1,0 +1,144 @@
+{
+  "namespace": "aui-safe_zone_screen",
+  "content_panel@auicore_configloader.core": {
+    "type": "stack_panel",
+    "size": [ "100% - 2px", "default" ],
+    "$label_bindings": [
+      { "binding_name": "$option_label" },
+      { "binding_name": "$slider_tts_text_value" }
+    ],
+    "controls": [
+      { "main_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-safe_zone_screen.main_element", "$text": "arc-ui.setting.safezone.title.main" }},
+      { "safe_zone_slider_all@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.safe_zone_slider_all", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_allcorner", "$auivar-header_text": "arc-ui.setting.safezone.allcorner" }},
+      { "safe_zone_slider_x@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.safe_zone_slider_x", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_horizontal", "$auivar-header_text": "arc-ui.setting.safezone.horizontal" }},
+      { "safe_zone_slider_y@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.safe_zone_slider_y", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_vertical", "$auivar-header_text": "arc-ui.setting.safezone.vertical" }},
+      { "pudding00": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "exp_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-safe_zone_screen.exp_element", "$text": "arc-ui.setting.safezone.title.exp" }},
+      { "screen_position_slider_x@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.screen_position_slider_x", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_horizontalpos", "$auivar-header_text": "arc-ui.setting.safezone.horizontalpos" }},
+      { "screen_position_slider_y@aui-common.header_background_slider": { "$auivar-header_contents": "aui-safe_zone_screen.screen_position_slider_y", "$auivar-header_image": ".aui/.aui-assets/icons/glyph/safearea_verticalpos", "$auivar-header_text": "arc-ui.setting.safezone.verticalpos"}},
+      { "pudding01": { "type": "panel", "size": [ "100%", 2 ]}}
+  ]},
+  "exp_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "label01@aui-common.label_element": { "text": "arc-ui.setting.safezone.exp" }}
+  ]},
+  "main_element": { 
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "pudding00": { "type": "panel", "size": [ 1, 20 ]}},
+      { "label01@aui-common.label_element": { "text": "arc-ui.setting.safezone.main" }}
+  ]},
+  "safe_zone_slider_x@aui-setting_screen.option_slider": {
+    "$option_label": "#safe_zone_x_slider_label",
+    "$slider_name": "safe_zone_x",
+    "$slider_value_binding_name": "#safe_zone_x",
+    "$option_enabled_binding_name": "#safe_zone_x_enabled",
+    "$slider_select_on_hover": true,
+    "$slider_tts_text_value": "#safe_zone_x_text_value"
+  },
+  "safe_zone_slider_y@aui-setting_screen.option_slider": {
+    "$option_label": "#safe_zone_y_slider_label",
+    "$slider_name": "safe_zone_y",
+    "$slider_value_binding_name": "#safe_zone_y",
+    "$option_enabled_binding_name": "#safe_zone_y_enabled",
+    "$slider_select_on_hover": true,
+    "$slider_tts_text_value": "#safe_zone_y_text_value"
+  },
+  "screen_position_slider_x@aui-setting_screen.option_slider": {
+    "$option_label": "#screen_position_x_slider_label",
+    "$slider_name": "screen_position_x",
+    "$slider_value_binding_name": "#screen_position_x",
+    "$option_enabled_binding_name": "#screen_position_x_enabled",
+    "$slider_select_on_hover": true,
+    "$slider_tts_text_value": "#screen_position_x_text_value"
+  },
+  "screen_position_slider_y@aui-setting_screen.option_slider": {
+    "$option_label": "#screen_position_y_slider_label",
+    "$slider_name": "screen_position_y",
+    "$slider_value_binding_name": "#screen_position_y",
+    "$option_enabled_binding_name": "#screen_position_y_enabled",
+    "$slider_select_on_hover": true,
+    "$slider_tts_text_value": "#screen_position_y_text_value"
+  },
+  "safe_zone_slider_all@aui-setting_screen.option_slider": {
+    "$option_label": "#safe_zone_all_slider_label",
+    "$slider_name": "safe_zone_all",
+    "$slider_value_binding_name": "#safe_zone_all",
+    "$option_enabled_binding_name": "#safe_zone_all_enabled",
+    "$default_focus_precedence": 1,
+    "$slider_select_on_hover": true,
+    "$slider_tts_text_value": "#safe_zone_all_text_value"
+  },
+  "root_contents@auicore_configloader.core": {
+    "type": "panel",
+    "controls": [
+      { "safezone_bounds_markers": {
+          "type": "panel",
+          "controls": [
+            { "top_left_marker@safe_zone.corner_tl": {} },
+            { "top_right_marker@safe_zone.corner_tr": {} },
+            { "bottom_left_marker@safe_zone.corner_bl": {} },
+            { "bottom_right_marker@safe_zone.corner_br": {} }
+      ]}},
+      { "main_content_panel": {
+          "type": "panel",
+          "size": [ 300, 200 ],
+          "controls": [
+            { "main_title": {
+                "type": "panel",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [ "100%", 32 ],
+                "controls": [
+                  { "label_element": {
+                      "type": "label",
+                      "text": "options.safeZone.title",
+                      "font_type": "dainbold",
+                      "font_size": "large",
+                      "text_alignment": "center",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [ 0, 0 ]
+                  }}
+            ]}},
+            { "safezone_desc": {
+                "type": "label",
+                "text": "options.safeZone.description",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 1,
+                "offset": [ 4, 15 ],
+                "size": [ "125%", "default" ]
+            }},
+            { "scrolling_panel@common.scrolling_panel": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100% - 24px", "100%-65px" ],
+                "offset": [ 10, 35 ],
+                "$scrolling_pane_size": [ "100%", "100%" ],
+                "$scrolling_pane_offset": [ 1, 0 ],
+                "$scroll_size": [ 5, "100% - 4px" ],
+                "$scrolling_content": "aui-safe_zone_screen.content_panel",
+                "$scroll_bar_left_padding_size": [ 0, 0 ],
+                "$scroll_bar_right_padding_size": [ 0, 0 ],
+                "$show_background": false,
+                "$bar_visible": false
+            }},
+            { "confirm_button@aui-button.light_text_button": {
+                "layer": 1,
+                "size": [ 150, 25 ],
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "$pressed_button_name": "button.confirm_button",
+                "$button_text": "gui.confirm"
+            }}
+      ]}}
+]}}

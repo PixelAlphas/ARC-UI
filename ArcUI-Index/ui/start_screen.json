@@ -1,6 +1,0 @@
-{
-  "start_screen": {
-    "$screen_content": "aui-start_screen.root_contents",
-    "$screen_bg_content": "aui-common.screen_background"
-  }
-}

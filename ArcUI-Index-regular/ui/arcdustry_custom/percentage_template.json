@@ -1,0 +1,66 @@
+{ "namespace": "arcdustry-percentage",
+  "texture_ratio_percentage": {
+    "type": "label",
+    "color": [ 0.7450, 0.6470, 0.9568 ],
+    "text": "$label",
+    "$percentage_text_binding_name|default": "",
+    "$percentage_text_binding_type|default": "none",
+    "bindings": [
+      { "binding_name": "$percentage_text_binding_name",
+        "binding_type": "$percentage_text_binding_type"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(( 1 - $percentage_text_binding_name ) = $max ) or (((1 - $percentage_text_binding_name) > $min ) and ((1 - $percentage_text_binding_name) < $max )))",
+        "target_property_name": "#visible"
+  }]},
+  "label_template": { "type": "label" },
+  "texture_ratio_percentage_with_outline@arcdustry-percentage.texture_ratio_percentage": {
+    "controls": [
+      { "shadow01@label_template": {
+          "text": "$label",
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ -1, 0 ],
+          "layer": -2
+      }},
+      { "shadow02@label_template": {
+          "text": "$label",
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ 1, 0 ],
+          "layer": -2
+      }},
+      { "shadow03@label_template": {
+          "text": "$label",
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ 0, -1 ],
+          "layer": -2
+      }},
+      { "shadow04@label_template": {
+          "text": "$label",
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ 0, 1 ],
+          "layer": -2
+      }}
+  ]},
+  "progress_text_label": {
+    "controls": [
+      { "shadow01@progress_text_label_template": {
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ -1, 0 ],
+          "layer": -2
+      }},
+      { "shadow02@progress_text_label_template": {
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ 1, 0 ],
+          "layer": -2
+      }},
+      { "shadow03@progress_text_label_template": {
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ 0, -1 ],
+          "layer": -2
+      }},
+      { "shadow04@progress_text_label_template": {
+          "color": [ 0.2156, 0.0941, 0.4078 ],
+          "offset": [ 0, 1 ],
+          "layer": -2
+      }}
+]}}

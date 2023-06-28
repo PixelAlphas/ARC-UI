@@ -1,0 +1,7 @@
+{
+  "pause_screen": {
+    "$screen_content": "aui-pause_screen.root_contents",
+    "$screen_bg_content": "aui-common.screen_background",
+    "variables": []
+  }
+}

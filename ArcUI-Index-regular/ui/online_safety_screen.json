@@ -1,0 +1,8 @@
+{
+  "online_safety_screen@common.base_screen": {
+    "force_render_below": false,
+    "should_be_skipped_during_automation": true,
+    "$screen_content": "aui-online_safety_screen.root_contents",
+    "$screen_bg_content": "aui-common.menu_screen_background"
+  }
+}

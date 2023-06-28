@@ -1,0 +1,638 @@
+{ "namespace": "aui-common",
+  "changelog_v2_core": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "$auivar:changelog_version|default": "ARC-UIm.0",
+    "$auivar:changelog_control|default": [],
+    "controls": [
+      { "toggle_button@aui-toggle.text_toggle": {
+          "$toggle_view_binding_name": "$auivar:changelog_version",
+          "$toggle_name": "$auivar:changelog_version",
+          "size": [ "100%", 20 ],
+          "$button_type_panel": "common_buttons.button_content_panel",
+          "$button_content": "aui-common.changelog_v2_contents"
+      }},
+      { "changelog_control": {
+          "type": "image",
+          "size": [ "100%", "100%c + 8px" ],
+          "texture": ".aui/.aui-assets/changelogbackground",
+          "controls": [
+            { "stack": {
+                "type": "stack_panel",
+                "layer": 1,
+                "size": [ "100% - 12px", "100%c" ],
+                "controls": "$auivar:changelog_control"
+          }}],
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "$auivar:changelog_version",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+      }]}},
+      { "padding_2": {
+          "type": "panel",
+          "size": [ 0, 3 ]
+      }}
+  ]},
+  "changelog_v2_contents": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "label_core": {
+          "type": "stack_panel",
+          "size": [ "100%", 10 ],
+          "offset": [ 2, 0 ],
+          "orientation": "horizontal",
+          "controls": [
+            { "changelog_label": {
+                "type": "label",
+                "text": "Arcdustry-UI - ",
+                "color": "$text_color"
+            }},
+            { "versions": {
+                "type": "label",
+                "text": "$auivar:changelog_version",
+                "color": "$text_color"
+            }}
+      ]}},
+      { "dropdown_chevron_icon": {
+          "type": "panel",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -5, 0 ],
+          "size": [ 11, 11 ],
+          "controls": [
+            { "down_arrow": {
+                "type": "image",
+                "texture": "textures/ui/chevron_white_down",
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "$auivar:changelog_version",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                }]
+            }},
+            { "up_arrow": {
+                "type": "image",
+                "texture": "textures/ui/chevron_white_up",
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "$auivar:changelog_version",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                }]
+            }}
+      ]}}
+  ]},
+  "pudding_line": { 
+    "type": "panel",
+    "size": [ "100%", 5 ],
+    "controls": [
+      { "puddingline": {
+          "type": "image",
+          "color": "$option_description_text_color",
+          "texture": "textures/ui/White",
+          "size": [ "100% - 10px", 1 ]
+      }}
+  ]},
+  "close_button_panel": {
+    "type": "panel",
+    "layer": 1,
+    "size": "$close_button_panel_size",
+    "$button_alpha|default": 1,
+    "controls": [
+      { "close_button_image@common.close_button_image": {
+        "alpha": "$button_alpha",
+        "color": "$setting_button_icon_color"
+      }}
+  ]},
+  "close_button@common.close_button": {
+    "controls": [
+      { "default@aui-common.close_button_panel": { "$close_button_texture": ".aui/.aui-assets/icons/close_button_idle"}},
+      { "hover@aui-common.close_button_panel": { "$close_button_texture": ".aui/.aui-assets/icons/close_button_hover"}},
+      { "pressed@aui-common.close_button_panel": { "$close_button_texture": ".aui/.aui-assets/icons/close_button_pressed"}}
+  ]},
+  "label_element": {
+    "type": "label",
+    "size": [ "100%", "default" ],
+    "max_size": [ "100%", "default" ],
+    "shadow": false,
+    "$auivar:hover_text|default": false,
+    "$auivar:label_text|default": "Did not set?",
+    "controls": [
+      { "popup_text_core@common.button": {
+          "ignored": "(not $auivar:hover_text)",
+          "$pressed_button_name": "Harlow never sleeps don't they",
+          "sound_volume": 0.0,
+          "default_control": "",
+          "controls": [
+            { "hover": {
+                "type": "panel",
+                "controls": [
+                  { "white_border@common.white_border_slot": {
+                      "layer": 2,
+                      "size": [ "100% + 6px", "100% + 2px" ]
+                  }},
+                  { "text_popup": {
+                      "type": "image",
+                      "size": [ "100%c + 8px", "100%c + 8px" ],
+                      "texture": "textures/ui/purpleBorder",
+                      "layer": 5,
+                      "offset": [ 0, -15 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "controls": [
+                        { "text": {
+                            "type": "label",
+                            "max_size": [ 300, "default" ],
+                            "text": "$auivar:label_text"
+                        }}
+                  ]}}
+            ]}},
+            { "pressed": {
+                "type": "panel",
+                "controls": [
+                  { "white_border@common.white_border_slot": {
+                      "layer": 2,
+                      "size": [ "100% + 6px", "100% + 2px" ]
+                  }},
+                  { "text_popup": {
+                      "type": "image",
+                      "size": [ "100%c + 8px", "100%c + 8px" ],
+                      "texture": "textures/ui/purpleBorder",
+                      "layer": 5,
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "offset": [ 0, -15 ],
+                      "controls": [
+                        { "text": {
+                            "type": "label",
+                            "max_size": [ 300, "default" ],
+                            "text": "$auivar:label_text"
+                        }}
+                  ]}}
+            ]}}
+      ]}}
+  ]},
+  "title_logo": {
+    "type": "panel",
+    "size": [ "100%", 50 ],
+    "controls": [
+      { "texture": {
+          "type": "image",
+          "texture": "textures/ui/title",
+          "size": [ "100%", 50 ]
+      }}
+  ]},
+  "experience_bar_template": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui/White"
+  },
+  "experience_bar_empty@aui-common.experience_bar_template": { "color": [ 0.7, 0.7, 0.7 ] },
+  "experience_bar_full@aui-common.experience_bar_template": { "clip_direction": "left", "clip_pixelperfect": false },
+  "checkbox@common.toggle": {
+    "$toggle_tts_name": "accessibility.checkbox.tts.title",
+    "$toggle_tts_toggle_on_text": "accessibility.state.checked",
+    "$toggle_tts_toggle_off_text": "accessibility.state.unchecked",
+    "$unchecked_control": "aui-common.checkbox_unchecked_state",
+    "$checked_control": "aui-common.checkbox_checked_state",
+    "$unchecked_hover_control": "aui-common.checkbox_unchecked_hover_state",
+    "$checked_hover_control": "aui-common.checkbox_checked_hover_state",
+    "$unchecked_locked_control": "aui-common.checkbox_unchecked_locked_state",
+    "$unchecked_locked_hover_control": "aui-common.checkbox_unchecked_locked_state",
+    "$checked_locked_control": "aui-common.checkbox_checked_locked_state",
+    "$checked_locked_hover_control": "aui-common.checkbox_checked_locked_state"
+  },
+  "checkbox_checked_state@aui-common.toggle_state_template": { "texture": ".aui/.aui-assets/buttons/global/checkbox_ticked" },
+  "checkbox_unchecked_state@aui-common.toggle_state_template": { "texture": ".aui/.aui-assets/buttons/global/checkbox_idle" },
+  "checkbox_checked_hover_state@aui-common.checkbox_checked_state": { "texture": ".aui/.aui-assets/buttons/global/checkbox_ticked_hover" },
+  "checkbox_unchecked_hover_state@aui-common.checkbox_unchecked_state": { "texture": ".aui/.aui-assets/buttons/global/checkbox_idle_hover" },
+  "checkbox_checked_locked_state@aui-common.checkbox_checked_state": { "texture": ".aui/.aui-assets/buttons/global/checkbox_ticked_disabled" },
+  "checkbox_unchecked_locked_state@aui-common.toggle_state_template": { "texture": ".aui/.aui-assets/buttons/global/checkbox_idle_disabled" },
+  "toggle_state_template": {
+    "$checkbox_alignment|default": "center",
+    "anchor_from": "$checkbox_alignment",
+    "anchor_to": "$checkbox_alignment",
+    "offset": "$checkbox_offset",
+    "$checkbox_offset|default": [ 0, 0 ],
+    "type": "image",
+    "layer": 2,
+    "size": [ 16, 16 ]
+  },
+  "slider@common.slider": {
+    "type": "slider",
+    "$slider_box_layout|default": "aui-common.slider_button_layout",
+    "$slider_box_hover_layout|default": "aui-common.slider_button_hover_layout",
+    "$slider_box_locked_layout|default": "aui-common.slider_button_locked_layout",
+    "$slider_box_indent_layout|default": "aui-common.slider_button_indent_layout",
+    "$slider_step_factory_control_ids": { "slider_step": "@aui-common.slider_step", "slider_step_hover": "@aui-common.slider_step_hover", "slider_step_progress": "@aui-common.slider_step_progress", "slider_step_progress_hover": "@aui-common.slider_step_progress_hover" },
+    "controls": [
+      { "slider_box@aui-common.slider_box": { "$slider_box_layout": "$slider_box_layout", "$slider_box_size": "$slider_box_size", "$slider_track_button": "$slider_name" }},
+      { "slider_bar_default@aui-common.slider_bar_default": {} },
+      { "slider_bar_hover@aui-common.slider_bar_hover": { "visible": false }}
+    ],
+    "property_bag": { "#slider_steps": 1, "#slider_value": 0 },
+    "bindings": [
+      { "binding_type": "$slider_steps_binding_type", "binding_condition": "$slider_steps_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "$slider_steps_binding_name", "binding_name_override": "#slider_steps" },
+      { "binding_type": "$slider_binding_type", "binding_condition": "$slider_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "$slider_value_binding_name", "binding_name_override": "#slider_value" },
+      { "binding_type": "$slider_enabled_binding_type", "binding_condition": "$slider_enabled_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "$slider_enabled_binding_name", "binding_name_override": "#enabled" },
+      { "binding_type": "$slider_tts_binding_type", "binding_condition": "$slider_tts_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "$slider_tts_text_value" },
+      { "binding_type": "$slider_tts_header_binding_type", "binding_condition": "$slider_tts_header_binding_condition", "binding_collection_name": "$slider_header_collection_name", "binding_name": "$slider_tts_header" }
+  ]},
+  "slider_button_state": { "type": "image", "layer": 2, "texture": ".aui/.aui-assets/buttons/slider/slider_button_default" },
+  "slider_button_layout@aui-common.slider_button_state": { "texture": ".aui/.aui-assets/buttons/slider/slider_button_default" },
+  "slider_button_hover_layout@aui-common.slider_button_state": { "texture": ".aui/.aui-assets/buttons/slider/slider_button_hover" },
+  "slider_button_locked_layout@aui-common.slider_button_state": { "texture": ".aui/.aui-assets/buttons/slider/slider_button_indent" },
+  "slider_button_indent_layout@aui-common.slider_button_state": { "texture": ".aui/.aui-assets/buttons/slider/slider_button_locked" },
+  "slider_box": {
+    "type": "slider_box",
+    "layer": 4,
+    "size": [ 4, 14 ],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "default_control": "default",
+    "hover_control": "hover",
+    "locked_control": "locked",
+    "indent_control": "indent",
+    "controls": [
+      { "default@$slider_box_layout": { "layer": 2 }},
+      { "hover@$slider_box_hover_layout": { "layer": 3 }},
+      { "indent@$slider_box_indent_layout": { "layer": 4 }},
+      { "locked@$slider_box_locked_layout": {
+          "layer": 1,
+          "controls": [
+            { "transparent_grey": {
+                "type": "image",
+                "ignored": "$is_holographic",
+                "texture": "textures/ui/slider_locked_transparent_fade",
+                "alpha": 0,
+                "layer": 5,
+                "bindings": [ { "binding_type": "$slider_enabled_binding_type", "binding_condition": "$slider_enabled_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "(not $slider_enabled_binding_name)", "binding_name_override": "#visible" }]
+            }}
+      ]}}
+  ]},
+  "slider_background_template@auicore_configloader.core": {
+    "type": "image",
+    "texture": "textures/ui/White"
+  },
+  "slider_background@aui-common.slider_background_template": { "color": "$slider_background_color" },
+  "slider_background_hover@aui-common.slider_background_template": { "color": "$slider_background_hover_color" },
+  "slider_progress@aui-common.slider_background_template": { "color": "$slider_color" },
+  "slider_progress_hover@aui-common.slider_background_template": { "color": "$slider_hover_color" },
+  "slider_border": { "type": "image", "texture": "textures/ui/slider_border" },
+  "slider_bar_default@aui-common.slider_border": {
+    "$background_control|default": "aui-common.slider_background",
+    "$progress_control|default": "aui-common.slider_progress",
+    "$background_control_name|default": "slider_background",
+    "$progress_control_name|default": "slider_progress",
+    "$progress_clip_direction|default": "left",
+    "color": "$slider_default_border_color",
+    "controls": [
+      { "sizing_panel": {
+          "type": "panel",
+          "size": [ "100% - 2px", "100% - 2px" ],
+          "controls": [
+            { "$background_control_name@$background_control": { "layer": 1 }},
+            { "$progress_control_name@$progress_control": { "layer": 3, "clip_direction": "$progress_clip_direction", "clip_pixelperfect": false }}
+      ]}},
+      { "transparent_grey": {
+          "type": "image",
+          "ignored": "$is_holographic",
+          "texture": "textures/ui/slider_locked_transparent_fade",
+          "alpha": 0,
+          "layer": 4,
+          "bindings": [ { "binding_type": "$slider_enabled_binding_type", "binding_condition": "$slider_enabled_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "(not $slider_enabled_binding_name)", "binding_name_override": "#visible" }]
+      }}
+  ]},
+  "slider_bar_hover@aui-common.slider_bar_default": { "color": "$slider_hover_border_color", "$background_control": "aui-common.slider_background_hover", "$progress_control": "aui-common.slider_progress_hover", "$background_control_name": "slider_background_hover", "$progress_control_name": "slider_progress_hover" },
+  "slider_step": { "type": "image", "texture": "textures/ui/Black", "size": [ 2, 6 ], "layer": 4, "offset": "$step_offset" },
+  "slider_step_hover@common.slider_step": { "texture": "textures/ui/White" },
+  "slider_step_progress@common.slider_step": { "texture": "textures/ui/White" },
+  "slider_step_progress_hover@common.slider_step": { "texture": "textures/ui/White", "color": [ 0.95, 0.95, 0.95 ]},
+  "content_header": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "100%", 20 ],
+    "controls": [
+      { "header_background_element@aui-common.header_background_element": {}}
+  ]},
+  "header_background_element":{
+    "type": "image",
+    "$auivar-bgsize|default": [ "default", "100%cm" ],
+    "$auivar-offsetsize|default": [ 0, 0 ],
+    "$auivar-bganchor|default": "bottom_middle",
+    "$auivar-bgtexture|default": ".aui/.aui-assets/text_background",
+    "$auivar-header_contents|default": "",
+    "color": "$background_menu_color",
+    "alpha": "$auivar:config_theme_alpha",
+    "size": "$auivar-bgsize",
+    "offset": "$auivar-offsetsize",
+    "anchor_from": "$auivar-bganchor",
+    "anchor_to": "$auivar-bganchor",
+    "texture": "$auivar-bgtexture",
+    "controls": [
+      { "header_contents@$auivar-header_contents": {}},
+      { "header_label":{
+          "type": "label",
+          "text": "$text",
+          "layer": 1,
+          "shadow": false,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "color": "$auivar-color",
+          "$auivar-color|default": "$light_button_pressed_text_color",
+          "offset": [ 0, 3 ],
+          "font_type": "MinecraftTen",
+          "text_alignment": "center",
+          "max_size": [ "90%", 11 ],
+          "controls": [
+            { "contentline": {
+                "type": "image",
+                "size": [ "100% + 4px", 1 ],
+                "texture": "textures/ui/White",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0.5, 13 ]
+            }}
+      ]}}
+  ]},
+  "header_background_slider@auicore_configloader.core":{
+    "type": "image",
+    "$auivar-bgsize|default": [ "default", "100%cm" ],
+    "$auivar-offsetsize|default": [ 0, 0 ],
+    "$auivar-bganchor|default": "bottom_middle",
+    "$auivar-bgtexture|default": ".aui/.aui-assets/text_background",
+    "$auivar-header_contents|default": "",
+    "$auivar-header_image|default": "textures/ui/error",
+    "$auivar-header_image_size|default": [ 20, 20 ],
+    "$auivar-header_image_alpha|default": 1,
+    "$auivar-header_image_offset|default": [ 4, 0 ],
+    "$auivar-header_text|default": "trollage",
+    "color": "$background_menu_color",
+    "alpha": "$auivar:config_theme_alpha",
+    "size": "$auivar-bgsize",
+    "offset": "$auivar-offsetsize",
+    "anchor_from": "$auivar-bganchor",
+    "anchor_to": "$auivar-bganchor",
+    "texture": "$auivar-bgtexture",
+    "controls": [
+      { "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "default", "100%c" ],
+          "use_child_anchors": true,
+          "controls": [
+            { "header_and_contents_element": {
+                "type": "panel",
+                "size": [ "default", 30 ],
+                "controls": [
+                  { "header_image": {
+                      "type": "image",
+                      "color": "$slider_icon_color",
+                      "texture": "$auivar-header_image",
+                      "size": "$auivar-header_image_size",
+                      "alpha": "$auivar-header_image_alpha",
+                      "offset": "$auivar-header_image_offset",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle"
+                  }},
+                  { "header_contents@$auivar-header_contents": { "size": [ "100% - 34px", 28 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 28, 1 ]}}
+            ]}},
+            { "header_desc_label": {
+                "type": "label",
+                "size": [ "95%", "default" ],
+                "max_size": [ "95%", "default" ],
+                "text": "$auivar-header_text"
+            }},
+            { "puddings": { "type": "panel", "size": [ "default", 5 ]}}
+      ]}}
+  ]},
+  "header": {
+    "type": "panel",
+    "size": [ "100%", 14 ],
+    "controls": [
+      { "background": {
+          "type": "image",
+          "texture": ".aui/.aui-assets/text_background",
+          "size": [ "100%", "100%" ],
+          "color": "$background_menu_color",
+          "alpha": "$auivar:config_theme_alpha"
+      }},
+      { "list_label": {
+          "type": "label",
+          "size": [ "100% - 8px", 10 ],
+          "font_type": "MinecraftTen",
+          "text": "$text",
+          "color": "$primary_color",
+          "offset": [ 0, -2 ]
+      }},
+      { "outline": {
+          "type": "image",
+          "color": "$primary_color",
+          "texture": "textures/ui/White",
+          "size": [ "100% - 8px", 1 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -1 ]
+      }}
+  ]},
+  "menu_title": {
+    "type": "label",
+    "$auivar-title_text|default": "have you ever heard lawnmower?",
+    "text": "$auivar-title_text",
+    "font_type": "dainbold",
+    "font_scale_factor": 2,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 13, 8 ],
+    "shadow": false,
+    "$auivar:anim_from|default": [ 13, "-20% - 10px" ],
+    "$auivar:anim_to|default": [ 13, 8 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@aui-anim.screen_outro_anim_push",
+      "@aui-anim.screen_outro_anim_pop",
+      "@aui-anim.screen_intro_anim_push",
+      "@aui-anim.screen_intro_anim_pop"
+    ]
+  },
+  "gradient_renderer_template": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "layer": -89
+  },
+  "screen_background@auicore_configloader.core": {
+    "type": "panel",
+    "controls": [
+      { "gradient@aui-common.gradient_renderer_template": {
+          "ignored": "(not $gradient_renderer)",
+          "size": [ "45%", "100%" ],
+          "gradient_direction": "horizontal",
+          "color1": "$background_menu_color",
+          "color2": [ 0, 0, 0, 0.0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+      }},
+      { "background_renderer": {
+          "ignored": "(not $background_renderer)",
+          "type": "image",
+          "layer": -120,
+          "fill": true,
+          "texture": "custom_texture/background",
+          "size": [ "100%", "100%" ]
+      }}
+  ]}, 
+  "menu_screen_background@auicore_configloader.core": {
+    "type": "panel",
+    "controls": [
+      { "gradient01@aui-common.gradient_renderer_template": {
+          "ignored": "(not $gradient_renderer)",
+          "size": [ "100%", "20%" ],
+          "color1": "$background_standard_color_top",
+          "color2": [ 0, 0, 0, 0 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+      }},
+      { "gradient02@aui-common.gradient_renderer_template": {
+          "ignored": "(not $gradient_renderer)",
+          "size": [ "100%", "45%" ],
+          "color1": [ 0, 0, 0, 0 ],
+          "color2": "$background_standard_color_bottom",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }},
+      { "background_renderer": {
+          "ignored": "(not $background_renderer)",
+          "type": "image",
+          "layer": -120,
+          "fill": true,
+          "texture": "custom_texture/background_blur",
+          "size": [ "100%", "100%" ]
+      }}
+  ]},
+  "status_bottom_bar@auicore_configloader.core": {
+    "type": "panel",
+    "$auivar-bar_texture|default": "textures/ui/White",
+    "$auivar-bar_contents|default": "",
+    "$auivar-logo_texture|default": ".aui/.aui-assets/harlowlogo",
+    "$auivar-ver_text|default": "Arcdustry-UI [ v2.1-RC1 ]",
+    "$auivar-screen_name|default": "\"Unknown\"",
+    "$auivar-label_no_mcver|default": false,
+    "$auivar:back_button|default": false,
+    "$auivar:anim_from|default": [ 0, "25%" ],
+    "$auivar:anim_to|default": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@aui-anim.screen_outro_anim_push",
+      "@aui-anim.screen_outro_anim_pop",
+      "@aui-anim.screen_intro_anim_push",
+      "@aui-anim.screen_intro_anim_pop"
+    ],
+    "controls": [
+      { "close_button@aui-common.close_button": {
+          "ignored": "(not $auivar:back_button)",
+          "size": [ 24, 24 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left"
+      }},
+      { "texture_bar": {
+          "type": "image",
+          "texture": "$auivar-bar_texture",
+          "color": "$bottom_bar_background_color",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ "125%", 100 ],
+          "offset": [ 0, 80 ],
+          "layer": -2,
+          "alpha": "$bottom_bar_background_alpha",
+          "variables": [
+            { "requires": "(($oled_mode) and not ($allow_bottom_bar_customization))",
+              "$bottom_bar_background_alpha": "$auivar:config_theme_alpha"
+          }]
+      }},
+      { "arc_logo": {
+          "ignored": "$auivar:back_button",
+          "type": "image",
+          "texture": "$auivar-logo_texture",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ 16, 16 ],
+          "offset": [ 4, -2 ]
+      }},
+      { "ui_ver_label": {
+          "type": "label",
+          "color": "$bottom_bar_font_color",
+          "text": "$auivar-ver_text",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": "$auivar-ver_offset",
+          "$auivar-ver_offset|default": [ 22, -8.5 ],
+          "font_type": "$bottom_bar_font_type",
+          "variables": [
+            { "requires": "$auivar:back_button",
+              "$auivar-ver_text": "Back"
+          }]
+      }},
+      { "screen_name": {
+          "type": "label",
+          "visible": "$auivar-label_no_mcver",
+          "color": "$bottom_bar_font_color",
+          "text": "$auivar-screen_name",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 22, -2 ],
+          "font_scale_factor": 0.75,
+          "font_type": "$bottom_bar_font_type"
+      }},
+      { "mc_ver_label": {
+          "type": "label",
+          "color": "$bottom_bar_font_color",
+          "text": "#text",
+          "ignored": "$auivar-label_no_mcver",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 22, -2 ],
+          "font_type": "$bottom_bar_font_type",
+          "font_scale_factor": 0.75,
+          "bindings": [
+            { "binding_name": "#version" },
+            { "binding_type": "view",
+              "source_property_name": "('Bedrock ' + #version + ' | ©Mojang AB')",
+              "target_property_name": "#text"
+          }]
+      }},
+      { "contents@$auivar-bar_contents": {}}
+  ]},
+  "player_head_element": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "clips_children": true,
+    "controls": [
+      { "skin_renderer": {
+          "type": "custom",
+          "layer": 5,
+          "renderer": "paper_doll_renderer",
+          "size": [ 42, 92 ],
+          "offset": [ 0, 8 ]
+      }}
+  ]},
+  "warning_element": {
+    "type": "image",
+    "ignored": "(not $show_warning_notification)",
+    "texture": "textures/ui/White",
+    "size": [ "100%c + 10px", "100%cm + 8px" ],
+    "layer": 10,
+    "alpha": "$auivar:config_theme_alpha",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, -116 ],
+    "color": "aui-anim.warning_flashing00",
+    "anims": [ 
+      "aui-anim.warning_text_movement00",
+      "aui-anim.warning_flashing00"
+    ],
+    "$auivar:warning_element_controls|default": [],
+    "controls": "$auivar:warning_element_controls"
+}}

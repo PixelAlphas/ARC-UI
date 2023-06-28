@@ -1,0 +1,244 @@
+{ "namespace": "aui-about_ui",
+  "root_contents@auicore_configloader.core": {
+    "type": "panel",
+    "$auivar:back_button": true,
+    "controls": [
+      { "gamepad_helper_element": {
+          "type": "panel",
+          "controls": [
+            { "left_arrow@aui-play_screen.text_with_outline": {
+                "$label": ">",
+                "offset": [ 172, 15 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  { "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "right_arrow@aui-play_screen.text_with_outline": {
+                "$label": "<",
+                "offset": [ -172, 15 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  { "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "gamepad_helper_left_bumper@common.gamepad_helper_left_bumper": {
+                "offset": [ -155, 7 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$hide_description": true,
+                "bindings": [
+                  { "binding_name": "#bumper_tooltips_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "gamepad_helper_right_bumper@common.gamepad_helper_right_bumper": {
+                "offset": [ 155, 7 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$hide_description": true,
+                "bindings": [
+                  { "binding_name": "#bumper_tooltips_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }}
+      ]}},
+      { "keyboard_helper_element": {
+          "type": "panel",
+          "controls": [
+            { "left_arrow@aui-play_screen.text_with_outline": {
+                "$label": ">",
+                "offset": [ 167, 15 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  { "binding_name": "#keyboard_helper_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "right_arrow@aui-play_screen.text_with_outline": {
+                "$label": "<",
+                "offset": [ -167, 15 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  { "binding_name": "#keyboard_helper_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "keyboard_helper_left_bracket@common.keyboard_left_trigger": {
+                "offset": [ -153, 11 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$hide_description": true,
+                "$text_color": [ 1, 1, 1 ]
+            }},
+            { "keyboard_helper_right_bracket@common.keyboard_right_trigger": {
+                "offset": [ 153, 11 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$hide_description": true,
+                "$text_color": [ 1, 1, 1 ]
+            }}
+      ]}},
+      { "default_panel@aui-about_ui.default_panel": {}},
+      { "status_bottom_bar@aui-common.status_bottom_bar": { "$auivar-screen_name": "\"About Screen\"", "$auivar-label_no_mcver": true }},
+      { "menu_title@aui-common.menu_title": { "$auivar-title_text": "ABOUT" }},
+      { "buttons_element@aui-about_ui.buttons_element": {}}
+  ]},
+  "default_panel@aui-play_screen.play_screen_panel": {
+    "$tab_content_panel": "aui-about_ui.default_layout"
+  },
+  "default_layout": {
+    "type": "input_panel",
+    "size": [ "100%", "100%" ],
+    "ttsSectionContainer": true,
+    "$auivar:anim_from|default": [ "25%", 0 ],
+    "$auivar:anim_to|default": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@aui-anim.screen_outro_anim_push",
+      "@aui-anim.screen_outro_anim_pop",
+      "@aui-anim.screen_intro_anim_push",
+      "@aui-anim.screen_intro_anim_pop"
+    ],
+    "controls": [
+      { "about_arcdustry_ui_tab_content_panel@aui-about_ui.about_arcdustry_ui_tab_content_panel": {} },
+      { "config_tab_content_panel@aui-about_ui.config_tab_content_panel": {} },
+      { "changelog_tab_content_panel@aui-about_ui.changelog_tab_content_panel": {} }
+  ]},
+  "about_section@auicore_configloader.core": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      { "padding00": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "about_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-about_section.root_section", "$text": "arc-ui.settingtitle.about" }},
+      { "padding01": { "type": "panel", "size": [ "100%", 2 ]}}
+  ]},
+  "about_arcdustry_ui_tab_content_panel@aui-play_screen.common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "about_arcdustry_ui_tab_toggle",
+    "$scroll_tab_content": "aui-about_ui.about_arcdustry_ui_scroll_content"
+  },
+  "about_arcdustry_ui_scroll_content@play.common_content": {
+    "controls": [
+      { "worlds_stack_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            { "scrolling_panel@play.scrolling_offsets": {
+                "layer": 1,
+                "$scrolling_content": "aui-about_ui.about_section"
+            }}
+      ]}}
+  ]},
+  "config_section@auicore_configloader.core": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      { "padding00": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "config_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-config_section.root_section", "$text": "arc-ui.settingtitle.about-config" }},
+      { "padding01": { "type": "panel", "size": [ "100%", 2 ]}}
+  ]},
+  "config_tab_content_panel@aui-play_screen.common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "config_tab_toggle",
+    "$scroll_tab_content": "aui-about_ui.config_scroll_content"
+  },
+  "config_scroll_content@play.common_content": {
+    "controls": [
+      { "worlds_stack_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            { "scrolling_panel@play.scrolling_offsets": {
+                "layer": 1,
+                "$scrolling_content": "aui-about_ui.config_section"
+            }}
+      ]}}
+  ]},
+  "changelog_section@auicore_configloader.core": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      { "padding00": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "changelog_element@aui-common.header_background_element": { "$auivar-header_contents": "aui-changelog_section.root_section", "$text": "arc-ui.about.changelog.config.title" }},
+      { "padding01": { "type": "panel", "size": [ "100%", 2 ]}}
+  ]},
+  "changelog_tab_content_panel@aui-play_screen.common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "changelog_tab_toggle",
+    "$scroll_tab_content": "aui-about_ui.changelog_scroll_content"
+  },
+  "changelog_scroll_content@play.common_content": {
+    "controls": [
+      { "worlds_stack_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            { "scrolling_panel@play.scrolling_offsets": {
+                "layer": 1,
+                "$scrolling_content": "aui-about_ui.changelog_section"
+            }}
+      ]}}
+  ]},
+  "adv_tab_content": {
+    "type": "panel",
+    "controls": [
+      { "text_section": {
+          "type": "panel",
+          "controls": [
+            { "text@play.common_button_text": {
+                "layer": 3,
+                "text": "$tab_text_name",
+                "offset": [ 0, 0 ]
+            }}
+      ]}}
+  ]},
+  "about_arcdustry_ui_tab@aui-play_screen.top_tab": {
+    "$tab_view_binding_name": "about_arcdustry_ui_tab_toggle",
+    "$tab_text_name": "About UI",
+    "$toggle_group_forced_index": 0,
+    "$tab_content": "aui-about_ui.adv_tab_content"
+  },
+  "config_tab@aui-play_screen.top_tab": {
+    "$tab_view_binding_name": "config_tab_toggle",
+    "$tab_text_name": "Config",
+    "$toggle_group_forced_index": 1,
+    "$tab_content": "aui-about_ui.adv_tab_content"
+  },
+  "changelog_tab@aui-play_screen.top_tab": {
+    "$tab_view_binding_name": "changelog_tab_toggle",
+    "$tab_text_name": "Changelog",
+    "$toggle_group_forced_index": 2,
+    "$tab_content": "aui-about_ui.adv_tab_content"
+  },
+  "buttons_element": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ 275, 25 ],
+    "offset": [ 0, 8 ],
+    "layer": 3,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$auivar:anim_from|default": [ 0, "-25%" ],
+    "$auivar:anim_to|default": [ 0, 8 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@aui-anim.screen_outro_anim_push",
+      "@aui-anim.screen_outro_anim_pop",
+      "@aui-anim.screen_intro_anim_push",
+      "@aui-anim.screen_intro_anim_pop"
+    ],
+    "controls": [
+      { "about_arcdustry_ui_tab@aui-about_ui.about_arcdustry_ui_tab": { "size": [ "fill", "100%" ]}},
+      { "config_tab@aui-about_ui.config_tab": { "size": [ "fill", "100%" ]}},
+      { "changelog_tab@aui-about_ui.changelog_tab": { "size": [ "fill", "100%" ]}}
+]}}

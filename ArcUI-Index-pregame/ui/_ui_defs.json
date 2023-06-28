@@ -1,0 +1,44 @@
+{ "ui_defs": [
+  // /* - Config Core - */ //
+    "config.json",
+    
+  // /* - UI System Screens - */ //
+    ".aui/.aui-system/.ui-screens/.aui-about_section/.aui-about_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-about_section/.aui-config_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-about_section/.aui-changelog_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-play_section/.aui-world_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-play_section/.aui-friend_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-play_section/.aui-server_section.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-about_panel.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-account_panel.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-accessibility_panel.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-creator_panel.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-general_panel.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-lang_panel.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-htp_panel.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-sound_panel.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-video_panel.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-km_control.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-gamepad_control.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-touch_control.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_section/.aui-content_log.json",
+    ".aui/.aui-system/.ui-screens/.aui-about_ui_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-chat_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-content_log.json",
+    ".aui/.aui-system/.ui-screens/.aui-setting_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-start_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-safe_zone_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-online_safety_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-play_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-loading_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-play_high_ping_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-pause_screen.json",
+    ".aui/.aui-system/.ui-screens/.aui-pause_screen_compact.json",
+
+  // /* - UI System Templates
+    ".aui/.aui-system/.ui-templates/.aui-config_loader.json",
+    ".aui/.aui-system/.ui-templates/.aui-anim.json",
+    ".aui/.aui-system/.ui-templates/.aui-common.json",
+    ".aui/.aui-system/.ui-templates/.aui-button.json",
+    ".aui/.aui-system/.ui-templates/.aui-toggle.json"
+]}

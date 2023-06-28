@@ -1,0 +1,105 @@
+{ "namespace": "aui-anim",
+  "zoom_out": {
+    "anim_type": "size",
+    "duration": 1.5,
+    "easing": "out_cubic",
+    "from": [ "125%", "125%" ],
+    "to": [ "100%", "100%" ]
+  },
+  "warning_flashing00": {
+    "anim_type": "wait",
+    "duration": 2,
+    "next": "@aui-anim.warning_flashing01"
+  },
+  "warning_flashing01": {
+    "anim_type": "color",
+    "duration": 0.5,
+    "from": [ 1, 0.8627, 0 ],
+    "to": [ 0, 0, 0 ],
+    "next": "@aui-anim.warning_flashing02"
+  },
+  "warning_flashing02": {
+    "anim_type": "wait",
+    "duration": 1,
+    "next": "@aui-anim.warning_flashing03"
+  },
+  "warning_flashing03": {
+    "anim_type": "color",
+    "duration": 0.5,
+    "from": [ 1, 0.8627, 0 ],
+    "to": [ 0, 0, 0 ],
+    "next": "@aui-anim.warning_flashing04"
+  },
+  "warning_flashing04": {
+    "anim_type": "wait",
+    "duration": 1,
+    "next": "@aui-anim.warning_flashing05"
+  },
+  "warning_flashing05": {
+    "anim_type": "color",
+    "duration": 0.5,
+    "from": [ 1, 0.8627, 0 ],
+    "to": [ 0, 0, 0 ]
+  },
+  "warning_text_movement00": {
+    "anim_type": "wait",
+    "duration": 2,
+    "next": "@aui-anim.warning_text_movement01"
+  },
+  "warning_text_movement01": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.5,
+    "from": [ 0, -120 ],
+    "to": [ 0, 4 ],
+    "next": "@aui-anim.warning_text_movement02"
+  },
+  "warning_text_movement02": {
+    "anim_type": "wait",
+    "duration": 12,
+    "next": "@aui-anim.warning_text_movement03"
+  },
+  "warning_text_movement03": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": 0.5,
+    "from": [ 0, 4 ],
+    "to": [ 0, -120 ]
+  },
+  "screen_outro_anim_push": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": "$transition_time_push",
+    "from": "$auivar:anim_to",
+    "to": "$auivar:anim_from",
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "screen_outro_anim_pop": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$auivar:anim_to",
+    "to": "$auivar:anim_from",
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "screen_intro_anim_push": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$transition_time_push",
+    "from": "$auivar:anim_from",
+    "to": "$auivar:anim_to",
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_intro_anim_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$auivar:anim_from",
+    "to": "$auivar:anim_to",
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  }
+}

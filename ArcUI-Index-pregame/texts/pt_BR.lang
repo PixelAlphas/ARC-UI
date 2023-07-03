@@ -23,6 +23,7 @@ arc-ui.settingtitle.video-experiment=Configurações experimentais
 ## - Configuration info Description -
 ## mostly used for descriptions by hovering your mouse
 ## over the config lists
+arc-ui.about.changelog.config.info=Para fazer mudanças nas configurações da IU, você precisará de um §epacote de configurações§f do repositório da Arcdustry-UI no GitHub, e então você poderá editar §e'config.json'§f de acordo com a sua criteria e importar o pacote no jogo. Ponha o §epacote 'Config'§f acima do Arcdustry-UI para que as configurações tenham efeito. Divirta-se!
 arc-ui.about.config.show_changelog=Ativa as §elistas do Histórico de Mudanças§f na §eaba changelog§f.
 arc-ui.about.config.show_warning_notification=Ativa a §enotificação de Aviso§f no menu principal toda vez que vovê inicia o jogo.
 arc-ui.about.config.no_marketplace_button=Remove o §ebotão da Marketplace§f no menu principal e na tela de pausa.
@@ -35,6 +36,11 @@ arc-ui.about.config.allow_bottom_bar_customization=Permite customizar a barra de
 arc-ui.about.config.custom_loading_background_overworld=Ativa um §eplano de fundo customizável para o Mundo Superior§f. Customizável em §e'ArcUI-Config/custom_texture'
 arc-ui.about.config.custom_loading_background_nether=Ativa um §eplano de fundo customizável para o Nether§f. Customizável em §e'ArcUI-Config/custom_texture'
 arc-ui.about.config.custom_loading_background_theend=Ativa um §eplano de fundo customizável para o Fim§f. Customizável em §e'ArcUI-Config/custom_texture'
+arc-ui.about.config.no_xbox_profile_icon=Remove o §eperfil Xbox§r na §etela de Início§f.
+
+## - Username/Xbox thing -
+arc-ui.username.loggedas="§7Atualmente logado como
+arc-ui.username.localacc=§7Nome de usuário local
 
 ## - Warning Tooltips -
 arc-ui.warning.title=Aviso!

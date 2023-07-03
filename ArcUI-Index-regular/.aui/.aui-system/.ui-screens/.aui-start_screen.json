@@ -75,6 +75,7 @@
                       "controls": [
                         { "gametag_with_image_panel": {
                             "type": "panel",
+                            "ignored": "$no_xbox_profile_icon",
                             "size": [ 22, "100%" ],
                             "controls": [
                               { "gametag_profile": {
@@ -99,7 +100,7 @@
                                   "bindings": [
                                     { "binding_name": "#gamertag_label" }
                               ]}},
-                              { "message_label@aui-start_screen.userlabel_element": { "text": "§7Currently logged as" }}
+                              { "message_label@aui-start_screen.userlabel_element": { "text": "arc-ui.username.loggedas" }}
                         ]}}
                   ]}}
             ]}},
@@ -131,7 +132,7 @@
                                   "bindings": [
                                     { "binding_name": "#playername" }
                               ]}},
-                              { "message_label@aui-start_screen.userlabel_element": { "text": "§7Local Username" }}
+                              { "message_label@aui-start_screen.userlabel_element": { "text": "arc-ui.username.localacc" }}
                         ]}}
                   ]}}
             ]}},

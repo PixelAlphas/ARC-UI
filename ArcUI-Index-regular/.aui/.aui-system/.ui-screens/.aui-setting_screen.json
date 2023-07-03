@@ -77,10 +77,19 @@
             { "gamertag_core@aui-setting_screen.gamertag_core": { "ignored": "(not $include_controls_and_settings_sections)" }},
             { "pudding02": { "type": "panel", "size": [ 1, 1 ] }},
             { "action_button@aui-setting_screen.action_button": {
+                "ignored": "((not $is_pregame or not $include_controls_and_settings_sections) or (not $is_xboxlive_enabled))",
                 "$pressed_button_name": "sign_out_button",
-                "ignored": "(($build_platform_UWP or not $is_pregame or $requires_xbl_signin_to_play or $include_world_section)",
                 "$button_text": "xbox.signOut",
                 "size": [ "100%", 30 ]
+            }},
+            { "action_button@aui-setting_screen.action_button": {
+                "ignored": "((not $is_pregame or not $include_controls_and_settings_sections) or ($is_xboxlive_enabled))",
+                "$pressed_button_name": "sign_in_button",
+                "$button_text": "xbox.signInLong",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "size": [ "100%", 30 ],
+                "offset": [ 0, 2 ]
             }},
             { "pudding03": { "type": "panel", "size": [ 1, 1 ], "ignored": "($build_platform_UWP or not $is_pregame or $requires_xbl_signin_to_play)" }},
             { "button_background": {
@@ -93,7 +102,7 @@
                       "type": "stack_panel",
                       "size": [ "100%", "100%c" ],
                       "controls": [
-                        { "general_button@aui-setting_screen.general_button": { "$toggle_group_forced_index": "$general_forced_index", "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls or $include_world_section)" }},
+                        { "general_button@aui-setting_screen.general_button": { "$toggle_group_forced_index": "$general_forced_index", "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls or $include_world_section or not $include_controls_and_settings_sections)" }},
                         { "accessibility_button@aui-setting_screen.accessibility_button": { "$toggle_group_forced_index": "$accessibility_forced_index", "ignored": "(not $include_controls_and_settings_sections)" }},
                         { "creator_button@aui-setting_screen.creator_button": { "$toggle_group_forced_index": 100, "ignored": "(not $include_controls_and_settings_sections)" }},
                         { "realm_selector_panel@realms_settings.selector_panel": { "ignored": "(not $include_realm_section)", "$world_toggle_index": "$world_forced_index", "$members_toggle_index": "$members_forced_index", "$subscription_toggle_index": "$subscription_forced_index", "$backup_toggle_index": "$backup_forced_index", "$dev_options_toggle_index": "$dev_options_forced_index"}}
@@ -144,6 +153,7 @@
                         { "video_button@aui-setting_screen.video_button": { "$toggle_group_forced_index": "$video_forced_index", "$tts_section_header": "$general_section_header" }},
                         { "sound_button@aui-setting_screen.sound_button": { "$toggle_group_forced_index": "$sound_forced_index", "$tts_section_header": "$general_section_header" }},
                         { "global_texture_pack_button@aui-setting_screen.global_texture_pack_button": { "ignored": "$ignore_global_resources_section", "$toggle_group_forced_index": "$global_texture_pack_forced_index", "visible": "($is_global_texture_packs_visible)", "$tts_section_header": "$general_section_header" }},
+                        { "storage_management_button@aui-setting_screen.storage_management_button": { "ignored": "$ignore_storage_section", "$toggle_group_forced_index": "$storage_management_forced_index", "$tts_section_header": "$general_section_header" }},
                         { "language_button@aui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index", "$tts_section_header": "$general_section_header" }}
                   ]}}
             ]}}
@@ -172,6 +182,7 @@
             { "level_texture_pack_section@world_section.level_texture_pack_section": {} },
             { "addon_section@world_section.addon_section": {} }
       ]}},
+      { "section_content_panels@realms_settings.section_content_panels": { "ignored": "(not $include_realm_section)" }},
       { "general_and_controls_sections": {
           "type": "stack_panel",
           "ignored": "(not $include_controls_and_settings_sections)",
@@ -186,6 +197,7 @@
             { "video_section@aui-setting_video.root_section": { "visible": false } },
             { "how_to_play_section@aui-setting_htp.root_section": { "visible": false } },
             { "language_section@aui-setting_lang.root_section": { "ignored": "(not $is_pregame)", "visible": false }},
+            { "storage_management_section@general_section.storage_management_section": { "visible": false, "ignored": "$ignore_storage_section" }},
             { "global_texture_pack_section@general_section.global_texture_pack_section": { "visible": false, "ignored": "$ignore_global_resources_section" }}
       ]}}
   ]},
@@ -436,15 +448,27 @@
                 "controls": [
                   { "label_descriptor": {
                       "type": "label",
+                      "ignored": "(not $is_pregame or $is_xboxlive_enabled)",
                       "color": "$main_header_text_color",
                       "layer": 1,
                       "anchor_to": "left_middle",
                       "anchor_from": "left_middle",
-                      "text": "§7Currently logged as",
+                      "text": "arc-ui.username.localacc",
+                      "offset": [ 4, -10 ]
+                  }},
+                  { "label_descriptor_local": {
+                      "type": "label",
+                      "ignored": "(not $is_pregame or not $is_xboxlive_enabled)",
+                      "color": "$main_header_text_color",
+                      "layer": 1,
+                      "anchor_to": "left_middle",
+                      "anchor_from": "left_middle",
+                      "text": "arc-ui.username.loggedas",
                       "offset": [ 4, -10 ]
                   }},
                   { "gamertag_label": {
                       "type": "label",
+                      "ignored": "(not $is_pregame or not $is_xboxlive_enabled)",
                       "color": "$main_header_text_color",
                       "layer": 1,
                       "text": "#gamertag_label",
@@ -453,7 +477,18 @@
                       "offset": [ 4, 0 ],
                       "bindings": [{ "binding_name": "#gamertag_label" }]
                   }},
-                  { "gamertag_label": {
+                  { "gamertag_label_local": {
+                      "type": "label",
+                      "ignored": "(not $is_pregame or $is_xboxlive_enabled)",
+                      "color": "$main_header_text_color",
+                      "layer": 1,
+                      "text": "#gamertag_label",
+                      "anchor_to": "left_middle",
+                      "anchor_from": "left_middle",
+                      "offset": [ 4, 0 ],
+                      "bindings": [{ "binding_name": "#playername" }]
+                  }},
+                  { "thing": {
                       "type": "label",
                       "color": "$main_header_text_color",
                       "layer": 1,
@@ -463,11 +498,8 @@
                       "offset": [ 4, 10 ]
                   }}
              ]}}
-          ]
-        }
-      }
-    ]
-  },
+        ]}}
+  ]},
   "gamertag_rewrite_old": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -519,6 +551,18 @@
             }}
        ]}}
   ]},
+  "storage_management_button@aui-toggle.section_toggle_base": {
+    "$toggle_view_binding_name": "storage_management_button_toggle",
+    "enabled": "(not $trial)",
+    "visible": "($is_pregame and not $education_edition_china)",
+    "$button_text": "menu.storageManagement",
+    "$glyph_texture": ".aui/.aui-assets/icons/glyph/general_glyph",
+    "$glyph_color_texture": ".aui/.aui-assets/icons/glyph/block_sound_glyph",
+    "$glyph_uv": [ 0, 0 ],
+    "$glyph_size": [ 22, 22 ],
+    "$toggle_property_bag": {
+      "#panel_title": "menu.storageManagement"
+  }},
   "multiplayer_button@aui-toggle.section_toggle_base": {
     "$toggle_view_binding_name": "multiplayer_button_toggle",
     "$glyph_texture": ".aui/.aui-assets/icons/glyph/multiplayer_glyph",

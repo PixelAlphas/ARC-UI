@@ -23,6 +23,7 @@ arc-ui.settingtitle.video-experiment=Experiment
 ## - Configuration info Description -
 ## mostly used for descriptions by hovering your mouse
 ## over the config lists
+arc-ui.about.changelog.config.info=To make a changes on UI's configuration, you'll need a §econfig pack§f from Arcdustry-UI Github, then you can edit §e'config.json'§f as your choice and import the pack to the game, after that put the §eConfig pack§f above of Arcdustry-UI for config to effect. Have fun!
 arc-ui.about.config.show_changelog=Enables §eChangelog lists§f in §echangelog tab§f.
 arc-ui.about.config.show_warning_notification=Enables §eWarning notification§f on the main menu everytime you launch the the game.
 arc-ui.about.config.no_marketplace_button=Removes §eMarketplace button§f on the main menu and pause screen.
@@ -35,6 +36,11 @@ arc-ui.about.config.allow_bottom_bar_customization=Allows to customize the statu
 arc-ui.about.config.custom_loading_background_overworld=Enables a §eCustom loading background for Overworld§f, Customizable in §e'ArcUI-Config/custom_texture'
 arc-ui.about.config.custom_loading_background_nether=Enables a §eCustom loading background for Nether§f, Customizable in §e'ArcUI-Config/custom_texture'
 arc-ui.about.config.custom_loading_background_theend=Enables a §eCustom loading background for 'The End'c§f, Customizable in §e'ArcUI-Config/custom_texture'
+arc-ui.about.config.no_xbox_profile_icon=Removes §eXbox profile§r in §eStart screen§f.
+
+## - Username/Xbox thing -
+arc-ui.username.loggedas=§7Currently logged as
+arc-ui.username.localacc=§7Local Username
 
 ## - Warning Tooltips -
 arc-ui.warning.title=Warning!
@@ -404,6 +410,47 @@ arc-ui.section.changelogv2desc.v2-0-2.009=§7[§a+§7]§f Fixed accessibility an
 arc-ui.section.changelogv2desc.v2-0-2.010=§7[§a+§7]§f Fixed Progress label are not fading in and out
 arc-ui.section.changelogv2desc.v2-0-2.011=§7[§a+§7]§f Improvements to UI Stability
 arc-ui.section.changelogv2desc.v2-0-2.012=§7[§a+§7]§f Improvements to theme system
+
+## 2.1
+arc-ui.section.changelogv2desc.v2-1.001=§o× Released in - July 3, 2023
+arc-ui.section.changelogv2desc.v2-1.002=§o× Supported - 1.20.0.1+
+arc-ui.section.changelogv2desc.v2-1.003=§e× -- Requested Update has arrived! --
+arc-ui.section.changelogv2desc.v2-1.004=§e× Massive update with introduction of new UI versions - Regular, Pre-game and config pack.
+arc-ui.section.changelogv2desc.v2-1.005=§7[§a+/REGULAR§7]§f Added modified Hotbar
+arc-ui.section.changelogv2desc.v2-1.006=§7[§a+/REGULAR§7]§f Added/fixed experience bar texture
+arc-ui.section.changelogv2desc.v2-1.007=§7[§a+/REGULAR§7]§f Added experience bar text to more java style
+arc-ui.section.changelogv2desc.v2-1.008=§7[§a+/REGULAR§7]§f Added experience bar percentage on above of text
+arc-ui.section.changelogv2desc.v2-1.009=§7[§a+/REGULAR§7]§f Added villager trade are completely unhidden (only classic ui)
+arc-ui.section.changelogv2desc.v2-1.010=§7[§a+/REGULAR§7]§f Removed Help button '?' from villager trade screen
+arc-ui.section.changelogv2desc.v2-1.011=§7[§a+/CONFIG§7]§f Added no comment version of 'config.json' file for better syntax
+arc-ui.section.changelogv2desc.v2-1.012=§7[§a+/ALL§7]§f Added more .lang support
+arc-ui.section.changelogv2desc.v2-1.013=§7[§a+/ALP§7]§f Added Storage setting section - warning: vanilla atm
+arc-ui.section.changelogv2desc.v2-1.014=§7[§a+/ALL§7]§f Added UI version aka pregame and regular on start screen and about screen
+arc-ui.section.changelogv2desc.v2-1.015=§7[§a+/ALL§7]§f Added details about how to use configuration in about screen - config tab
+arc-ui.section.changelogv2desc.v2-1.016=§7[§a+/ALL§7]§f Added button text on play screen world section
+arc-ui.section.changelogv2desc.v2-1.017=§7[§a+/ALL§7]§f Added message hover thing for config list
+arc-ui.section.changelogv2desc.v2-1.018=§7[§a+/ALL§7]§f Added 'No Xbox profile on start screen' as configuration options
+arc-ui.section.changelogv2desc.v2-1.019=§7[§a+/ALL§7]§f Re-added custom background for dimensions because i forgot to export the file for package and therefore its not there
+arc-ui.section.changelogv2desc.v2-1.020=§7[§a+/ALL§7]§f Rewrite lots of thing
+arc-ui.section.changelogv2desc.v2-1.021=§7[§a+/ALL§7]§f Resorted changelog list
+arc-ui.section.changelogv2desc.v2-1.022=§7[§a+/ALL§7]§f Merged/Updated Brazil Portuguese language for the UI
+arc-ui.section.changelogv2desc.v2-1.023=§7[§a+/ALL§7]§f Updated Settings screen again
+arc-ui.section.changelogv2desc.v2-1.024=§7[§a+/ALL§7]§f Updated Configuration list
+arc-ui.section.changelogv2desc.v2-1.025=§7[§c-/ALL§7]§f Removed moving lawnmowers as configuration feature since it is impacting the UI performance
+arc-ui.section.changelogv2desc.v2-1.026=§7[§c-/ALL§7]§f Removed test configuration
+arc-ui.section.changelogv2desc.v2-1.027=§7[§a+/CONFIG§7]§f Fixed config file corruption
+arc-ui.section.changelogv2desc.v2-1.028=§7[§a+§7]§f Fixed issues where non-xbox user are unable to log-in
+arc-ui.section.changelogv2desc.v2-1.029=§7[§a+§7]§f Fixed issues where changelog could cause content log error
+arc-ui.section.changelogv2desc.v2-1.030=§7[§a+§7]§f Fixed issues where realm setting pane isnt there
+arc-ui.section.changelogv2desc.v2-1.031=§7[§a+§7]§f Fixed issues where logout and general buttons are in realm setting
+arc-ui.section.changelogv2desc.v2-1.032=§7[§a+§7]§f Fixed some devices unable to click/tap the exit button
+arc-ui.section.changelogv2desc.v2-1.033=§7[§a+§7]§f Fixed Minor spacing issues in play screen
+arc-ui.section.changelogv2desc.v2-1.034=§7[§a+§7]§f Fixed Accessibility and creator section 'ingored' during playing sessions.
+arc-ui.section.changelogv2desc.v2-1.035=§7[§a+§7]§f Fixed Progress label are not fading in and out
+arc-ui.section.changelogv2desc.v2-1.036=§7[§a+§7]§f Improvements to UI Stability and optimization
+arc-ui.section.changelogv2desc.v2-1.037=§7[§a+§7]§f Improvements to animation system
+arc-ui.section.changelogv2desc.v2-1.038=§7[§a+§7]§f Improvements to theme system
+arc-ui.section.changelogv2desc.v2-1.039=§7[§c-§7]§f Removed config file on Regular/Pre-Game due to config pack addition
 
 ## video section
 arc-ui.setting.video-experiment.warn=§7§oThese features are an experiment, and are definitely not meant to be enabled on any platforms. several features here are enabled on few platforms and therefore may not compatible with all platforms. this may cause the following issues - unintentional crashes, performance downgraded or feature won't work entirely. be cautious on what are you doing, I'm not responsible for this.

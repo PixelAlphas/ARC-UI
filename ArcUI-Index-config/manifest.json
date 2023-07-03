@@ -1,10 +1,10 @@
 { "format_version": 2,
   "header": {
-    "name": "Arcdustry-UI Config [ 6/25/2023-v2.0.3 ]",
-    "description": "Configuration Module for Arcdustry-UI\n[6/25/2023-v2.0.3]",
+    "name": "Arcdustry-UI Config Pack",
+    "description": "Configuration Module for Arcdustry-UI\n[7/3/2023-v2.1]",
     "uuid": "ce443779-5f6f-4acc-96f0-ca25e2f0fa04",
-    "version": [ 2, 0, 2 ],
-    "min_engine_version": [ 1, 19, 70 ]
+    "version": [ 2, 1, 0 ],
+    "min_engine_version": [ 1, 20, 0 ]
   },
   "modules": [
     { "type": "resources",

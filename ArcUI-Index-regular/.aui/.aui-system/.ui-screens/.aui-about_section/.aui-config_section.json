@@ -7,6 +7,8 @@
     "controls": [
       { "padding00": { "type": "panel", "size": [ 1, 20 ]}},
       { "label01@aui-common.label_element": { "text": "arc-ui.settingtitle.changelog.config" }},
+      { "padding00": { "type": "panel", "size": [ 1, 10 ]}},
+      { "label01@aui-common.label_element": { "ignored": "(not $show_changelog)", "text": "arc-ui.about.changelog.config.info" }},
       { "label02@aui-common.label_element": { "text": "('§7- Config name : §f' + $configname)" }},
       { "label03@aui-common.label_element": { "text": "('§7- Config key : §f' + $key)" }},
       { "label04@aui-common.label_element": { "text": "('§7- Config ver : §f' + $ver)" }},
@@ -117,6 +119,15 @@
           "variables": [
             { "requires": "($custom_loading_background_theend)", "$valuetext": "('§a█§7 custom_loading_background_theend : ' + '§aTrue')" },
             { "requires": "(not $custom_loading_background_theend)", "$valuetext": "('§c█§7 custom_loading_background_theend : ' + '§cFalse')" }
+      ]}},
+      { "label15@aui-common.label_element": {
+          "text": "$valuetext",
+          "$valuetext|default": "§cINVAILD VALUE",
+          "$auivar:hover_text": true,
+          "$auivar:label_text": "arc-ui.about.config.no_xbox_profile_icon",
+          "variables": [
+            { "requires": "($no_xbox_profile_icon)", "$valuetext": "('§a█§7 no_xbox_profile_icon : ' + '§aTrue')" },
+            { "requires": "(not $no_xbox_profile_icon)", "$valuetext": "('§c█§7 no_xbox_profile_icon : ' + '§cFalse')" }
       ]}},
       { "label07@aui-common.label_element": { 
         "text": "('§7- Status bar font-type : §f' + $bottom_bar_font_type)"

@@ -1,0 +1,124 @@
+
+## This is a template for en_US.lang without changelog.
+## it was made for convenience, so you don't have to remove it!
+## make a copy of this file and edit with your own language, then
+## rename it to preferred lang file and done!
+
+## - Settings Sections Title -
+## Note: Character case doesn't matter since the font will outputs
+##       all the same characters.
+arc-ui.settingtitle.about=About ARC-UI
+arc-ui.settingtitle.about-config=Configuration
+arc-ui.settingtitle.about-changelog=Changelog
+arc-ui.settingtitle.accessibility-tts=Text To Speech Settings
+arc-ui.settingtitle.accessibility-visuality=Visuality Settings
+arc-ui.settingtitle.account=Account settings
+arc-ui.settingtitle.account-alt=Additional Settings
+arc-ui.settingtitle.creator=Creator Settings
+arc-ui.settingtitle.gamepad=Controller settings
+arc-ui.settingtitle.howtoplay=How to play
+arc-ui.settingtitle.keyboardandmouse=Keyboard & mouse settings
+arc-ui.settingtitle.lang=Language settings
+arc-ui.settingtitle.sound=Sound Settings
+arc-ui.settingtitle.sound-main=Main Settings
+arc-ui.settingtitle.touch=Touch Controls Settings
+arc-ui.settingtitle.video-interface=Interface Settings
+arc-ui.settingtitle.video-graphic=Graphical Settings
+arc-ui.settingtitle.video-experiment=Experiment
+
+## - Configuration info Description -
+## mostly used for descriptions by hovering your mouse
+## over the config lists
+arc-ui.about.changelog.config.info=To make a changes on UI's configuration, you'll need a §econfig pack§f from Arcdustry-UI Github, then you can edit §e'config.json'§f as your choice and import the pack to the game, after that put the §eConfig pack§f above of Arcdustry-UI for config to effect. Have fun!
+arc-ui.about.config.show_changelog=Enables §eChangelog lists§f in §echangelog tab§f.
+arc-ui.about.config.show_warning_notification=Enables §eWarning notification§f on the main menu everytime you launch the the game.
+arc-ui.about.config.no_marketplace_button=Removes §eMarketplace button§f on the main menu and pause screen.
+arc-ui.about.config.legacy_ui_layout=Change the main menu and pause screen into §eLegacy UI layout§f from past v2.0.
+arc-ui.about.config.main_menu_background=Enables a little §ebackground§f on the main menu and pause screen buttons.
+arc-ui.about.config.background_renderer=Enables a §eUI backgrounds§f including blurred version. Customizable in §e'ArcUI-Config/custom_texture'
+arc-ui.about.config.gradient_renderer=Enables a §eGradient Render§f as background.
+arc-ui.about.config.oled_mode=Changes the whole UI interface into §eOLED§f mode by changing every UI alpha into pure black.
+arc-ui.about.config.allow_bottom_bar_customization=Allows to customize the status bar due to OLED limitations.
+arc-ui.about.config.custom_loading_background_overworld=Enables a §eCustom loading background for Overworld§f, Customizable in §e'ArcUI-Config/custom_texture'
+arc-ui.about.config.custom_loading_background_nether=Enables a §eCustom loading background for Nether§f, Customizable in §e'ArcUI-Config/custom_texture'
+arc-ui.about.config.custom_loading_background_theend=Enables a §eCustom loading background for 'The End'c§f, Customizable in §e'ArcUI-Config/custom_texture'
+arc-ui.about.config.no_xbox_profile_icon=Removes §eXbox profile§r in §eStart screen§f.
+
+## - Username/Xbox thing -
+arc-ui.username.loggedas="§7Currently logged as
+arc-ui.username.localacc=§7Local Username
+
+## - Warning Tooltips -
+arc-ui.warning.title=Warning!
+arc-ui.warning.start.label01=× Pocket UI is not supported! This can cause potential UI issues or crashes.
+arc-ui.warning.start.label02=× If you applied this pack for the first time, restart the game! for font to load.
+
+## - Entering Dimensions -
+arc-ui.loadingscreen.overworld=Entering The Overworld...
+arc-ui.loadingscreen.nether=Entering The Nether...
+arc-ui.loadingscreen.end=Entering The End...
+
+## - About Screen Title -
+arc-ui.settingtitle.changelog.config=Configuration Details
+arc-ui.about.uiinfo=Greetings! Thanks for trying this UI out! the purpose of this UI was to make controller experience more usable for pre-game UI, since vanilla doesnt look great. This UI will also offers the best menu experience since you'll have control over how UI will look, ranged from background to changable UI colors. for now, have fun!
+arc-ui.about.changelog.config.title=Configuration Details
+arc-ui.about.changelog.config.enabled=All Update changelog goes here, you can click/tap the dropdown order to see the changelog!
+arc-ui.about.changelog.config.disabled=Changelog is currently §cdisabled§r. You can still check UI changelog in §e'ARC-UI/changelog.txt`§r or check in github!
+arc-ui.about.credit.title=- Credits -
+arc-ui.about.credit.harlow=§ePixel Arts, UI designs and code and testing§r - Harlow (Arcdustry)
+arc-ui.about.credit.valve=§eOrigins UI designs and inspired from§r - Valve Software
+arc-ui.about.credit.brazil.lang=§eBrazil Portuguese support§r - Santiago046
+
+## - Start Section -
+## Note: Character case doesn't matter since the font will outputs
+##       probably the same.
+## > Regular ( Start screen & Pause screen )
+arc-ui.mainmenu.regular.start=PLAY
+arc-ui.mainmenu.regular.setting=OPTIONS
+arc-ui.mainmenu.regular.skin=CHARACTER CREATOR
+arc-ui.mainmenu.regular.achievement=ACHIEVEMENT
+arc-ui.mainmenu.regular.marketplace=MARKETPLACE
+arc-ui.mainmenu.regular.more=MORE
+arc-ui.mainmenu.regular.exit=EXIT GAME
+## > Pause ( Pause screen only )
+arc-ui.mainmenu.pause.start=RESUME SESSION
+arc-ui.mainmenu.pause.exit=EXIT SESSION
+
+## - Play Section -
+## Note: Character case doesn't matter since the font will outputs
+##       probably the same.
+arc-ui.playscreen.title.controlcenter=Control Center
+arc-ui.playscreen.title.realm=Realms
+arc-ui.playscreen.title.world=World
+
+## - Safe zone screen -
+arc-ui.setting.safezone.title.main=Safe zone settings
+arc-ui.setting.safezone.title.exp=experiment settings
+arc-ui.setting.safezone.main=Adjust whenever the game screen does not fit your screen well.
+arc-ui.setting.safezone.exp=Unintentionally was a hidden option, it was for console's feature
+arc-ui.setting.safezone.allcorner=§7Expand and decrease in all corner
+arc-ui.setting.safezone.horizontal=§7Expand and decrease in left & right side
+arc-ui.setting.safezone.vertical=§7Expand and decrease in up & bottom side
+arc-ui.setting.safezone.horizontalpos=§7Move the screen between left & right ( EXP: won't work if the following non-exp settings are default )
+arc-ui.setting.safezone.verticalpos=§7Move the screen between up & bottom ( EXP: won't work if the following non-exp settings are default )
+
+## - Sound section -
+arc-ui.setting.sound.main=§7Game Client volume - Affects the game client volume ranged from music to sounds. Note that ALL volume option won't change!
+arc-ui.setting.sound.music=§7Musics volume - Only affects a musics related. such as main menu, overworld, creative mode and etc.
+arc-ui.setting.sound.sound=§7Sounds volume - Only affects a sounds related. such as walking, breaking blocks, playing discs and etc.
+arc-ui.setting.sound.ambient=§7Ambient volume - Cave ambients and so on.
+arc-ui.setting.sound.block=§7Placing blocks - walking, breaking blocks and so on.
+arc-ui.setting.sound.hostile=§7Hostile mob sounds.
+arc-ui.setting.sound.neutral=§7Neutral mob sounds.
+arc-ui.setting.sound.player=§7Player hurt sounds.
+arc-ui.setting.sound.record=§7Disc related sounds.
+arc-ui.setting.sound.weather=§7Weather, rains, storms.
+arc-ui.setting.sound.tts=§7Text-to-speech volume.
+
+## - Changelog section V2 -
+arc-ui.setting.changelogv2desc.addition-update=§a§l[ -- ADDITIONS / UPDATES -- ]
+arc-ui.setting.changelogv2desc.bug-fixes=§a§l[ -- BUG FIXES -- ]
+arc-ui.setting.changelogv2desc.changes=§a§l[ -- ADJUSTMENTS -- ]
+
+## video section
+arc-ui.setting.video-experiment.warn=§7§oThese features are an experiment, and are definitely not meant to be enabled on any platforms. several features here are enabled on few platforms and therefore may not compatible with all platforms. this may cause the following issues - unintentional crashes, performance downgraded or feature won't work entirely. be cautious on what are you doing, I'm not responsible for this.

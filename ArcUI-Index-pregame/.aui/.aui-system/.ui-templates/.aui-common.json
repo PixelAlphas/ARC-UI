@@ -2,7 +2,7 @@
   "changelog_v2_core": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
-    "$auivar:changelog_version|default": "ARC-UIm.0",
+    "$auivar:changelog_version|default": "ARC-UI1.0",
     "$auivar:changelog_control|default": [],
     "controls": [
       { "toggle_button@aui-toggle.text_toggle": {
@@ -517,7 +517,7 @@
     "$auivar-bar_texture|default": "textures/ui/White",
     "$auivar-bar_contents|default": "",
     "$auivar-logo_texture|default": ".aui/.aui-assets/harlowlogo",
-    "$auivar-ver_text|default": "Arcdustry-UI [ v2.1-RC1 ]",
+    "$auivar-ver_text|default": "Arcdustry-UI [ v2.1 - PREGAME ]",
     "$auivar-screen_name|default": "\"Unknown\"",
     "$auivar-label_no_mcver|default": false,
     "$auivar:back_button|default": false,

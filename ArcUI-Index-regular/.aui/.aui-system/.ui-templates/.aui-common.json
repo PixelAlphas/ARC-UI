@@ -517,7 +517,7 @@
     "$auivar-bar_texture|default": "textures/ui/White",
     "$auivar-bar_contents|default": "",
     "$auivar-logo_texture|default": ".aui/.aui-assets/harlowlogo",
-    "$auivar-ver_text|default": "Arcdustry-UI [ v2.1-RC1 ]",
+    "$auivar-ver_text|default": "Arcdustry-UI [ v2.1 - REGULAR ]",
     "$auivar-screen_name|default": "\"Unknown\"",
     "$auivar-label_no_mcver|default": false,
     "$auivar:back_button|default": false,

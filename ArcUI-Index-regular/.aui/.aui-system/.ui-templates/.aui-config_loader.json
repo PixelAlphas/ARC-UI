@@ -33,6 +33,7 @@
     "$custom_loading_background_theend|default": false,
     "$legacy_ui_layout|default": false,
     "$main_menu_background|default": false,
+    "$no_xbox_profile_icon|default": false,
     "variables": [
       { "requires": "($oled_mode)",
         "$auivar:config_theme_alpha": 1

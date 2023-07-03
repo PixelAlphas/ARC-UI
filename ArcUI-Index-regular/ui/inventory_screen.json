@@ -1,0 +1,28 @@
+{
+  "recipe_inventory_screen_content": {
+    "modifications": [
+      { "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+        { "hud_actionbar_text_area": {
+          "type": "panel",
+            "anchor_to": "right_middle",
+            "anchor_from": "right_middle",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "hud_actionbar_text@hud.hud_actionbar_text"
+            }
+          }
+        }},
+        {
+          "test_text": {
+            "type": "label",
+            "anchor_to": "bottom_middle",
+            "anchor_from": "bottom_middle",
+            "text": "TEST TEXT YOU MORONS"
+          }
+        }
+      ]}
+  ]}
+}

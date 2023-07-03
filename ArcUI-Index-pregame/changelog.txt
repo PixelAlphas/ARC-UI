@@ -1,3 +1,68 @@
+--- v2.1 (July 2, 2023) ---
+× A requested update has arrived!
+
+[ -- ADDITIONS/UPDATES -- ]
+[+/REGULAR] Added modified Hotbar
+[+/REGULAR] Added/fixed experience bar texture
+[+/REGULAR] Added experience bar text to more java style
+[+/REGULAR] Added experience bar percentage on above of text
+[+/REGULAR] Added villager trade are completely unhidden (only classic ui)
+[+/REGULAR] Removed Help button '?' from villager trade screen
+[+/CONFIG] Added no comment version of 'config.json' file for better syntax
+[+/ALL] Added more .lang support
+[+/ALL] Added Storage setting section - warning: vanilla atm
+[+/ALL] Added UI version aka pregame and regular on start screen and about screen
+[+/ALL] Added details about how to use configuration in about screen - config tab 
+[+/ALL] Added button text on play screen world section
+[+/ALL] Added message hover thing for config list
+[+/ALL] Added 'No Xbox profile on start screen' as configuration options
+[+/ALL] Re-added custom background for dimensions because i forgot to export the file for package and therefore its not there.
+[+/ALL] Rewrite lots of thing
+[+/ALL] Resorted changelog list
+[+/ALL] Merged/Updated Brazil Portuguese language for the UI
+[+/ALL] Updated Settings screen again
+[+/ALL] Updated Configuration list
+[-/ALL] Removed moving lawnmowers as configuration feature since it is impacting the UI performance
+[-/ALL] Removed test configuration
+
+[ -- BUG FIXES -- ]
+[+] Fixed issues where non-xbox user are unable to log-in
+[+] Fixed issues where changelog could cause content log error
+[+] Fixed issues where realm setting pane isnt there
+[+] Fixed issues where logout and general buttons are in realm setting
+[+] Fixed some devices unable to click/tap the exit button
+[+] Fixed Minor spacing issues in play screen
+[+] Fixed Accessibility and creator section 'ingored' during playing sessions.
+[+] Fixed Progress label are not fading in and out
+[+/CONFIG] Fixed config file corruption
+
+[ -- ADJUSTMENTS -- ]
+[+] Improvements to UI Stability and optimization
+[+] Improvements to animation system
+[+] Improvements to theme system
+[-] Removed config file on Regular/Pre-Game due to config pack addition
+
+--- v2.1-RC2 (Jun 30, 2023) ---
+× Release candidate 2!
+
+[ -- ADDITIONS/UPDATES -- ]
+[+/ALL] Updated Brazil Portuguese language
+[+/ALL] Resorted changelog list
+[+/ALL] Rewrite on couple of stuff
+[+/ALL] Added more .lang support
+[+/ALL] Added Storage setting section - warning: vanilla atm
+[+/ALL] Added a UI version aka pregame and regular on start screen and about screen
+[+/ALL] Added a details about how to use configuration in about screen - config tab 
+
+[ -- BUG FIXES -- ]
+[+] Fixed issues where non-xbox user are unable to log-in
+[+] Fixed issues where changelog could cause content log error
+
+[ -- ADJUSTMENTS -- ]
+[+] Optimization and improvements to UI Stability
+[+] Release candidate will not be on changelog list
+[+] Config are compatible
+
 --- v2.1-RC1 (Jun 28, 2023) ---
 × monkey.
 
@@ -24,8 +89,9 @@
 [+] Fixed Minor spacing issues in play screen
 
 [ -- ADJUSTMENTS -- ]
-[+] Improvements to UI Stability
+[+] Improvements to UI Stability and optimization
 [+] Improvements to animation system
+[+] Improvements to theme system
 
 --- v2.0.2 (Jun 21, 2023) ---
 × Small Update for 2.0
